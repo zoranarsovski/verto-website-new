@@ -325,66 +325,59 @@
       </section>
 
       <!-- Contact -->
-      <section class="w-full bg-primary py-32 overflow-hidden border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-8 lg:px-[120px]">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-            <div class="lg:col-span-5 space-y-8">
-              <p class="font-mono text-accent text-sm font-bold tracking-[0.2em] uppercase">Connect With Us</p>
-              <h2 class="text-4xl md:text-5xl font-bold text-white leading-tight">Ready to fix your pipeline?</h2>
-              <p class="text-slate-300 text-lg leading-relaxed max-w-md">
-                Stop guessing and start growing. Schedule a diagnostic session with our pipeline architects today.
-              </p>
-              <ul class="space-y-6 pt-4">
-                <li class="flex items-start gap-4 group">
-                  <div class="w-6 h-6 mt-1 flex-shrink-0 flex items-center justify-center rounded border border-secondary/40 text-secondary group-hover:bg-secondary group-hover:text-white transition-colors duration-300">
-                    <i data-lucide="check" class="w-4 h-4"></i>
+      <section class="w-full bg-primary py-32 overflow-hidden border-t border-white/5 relative">
+        <!-- Ambient background glows -->
+        <div class="absolute top-0 left-1/4 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-8 relative z-10">
+          <!-- Unified header -->
+          <div class="text-center max-w-3xl mx-auto mb-20">
+            <p class="font-mono text-accent text-sm font-bold tracking-[0.2em] uppercase mb-5">Connect With Us</p>
+            <h2 class="text-4xl md:text-6xl font-bold text-white leading-[1.1] mb-6">Ready to fix your pipeline?</h2>
+            <p class="text-slate-300 text-lg md:text-xl leading-relaxed">
+              Two ways in — pick whichever feels right. Both lead to a real conversation about your pipeline.
+            </p>
+          </div>
+
+          <!-- Two paths: Form + Paul -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
+
+            <!-- Path 1: Diagnostic form -->
+            <div class="glass-card p-8 md:p-10 rounded-2xl relative overflow-hidden flex flex-col">
+              <div class="absolute inset-0 pointer-events-none opacity-5 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+
+              <div class="relative z-10 flex flex-col flex-1">
+                <!-- Card header -->
+                <div class="flex items-center gap-3 mb-5">
+                  <div class="w-11 h-11 rounded-lg bg-secondary/15 border border-secondary/30 flex items-center justify-center">
+                    <i data-lucide="clipboard-list" class="w-5 h-5 text-secondary"></i>
                   </div>
                   <div>
-                    <h4 class="text-white font-bold mb-1">30-minute diagnostic call</h4>
-                    <p class="text-slate-400 text-sm">A deep dive into your current funnel and identifying low-hanging fruit.</p>
+                    <p class="font-mono text-[10px] text-accent uppercase tracking-widest font-bold">Option 01</p>
+                    <h3 class="text-white font-display font-bold text-xl">Book a diagnostic</h3>
                   </div>
-                </li>
-                <li class="flex items-start gap-4 group">
-                  <div class="w-6 h-6 mt-1 flex-shrink-0 flex items-center justify-center rounded border border-secondary/40 text-secondary group-hover:bg-secondary group-hover:text-white transition-colors duration-300">
-                    <i data-lucide="check" class="w-4 h-4"></i>
-                  </div>
-                  <div>
-                    <h4 class="text-white font-bold mb-1">No vanity metrics</h4>
-                    <p class="text-slate-400 text-sm">We focus solely on Stage 1 opportunities and revenue generation.</p>
-                  </div>
-                </li>
-                <li class="flex items-start gap-4 group">
-                  <div class="w-6 h-6 mt-1 flex-shrink-0 flex items-center justify-center rounded border border-secondary/40 text-secondary group-hover:bg-secondary group-hover:text-white transition-colors duration-300">
-                    <i data-lucide="check" class="w-4 h-4"></i>
-                  </div>
-                  <div>
-                    <h4 class="text-white font-bold mb-1">Clear roadmap</h4>
-                    <p class="text-slate-400 text-sm">Walk away with a prioritized list of actions to improve pipeline velocity.</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="lg:col-span-7">
-              <div class="glass-card p-8 md:p-12 rounded-2xl relative overflow-hidden">
-                <div class="absolute inset-0 pointer-events-none opacity-5 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]"></div>
-                <form class="relative z-10 space-y-6">
-                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                </div>
+                <p class="text-slate-400 text-sm mb-7">Tell us about your funnel — we'll respond with a tailored plan.</p>
+
+                <form class="space-y-5 flex-1 flex flex-col">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div class="space-y-2">
                       <label class="font-mono text-[10px] text-slate-400 uppercase tracking-widest font-bold">Full Name</label>
-                      <input class="w-full bg-transparent border border-slate-700 text-white focus:border-secondary focus:ring-1 focus:ring-secondary/30 rounded-lg p-4 transition-all duration-300 placeholder:text-slate-600" placeholder="John Doe" type="text" />
+                      <input class="w-full bg-transparent border border-slate-700 text-white focus:border-secondary focus:ring-1 focus:ring-secondary/30 rounded-lg p-3.5 transition-all duration-300 placeholder:text-slate-600" placeholder="John Doe" type="text" />
                     </div>
                     <div class="space-y-2">
                       <label class="font-mono text-[10px] text-slate-400 uppercase tracking-widest font-bold">Work Email</label>
-                      <input class="w-full bg-transparent border border-slate-700 text-white focus:border-secondary focus:ring-1 focus:ring-secondary/30 rounded-lg p-4 transition-all duration-300 placeholder:text-slate-600" placeholder="john@company.com" type="email" />
+                      <input class="w-full bg-transparent border border-slate-700 text-white focus:border-secondary focus:ring-1 focus:ring-secondary/30 rounded-lg p-3.5 transition-all duration-300 placeholder:text-slate-600" placeholder="john@company.com" type="email" />
                     </div>
                   </div>
                   <div class="space-y-2">
                     <label class="font-mono text-[10px] text-slate-400 uppercase tracking-widest font-bold">Company</label>
-                    <input class="w-full bg-transparent border border-slate-700 text-white focus:border-secondary focus:ring-1 focus:ring-secondary/30 rounded-lg p-4 transition-all duration-300 placeholder:text-slate-600" placeholder="Enter company name" type="text" />
+                    <input class="w-full bg-transparent border border-slate-700 text-white focus:border-secondary focus:ring-1 focus:ring-secondary/30 rounded-lg p-3.5 transition-all duration-300 placeholder:text-slate-600" placeholder="Enter company name" type="text" />
                   </div>
                   <div class="space-y-2">
                     <label class="font-mono text-[10px] text-slate-400 uppercase tracking-widest font-bold">Pipeline Challenge</label>
-                    <select class="w-full bg-primary border border-slate-700 text-white focus:border-secondary focus:ring-1 focus:ring-secondary/30 rounded-lg p-4 transition-all duration-300">
+                    <select class="w-full bg-primary border border-slate-700 text-white focus:border-secondary focus:ring-1 focus:ring-secondary/30 rounded-lg p-3.5 transition-all duration-300">
                       <option value="" disabled selected>Select your main objective...</option>
                       <option>Improving Lead Quality</option>
                       <option>Scaling Ad Performance</option>
@@ -394,60 +387,108 @@
                       <option>Other / General Audit</option>
                     </select>
                   </div>
-                  <div class="pt-4">
-                    <button class="w-full bg-secondary hover:bg-secondary/90 text-white font-bold py-5 rounded-lg transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-secondary/20 flex items-center justify-center gap-2 group text-lg" type="submit">
+                  <div class="pt-2 mt-auto">
+                    <button class="w-full bg-secondary hover:bg-secondary/90 text-white font-bold py-4 rounded-lg transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg shadow-secondary/20 flex items-center justify-center gap-2 group" type="submit">
                       Let’s Talk Pipeline
                       <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
                     </button>
+                    <p class="text-[10px] text-slate-500 font-mono text-center mt-3">By submitting, you agree to our privacy policy and terms.</p>
                   </div>
-                  <p class="text-[10px] text-slate-500 font-mono text-center">By submitting, you agree to our privacy policy and terms.</p>
                 </form>
-              </div>
-              <!-- Direct contact - Paul Green -->
-              <div class="mt-6 glass-card p-8 rounded-2xl relative overflow-hidden">
-                <!-- Decorative glow -->
-                <div class="absolute -top-16 -right-16 w-48 h-48 bg-secondary/20 rounded-full blur-3xl pointer-events-none"></div>
-                <div class="absolute -bottom-20 -left-10 w-40 h-40 bg-accent/10 rounded-full blur-3xl pointer-events-none"></div>
 
-                <div class="relative z-10 flex flex-col sm:flex-row items-start gap-6">
-                  <!-- Avatar -->
-                  <div class="flex-shrink-0">
-                    <div class="w-20 h-20 rounded-full bg-gradient-to-br from-secondary to-accent flex items-center justify-center text-white font-display font-bold text-2xl shadow-lg shadow-secondary/30 ring-4 ring-white/10">
-                      PG
+                <!-- Trust strip -->
+                <div class="grid grid-cols-3 gap-4 pt-6 mt-6 border-t border-white/10">
+                  <div class="flex items-start gap-2">
+                    <i data-lucide="check" class="w-4 h-4 text-secondary flex-shrink-0 mt-0.5"></i>
+                    <div>
+                      <p class="text-white text-xs font-bold leading-tight">30-min call</p>
+                      <p class="text-slate-500 text-[10px] leading-snug mt-0.5">Diagnostic deep-dive</p>
                     </div>
                   </div>
-
-                  <div class="flex-1 min-w-0">
-                    <p class="font-mono text-[10px] text-accent uppercase tracking-widest font-bold mb-3">Talk to a human</p>
-                    <h3 class="text-white font-display font-bold text-2xl mb-2">Hey, I'm Paul.</h3>
-                    <div class="flex items-center gap-2 text-slate-400 text-sm mb-4">
-                      <i data-lucide="map-pin" class="w-3.5 h-3.5 text-accent"></i>
-                      <span>Beautiful Boston, MA</span>
-                      <span class="opacity-40">·</span>
-                      <span class="inline-flex items-center gap-1.5">
-                        <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span>
-                        Usually replies within a day
-                      </span>
+                  <div class="flex items-start gap-2">
+                    <i data-lucide="check" class="w-4 h-4 text-secondary flex-shrink-0 mt-0.5"></i>
+                    <div>
+                      <p class="text-white text-xs font-bold leading-tight">No vanity metrics</p>
+                      <p class="text-slate-500 text-[10px] leading-snug mt-0.5">Pipeline-only focus</p>
                     </div>
-                    <p class="text-slate-300 leading-relaxed mb-6">
-                      Skip the form — I'd genuinely love to hear about your pipeline. Drop me a line, send a connection request, or grab a coffee if you're ever in town. Real conversations beat contact forms every time.
-                    </p>
-
-                    <div class="flex flex-wrap items-center gap-3">
-                      <a href="mailto:paul.green@vertodigital.com" class="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-white font-semibold px-5 py-3 rounded-lg transition-all hover:-translate-y-0.5 shadow-lg shadow-secondary/20 text-sm group">
-                        <i data-lucide="mail" class="w-4 h-4"></i>
-                        paul.green@vertodigital.com
-                        <i data-lucide="arrow-up-right" class="w-4 h-4 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
-                      </a>
-                      <a href="https://www.linkedin.com/in/psgreen222/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 hover:bg-white/5 text-white font-semibold px-5 py-3 rounded-lg transition-colors text-sm">
-                        <i data-lucide="linkedin" class="w-4 h-4"></i>
-                        Connect on LinkedIn
-                      </a>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <i data-lucide="check" class="w-4 h-4 text-secondary flex-shrink-0 mt-0.5"></i>
+                    <div>
+                      <p class="text-white text-xs font-bold leading-tight">Clear roadmap</p>
+                      <p class="text-slate-500 text-[10px] leading-snug mt-0.5">Action-ready plan</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            <!-- Path 2: Paul Green -->
+            <div class="glass-card p-8 md:p-10 rounded-2xl relative overflow-hidden flex flex-col">
+              <!-- Decorative glow -->
+              <div class="absolute -top-20 -right-20 w-56 h-56 bg-secondary/20 rounded-full blur-3xl pointer-events-none"></div>
+              <div class="absolute -bottom-24 -left-16 w-48 h-48 bg-accent/15 rounded-full blur-3xl pointer-events-none"></div>
+
+              <div class="relative z-10 flex flex-col flex-1">
+                <!-- Card header -->
+                <div class="flex items-center gap-3 mb-5">
+                  <div class="w-11 h-11 rounded-lg bg-accent/15 border border-accent/30 flex items-center justify-center">
+                    <i data-lucide="message-circle" class="w-5 h-5 text-accent"></i>
+                  </div>
+                  <div>
+                    <p class="font-mono text-[10px] text-accent uppercase tracking-widest font-bold">Option 02</p>
+                    <h3 class="text-white font-display font-bold text-xl">Talk to a human</h3>
+                  </div>
+                </div>
+                <p class="text-slate-400 text-sm mb-7">Skip the form. Reach out to Paul directly — he picks up his own emails.</p>
+
+                <!-- Paul intro -->
+                <div class="flex items-center gap-5 mb-6">
+                  <div class="w-20 h-20 rounded-full bg-gradient-to-br from-secondary to-accent flex items-center justify-center text-white font-display font-bold text-2xl shadow-lg shadow-secondary/30 ring-4 ring-white/10 flex-shrink-0">
+                    PG
+                  </div>
+                  <div class="min-w-0">
+                    <h4 class="text-white font-display font-bold text-2xl leading-tight">Hey, I'm Paul.</h4>
+                    <div class="flex items-center gap-2 text-slate-400 text-sm mt-1">
+                      <i data-lucide="map-pin" class="w-3.5 h-3.5 text-accent flex-shrink-0"></i>
+                      <span>Beautiful Boston, MA</span>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="text-slate-300 leading-relaxed mb-6 flex-1">
+                  I'd genuinely love to hear about your pipeline. Drop me a line, send a connection request, or grab a coffee if you're ever in town. Real conversations beat contact forms every time.
+                </p>
+
+                <!-- Status -->
+                <div class="inline-flex items-center gap-2 text-slate-400 text-xs mb-5">
+                  <span class="relative flex w-2 h-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-green-400"></span>
+                  </span>
+                  <span class="font-mono uppercase tracking-wider">Usually replies within a day</span>
+                </div>
+
+                <!-- CTAs -->
+                <div class="flex flex-col gap-3">
+                  <a href="mailto:paul.green@vertodigital.com" class="inline-flex items-center justify-between gap-2 bg-secondary hover:bg-secondary/90 text-white font-semibold px-5 py-4 rounded-lg transition-all hover:-translate-y-0.5 shadow-lg shadow-secondary/20 group">
+                    <span class="flex items-center gap-3">
+                      <i data-lucide="mail" class="w-4 h-4"></i>
+                      <span class="text-sm">paul.green@vertodigital.com</span>
+                    </span>
+                    <i data-lucide="arrow-up-right" class="w-4 h-4 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/psgreen222/" target="_blank" rel="noopener" class="inline-flex items-center justify-between gap-2 border border-white/20 hover:border-white/40 hover:bg-white/5 text-white font-semibold px-5 py-4 rounded-lg transition-colors group">
+                    <span class="flex items-center gap-3">
+                      <i data-lucide="linkedin" class="w-4 h-4"></i>
+                      <span class="text-sm">Connect on LinkedIn</span>
+                    </span>
+                    <i data-lucide="arrow-up-right" class="w-4 h-4 opacity-50 group-hover:opacity-90 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>

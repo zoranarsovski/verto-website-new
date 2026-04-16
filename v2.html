@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VertoDigital · V2 — Pipeline-Driven Digital Marketing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Manrope', 'sans-serif'],
+              display: ['Space Grotesk', 'sans-serif'],
+            },
+            colors: {
+              // Brand palette — primary blues
+              'brand-light': '#66CCFF',   // Light Main Blue — backgrounds, large surfaces
+              'brand-blue': '#0066CC',    // Main Blue — CTAs, links, primary actions
+              'brand-dark': '#002B55',    // Dark Blue — section panels, hierarchy
+              // Accents (use sparingly — max 10–15% of layout)
+              'accent-purple': '#7A4BD1',
+              'accent-cyan': '#3EC7D3',
+              'accent-lime': '#CFE46B',
+              // Neutrals
+              'navy': '#05052A',          // Deep Navy — base bg, footer
+              'cool-gray': '#9EA3AA',
+              'light-gray': '#AFC3D3',
+              // Semantic aliases (matches v1 token names but with v2 values)
+              primary: '#0066CC',
+              secondary: '#3EC7D3',
+              accent: '#CFE46B',
+              surface: '#05052A',
+              'surface-low': '#002B55',
+              'surface-high': '#0a3870',
+              'on-surface-variant': '#AFC3D3',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Manrope', sans-serif;
+        background-color: #05052A;
+        color: #ffffff;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Space Grotesk', sans-serif;
+      }
+      .pipeline-graphic-path {
+        stroke-dasharray: 8 4;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .glass-card-strong {
+        background: rgba(255, 255, 255, 0.06);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+      }
+      /* Subtle grid backdrop */
+      .grid-bg {
+        background-image:
+          linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+        background-size: 48px 48px;
+      }
+      /* Hero gradient — Dark Blue → Main Blue (per brand spec) */
+      .hero-gradient {
+        background:
+          radial-gradient(ellipse 80% 60% at 70% 30%, rgba(0, 102, 204, 0.25), transparent 60%),
+          radial-gradient(ellipse 60% 50% at 20% 70%, rgba(62, 199, 211, 0.12), transparent 60%),
+          linear-gradient(135deg, #002B55 0%, #05052A 60%);
+      }
+      /* CTA gradient — Main Blue → Cyan (per brand spec) */
+      .cta-gradient {
+        background: linear-gradient(135deg, #002B55 0%, #0066CC 50%, #3EC7D3 100%);
+      }
+    </style>
+  </head>
+  <body class="antialiased">
+    <!-- Version switcher ribbon -->
+    <div class="bg-[#CFE46B] text-[#05052A] py-2.5 px-4 flex items-center justify-center gap-3 text-[11px] font-mono uppercase tracking-[0.15em] font-bold border-b border-black/10">
+      <span class="opacity-60 hidden sm:inline">Preview</span>
+      <span class="opacity-40 hidden sm:inline">·</span>
+      <a href="index.html" class="px-3 py-1 rounded-full hover:bg-black/10 transition-colors">V1 · Original</a>
+      <a href="v2.html" class="px-3 py-1 rounded-full bg-[#05052A] text-white">V2 · Dark</a>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 w-full z-50 bg-navy/80 backdrop-blur-xl border-b border-white/10">
+      <div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+        <a href="#" class="flex items-center"><img src="VertoDigital-brandmark-color-white.png" alt="VertoDigital" class="h-11 w-auto" /></a>
+        <div class="hidden md:flex items-center space-x-10">
+          <a class="text-accent-cyan border-b-2 border-accent-cyan pb-1 font-medium" href="#">Solutions</a>
+          <a class="text-light-gray font-medium hover:text-accent-cyan transition-colors duration-300" href="#">Services</a>
+          <a class="text-light-gray font-medium hover:text-accent-cyan transition-colors duration-300" href="#">Case Studies</a>
+          <a class="text-light-gray font-medium hover:text-accent-cyan transition-colors duration-300" href="#">Insights</a>
+        </div>
+        <div class="flex items-center space-x-6">
+          <i data-lucide="network" class="w-5 h-5 text-light-gray cursor-pointer hover:text-accent-cyan duration-200"></i>
+          <button class="bg-brand-blue text-white px-6 py-2.5 rounded-lg font-semibold text-sm hover:bg-accent-cyan hover:text-navy duration-200 ease-in-out transition-all">
+            Let's Talk Pipeline
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero -->
+      <section class="relative hero-gradient overflow-hidden">
+        <div class="absolute inset-0 grid-bg opacity-40 pointer-events-none"></div>
+        <div class="relative max-w-7xl mx-auto px-8 py-24 md:py-32 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-7 space-y-8">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent-cyan/30 bg-accent-cyan/10 text-accent-cyan text-xs font-mono uppercase tracking-[0.2em] font-bold">
+              <span class="w-1.5 h-1.5 rounded-full bg-accent-cyan animate-pulse"></span>
+              Pipeline Intelligence Platform
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold leading-[1.05] tracking-tight text-white">
+              Pipeline-Driven Digital Marketing for <span class="text-accent-cyan">B2B Companies</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-light-gray max-w-2xl leading-relaxed">
+              How much of your marketing actually turns into pipeline? We help B2B companies answer that question — then fix it.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 pt-4">
+              <button class="bg-brand-blue text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-accent-cyan hover:text-navy transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-brand-blue/30">
+                Let’s Talk Pipeline <i data-lucide="arrow-right" class="w-5 h-5"></i>
+              </button>
+              <button class="border border-white/20 hover:border-white/40 hover:bg-white/5 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300">
+                See Our Work
+              </button>
+            </div>
+          </div>
+          <div class="lg:col-span-5 relative">
+            <div class="relative w-full aspect-square glass-card-strong rounded-2xl p-8 overflow-hidden group">
+              <div class="absolute -top-20 -right-20 w-64 h-64 bg-accent-cyan/15 rounded-full blur-3xl"></div>
+              <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-brand-blue/20 rounded-full blur-3xl"></div>
+              <svg class="relative w-full h-full text-accent-cyan/40 stroke-current fill-none" viewBox="0 0 400 400">
+                <path d="M50 50 L350 50 L300 350 L100 350 Z" class="pipeline-graphic-path" stroke-width="1.5"></path>
+                <circle cx="200" cy="50" fill="currentColor" opacity="0.9" r="12"></circle>
+                <path d="M200 50 L200 350" stroke-width="1"></path>
+                <path d="M50 150 L350 150" stroke-dasharray="4 2" stroke-width="0.5"></path>
+                <path d="M50 250 L350 250" stroke-dasharray="4 2" stroke-width="0.5"></path>
+                <rect class="text-brand-blue" height="40" rx="4" stroke-width="2" width="40" x="180" y="130" fill="currentColor" fill-opacity="0.2"></rect>
+                <rect class="text-accent-cyan" height="30" rx="2" stroke-width="2" width="30" x="185" y="235" fill="currentColor" fill-opacity="0.2"></rect>
+                <circle class="text-accent-cyan" cx="200" cy="350" fill="currentColor" r="8"></circle>
+              </svg>
+              <!-- Lime accent callout — saved for the headline metric -->
+              <div class="absolute bottom-8 right-8 bg-accent-lime text-navy p-4 rounded-lg shadow-xl shadow-accent-lime/20">
+                <p class="font-mono text-[10px] font-bold uppercase tracking-widest opacity-70">Pipeline Growth</p>
+                <p class="font-mono text-3xl font-bold">+125%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Social Proof -->
+      <section class="w-full bg-brand-dark py-12 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-8 flex flex-wrap justify-between items-center gap-8">
+          <div class="flex items-center gap-3">
+            <div class="flex text-accent-cyan">
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current opacity-40"></i>
+            </div>
+            <span class="font-mono text-sm font-bold text-white">G2 4.9/5 RATING</span>
+          </div>
+          <div class="flex flex-wrap items-center gap-x-12 gap-y-6 text-light-gray opacity-70 hover:opacity-100 transition-opacity duration-500">
+            <span class="font-display font-bold text-xl tracking-tight">Neo4j</span>
+            <span class="font-display font-bold text-xl tracking-tight">Payhawk</span>
+            <span class="font-display font-bold text-xl tracking-tight">Cribl</span>
+            <span class="font-display font-bold text-xl tracking-tight">Camunda</span>
+            <span class="font-display font-bold text-xl tracking-tight">SnapLogic</span>
+            <span class="font-display font-bold text-xl tracking-tight">Scalefocus</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Methodology -->
+      <section class="max-w-7xl mx-auto px-8 py-32">
+        <div class="mb-20 max-w-2xl">
+          <p class="font-mono text-accent-cyan text-sm font-bold tracking-[0.2em] mb-4">THE METHODOLOGY</p>
+          <h2 class="text-4xl md:text-5xl font-bold text-white">The blueprint for modern <span class="text-accent-cyan">B2B growth</span>.</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="p-10 glass-card hover:border-accent-cyan/40 hover:bg-white/[0.06] transition-all duration-300 group rounded-2xl">
+            <div class="w-12 h-12 rounded-xl bg-brand-blue/15 border border-brand-blue/30 flex items-center justify-center mb-8 text-accent-cyan group-hover:bg-accent-cyan group-hover:text-navy transition-all duration-300">
+              <i data-lucide="layout" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-4">Pipeline-First Value</h3>
+            <p class="text-light-gray leading-relaxed">Every deliverable connects to revenue. We don't optimize for vanity metrics; we optimize for stage progression and deal velocity.</p>
+          </div>
+          <div class="p-10 glass-card hover:border-accent-cyan/40 hover:bg-white/[0.06] transition-all duration-300 group rounded-2xl">
+            <div class="w-12 h-12 rounded-xl bg-brand-blue/15 border border-brand-blue/30 flex items-center justify-center mb-8 text-accent-cyan group-hover:bg-accent-cyan group-hover:text-navy transition-all duration-300">
+              <i data-lucide="sparkles" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-4">AI-Powered Delivery</h3>
+            <p class="text-light-gray leading-relaxed">Faster, smarter, and more proactive. Our team leverages proprietary AI stacks to handle the heavy lifting while focusing on strategy.</p>
+          </div>
+          <div class="p-10 glass-card hover:border-accent-cyan/40 hover:bg-white/[0.06] transition-all duration-300 group rounded-2xl">
+            <div class="w-12 h-12 rounded-xl bg-brand-blue/15 border border-brand-blue/30 flex items-center justify-center mb-8 text-accent-cyan group-hover:bg-accent-cyan group-hover:text-navy transition-all duration-300">
+              <i data-lucide="trending-up" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-4">Profitable Growth</h3>
+            <p class="text-light-gray leading-relaxed">Scale without sacrificing margins. We architect systems that lower your customer acquisition costs while increasing deal size.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Capabilities -->
+      <section class="w-full bg-brand-dark text-white py-32 overflow-hidden relative">
+        <div class="absolute inset-0 grid-bg opacity-30 pointer-events-none"></div>
+        <div class="absolute top-0 left-1/3 w-[500px] h-[500px] bg-brand-blue/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="relative max-w-7xl mx-auto px-8">
+          <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-20">
+            <div class="max-w-2xl">
+              <p class="font-mono text-accent-cyan text-sm font-bold tracking-[0.2em] mb-4">OUR CAPABILITIES</p>
+              <h2 class="text-4xl md:text-6xl font-bold">Engineered for <span class="text-accent-cyan">demand</span>.</h2>
+            </div>
+            <a href="#" class="text-accent-cyan font-bold flex items-center gap-2 hover:translate-x-2 transition-transform">
+              Explore all services <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </a>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10 border border-white/10 rounded-2xl overflow-hidden">
+            <div class="p-12 hover:bg-gradient-to-br hover:from-brand-blue/20 hover:to-accent-cyan/10 transition-all group cursor-pointer bg-brand-dark">
+              <div class="w-12 h-12 rounded-xl bg-brand-blue/20 flex items-center justify-center mb-6 group-hover:bg-accent-cyan group-hover:text-navy transition-all">
+                <i data-lucide="bar-chart-3" class="w-6 h-6 text-accent-cyan group-hover:text-navy"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Pipeline Intelligence</h3>
+              <p class="text-light-gray text-sm leading-relaxed mb-6">Uncover the data & analytics gaps that are hiding your true marketing performance.</p>
+              <i data-lucide="arrow-right" class="w-5 h-5 text-accent-cyan opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+            </div>
+            <div class="p-12 hover:bg-gradient-to-br hover:from-brand-blue/20 hover:to-accent-cyan/10 transition-all group cursor-pointer bg-brand-dark">
+              <div class="w-12 h-12 rounded-xl bg-brand-blue/20 flex items-center justify-center mb-6 group-hover:bg-accent-cyan transition-all">
+                <i data-lucide="mouse-pointer-2" class="w-6 h-6 text-accent-cyan group-hover:text-navy"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Pipeline-Driven Paid Media</h3>
+              <p class="text-light-gray text-sm leading-relaxed mb-6">Targeting that actually converts. Media buying with a focus on high-intent pipeline.</p>
+              <i data-lucide="arrow-right" class="w-5 h-5 text-accent-cyan opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+            </div>
+            <div class="p-12 hover:bg-gradient-to-br hover:from-brand-blue/20 hover:to-accent-cyan/10 transition-all group cursor-pointer bg-brand-dark">
+              <div class="w-12 h-12 rounded-xl bg-brand-blue/20 flex items-center justify-center mb-6 group-hover:bg-accent-cyan transition-all">
+                <i data-lucide="users" class="w-6 h-6 text-accent-cyan group-hover:text-navy"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Pipeline-Driven LinkedIn</h3>
+              <p class="text-light-gray text-sm leading-relaxed mb-6">The definitive channel for B2B. Dominate the feed and the decision-maker's mind.</p>
+              <i data-lucide="arrow-right" class="w-5 h-5 text-accent-cyan opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+            </div>
+            <div class="p-12 hover:bg-gradient-to-br hover:from-brand-blue/20 hover:to-accent-cyan/10 transition-all group cursor-pointer bg-brand-dark">
+              <div class="w-12 h-12 rounded-xl bg-brand-blue/20 flex items-center justify-center mb-6 group-hover:bg-accent-cyan transition-all">
+                <i data-lucide="search" class="w-6 h-6 text-accent-cyan group-hover:text-navy"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Pipeline-Driven Organic Growth</h3>
+              <p class="text-light-gray text-sm leading-relaxed mb-6">SEO that generates demo requests, not just traffic. Content with architectural intent.</p>
+              <i data-lucide="arrow-right" class="w-5 h-5 text-accent-cyan opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+            </div>
+            <div class="p-12 hover:bg-gradient-to-br hover:from-brand-blue/20 hover:to-accent-cyan/10 transition-all group cursor-pointer bg-brand-dark">
+              <div class="w-12 h-12 rounded-xl bg-brand-blue/20 flex items-center justify-center mb-6 group-hover:bg-accent-cyan transition-all">
+                <i data-lucide="target" class="w-6 h-6 text-accent-cyan group-hover:text-navy"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Pipeline-Driven ABM</h3>
+              <p class="text-light-gray text-sm leading-relaxed mb-6">Personalized engagement for your most valuable target accounts at scale.</p>
+              <i data-lucide="arrow-right" class="w-5 h-5 text-accent-cyan opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+            </div>
+            <div class="p-12 hover:bg-gradient-to-br hover:from-brand-blue/20 hover:to-accent-cyan/10 transition-all group cursor-pointer bg-brand-dark">
+              <div class="w-12 h-12 rounded-xl bg-brand-blue/20 flex items-center justify-center mb-6 group-hover:bg-accent-cyan transition-all">
+                <i data-lucide="brain" class="w-6 h-6 text-accent-cyan group-hover:text-navy"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Pipeline-Driven AI Visibility</h3>
+              <p class="text-light-gray text-sm leading-relaxed mb-6">Ensuring your brand is what LLMs and AI agents recommend during the search phase.</p>
+              <i data-lucide="arrow-right" class="w-5 h-5 text-accent-cyan opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Proof Bank -->
+      <section class="max-w-7xl mx-auto px-8 py-32">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <div>
+            <p class="font-mono text-accent-cyan text-sm font-bold tracking-[0.2em] mb-4">PROOF BANK</p>
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-8">Numbers don’t lie. <span class="text-accent-cyan">Pipelines do.</span> We fix both.</h2>
+            <p class="text-light-gray text-lg leading-relaxed mb-12">We’ve audited hundreds of millions in ad spend. The results of "Pipeline Thinking" are consistent and measurable.</p>
+            <div class="space-y-10">
+              <div class="flex items-start gap-6 group">
+                <div class="font-mono text-5xl font-light text-accent-lime opacity-50 group-hover:opacity-100 transition-opacity">01</div>
+                <div>
+                  <h3 class="font-mono text-5xl font-bold text-accent-cyan mb-2">70%+</h3>
+                  <p class="text-light-gray">of pipeline connected to ads (LinkedIn Influence)</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-6 group">
+                <div class="font-mono text-5xl font-light text-accent-lime opacity-50 group-hover:opacity-100 transition-opacity">02</div>
+                <div>
+                  <h3 class="font-mono text-5xl font-bold text-accent-cyan mb-2">130%</h3>
+                  <p class="text-light-gray">increase in marketing-sourced ARR (Netgain)</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-6 group">
+                <div class="font-mono text-5xl font-light text-accent-lime opacity-50 group-hover:opacity-100 transition-opacity">03</div>
+                <div>
+                  <h3 class="font-mono text-5xl font-bold text-accent-cyan mb-2">125%</h3>
+                  <p class="text-light-gray">increase in Stage 1 opportunities (SnapLogic)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="absolute -inset-4 bg-gradient-to-br from-brand-blue/20 to-accent-cyan/10 rounded-2xl blur-2xl"></div>
+            <img
+              alt="Team collaborating"
+              class="rounded-2xl shadow-2xl relative z-10 border border-white/10"
+              referrerpolicy="no-referrer"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOveHl3wxZYQG9AGkRIe3iNf6aRFnlwLV8r7hGE3F1ps1xqkq8nxANBGqvvlEm5HDXe1INH3fdWOiJYQb4BxUx_QsudR_TEL7Hu8PiJK3xvHiLXGKLSZ1eMNbtwxGJC7J-u044RHegFAXuqha3HuWsmfxl04zT5URWZrmhxHxnUNDDZh-MaPPnCQdD_F91LzDIgSDsk3aBYhoKsSPiheN--3et5uBvAP2iLid4CBiQNm-I6P2yIxmdGGqk1mUa7P45WUPFpGM0h0k"
+            />
+            <div class="absolute -top-10 -right-10 w-64 h-64 bg-accent-cyan/15 rounded-full blur-3xl -z-0"></div>
+            <div class="absolute -bottom-10 -left-10 w-48 h-48 bg-brand-blue/20 rounded-full blur-3xl -z-0"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Insights -->
+      <section class="bg-brand-dark py-32 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-8">
+          <div class="mb-16 flex items-end justify-between flex-wrap gap-6">
+            <div>
+              <p class="font-mono text-accent-cyan text-sm font-bold tracking-[0.2em] mb-4">INSIGHTS</p>
+              <h2 class="text-4xl font-bold text-white">Pipeline Thinking.</h2>
+            </div>
+            <a href="#" class="text-accent-cyan font-bold flex items-center gap-2 hover:translate-x-2 transition-transform text-sm">
+              All articles <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="glass-card overflow-hidden group hover:border-accent-cyan/40 transition-all duration-500 rounded-2xl">
+              <div class="h-64 overflow-hidden relative">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent z-10 opacity-60 pointer-events-none"></div>
+                <img
+                  alt="The Death of the Marketing Qualified Lead (MQL)"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  referrerpolicy="no-referrer"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwB6J7bExOmTl8FlHnScIKRuXzH6FwHLmO4XOaJV7MUvfp1esF-1rjL83qel6LPdIsNhFE6VKyO-FY4w1mfGO6NpzYUK9FQXSfLsEl-FX8a4UHrE02pLZe4yyTy0U9_azts_xCQoJPtnVO0CwrLd7p-knChwVuoyHHkyTx-xbYAd4TUjNiSby3eAaDXPxZHF-nmTgllYIpKMHloQo05dNuOGP7tm-ofN80wqClvnPsYLEBQAGvmI4JPhDAem_hPUDH8UEcFthcJBo"
+                />
+              </div>
+              <div class="p-8">
+                <span class="font-mono text-xs text-accent-cyan font-bold uppercase tracking-widest block mb-4">Strategy</span>
+                <h3 class="text-xl font-bold text-white mb-4 leading-tight group-hover:text-accent-cyan transition-colors">The Death of the Marketing Qualified Lead (MQL)</h3>
+                <a class="text-light-gray font-bold text-sm flex items-center gap-2 group-hover:text-accent-cyan transition-colors" href="#">
+                  Read Article <i data-lucide="external-link" class="w-4 h-4"></i>
+                </a>
+              </div>
+            </div>
+            <div class="glass-card overflow-hidden group hover:border-accent-cyan/40 transition-all duration-500 rounded-2xl">
+              <div class="h-64 overflow-hidden relative">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent z-10 opacity-60 pointer-events-none"></div>
+                <img
+                  alt="Beyond Attribution: Mapping the Dark Social Funnel"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  referrerpolicy="no-referrer"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq2rK5NbSB1TFxHcy3L6v5_mg5Kz32hTx1idL6FZ6lIv3xuCDoKFdbz7RsDSLtWuybSbMSPYjMt9qNdNNoU1BkrbSJVFvc1bD-Igk3EMCQzBP6IYdK2JyZvaOM61DcakFywWv66AP_EboFMauI_zYv1iTTtWT2zBnjJx_9_tPQL2wcKoshv7ph6k7RzqhTntS_LjVJwiWzMBIB1IFad507gC5KKrcoU5M9bi8KlDeTXbxPImXCLCOmtufhuxiB-xELlmdS9CvZwVw"
+                />
+              </div>
+              <div class="p-8">
+                <span class="font-mono text-xs text-accent-cyan font-bold uppercase tracking-widest block mb-4">Analytics</span>
+                <h3 class="text-xl font-bold text-white mb-4 leading-tight group-hover:text-accent-cyan transition-colors">Beyond Attribution: Mapping the Dark Social Funnel</h3>
+                <a class="text-light-gray font-bold text-sm flex items-center gap-2 group-hover:text-accent-cyan transition-colors" href="#">
+                  Read Article <i data-lucide="external-link" class="w-4 h-4"></i>
+                </a>
+              </div>
+            </div>
+            <div class="glass-card overflow-hidden group hover:border-accent-cyan/40 transition-all duration-500 rounded-2xl">
+              <div class="h-64 overflow-hidden relative">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent z-10 opacity-60 pointer-events-none"></div>
+                <img
+                  alt="Architecting for Stage 1: A B2B Growth Blueprint"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  referrerpolicy="no-referrer"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG7Ba6BKJg4Wympftvy8fwAEiBCJtWkwUK3r03Vo59yEegPR9NsCY5IMSuB7-lYwiwj1Z1q9df6lYBjpXNRKuc_bxFgViiuJGBh-VR7kd2iR8dbuqznpg6BxmilVdvsk0B2FBTio4PDTAy960v7YfhQ-AQz3nkxnFuyW9vrhd6a28brqEtTK-Wj7NTXbssXwy4XpFAKxhwfr4rhakf-Wnac780_EJ7sBPEcFn5vsiTPtTqEnvLK0zSMcm1kk0mAhYYOYVLIBPHGhk"
+                />
+              </div>
+              <div class="p-8">
+                <span class="font-mono text-xs text-accent-cyan font-bold uppercase tracking-widest block mb-4">Operations</span>
+                <h3 class="text-xl font-bold text-white mb-4 leading-tight group-hover:text-accent-cyan transition-colors">Architecting for Stage 1: A B2B Growth Blueprint</h3>
+                <a class="text-light-gray font-bold text-sm flex items-center gap-2 group-hover:text-accent-cyan transition-colors" href="#">
+                  Read Article <i data-lucide="external-link" class="w-4 h-4"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="w-full bg-navy py-32 overflow-hidden border-t border-white/5 relative">
+        <div class="absolute top-0 left-1/4 w-[600px] h-[600px] bg-brand-blue/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-accent-cyan/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="relative max-w-7xl mx-auto px-8 lg:px-[120px]">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+            <div class="lg:col-span-5 space-y-8">
+              <p class="font-mono text-accent-cyan text-sm font-bold tracking-[0.2em] uppercase">Connect With Us</p>
+              <h2 class="text-4xl md:text-5xl font-bold text-white leading-tight">Ready to fix your <span class="text-accent-cyan">pipeline</span>?</h2>
+              <p class="text-light-gray text-lg leading-relaxed max-w-md">
+                Stop guessing and start growing. Schedule a diagnostic session with our pipeline architects today.
+              </p>
+              <ul class="space-y-6 pt-4">
+                <li class="flex items-start gap-4 group">
+                  <div class="w-6 h-6 mt-1 flex-shrink-0 flex items-center justify-center rounded border border-accent-cyan/40 text-accent-cyan group-hover:bg-accent-cyan group-hover:text-navy transition-colors duration-300">
+                    <i data-lucide="check" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white font-bold mb-1">30-minute diagnostic call</h4>
+                    <p class="text-cool-gray text-sm">A deep dive into your current funnel and identifying low-hanging fruit.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-4 group">
+                  <div class="w-6 h-6 mt-1 flex-shrink-0 flex items-center justify-center rounded border border-accent-cyan/40 text-accent-cyan group-hover:bg-accent-cyan group-hover:text-navy transition-colors duration-300">
+                    <i data-lucide="check" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white font-bold mb-1">No vanity metrics</h4>
+                    <p class="text-cool-gray text-sm">We focus solely on Stage 1 opportunities and revenue generation.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-4 group">
+                  <div class="w-6 h-6 mt-1 flex-shrink-0 flex items-center justify-center rounded border border-accent-cyan/40 text-accent-cyan group-hover:bg-accent-cyan group-hover:text-navy transition-colors duration-300">
+                    <i data-lucide="check" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white font-bold mb-1">Clear roadmap</h4>
+                    <p class="text-cool-gray text-sm">Walk away with a prioritized list of actions to improve pipeline velocity.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="lg:col-span-7">
+              <div class="glass-card-strong p-8 md:p-12 rounded-2xl relative overflow-hidden">
+                <div class="absolute inset-0 grid-bg opacity-30 pointer-events-none"></div>
+                <form class="relative z-10 space-y-6">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                      <label class="font-mono text-[10px] text-cool-gray uppercase tracking-widest font-bold">Full Name</label>
+                      <input class="w-full bg-navy/40 border border-white/10 text-white focus:border-accent-cyan focus:ring-1 focus:ring-accent-cyan/30 rounded-lg p-4 transition-all duration-300 placeholder:text-cool-gray/60" placeholder="John Doe" type="text" />
+                    </div>
+                    <div class="space-y-2">
+                      <label class="font-mono text-[10px] text-cool-gray uppercase tracking-widest font-bold">Work Email</label>
+                      <input class="w-full bg-navy/40 border border-white/10 text-white focus:border-accent-cyan focus:ring-1 focus:ring-accent-cyan/30 rounded-lg p-4 transition-all duration-300 placeholder:text-cool-gray/60" placeholder="john@company.com" type="email" />
+                    </div>
+                  </div>
+                  <div class="space-y-2">
+                    <label class="font-mono text-[10px] text-cool-gray uppercase tracking-widest font-bold">Company</label>
+                    <input class="w-full bg-navy/40 border border-white/10 text-white focus:border-accent-cyan focus:ring-1 focus:ring-accent-cyan/30 rounded-lg p-4 transition-all duration-300 placeholder:text-cool-gray/60" placeholder="Enter company name" type="text" />
+                  </div>
+                  <div class="space-y-2">
+                    <label class="font-mono text-[10px] text-cool-gray uppercase tracking-widest font-bold">Pipeline Challenge</label>
+                    <select class="w-full bg-navy/40 border border-white/10 text-white focus:border-accent-cyan focus:ring-1 focus:ring-accent-cyan/30 rounded-lg p-4 transition-all duration-300">
+                      <option value="" disabled selected>Select your main objective...</option>
+                      <option>Improving Lead Quality</option>
+                      <option>Scaling Ad Performance</option>
+                      <option>Dark Social Attribution</option>
+                      <option>ABM Implementation</option>
+                      <option>AI Visibility & Strategy</option>
+                      <option>Other / General Audit</option>
+                    </select>
+                  </div>
+                  <div class="pt-4">
+                    <button class="w-full bg-brand-blue hover:bg-accent-cyan hover:text-navy text-white font-bold py-5 rounded-lg transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-brand-blue/30 flex items-center justify-center gap-2 group text-lg" type="submit">
+                      Let’s Talk Pipeline
+                      <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                    </button>
+                  </div>
+                  <p class="text-[10px] text-cool-gray font-mono text-center">By submitting, you agree to our privacy policy and terms.</p>
+                </form>
+              </div>
+              <!-- Direct contact - Paul Green -->
+              <div class="mt-6 glass-card p-8 rounded-2xl relative overflow-hidden">
+                <div class="absolute -top-16 -right-16 w-48 h-48 bg-brand-blue/25 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="absolute -bottom-20 -left-10 w-40 h-40 bg-accent-cyan/15 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="relative z-10 flex flex-col sm:flex-row items-start gap-6">
+                  <div class="flex-shrink-0">
+                    <div class="w-20 h-20 rounded-full bg-gradient-to-br from-brand-blue to-accent-cyan flex items-center justify-center text-white font-display font-bold text-2xl shadow-lg shadow-brand-blue/40 ring-4 ring-white/10">
+                      PG
+                    </div>
+                  </div>
+
+                  <div class="flex-1 min-w-0">
+                    <p class="font-mono text-[10px] text-accent-cyan uppercase tracking-widest font-bold mb-3">Talk to a human</p>
+                    <h3 class="text-white font-display font-bold text-2xl mb-2">Hey, I'm Paul.</h3>
+                    <div class="flex items-center gap-2 text-cool-gray text-sm mb-4 flex-wrap">
+                      <i data-lucide="map-pin" class="w-3.5 h-3.5 text-accent-cyan"></i>
+                      <span>Beautiful Boston, MA</span>
+                      <span class="opacity-40">·</span>
+                      <span class="inline-flex items-center gap-1.5">
+                        <span class="w-1.5 h-1.5 rounded-full bg-accent-lime animate-pulse"></span>
+                        Usually replies within a day
+                      </span>
+                    </div>
+                    <p class="text-light-gray leading-relaxed mb-6">
+                      Skip the form — I'd genuinely love to hear about your pipeline. Drop me a line, send a connection request, or grab a coffee if you're ever in town. Real conversations beat contact forms every time.
+                    </p>
+
+                    <div class="flex flex-wrap items-center gap-3">
+                      <a href="mailto:paul.green@vertodigital.com" class="inline-flex items-center gap-2 bg-brand-blue hover:bg-accent-cyan hover:text-navy text-white font-semibold px-5 py-3 rounded-lg transition-all hover:-translate-y-0.5 shadow-lg shadow-brand-blue/30 text-sm group">
+                        <i data-lucide="mail" class="w-4 h-4"></i>
+                        paul.green@vertodigital.com
+                        <i data-lucide="arrow-up-right" class="w-4 h-4 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
+                      </a>
+                      <a href="https://www.linkedin.com/in/psgreen222/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 border border-white/20 hover:border-accent-cyan/60 hover:bg-white/5 text-white font-semibold px-5 py-3 rounded-lg transition-colors text-sm">
+                        <i data-lucide="linkedin" class="w-4 h-4"></i>
+                        Connect on LinkedIn
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Final CTA -->
+      <section class="max-w-7xl mx-auto px-8 py-32 text-center">
+        <div class="cta-gradient p-20 rounded-3xl relative overflow-hidden border border-white/10">
+          <div class="absolute inset-0 grid-bg opacity-20 pointer-events-none"></div>
+          <div class="absolute top-0 right-0 p-10 opacity-10">
+            <i data-lucide="layout" class="w-48 h-48 text-white"></i>
+          </div>
+          <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-accent-cyan/30 rounded-full blur-3xl"></div>
+          <div class="relative z-10 max-w-2xl mx-auto">
+            <h2 class="text-4xl md:text-6xl font-bold text-white mb-8">Ready to engineer your <span class="text-accent-lime">pipeline</span>?</h2>
+            <p class="text-white/80 text-xl mb-12">Join the world's fastest-growing B2B companies who have abandoned vanity metrics for revenue certainty.</p>
+            <button class="bg-accent-lime text-navy px-10 py-5 rounded-lg font-bold text-xl hover:bg-white transition-all duration-300 transform hover:-translate-y-1 shadow-xl shadow-accent-lime/30">
+              Let’s Talk Pipeline
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white border-t border-white/10">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 w-full max-w-7xl mx-auto">
+        <div class="space-y-6">
+          <a href="#" class="flex items-center"><img src="VertoDigital-brandmark-color-white.png" alt="VertoDigital" class="h-10 w-auto" /></a>
+          <p class="text-light-gray text-sm leading-relaxed max-w-xs">
+            Architecting high-performance digital marketing for B2B enterprises that demand pipeline certainty.
+          </p>
+          <div class="flex gap-4">
+            <a class="text-light-gray hover:text-accent-cyan transition-colors" href="#"><i data-lucide="network" class="w-5 h-5"></i></a>
+            <a class="text-light-gray hover:text-accent-cyan transition-colors" href="#"><i data-lucide="globe" class="w-5 h-5"></i></a>
+            <a class="text-light-gray hover:text-accent-cyan transition-colors" href="#"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+          </div>
+        </div>
+        <div class="space-y-6">
+          <p class="font-display font-bold text-lg">Solutions</p>
+          <ul class="space-y-4 font-mono text-xs tracking-wider">
+            <li><a class="text-light-gray hover:text-accent-cyan hover:translate-x-1 transition-all duration-300 block" href="#">ADVERTISING</a></li>
+            <li><a class="text-light-gray hover:text-accent-cyan hover:translate-x-1 transition-all duration-300 block" href="#">ANALYTICS</a></li>
+            <li><a class="text-light-gray hover:text-accent-cyan hover:translate-x-1 transition-all duration-300 block" href="#">SEO</a></li>
+            <li><a class="text-light-gray hover:text-accent-cyan hover:translate-x-1 transition-all duration-300 block" href="#">ABM</a></li>
+          </ul>
+        </div>
+        <div class="space-y-6">
+          <p class="font-display font-bold text-lg">Company</p>
+          <ul class="space-y-4 font-mono text-xs tracking-wider">
+            <li><a class="text-light-gray hover:text-accent-cyan hover:translate-x-1 transition-all duration-300 block" href="#">OUR STORY</a></li>
+            <li><a class="text-light-gray hover:text-accent-cyan hover:translate-x-1 transition-all duration-300 block" href="#">CLIENT RESULTS</a></li>
+            <li><a class="text-light-gray hover:text-accent-cyan hover:translate-x-1 transition-all duration-300 block" href="#">CAREERS</a></li>
+            <li><a class="text-light-gray hover:text-accent-cyan hover:translate-x-1 transition-all duration-300 block" href="#">G2 BADGE</a></li>
+          </ul>
+        </div>
+        <div class="space-y-6">
+          <p class="font-display font-bold text-lg">Connect</p>
+          <ul class="space-y-4 font-mono text-xs tracking-wider">
+            <li><a class="text-light-gray hover:text-accent-cyan hover:translate-x-1 transition-all duration-300 block" href="#">LINKEDIN</a></li>
+            <li><a class="text-light-gray hover:text-accent-cyan hover:translate-x-1 transition-all duration-300 block" href="#">PRIVACY POLICY</a></li>
+            <li><a class="text-light-gray hover:text-accent-cyan hover:translate-x-1 transition-all duration-300 block" href="#">TERMS OF SERVICE</a></li>
+          </ul>
+          <div class="pt-4">
+            <p class="text-cool-gray font-mono text-[10px]">© 2026 VertoDigital. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

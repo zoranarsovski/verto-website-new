@@ -145,7 +145,835 @@
     </nav>
 
     <main>
-      <!-- SECTIONS GO HERE -->
+      <!-- Hero -->
+      <section class="bg-white section-rule">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-8 py-16 md:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <!-- Left: copy -->
+          <div class="lg:col-span-6 space-y-7">
+            <div class="inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.15em] text-brand-dark/65 border border-divider rounded-full px-3 py-1.5 bg-surface">
+              <span class="relative flex h-1.5 w-1.5">
+                <span class="absolute inline-flex h-full w-full rounded-full bg-accent-cyan opacity-60 pulse-dot"></span>
+                <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-accent-cyan"></span>
+              </span>
+              18 engagements · 1,247 SQLs shipped this week
+            </div>
+
+            <h1 class="text-[44px] md:text-[60px] font-medium leading-[1.03] tracking-[-0.025em] text-brand-dark">
+              Pipeline infrastructure<br />
+              for hands-on B2B<br />
+              marketing teams.
+            </h1>
+
+            <p class="text-[17px] md:text-[19px] text-brand-dark/75 leading-[1.55] max-w-[52ch]">
+              We ship alongside your demand gen, RevOps, and ABM teams.
+              Salesforce-native. Signal-driven. Measurable by Monday.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-3 pt-2">
+              <a href="#contact" class="bg-brand-dark hover:bg-brand-blue text-white px-6 py-3.5 rounded-md font-medium text-[15px] transition-colors inline-flex items-center justify-center gap-2">
+                Start an engagement
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+              <a href="#playbooks" class="border border-divider hover:border-brand-dark hover:bg-surface text-brand-dark px-6 py-3.5 rounded-md font-medium text-[15px] transition-colors inline-flex items-center justify-center gap-2">
+                Browse playbooks
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+
+            <!-- Integration strip -->
+            <div class="pt-6 section-rule">
+              <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-dark/50 font-medium mb-3">Works natively with your stack</p>
+              <div class="flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-[12px] text-brand-dark/70">
+                <span>Salesforce</span>
+                <span class="text-divider">·</span>
+                <span>HubSpot</span>
+                <span class="text-divider">·</span>
+                <span>6sense</span>
+                <span class="text-divider">·</span>
+                <span>Clay</span>
+                <span class="text-divider">·</span>
+                <span>Outreach</span>
+                <span class="text-divider">·</span>
+                <span>LinkedIn Ads</span>
+                <span class="text-divider">·</span>
+                <span>Clearbit</span>
+                <span class="text-divider">·</span>
+                <span>+17 more</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: terminal-style status view -->
+          <div class="lg:col-span-6">
+            <div class="terminal rounded-lg border border-brand-dark/20 shadow-2xl shadow-brand-blue/10 overflow-hidden">
+              <!-- Terminal top bar -->
+              <div class="flex items-center justify-between px-4 py-2.5 border-b border-white/10 bg-black/30">
+                <div class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-red-400/70"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400/70"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-400/70"></span>
+                </div>
+                <p class="text-[11px] text-white/50 font-mono">acme-inc · pipeline-ops</p>
+                <div class="w-12"></div>
+              </div>
+
+              <!-- Terminal body -->
+              <div class="p-5 md:p-6 space-y-1">
+                <p><span class="text-accent-cyan">$</span> <span class="text-white">verto status</span> <span class="text-white/40">--org=acme --period=7d</span></p>
+                <p class="pt-2 text-white/40 text-[11px] uppercase tracking-widest">Pipeline · last 7 days</p>
+                <p class="flex items-center gap-3">
+                  <span class="text-emerald-400">●</span>
+                  <span class="text-white/90 flex-1">Pipeline sourced</span>
+                  <span class="text-white font-mono">$847K</span>
+                  <span class="text-emerald-400 text-[11px]">↑ 12.4%</span>
+                </p>
+                <p class="flex items-center gap-3">
+                  <span class="text-emerald-400">●</span>
+                  <span class="text-white/90 flex-1">New SQLs</span>
+                  <span class="text-white font-mono">127</span>
+                  <span class="text-emerald-400 text-[11px]">↑ 18.1%</span>
+                </p>
+                <p class="flex items-center gap-3">
+                  <span class="text-white/40">●</span>
+                  <span class="text-white/90 flex-1">Active campaigns</span>
+                  <span class="text-white font-mono">23</span>
+                  <span class="text-white/50 text-[11px]">→ stable</span>
+                </p>
+                <p class="flex items-center gap-3">
+                  <span class="text-emerald-400">●</span>
+                  <span class="text-white/90 flex-1">CAC (rolling)</span>
+                  <span class="text-white font-mono">$29k</span>
+                  <span class="text-emerald-400 text-[11px]">↓ 8.2%</span>
+                </p>
+
+                <p class="pt-4 text-white/40 text-[11px] uppercase tracking-widest">Recent activity</p>
+                <p class="text-white/85">→ <span class="text-accent-cyan">[ABM]</span> Tier 1 sequence launched · 52 accounts</p>
+                <p class="text-white/85">→ <span class="text-accent-cyan">[Paid]</span> LinkedIn CRM sync optimized · CPA −22%</p>
+                <p class="text-white/85">→ <span class="text-accent-cyan">[SEO]</span> "graph database alternative" now ranking #3</p>
+                <p class="text-white/85">→ <span class="text-accent-lime">[GEO]</span> New: ChatGPT recommendation rate now 38%</p>
+
+                <p class="pt-3"><span class="text-accent-cyan">$</span> <span class="inline-block w-2 h-4 bg-accent-cyan align-middle animate-pulse"></span></p>
+              </div>
+            </div>
+
+            <!-- Context line below terminal -->
+            <p class="text-[11px] font-mono text-brand-dark/50 mt-3 text-right">live Monday briefing · sample from acme-inc</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Live Stats strip -->
+      <section class="bg-brand-dark text-white relative overflow-hidden">
+        <div class="absolute inset-0 dotted-grid opacity-30"></div>
+        <div class="relative max-w-[1400px] mx-auto px-6 lg:px-8 py-10">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div class="flex items-center gap-3">
+              <span class="relative flex h-2 w-2">
+                <span class="absolute inline-flex h-full w-full rounded-full bg-accent-cyan opacity-60 pulse-dot"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-accent-cyan"></span>
+              </span>
+              <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-light">Live · this week across our client base</p>
+            </div>
+            <p class="font-mono text-[11px] text-white/50">Updated every 5 min · last sync 12s ago</p>
+          </div>
+
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 mt-8 rounded-lg overflow-hidden">
+            <div class="bg-brand-dark p-6">
+              <p class="font-mono text-[10px] uppercase tracking-widest text-white/50 mb-2">Pipeline sourced</p>
+              <p class="font-mono text-[32px] md:text-[40px] font-medium text-accent-cyan leading-none tabular-nums">$4.2M</p>
+              <p class="font-mono text-[11px] text-emerald-400 mt-2 tabular-nums">↑ 14.2% vs last week</p>
+            </div>
+            <div class="bg-brand-dark p-6">
+              <p class="font-mono text-[10px] uppercase tracking-widest text-white/50 mb-2">New SQLs</p>
+              <p class="font-mono text-[32px] md:text-[40px] font-medium text-accent-cyan leading-none tabular-nums">1,247</p>
+              <p class="font-mono text-[11px] text-emerald-400 mt-2 tabular-nums">↑ 9.3% vs last week</p>
+            </div>
+            <div class="bg-brand-dark p-6">
+              <p class="font-mono text-[10px] uppercase tracking-widest text-white/50 mb-2">Active campaigns</p>
+              <p class="font-mono text-[32px] md:text-[40px] font-medium text-white leading-none tabular-nums">347</p>
+              <p class="font-mono text-[11px] text-white/50 mt-2 tabular-nums">→ stable</p>
+            </div>
+            <div class="bg-brand-dark p-6">
+              <p class="font-mono text-[10px] uppercase tracking-widest text-white/50 mb-2">Integrations built</p>
+              <p class="font-mono text-[32px] md:text-[40px] font-medium text-white leading-none tabular-nums">142</p>
+              <p class="font-mono text-[11px] text-emerald-400 mt-2 tabular-nums">+12 this week</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section id="how" class="bg-white section-rule">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-8 py-20 md:py-28">
+          <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+            <div>
+              <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-blue font-medium mb-3">How it works</p>
+              <h2 class="text-[32px] md:text-[44px] font-medium text-brand-dark leading-[1.1] tracking-[-0.02em] max-w-2xl">From kickoff to first pipeline in 21 days.</h2>
+            </div>
+            <div class="flex items-center gap-2 font-mono text-[11px] text-brand-dark/60">
+              <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+              <span>Average engagement: 4 weeks to reporting · 90 days to first pipeline lift</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <!-- Step 01 -->
+            <div class="card p-6 relative">
+              <div class="flex items-center justify-between mb-6">
+                <span class="font-mono text-[11px] uppercase tracking-widest text-brand-blue font-medium">Week 01</span>
+                <span class="font-mono text-[13px] text-brand-dark/30 tabular-nums">01</span>
+              </div>
+              <h3 class="text-[17px] font-medium text-brand-dark mb-2.5">Audit</h3>
+              <p class="text-brand-dark/70 text-[13.5px] leading-[1.55] mb-5">Connect Salesforce, HubSpot, ad platforms. We map your funnel end-to-end.</p>
+              <ul class="space-y-2 font-mono text-[11px] text-brand-dark/65">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-accent-cyan"></i><span>6 tools connected</span></li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-accent-cyan"></i><span>47 signals mapped</span></li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-accent-cyan"></i><span>Leak points documented</span></li>
+              </ul>
+            </div>
+
+            <!-- Step 02 -->
+            <div class="card p-6 relative">
+              <div class="flex items-center justify-between mb-6">
+                <span class="font-mono text-[11px] uppercase tracking-widest text-brand-blue font-medium">Week 02</span>
+                <span class="font-mono text-[13px] text-brand-dark/30 tabular-nums">02</span>
+              </div>
+              <h3 class="text-[17px] font-medium text-brand-dark mb-2.5">Plan</h3>
+              <p class="text-brand-dark/70 text-[13.5px] leading-[1.55] mb-5">Playbook selection, budget allocation, sprint cadence locked with your team.</p>
+              <ul class="space-y-2 font-mono text-[11px] text-brand-dark/65">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-accent-cyan"></i><span>3 playbooks activated</span></li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-accent-cyan"></i><span>Budget reallocation model</span></li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-accent-cyan"></i><span>OKRs agreed with RevOps</span></li>
+              </ul>
+            </div>
+
+            <!-- Step 03 -->
+            <div class="card p-6 relative">
+              <div class="flex items-center justify-between mb-6">
+                <span class="font-mono text-[11px] uppercase tracking-widest text-brand-blue font-medium">Week 03+</span>
+                <span class="font-mono text-[13px] text-brand-dark/30 tabular-nums">03</span>
+              </div>
+              <h3 class="text-[17px] font-medium text-brand-dark mb-2.5">Ship</h3>
+              <p class="text-brand-dark/70 text-[13.5px] leading-[1.55] mb-5">Campaigns live, dashboards wired, weekly ops stand-ups in your Slack.</p>
+              <ul class="space-y-2 font-mono text-[11px] text-brand-dark/65">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-accent-cyan"></i><span>Dashboards updated daily</span></li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-accent-cyan"></i><span>Private Slack channel</span></li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-accent-cyan"></i><span>Weekly 30-min stand-up</span></li>
+              </ul>
+            </div>
+
+            <!-- Step 04 -->
+            <div class="card p-6 relative">
+              <div class="flex items-center justify-between mb-6">
+                <span class="font-mono text-[11px] uppercase tracking-widest text-brand-blue font-medium">Monthly</span>
+                <span class="font-mono text-[13px] text-brand-dark/30 tabular-nums">04</span>
+              </div>
+              <h3 class="text-[17px] font-medium text-brand-dark mb-2.5">Report</h3>
+              <p class="text-brand-dark/70 text-[13.5px] leading-[1.55] mb-5">Pipeline board deck, CAC deep-dive, sprint retro with named owners.</p>
+              <ul class="space-y-2 font-mono text-[11px] text-brand-dark/65">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-accent-cyan"></i><span>1 board-ready deck</span></li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-accent-cyan"></i><span>4 stakeholders briefed</span></li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-accent-cyan"></i><span>Next sprint scoped</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- The Stack -->
+      <section id="stack" class="bg-surface section-rule">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-8 py-20 md:py-28">
+          <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+            <div>
+              <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-blue font-medium mb-3">Integrations</p>
+              <h2 class="text-[32px] md:text-[44px] font-medium text-brand-dark leading-[1.1] tracking-[-0.02em] max-w-2xl">Your stack is our stack.</h2>
+              <p class="mt-4 text-[16px] text-brand-dark/70 leading-[1.55] max-w-2xl">24 native integrations. Zero "bring-your-own-agency". If it's in your tech stack, it's already in our workflow.</p>
+            </div>
+            <a href="#" class="font-mono text-[11px] uppercase tracking-widest text-brand-blue font-medium inline-flex items-center gap-1.5 hover:gap-2.5 transition-all whitespace-nowrap">
+              Full integrations matrix <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+
+          <!-- Category groups -->
+          <div class="space-y-10">
+            <!-- CRM -->
+            <div>
+              <div class="flex items-center gap-3 mb-4">
+                <p class="font-mono text-[11px] uppercase tracking-widest text-brand-dark/60 font-medium">CRM</p>
+                <span class="hr-dashed flex-1"></span>
+              </div>
+              <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+                <div class="card px-4 py-3 flex items-center gap-3"><div class="w-7 h-7 rounded bg-brand-blue/10 flex items-center justify-center"><i data-lucide="cloud" class="w-3.5 h-3.5 text-brand-blue"></i></div><div><p class="text-[13.5px] font-medium text-brand-dark">Salesforce</p><p class="font-mono text-[10px] text-brand-dark/50">native</p></div></div>
+                <div class="card px-4 py-3 flex items-center gap-3"><div class="w-7 h-7 rounded bg-brand-blue/10 flex items-center justify-center"><i data-lucide="cloud" class="w-3.5 h-3.5 text-brand-blue"></i></div><div><p class="text-[13.5px] font-medium text-brand-dark">HubSpot</p><p class="font-mono text-[10px] text-brand-dark/50">native</p></div></div>
+                <div class="card px-4 py-3 flex items-center gap-3"><div class="w-7 h-7 rounded bg-brand-blue/10 flex items-center justify-center"><i data-lucide="cloud" class="w-3.5 h-3.5 text-brand-blue"></i></div><div><p class="text-[13.5px] font-medium text-brand-dark">Pipedrive</p><p class="font-mono text-[10px] text-brand-dark/50">native</p></div></div>
+                <div class="card px-4 py-3 flex items-center gap-3"><div class="w-7 h-7 rounded bg-brand-blue/10 flex items-center justify-center"><i data-lucide="cloud" class="w-3.5 h-3.5 text-brand-blue"></i></div><div><p class="text-[13.5px] font-medium text-brand-dark">Close</p><p class="font-mono text-[10px] text-brand-dark/50">API</p></div></div>
+              </div>
+            </div>
+
+            <!-- Intent & Enrichment -->
+            <div>
+              <div class="flex items-center gap-3 mb-4">
+                <p class="font-mono text-[11px] uppercase tracking-widest text-brand-dark/60 font-medium">Intent · Enrichment</p>
+                <span class="hr-dashed flex-1"></span>
+              </div>
+              <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+                <div class="card px-4 py-3 flex items-center gap-3"><div class="w-7 h-7 rounded bg-accent-cyan/15 flex items-center justify-center"><i data-lucide="radar" class="w-3.5 h-3.5 text-accent-cyan"></i></div><div><p class="text-[13.5px] font-medium text-brand-dark">6sense</p><p class="font-mono text-[10px] text-brand-dark/50">native</p></div></div>
+                <div class="card px-4 py-3 flex items-center gap-3"><div class="w-7 h-7 rounded bg-accent-cyan/15 flex items-center justify-center"><i data-lucide="radar" class="w-3.5 h-3.5 text-accent-cyan"></i></div><div><p class="text-[13.5px] font-medium text-brand-dark">Demandbase</p><p class="font-mono text-[10px] text-brand-dark/50">native</p></div></div>
+                <div class="card px-4 py-3 flex items-center gap-3"><div class="w-7 h-7 rounded bg-accent-cyan/15 flex items-center justify-center"><i data-lucide="radar" class="w-3.5 h-3.5 text-accent-cyan"></i></div><div><p class="text-[13.5px] font-medium text-brand-dark">Bombora</p><p class="font-mono text-[10px] text-brand-dark/50">API</p></div></div>
+                <div class="card px-4 py-3 flex items-center gap-3"><div class="w-7 h-7 rounded bg-accent-cyan/15 flex items-center justify-center"><i data-lucide="radar" class="w-3.5 h-3.5 text-accent-cyan"></i></div><div><p class="text-[13.5px] font-medium text-brand-dark">ZoomInfo</p><p class="font-mono text-[10px] text-brand-dark/50">native</p></div></div>
+                <div class="card px-4 py-3 flex items-center gap-3"><div class="w-7 h-7 rounded bg-accent-cyan/15 flex items-center justify-center"><i data-lucide="radar" class="w-3.5 h-3.5 text-accent-cyan"></i></div><div><p class="text-[13.5px] font-medium text-brand-dark">Clearbit</p><p class="font-mono text-[10px] text-brand-dark/50">native</p></div></div>
+                <div class="card px-4 py-3 flex items-center gap-3"><div class="w-7 h-7 rounded bg-accent-cyan/15 flex items-center justify-center"><i data-lucide="radar" class="w-3.5 h-3.5 text-accent-cyan"></i></div><div><p class="text-[13.5px] font-medium text-brand-dark">Clay</p><p class="font-mono text-[10px] text-brand-dark/50">partner</p></div></div>
+              </div>
+            </div>
+
+            <!-- Ads -->
+            <div>
+              <div class="flex items-center gap-3 mb-4">
+                <p class="font-mono text-[11px] uppercase tracking-widest text-brand-dark/60 font-medium">Ads · Channels</p>
+                <span class="hr-dashed flex-1"></span>
+              </div>
+              <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+                <div class="card px-4 py-3 flex items-center gap-3"><div class="w-7 h-7 rounded bg-brand-dark/10 flex items-center justify-center"><i data-lucide="megaphone" class="w-3.5 h-3.5 text-brand-dark"></i></div><div><p class="text-[13.5px] font-medium text-brand-dark">LinkedIn Ads</p><p class="font-mono text-[10px] text-brand-dark/50">CAPI</p></div></div>
+                <div class="card px-4 py-3 flex items-center gap-3"><div class="w-7 h-7 rounded bg-brand-dark/10 flex items-center justify-center"><i data-lucide="megaphone" class="w-3.5 h-3.5 text-brand-dark"></i></div><div><p class="text-[13.5px] font-medium text-brand-dark">Google Ads</p><p class="font-mono text-[10px] text-brand-dark/50">offline conv.</p></div></div>
+                <div class="card px-4 py-3 flex items-center gap-3"><div class="w-7 h-7 rounded bg-brand-dark/10 flex items-center justify-center"><i data-lucide="megaphone" class="w-3.5 h-3.5 text-brand-dark"></i></div><div><p class="text-[13.5px] font-medium text-brand-dark">Meta Ads</p><p class="font-mono text-[10px] text-brand-dark/50">CAPI</p></div></div>
+                <div class="card px-4 py-3 flex items-center gap-3"><div class="w-7 h-7 rounded bg-brand-dark/10 flex items-center justify-center"><i data-lucide="megaphone" class="w-3.5 h-3.5 text-brand-dark"></i></div><div><p class="text-[13.5px] font-medium text-brand-dark">Reddit Ads</p><p class="font-mono text-[10px] text-brand-dark/50">pixel+CAPI</p></div></div>
+              </div>
+            </div>
+
+            <!-- Sales & Orchestration -->
+            <div>
+              <div class="flex items-center gap-3 mb-4">
+                <p class="font-mono text-[11px] uppercase tracking-widest text-brand-dark/60 font-medium">Sales · Orchestration</p>
+                <span class="hr-dashed flex-1"></span>
+              </div>
+              <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+                <div class="card px-4 py-3 flex items-center gap-3"><div class="w-7 h-7 rounded bg-accent-purple/15 flex items-center justify-center"><i data-lucide="workflow" class="w-3.5 h-3.5 text-accent-purple"></i></div><div><p class="text-[13.5px] font-medium text-brand-dark">Outreach</p><p class="font-mono text-[10px] text-brand-dark/50">native</p></div></div>
+                <div class="card px-4 py-3 flex items-center gap-3"><div class="w-7 h-7 rounded bg-accent-purple/15 flex items-center justify-center"><i data-lucide="workflow" class="w-3.5 h-3.5 text-accent-purple"></i></div><div><p class="text-[13.5px] font-medium text-brand-dark">Salesloft</p><p class="font-mono text-[10px] text-brand-dark/50">native</p></div></div>
+                <div class="card px-4 py-3 flex items-center gap-3"><div class="w-7 h-7 rounded bg-accent-purple/15 flex items-center justify-center"><i data-lucide="workflow" class="w-3.5 h-3.5 text-accent-purple"></i></div><div><p class="text-[13.5px] font-medium text-brand-dark">Apollo</p><p class="font-mono text-[10px] text-brand-dark/50">API</p></div></div>
+                <div class="card px-4 py-3 flex items-center gap-3"><div class="w-7 h-7 rounded bg-accent-purple/15 flex items-center justify-center"><i data-lucide="workflow" class="w-3.5 h-3.5 text-accent-purple"></i></div><div><p class="text-[13.5px] font-medium text-brand-dark">Gong</p><p class="font-mono text-[10px] text-brand-dark/50">API</p></div></div>
+                <div class="card px-4 py-3 flex items-center gap-3"><div class="w-7 h-7 rounded bg-accent-purple/15 flex items-center justify-center"><i data-lucide="workflow" class="w-3.5 h-3.5 text-accent-purple"></i></div><div><p class="text-[13.5px] font-medium text-brand-dark">Tray.io</p><p class="font-mono text-[10px] text-brand-dark/50">partner</p></div></div>
+                <div class="card px-4 py-3 flex items-center gap-3"><div class="w-7 h-7 rounded bg-accent-purple/15 flex items-center justify-center"><i data-lucide="workflow" class="w-3.5 h-3.5 text-accent-purple"></i></div><div><p class="text-[13.5px] font-medium text-brand-dark">n8n</p><p class="font-mono text-[10px] text-brand-dark/50">self-host</p></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Playbooks library -->
+      <section id="playbooks" class="bg-white section-rule">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-8 py-20 md:py-28">
+          <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
+            <div>
+              <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-blue font-medium mb-3">Playbook library</p>
+              <h2 class="text-[32px] md:text-[44px] font-medium text-brand-dark leading-[1.1] tracking-[-0.02em] max-w-2xl">12 proven playbooks. Pick one, combine three.</h2>
+            </div>
+            <div class="flex items-center gap-2 font-mono text-[11px] text-brand-dark/60">
+              <i data-lucide="book-open" class="w-3.5 h-3.5"></i>
+              <span>Each playbook includes scope, cadence, deliverables, and expected lift</span>
+            </div>
+          </div>
+
+          <!-- Filter row (display only) -->
+          <div class="flex flex-wrap items-center gap-2 mb-6 pb-6 section-rule">
+            <span class="font-mono text-[10px] uppercase tracking-widest text-brand-dark/50 font-medium mr-2">Filter</span>
+            <button class="text-[12px] px-3 py-1.5 rounded-full bg-brand-dark text-white font-medium">All · 12</button>
+            <button class="text-[12px] px-3 py-1.5 rounded-full border border-divider text-brand-dark/75 hover:border-brand-dark transition-colors">ABM · 3</button>
+            <button class="text-[12px] px-3 py-1.5 rounded-full border border-divider text-brand-dark/75 hover:border-brand-dark transition-colors">Paid · 2</button>
+            <button class="text-[12px] px-3 py-1.5 rounded-full border border-divider text-brand-dark/75 hover:border-brand-dark transition-colors">Organic · 2</button>
+            <button class="text-[12px] px-3 py-1.5 rounded-full border border-divider text-brand-dark/75 hover:border-brand-dark transition-colors">Analytics · 2</button>
+            <button class="text-[12px] px-3 py-1.5 rounded-full border border-divider text-brand-dark/75 hover:border-brand-dark transition-colors">AI · 1</button>
+            <button class="text-[12px] px-3 py-1.5 rounded-full border border-divider text-brand-dark/75 hover:border-brand-dark transition-colors">Sales alignment · 2</button>
+          </div>
+
+          <!-- Playbooks grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- 01 -->
+            <article class="card p-6 flex flex-col">
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-mono text-[10px] uppercase tracking-widest text-accent-cyan bg-accent-cyan/10 px-2 py-0.5 rounded font-medium">ABM · Enterprise</span>
+                <span class="font-mono text-[11px] text-brand-dark/40 tabular-nums">P01</span>
+              </div>
+              <h3 class="text-[17px] font-medium text-brand-dark mb-2">Tier 1 Named Account Orchestration</h3>
+              <p class="text-[13.5px] text-brand-dark/70 leading-[1.55] mb-5">One-to-one engagement for 30–100 target accounts. Intent-triggered sales plays with weekly account scoring.</p>
+              <dl class="grid grid-cols-2 gap-2 text-[11px] font-mono pt-4 section-rule mt-auto">
+                <div><dt class="text-brand-dark/50">Duration</dt><dd class="text-brand-dark">12 wks</dd></div>
+                <div><dt class="text-brand-dark/50">Team</dt><dd class="text-brand-dark">3</dd></div>
+                <div><dt class="text-brand-dark/50">Expected lift</dt><dd class="text-brand-blue tabular-nums">+80% S1 opps</dd></div>
+                <div><dt class="text-brand-dark/50">Integrations</dt><dd class="text-brand-dark">6sense, SF, LI</dd></div>
+              </dl>
+            </article>
+
+            <!-- 02 -->
+            <article class="card p-6 flex flex-col">
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-mono text-[10px] uppercase tracking-widest text-accent-cyan bg-accent-cyan/10 px-2 py-0.5 rounded font-medium">Analytics</span>
+                <span class="font-mono text-[11px] text-brand-dark/40 tabular-nums">P02</span>
+              </div>
+              <h3 class="text-[17px] font-medium text-brand-dark mb-2">Dark Social Attribution Rebuild</h3>
+              <p class="text-[13.5px] text-brand-dark/70 leading-[1.55] mb-5">Self-reported attribution + influenced-pipeline model. Stop losing credit for channels your CFO can't see.</p>
+              <dl class="grid grid-cols-2 gap-2 text-[11px] font-mono pt-4 section-rule mt-auto">
+                <div><dt class="text-brand-dark/50">Duration</dt><dd class="text-brand-dark">6 wks</dd></div>
+                <div><dt class="text-brand-dark/50">Team</dt><dd class="text-brand-dark">2</dd></div>
+                <div><dt class="text-brand-dark/50">Expected lift</dt><dd class="text-brand-blue tabular-nums">+40% attr pipeline</dd></div>
+                <div><dt class="text-brand-dark/50">Integrations</dt><dd class="text-brand-dark">HubSpot, Segment</dd></div>
+              </dl>
+            </article>
+
+            <!-- 03 -->
+            <article class="card p-6 flex flex-col">
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-mono text-[10px] uppercase tracking-widest text-accent-cyan bg-accent-cyan/10 px-2 py-0.5 rounded font-medium">Paid · Channel</span>
+                <span class="font-mono text-[11px] text-brand-dark/40 tabular-nums">P03</span>
+              </div>
+              <h3 class="text-[17px] font-medium text-brand-dark mb-2">LinkedIn Decision-Maker Activation</h3>
+              <p class="text-[13.5px] text-brand-dark/70 leading-[1.55] mb-5">Executive-level targeting with CAPI feedback. Bid on SQL rate, not clicks. Matched audiences + thought leader ads.</p>
+              <dl class="grid grid-cols-2 gap-2 text-[11px] font-mono pt-4 section-rule mt-auto">
+                <div><dt class="text-brand-dark/50">Duration</dt><dd class="text-brand-dark">ongoing</dd></div>
+                <div><dt class="text-brand-dark/50">Team</dt><dd class="text-brand-dark">2</dd></div>
+                <div><dt class="text-brand-dark/50">Expected lift</dt><dd class="text-brand-blue tabular-nums">70% pipeline inf.</dd></div>
+                <div><dt class="text-brand-dark/50">Integrations</dt><dd class="text-brand-dark">LI CAPI, SF</dd></div>
+              </dl>
+            </article>
+
+            <!-- 04 -->
+            <article class="card p-6 flex flex-col">
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-mono text-[10px] uppercase tracking-widest text-accent-cyan bg-accent-cyan/10 px-2 py-0.5 rounded font-medium">Sales alignment</span>
+                <span class="font-mono text-[11px] text-brand-dark/40 tabular-nums">P04</span>
+              </div>
+              <h3 class="text-[17px] font-medium text-brand-dark mb-2">Intent-Based SDR Handoff</h3>
+              <p class="text-[13.5px] text-brand-dark/70 leading-[1.55] mb-5">Score → route → sequence. Pipe warm accounts into the right rep within 4 minutes of signal fire.</p>
+              <dl class="grid grid-cols-2 gap-2 text-[11px] font-mono pt-4 section-rule mt-auto">
+                <div><dt class="text-brand-dark/50">Duration</dt><dd class="text-brand-dark">4 wks</dd></div>
+                <div><dt class="text-brand-dark/50">Team</dt><dd class="text-brand-dark">2</dd></div>
+                <div><dt class="text-brand-dark/50">Expected lift</dt><dd class="text-brand-blue tabular-nums">+3× SDR reply rate</dd></div>
+                <div><dt class="text-brand-dark/50">Integrations</dt><dd class="text-brand-dark">Outreach, 6sense</dd></div>
+              </dl>
+            </article>
+
+            <!-- 05 -->
+            <article class="card p-6 flex flex-col">
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-mono text-[10px] uppercase tracking-widest text-accent-cyan bg-accent-cyan/10 px-2 py-0.5 rounded font-medium">Organic</span>
+                <span class="font-mono text-[11px] text-brand-dark/40 tabular-nums">P05</span>
+              </div>
+              <h3 class="text-[17px] font-medium text-brand-dark mb-2">Revenue-Tied SEO</h3>
+              <p class="text-[13.5px] text-brand-dark/70 leading-[1.55] mb-5">Topic clusters mapped to ICP questions. Every URL tied to a Salesforce campaign. Technical SEO + editorial content.</p>
+              <dl class="grid grid-cols-2 gap-2 text-[11px] font-mono pt-4 section-rule mt-auto">
+                <div><dt class="text-brand-dark/50">Duration</dt><dd class="text-brand-dark">ongoing</dd></div>
+                <div><dt class="text-brand-dark/50">Team</dt><dd class="text-brand-dark">3</dd></div>
+                <div><dt class="text-brand-dark/50">Expected lift</dt><dd class="text-brand-blue tabular-nums">3× organic SQLs</dd></div>
+                <div><dt class="text-brand-dark/50">Integrations</dt><dd class="text-brand-dark">GSC, GA4, SF</dd></div>
+              </dl>
+            </article>
+
+            <!-- 06 -->
+            <article class="card p-6 flex flex-col">
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-mono text-[10px] uppercase tracking-widest text-accent-cyan bg-accent-cyan/10 px-2 py-0.5 rounded font-medium">Paid · Analytics</span>
+                <span class="font-mono text-[11px] text-brand-dark/40 tabular-nums">P06</span>
+              </div>
+              <h3 class="text-[17px] font-medium text-brand-dark mb-2">Paid Media Pipeline Model</h3>
+              <p class="text-[13.5px] text-brand-dark/70 leading-[1.55] mb-5">Shift bid optimization from clicks → qualified pipeline. MMM + touchpoint weighting for full-funnel ROAS.</p>
+              <dl class="grid grid-cols-2 gap-2 text-[11px] font-mono pt-4 section-rule mt-auto">
+                <div><dt class="text-brand-dark/50">Duration</dt><dd class="text-brand-dark">8 wks</dd></div>
+                <div><dt class="text-brand-dark/50">Team</dt><dd class="text-brand-dark">2</dd></div>
+                <div><dt class="text-brand-dark/50">Expected lift</dt><dd class="text-brand-blue tabular-nums">−38% CAC</dd></div>
+                <div><dt class="text-brand-dark/50">Integrations</dt><dd class="text-brand-dark">All ad platforms</dd></div>
+              </dl>
+            </article>
+
+            <!-- 07 — featured: AI -->
+            <article class="card p-6 flex flex-col border-accent-purple/40 bg-gradient-to-br from-accent-purple/5 to-transparent">
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-mono text-[10px] uppercase tracking-widest text-accent-purple bg-accent-purple/10 px-2 py-0.5 rounded font-medium">AI · New</span>
+                <span class="font-mono text-[11px] text-brand-dark/40 tabular-nums">P07</span>
+              </div>
+              <h3 class="text-[17px] font-medium text-brand-dark mb-2">AI-Visibility Content Engine (GEO)</h3>
+              <p class="text-[13.5px] text-brand-dark/70 leading-[1.55] mb-5">Optimize for ChatGPT, Claude, Gemini, Perplexity. The content layer that gets you recommended during the discovery phase.</p>
+              <dl class="grid grid-cols-2 gap-2 text-[11px] font-mono pt-4 section-rule mt-auto">
+                <div><dt class="text-brand-dark/50">Duration</dt><dd class="text-brand-dark">ongoing</dd></div>
+                <div><dt class="text-brand-dark/50">Team</dt><dd class="text-brand-dark">2</dd></div>
+                <div><dt class="text-brand-dark/50">Expected lift</dt><dd class="text-accent-purple tabular-nums">12-mo first-mover</dd></div>
+                <div><dt class="text-brand-dark/50">Integrations</dt><dd class="text-brand-dark">Custom</dd></div>
+              </dl>
+            </article>
+
+            <!-- 08 -->
+            <article class="card p-6 flex flex-col">
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-mono text-[10px] uppercase tracking-widest text-accent-cyan bg-accent-cyan/10 px-2 py-0.5 rounded font-medium">Lifecycle</span>
+                <span class="font-mono text-[11px] text-brand-dark/40 tabular-nums">P08</span>
+              </div>
+              <h3 class="text-[17px] font-medium text-brand-dark mb-2">Lifecycle Orchestration</h3>
+              <p class="text-[13.5px] text-brand-dark/70 leading-[1.55] mb-5">Nurture → demo → trial → close. Triggered across email, ads, sales touches. One unified sequence per persona.</p>
+              <dl class="grid grid-cols-2 gap-2 text-[11px] font-mono pt-4 section-rule mt-auto">
+                <div><dt class="text-brand-dark/50">Duration</dt><dd class="text-brand-dark">6 wks</dd></div>
+                <div><dt class="text-brand-dark/50">Team</dt><dd class="text-brand-dark">2</dd></div>
+                <div><dt class="text-brand-dark/50">Expected lift</dt><dd class="text-brand-blue tabular-nums">+60% velocity</dd></div>
+                <div><dt class="text-brand-dark/50">Integrations</dt><dd class="text-brand-dark">Marketo, SF</dd></div>
+              </dl>
+            </article>
+
+            <!-- 09 -->
+            <article class="card p-6 flex flex-col">
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-mono text-[10px] uppercase tracking-widest text-accent-cyan bg-accent-cyan/10 px-2 py-0.5 rounded font-medium">Infrastructure</span>
+                <span class="font-mono text-[11px] text-brand-dark/40 tabular-nums">P09</span>
+              </div>
+              <h3 class="text-[17px] font-medium text-brand-dark mb-2">Attribution Rebuild</h3>
+              <p class="text-[13.5px] text-brand-dark/70 leading-[1.55] mb-5">Identity graph + multi-touch model + Salesforce campaign sync. The data plumbing your CFO will accept.</p>
+              <dl class="grid grid-cols-2 gap-2 text-[11px] font-mono pt-4 section-rule mt-auto">
+                <div><dt class="text-brand-dark/50">Duration</dt><dd class="text-brand-dark">4 wks</dd></div>
+                <div><dt class="text-brand-dark/50">Team</dt><dd class="text-brand-dark">3</dd></div>
+                <div><dt class="text-brand-dark/50">Expected lift</dt><dd class="text-brand-blue tabular-nums">Single source of truth</dd></div>
+                <div><dt class="text-brand-dark/50">Integrations</dt><dd class="text-brand-dark">Snowflake, SF</dd></div>
+              </dl>
+            </article>
+
+            <!-- 10 -->
+            <article class="card p-6 flex flex-col">
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-mono text-[10px] uppercase tracking-widest text-accent-cyan bg-accent-cyan/10 px-2 py-0.5 rounded font-medium">Events · ABM</span>
+                <span class="font-mono text-[11px] text-brand-dark/40 tabular-nums">P10</span>
+              </div>
+              <h3 class="text-[17px] font-medium text-brand-dark mb-2">Event-Led Growth Motion</h3>
+              <p class="text-[13.5px] text-brand-dark/70 leading-[1.55] mb-5">Pre-event outreach, on-site meeting ops, post-event sequencing. Turn $150K events into $3M in pipeline.</p>
+              <dl class="grid grid-cols-2 gap-2 text-[11px] font-mono pt-4 section-rule mt-auto">
+                <div><dt class="text-brand-dark/50">Duration</dt><dd class="text-brand-dark">per event</dd></div>
+                <div><dt class="text-brand-dark/50">Team</dt><dd class="text-brand-dark">3</dd></div>
+                <div><dt class="text-brand-dark/50">Expected lift</dt><dd class="text-brand-blue tabular-nums">20× event ROI</dd></div>
+                <div><dt class="text-brand-dark/50">Integrations</dt><dd class="text-brand-dark">6sense, SF, LI</dd></div>
+              </dl>
+            </article>
+
+            <!-- 11 -->
+            <article class="card p-6 flex flex-col">
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-mono text-[10px] uppercase tracking-widest text-accent-cyan bg-accent-cyan/10 px-2 py-0.5 rounded font-medium">Ecosystem</span>
+                <span class="font-mono text-[11px] text-brand-dark/40 tabular-nums">P11</span>
+              </div>
+              <h3 class="text-[17px] font-medium text-brand-dark mb-2">Partner Pipeline Engine</h3>
+              <p class="text-[13.5px] text-brand-dark/70 leading-[1.55] mb-5">Co-marketing playbook for tech alliances. Overlap accounts, joint campaigns, closed-loop attribution across partners.</p>
+              <dl class="grid grid-cols-2 gap-2 text-[11px] font-mono pt-4 section-rule mt-auto">
+                <div><dt class="text-brand-dark/50">Duration</dt><dd class="text-brand-dark">12 wks</dd></div>
+                <div><dt class="text-brand-dark/50">Team</dt><dd class="text-brand-dark">2</dd></div>
+                <div><dt class="text-brand-dark/50">Expected lift</dt><dd class="text-brand-blue tabular-nums">+25% sourced pipeline</dd></div>
+                <div><dt class="text-brand-dark/50">Integrations</dt><dd class="text-brand-dark">Crossbeam, SF</dd></div>
+              </dl>
+            </article>
+
+            <!-- 12 -->
+            <article class="card p-6 flex flex-col">
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-mono text-[10px] uppercase tracking-widest text-accent-cyan bg-accent-cyan/10 px-2 py-0.5 rounded font-medium">Feedback loop</span>
+                <span class="font-mono text-[11px] text-brand-dark/40 tabular-nums">P12</span>
+              </div>
+              <h3 class="text-[17px] font-medium text-brand-dark mb-2">Win-Loss → Programs</h3>
+              <p class="text-[13.5px] text-brand-dark/70 leading-[1.55] mb-5">Interview program that feeds messaging, ICP, and channel mix. Close the loop between sales reality and marketing inputs.</p>
+              <dl class="grid grid-cols-2 gap-2 text-[11px] font-mono pt-4 section-rule mt-auto">
+                <div><dt class="text-brand-dark/50">Duration</dt><dd class="text-brand-dark">quarterly</dd></div>
+                <div><dt class="text-brand-dark/50">Team</dt><dd class="text-brand-dark">1</dd></div>
+                <div><dt class="text-brand-dark/50">Expected lift</dt><dd class="text-brand-blue tabular-nums">Higher-fidelity ICP</dd></div>
+                <div><dt class="text-brand-dark/50">Integrations</dt><dd class="text-brand-dark">Gong, SF</dd></div>
+              </dl>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Engagement tiers -->
+      <section id="pricing" class="bg-surface section-rule">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-8 py-20 md:py-28">
+          <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+            <div>
+              <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-blue font-medium mb-3">Engagement tiers</p>
+              <h2 class="text-[32px] md:text-[44px] font-medium text-brand-dark leading-[1.1] tracking-[-0.02em] max-w-2xl">Pick the shape that fits your team.</h2>
+            </div>
+            <p class="font-mono text-[11px] text-brand-dark/60 max-w-sm">All tiers include private Slack channel, dashboard access, and weekly stand-up. Change tier at any time.</p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <!-- Sprint -->
+            <div class="card p-8 flex flex-col">
+              <div class="flex items-center gap-2 mb-5">
+                <span class="font-mono text-[10px] uppercase tracking-widest text-brand-dark/60 bg-brand-dark/5 px-2 py-0.5 rounded font-medium">Sprint</span>
+              </div>
+              <h3 class="text-[22px] font-medium text-brand-dark mb-2">One playbook. Four weeks.</h3>
+              <p class="text-[14px] text-brand-dark/70 leading-[1.55] mb-6">A focused tactical engagement. Best for teams with a specific blocker — attribution, ABM launch, or a channel rebuild.</p>
+              <dl class="space-y-3 text-[13px] mb-6 pb-6 section-rule">
+                <div class="flex items-start justify-between gap-6"><dt class="text-brand-dark/60">Pod size</dt><dd class="text-brand-dark font-medium">1 specialist</dd></div>
+                <div class="flex items-start justify-between gap-6"><dt class="text-brand-dark/60">Cadence</dt><dd class="text-brand-dark font-medium">Daily async · weekly sync</dd></div>
+                <div class="flex items-start justify-between gap-6"><dt class="text-brand-dark/60">Deliverable</dt><dd class="text-brand-dark font-medium">1 playbook shipped</dd></div>
+                <div class="flex items-start justify-between gap-6"><dt class="text-brand-dark/60">Kickoff</dt><dd class="text-brand-dark font-medium">72 hours</dd></div>
+              </dl>
+              <ul class="space-y-2 text-[13.5px] text-brand-dark/75 mb-8">
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent-cyan flex-shrink-0 mt-1"></i><span>Discovery + audit (week 1)</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent-cyan flex-shrink-0 mt-1"></i><span>Build + ship (weeks 2–3)</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent-cyan flex-shrink-0 mt-1"></i><span>Handover + runbook (week 4)</span></li>
+              </ul>
+              <a href="#contact" class="mt-auto bg-surface hover:bg-brand-dark hover:text-white border border-divider hover:border-brand-dark text-brand-dark text-center py-3 rounded-md font-medium text-[14px] transition-colors">Start a sprint</a>
+            </div>
+
+            <!-- Program — featured -->
+            <div class="card p-8 flex flex-col border-brand-blue shadow-lg shadow-brand-blue/10 relative">
+              <div class="absolute -top-3 left-8 font-mono text-[10px] uppercase tracking-widest bg-brand-blue text-white px-2.5 py-1 rounded">Most common</div>
+              <div class="flex items-center gap-2 mb-5">
+                <span class="font-mono text-[10px] uppercase tracking-widest text-brand-blue bg-brand-blue/10 px-2 py-0.5 rounded font-medium">Program</span>
+              </div>
+              <h3 class="text-[22px] font-medium text-brand-dark mb-2">Multi-playbook. 3 months.</h3>
+              <p class="text-[14px] text-brand-dark/70 leading-[1.55] mb-6">A pod of specialists running 3–5 coordinated playbooks. Best for teams scaling demand gen into a repeatable motion.</p>
+              <dl class="space-y-3 text-[13px] mb-6 pb-6 section-rule">
+                <div class="flex items-start justify-between gap-6"><dt class="text-brand-dark/60">Pod size</dt><dd class="text-brand-dark font-medium">3 specialists</dd></div>
+                <div class="flex items-start justify-between gap-6"><dt class="text-brand-dark/60">Cadence</dt><dd class="text-brand-dark font-medium">2× weekly sync · Slack live</dd></div>
+                <div class="flex items-start justify-between gap-6"><dt class="text-brand-dark/60">Deliverable</dt><dd class="text-brand-dark font-medium">3–5 playbooks + dashboard</dd></div>
+                <div class="flex items-start justify-between gap-6"><dt class="text-brand-dark/60">Kickoff</dt><dd class="text-brand-dark font-medium">2 weeks</dd></div>
+              </dl>
+              <ul class="space-y-2 text-[13.5px] text-brand-dark/75 mb-8">
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent-cyan flex-shrink-0 mt-1"></i><span>Full funnel audit + attribution rebuild</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent-cyan flex-shrink-0 mt-1"></i><span>3–5 playbooks running in parallel</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent-cyan flex-shrink-0 mt-1"></i><span>Monthly board-ready deck</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent-cyan flex-shrink-0 mt-1"></i><span>Dashboard embedded in your BI</span></li>
+              </ul>
+              <a href="#contact" class="mt-auto bg-brand-blue hover:bg-brand-dark text-white text-center py-3 rounded-md font-medium text-[14px] transition-colors">Start a program</a>
+            </div>
+
+            <!-- Embedded -->
+            <div class="card p-8 flex flex-col">
+              <div class="flex items-center gap-2 mb-5">
+                <span class="font-mono text-[10px] uppercase tracking-widest text-accent-purple bg-accent-purple/10 px-2 py-0.5 rounded font-medium">Embedded</span>
+              </div>
+              <h3 class="text-[22px] font-medium text-brand-dark mb-2">Full pod. 12 months.</h3>
+              <p class="text-[14px] text-brand-dark/70 leading-[1.55] mb-6">A dedicated 5-person pod operating as an extension of your team. Best for teams replacing or augmenting in-house demand gen.</p>
+              <dl class="space-y-3 text-[13px] mb-6 pb-6 section-rule">
+                <div class="flex items-start justify-between gap-6"><dt class="text-brand-dark/60">Pod size</dt><dd class="text-brand-dark font-medium">5 specialists</dd></div>
+                <div class="flex items-start justify-between gap-6"><dt class="text-brand-dark/60">Cadence</dt><dd class="text-brand-dark font-medium">Embedded daily</dd></div>
+                <div class="flex items-start justify-between gap-6"><dt class="text-brand-dark/60">Deliverable</dt><dd class="text-brand-dark font-medium">Full marketing ops</dd></div>
+                <div class="flex items-start justify-between gap-6"><dt class="text-brand-dark/60">Kickoff</dt><dd class="text-brand-dark font-medium">30 days</dd></div>
+              </dl>
+              <ul class="space-y-2 text-[13.5px] text-brand-dark/75 mb-8">
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent-cyan flex-shrink-0 mt-1"></i><span>All 12 playbooks available</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent-cyan flex-shrink-0 mt-1"></i><span>Named pod lead + 4 specialists</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent-cyan flex-shrink-0 mt-1"></i><span>Quarterly strategy + monthly exec review</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent-cyan flex-shrink-0 mt-1"></i><span>Co-branded reporting to your board</span></li>
+              </ul>
+              <a href="#contact" class="mt-auto bg-surface hover:bg-brand-dark hover:text-white border border-divider hover:border-brand-dark text-brand-dark text-center py-3 rounded-md font-medium text-[14px] transition-colors">Talk to Paul</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Your Pod -->
+      <section id="pod" class="bg-white section-rule">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-8 py-20 md:py-28">
+          <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+            <div>
+              <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-blue font-medium mb-3">Your pod</p>
+              <h2 class="text-[32px] md:text-[44px] font-medium text-brand-dark leading-[1.1] tracking-[-0.02em] max-w-2xl">Named specialists. Real humans. No account managers.</h2>
+            </div>
+            <p class="font-mono text-[11px] text-brand-dark/60 max-w-sm">Every engagement gets a dedicated pod with named ownership. You always know who's building what.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+            <!-- Paul -->
+            <div class="card p-6">
+              <div class="w-14 h-14 rounded-full bg-gradient-to-br from-brand-blue to-accent-cyan flex items-center justify-center text-white font-medium text-lg mb-4">PG</div>
+              <h3 class="text-[16px] font-medium text-brand-dark">Paul Green</h3>
+              <p class="text-[12px] text-brand-dark/60 mb-3">Founder · Pod Lead</p>
+              <p class="font-mono text-[10px] uppercase tracking-widest text-brand-blue/80 font-medium mb-3">Strategy · Pipeline</p>
+              <p class="text-[12.5px] text-brand-dark/70 leading-[1.55]">Runs every kickoff. Ex-CMO at two B2B SaaS companies. Boston.</p>
+              <div class="flex items-center gap-2 mt-4 pt-3 section-rule font-mono text-[10px] text-brand-dark/50">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 pulse-dot"></span>
+                <span>active</span>
+              </div>
+            </div>
+
+            <!-- Maya -->
+            <div class="card p-6">
+              <div class="w-14 h-14 rounded-full bg-gradient-to-br from-accent-purple to-brand-blue flex items-center justify-center text-white font-medium text-lg mb-4">MK</div>
+              <h3 class="text-[16px] font-medium text-brand-dark">Maya Khatri</h3>
+              <p class="text-[12px] text-brand-dark/60 mb-3">Head of Paid Media</p>
+              <p class="font-mono text-[10px] uppercase tracking-widest text-brand-blue/80 font-medium mb-3">LinkedIn · Google · Meta</p>
+              <p class="text-[12.5px] text-brand-dark/70 leading-[1.55]">$80M+ managed spend. CAPI/offline-conv obsessive. London.</p>
+              <div class="flex items-center gap-2 mt-4 pt-3 section-rule font-mono text-[10px] text-brand-dark/50">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 pulse-dot"></span>
+                <span>active</span>
+              </div>
+            </div>
+
+            <!-- Jordan -->
+            <div class="card p-6">
+              <div class="w-14 h-14 rounded-full bg-gradient-to-br from-accent-cyan to-brand-blue flex items-center justify-center text-white font-medium text-lg mb-4">JR</div>
+              <h3 class="text-[16px] font-medium text-brand-dark">Jordan Reyes</h3>
+              <p class="text-[12px] text-brand-dark/60 mb-3">RevOps Lead</p>
+              <p class="font-mono text-[10px] uppercase tracking-widest text-brand-blue/80 font-medium mb-3">Salesforce · Attribution</p>
+              <p class="text-[12.5px] text-brand-dark/70 leading-[1.55]">2× Salesforce-certified architect. Lives in SOQL. NYC.</p>
+              <div class="flex items-center gap-2 mt-4 pt-3 section-rule font-mono text-[10px] text-brand-dark/50">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 pulse-dot"></span>
+                <span>active</span>
+              </div>
+            </div>
+
+            <!-- Sofía -->
+            <div class="card p-6">
+              <div class="w-14 h-14 rounded-full bg-gradient-to-br from-brand-blue to-brand-dark flex items-center justify-center text-white font-medium text-lg mb-4">SV</div>
+              <h3 class="text-[16px] font-medium text-brand-dark">Sofía Vélez</h3>
+              <p class="text-[12px] text-brand-dark/60 mb-3">ABM Architect</p>
+              <p class="font-mono text-[10px] uppercase tracking-widest text-brand-blue/80 font-medium mb-3">6sense · Demandbase · Clay</p>
+              <p class="text-[12.5px] text-brand-dark/70 leading-[1.55]">Built ABM motions at Neo4j, SnapLogic. Remote (Medellín).</p>
+              <div class="flex items-center gap-2 mt-4 pt-3 section-rule font-mono text-[10px] text-brand-dark/50">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 pulse-dot"></span>
+                <span>active</span>
+              </div>
+            </div>
+
+            <!-- Adrien -->
+            <div class="card p-6">
+              <div class="w-14 h-14 rounded-full bg-gradient-to-br from-accent-purple to-accent-cyan flex items-center justify-center text-white font-medium text-lg mb-4">AL</div>
+              <h3 class="text-[16px] font-medium text-brand-dark">Adrien Laurent</h3>
+              <p class="text-[12px] text-brand-dark/60 mb-3">AI / GEO Engineer</p>
+              <p class="font-mono text-[10px] uppercase tracking-widest text-accent-purple font-medium mb-3">LLMs · Content · Evals</p>
+              <p class="text-[12.5px] text-brand-dark/70 leading-[1.55]">Builds the AI-visibility stack. Ex-OpenAI solutions. Paris.</p>
+              <div class="flex items-center gap-2 mt-4 pt-3 section-rule font-mono text-[10px] text-brand-dark/50">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 pulse-dot"></span>
+                <span>active</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact — Slack-channel style -->
+      <section id="contact" class="bg-brand-dark text-white section-rule relative overflow-hidden">
+        <div class="absolute inset-0 dotted-grid opacity-20 pointer-events-none"></div>
+        <div class="relative max-w-[1400px] mx-auto px-6 lg:px-8 py-20 md:py-28">
+          <div class="max-w-3xl mb-12">
+            <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-light font-medium mb-3">Start an engagement</p>
+            <h2 class="text-[32px] md:text-[44px] font-medium leading-[1.1] tracking-[-0.02em]">Open a Slack channel with us in 24 hours.</h2>
+            <p class="mt-4 text-[16px] text-light-gray leading-[1.55] max-w-2xl">No forms, no SDR chain. Send a note — we'll spin up a private Slack channel with Paul and the pod lead who'd be assigned to your account.</p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-5 gap-4">
+            <!-- Primary: Slack-style card -->
+            <div class="lg:col-span-3 bg-white rounded-xl overflow-hidden border border-white/10">
+              <!-- Channel header (mimics Slack) -->
+              <div class="flex items-center justify-between px-5 py-3 bg-[#f8f8f8] border-b border-divider">
+                <div class="flex items-center gap-2 text-brand-dark">
+                  <span class="text-brand-dark/40 font-mono">#</span>
+                  <span class="font-medium text-[14px]">your-company-verto</span>
+                  <span class="font-mono text-[11px] text-brand-dark/50">— private channel</span>
+                </div>
+                <div class="flex items-center gap-3 font-mono text-[11px] text-brand-dark/60">
+                  <span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>3 online</span>
+                </div>
+              </div>
+              <!-- Channel body — messages mockup + form -->
+              <div class="p-6 space-y-5 text-brand-dark">
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 rounded bg-gradient-to-br from-brand-blue to-accent-cyan flex items-center justify-center text-white text-[11px] font-medium flex-shrink-0">PG</div>
+                  <div class="flex-1 min-w-0">
+                    <p class="text-[13px]"><span class="font-medium">Paul Green</span> <span class="font-mono text-[11px] text-brand-dark/50 ml-1">9:02 AM</span></p>
+                    <p class="text-[14px] text-brand-dark/80 mt-0.5 leading-[1.5]">Hey — saw your note come in. I'll bring Jordan (RevOps) and Maya (paid) into this channel. Shall we grab 30 min Tuesday?</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 rounded bg-gradient-to-br from-accent-cyan to-brand-blue flex items-center justify-center text-white text-[11px] font-medium flex-shrink-0">JR</div>
+                  <div class="flex-1 min-w-0">
+                    <p class="text-[13px]"><span class="font-medium">Jordan Reyes</span> <span class="font-mono text-[11px] text-brand-dark/50 ml-1">9:04 AM</span></p>
+                    <p class="text-[14px] text-brand-dark/80 mt-0.5 leading-[1.5]">I took a first look at your Salesforce schema you linked — three immediate leak points I'd flag. Will walk through on the call.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3 opacity-60">
+                  <div class="w-8 h-8 rounded bg-divider flex items-center justify-center text-brand-dark/60 text-[11px] font-mono flex-shrink-0">you</div>
+                  <div class="flex-1 min-w-0 border border-dashed border-brand-dark/20 rounded-lg px-4 py-3">
+                    <p class="font-mono text-[11px] text-brand-dark/50 uppercase tracking-widest">Your first message →</p>
+                  </div>
+                </div>
+
+                <!-- Input box -->
+                <form class="pt-4 border-t border-divider space-y-3">
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <input type="email" placeholder="work@email.com" class="bg-surface border border-divider rounded-md px-3 py-2.5 text-[13.5px] text-brand-dark focus:border-brand-blue focus:ring-1 focus:ring-brand-blue/30 outline-none transition-colors" />
+                    <input type="text" placeholder="Company · Title" class="bg-surface border border-divider rounded-md px-3 py-2.5 text-[13.5px] text-brand-dark focus:border-brand-blue focus:ring-1 focus:ring-brand-blue/30 outline-none transition-colors" />
+                  </div>
+                  <textarea rows="3" placeholder="Message · what's the pipeline blocker?" class="w-full bg-surface border border-divider rounded-md px-3 py-2.5 text-[13.5px] text-brand-dark focus:border-brand-blue focus:ring-1 focus:ring-brand-blue/30 outline-none transition-colors resize-none"></textarea>
+                  <div class="flex items-center justify-between gap-3">
+                    <p class="font-mono text-[10px] text-brand-dark/50">Enter ⏎ to open a Slack channel</p>
+                    <button type="submit" class="bg-brand-dark hover:bg-brand-blue text-white text-[13px] font-medium px-4 py-2 rounded-md transition-colors inline-flex items-center gap-2">
+                      Open channel
+                      <kbd class="font-mono text-[10px] bg-white/10 px-1.5 py-0.5 rounded">⏎</kbd>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- Side panel: direct contacts -->
+            <div class="lg:col-span-2 space-y-4">
+              <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                <p class="font-mono text-[10px] uppercase tracking-widest text-brand-light font-medium mb-4">Prefer direct?</p>
+                <div class="space-y-3">
+                  <a href="mailto:paul.green@vertodigital.com" class="flex items-center justify-between gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-brand-light/40 transition-all group">
+                    <div class="flex items-center gap-3 min-w-0">
+                      <div class="w-8 h-8 rounded bg-gradient-to-br from-brand-blue to-accent-cyan flex items-center justify-center text-white text-[11px] font-medium flex-shrink-0">PG</div>
+                      <div class="min-w-0">
+                        <p class="text-[13px] text-white truncate">paul.green@vertodigital.com</p>
+                        <p class="text-[11px] text-light-gray font-mono">Email · replies in &lt;24h</p>
+                      </div>
+                    </div>
+                    <i data-lucide="arrow-up-right" class="w-4 h-4 text-light-gray group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/psgreen222/" target="_blank" rel="noopener" class="flex items-center justify-between gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-brand-light/40 transition-all group">
+                    <div class="flex items-center gap-3 min-w-0">
+                      <div class="w-8 h-8 rounded bg-white/10 flex items-center justify-center flex-shrink-0"><i data-lucide="linkedin" class="w-4 h-4 text-brand-light"></i></div>
+                      <div class="min-w-0">
+                        <p class="text-[13px] text-white truncate">Connect on LinkedIn</p>
+                        <p class="text-[11px] text-light-gray font-mono">/in/psgreen222</p>
+                      </div>
+                    </div>
+                    <i data-lucide="arrow-up-right" class="w-4 h-4 text-light-gray group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- SLA card -->
+              <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                <p class="font-mono text-[10px] uppercase tracking-widest text-brand-light font-medium mb-4">What to expect</p>
+                <dl class="space-y-3 text-[13px]">
+                  <div class="flex items-start justify-between gap-4">
+                    <dt class="text-light-gray">First reply</dt>
+                    <dd class="text-white font-mono tabular-nums">&lt; 24h</dd>
+                  </div>
+                  <div class="flex items-start justify-between gap-4">
+                    <dt class="text-light-gray">Kickoff call</dt>
+                    <dd class="text-white font-mono tabular-nums">72h from note</dd>
+                  </div>
+                  <div class="flex items-start justify-between gap-4">
+                    <dt class="text-light-gray">Audit delivered</dt>
+                    <dd class="text-white font-mono tabular-nums">7 days</dd>
+                  </div>
+                  <div class="flex items-start justify-between gap-4">
+                    <dt class="text-light-gray">First pipeline lift</dt>
+                    <dd class="text-white font-mono tabular-nums">21–30 days</dd>
+                  </div>
+                </dl>
+              </div>
+
+              <!-- Location -->
+              <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                <p class="font-mono text-[10px] uppercase tracking-widest text-brand-light font-medium mb-3">Where we are</p>
+                <div class="flex items-start gap-3 text-[13px]">
+                  <i data-lucide="map-pin" class="w-4 h-4 text-brand-light flex-shrink-0 mt-0.5"></i>
+                  <div>
+                    <p class="text-white">HQ · Boston, MA</p>
+                    <p class="text-light-gray mt-0.5">Pod across NYC, London, Paris, Medellín</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer — docs-style -->

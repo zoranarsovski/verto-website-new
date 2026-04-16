@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VertoDigital · V4 — Pipeline Playbook for B2B Marketing Teams</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Brand typography: Geist + Geist Mono. No script accent — v4 is operational, no handwriting. -->
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Geist', 'Inter', 'system-ui', 'sans-serif'],
+              display: ['Geist', 'Inter', 'system-ui', 'sans-serif'],
+              mono: ['"Geist Mono"', 'ui-monospace', 'monospace'],
+            },
+            colors: {
+              'brand-light': '#66CCFF',
+              'brand-blue': '#0066CC',
+              'brand-dark': '#002B55',
+              'accent-purple': '#7A4BD1',
+              'accent-cyan': '#3EC7D3',
+              'accent-lime': '#CFE46B',
+              'navy': '#05052A',
+              'cool-gray': '#9EA3AA',
+              'light-gray': '#AFC3D3',
+              primary: '#002B55',
+              secondary: '#0066CC',
+              accent: '#3EC7D3',
+              // v4 neutral tool-surface tones
+              'surface': '#FAFAFB',
+              'surface-card': '#ffffff',
+              'divider': '#E4E7EB',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Geist', 'Inter', system-ui, sans-serif;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 1.55;
+        background-color: #FAFAFB;
+        color: #002B55;
+        font-feature-settings: "ss01", "cv11";
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Geist', 'Inter', system-ui, sans-serif;
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: -0.018em;
+        color: #002B55;
+      }
+      .font-mono, .tabular-nums { font-variant-numeric: tabular-nums; }
+
+      /* Dotted grid backdrop used in dashboard areas */
+      .dotted-grid {
+        background-image: radial-gradient(circle, #0066CC0f 1px, transparent 1px);
+        background-size: 16px 16px;
+      }
+      /* Terminal card */
+      .terminal {
+        background: #05052A;
+        color: #AFC3D3;
+        font-family: 'Geist Mono', ui-monospace, monospace;
+        font-size: 13px;
+        line-height: 1.6;
+      }
+      /* Thin divider */
+      .hr-dashed { background-image: linear-gradient(90deg, rgba(0,43,85,0.15) 50%, transparent 0); background-size: 8px 1px; background-repeat: repeat-x; background-position: left center; height: 1px; }
+
+      /* Pulse dot */
+      @keyframes pulse-dot {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.4; }
+      }
+      .pulse-dot { animation: pulse-dot 2s ease-in-out infinite; }
+
+      /* Subtle card hover */
+      .card {
+        background: #ffffff;
+        border: 1px solid #E4E7EB;
+        border-radius: 10px;
+        transition: border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+      }
+      .card:hover {
+        border-color: #0066CC33;
+        box-shadow: 0 8px 24px -8px rgba(0, 43, 85, 0.08);
+      }
+
+      /* Section rule */
+      .section-rule { border-top: 1px solid #E4E7EB; }
+    </style>
+  </head>
+  <body class="antialiased">
+    <!-- Version switcher ribbon -->
+    <div class="bg-[#CFE46B] text-[#05052A] py-2.5 px-4 flex items-center justify-center gap-3 text-[11px] font-mono uppercase tracking-[0.15em] font-medium border-b border-black/10">
+      <span class="opacity-60 hidden sm:inline">Preview</span>
+      <span class="opacity-40 hidden sm:inline">·</span>
+      <a href="index.html" class="px-3 py-1 rounded-full hover:bg-black/10 transition-colors">V1 · Original</a>
+      <a href="v2.html" class="px-3 py-1 rounded-full hover:bg-black/10 transition-colors">V2 · Dark</a>
+      <a href="v3.html" class="px-3 py-1 rounded-full hover:bg-black/10 transition-colors">V3 · Executive</a>
+      <a href="v4.html" class="px-3 py-1 rounded-full bg-[#05052A] text-white">V4 · Playbook</a>
+    </div>
+
+    <!-- Navbar — tool-style with status indicator -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-divider">
+      <div class="flex justify-between items-center w-full px-6 lg:px-8 h-14 max-w-[1400px] mx-auto">
+        <div class="flex items-center gap-8">
+          <a href="#" class="flex items-center"><img src="VertoDigital-brandmark-color-black.png" alt="VertoDigital" class="h-8 w-auto" /></a>
+          <span class="h-5 w-px bg-divider"></span>
+          <div class="hidden md:flex items-center gap-6 text-[13.5px] text-brand-dark/75">
+            <a class="hover:text-brand-blue transition-colors" href="#how">How it works</a>
+            <a class="hover:text-brand-blue transition-colors" href="#stack">Stack</a>
+            <a class="hover:text-brand-blue transition-colors" href="#playbooks">Playbooks</a>
+            <a class="hover:text-brand-blue transition-colors" href="#pricing">Engagement</a>
+            <a class="hover:text-brand-blue transition-colors" href="#pod">Your pod</a>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="hidden md:inline-flex items-center gap-2 text-[11px] font-mono text-brand-dark/60">
+            <span class="relative flex h-1.5 w-1.5">
+              <span class="absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-60 pulse-dot"></span>
+              <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
+            </span>
+            ALL SYSTEMS · 18 ACTIVE
+          </span>
+          <a href="#contact" class="hidden sm:inline-flex items-center gap-1.5 text-[13px] text-brand-dark/75 hover:text-brand-blue transition-colors font-mono">
+            <kbd class="px-1.5 py-0.5 bg-surface border border-divider rounded text-[10px]">⌘</kbd>
+            <kbd class="px-1.5 py-0.5 bg-surface border border-divider rounded text-[10px]">K</kbd>
+            Search
+          </a>
+          <a href="#contact" class="bg-brand-dark hover:bg-brand-blue text-white px-4 py-2 rounded-md font-medium text-[13px] transition-colors inline-flex items-center gap-1.5">
+            Start engagement <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- SECTIONS GO HERE -->
+    </main>
+
+    <!-- Footer — docs-style -->
+    <footer class="section-rule bg-white">
+      <div class="max-w-[1400px] mx-auto px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-2 md:grid-cols-6 gap-10 mb-12">
+          <div class="col-span-2 space-y-4">
+            <img src="VertoDigital-brandmark-color-black.png" alt="VertoDigital" class="h-8 w-auto" />
+            <p class="text-brand-dark/70 text-[13.5px] leading-[1.55] max-w-xs">Pipeline infrastructure for B2B marketing teams. Built in Boston.</p>
+            <div class="flex items-center gap-2 text-[11px] font-mono text-brand-dark/60">
+              <span class="relative flex h-1.5 w-1.5">
+                <span class="absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-60 pulse-dot"></span>
+                <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
+              </span>
+              STATUS: OPERATIONAL
+            </div>
+          </div>
+          <div>
+            <p class="text-[11px] font-mono uppercase tracking-widest text-brand-dark/50 mb-4">Product</p>
+            <ul class="space-y-2.5 text-[13.5px]">
+              <li><a class="text-brand-dark/75 hover:text-brand-blue transition-colors" href="#playbooks">Playbooks</a></li>
+              <li><a class="text-brand-dark/75 hover:text-brand-blue transition-colors" href="#stack">Integrations</a></li>
+              <li><a class="text-brand-dark/75 hover:text-brand-blue transition-colors" href="#pricing">Engagement tiers</a></li>
+              <li><a class="text-brand-dark/75 hover:text-brand-blue transition-colors" href="#">Changelog</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-[11px] font-mono uppercase tracking-widest text-brand-dark/50 mb-4">Resources</p>
+            <ul class="space-y-2.5 text-[13.5px]">
+              <li><a class="text-brand-dark/75 hover:text-brand-blue transition-colors" href="#">2026 Pipeline Report</a></li>
+              <li><a class="text-brand-dark/75 hover:text-brand-blue transition-colors" href="#">Playbook Library</a></li>
+              <li><a class="text-brand-dark/75 hover:text-brand-blue transition-colors" href="#">Benchmarks</a></li>
+              <li><a class="text-brand-dark/75 hover:text-brand-blue transition-colors" href="#">Templates</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-[11px] font-mono uppercase tracking-widest text-brand-dark/50 mb-4">Company</p>
+            <ul class="space-y-2.5 text-[13.5px]">
+              <li><a class="text-brand-dark/75 hover:text-brand-blue transition-colors" href="#">About</a></li>
+              <li><a class="text-brand-dark/75 hover:text-brand-blue transition-colors" href="#pod">Team</a></li>
+              <li><a class="text-brand-dark/75 hover:text-brand-blue transition-colors" href="#">Careers</a></li>
+              <li><a class="text-brand-dark/75 hover:text-brand-blue transition-colors" href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-[11px] font-mono uppercase tracking-widest text-brand-dark/50 mb-4">Legal</p>
+            <ul class="space-y-2.5 text-[13.5px]">
+              <li><a class="text-brand-dark/75 hover:text-brand-blue transition-colors" href="#">Privacy</a></li>
+              <li><a class="text-brand-dark/75 hover:text-brand-blue transition-colors" href="#">Terms</a></li>
+              <li><a class="text-brand-dark/75 hover:text-brand-blue transition-colors" href="#">Security</a></li>
+              <li><a class="text-brand-dark/75 hover:text-brand-blue transition-colors" href="#">DPA</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="pt-6 section-rule flex flex-col md:flex-row justify-between items-start md:items-center gap-3 text-[11px] font-mono text-brand-dark/50">
+          <p>© 2026 VertoDigital. All rights reserved.</p>
+          <p>v4.0.0 · Deployed from main · <a href="#" class="hover:text-brand-blue">changelog</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

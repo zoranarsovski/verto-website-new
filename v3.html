@@ -24,19 +24,21 @@
               script: ['Caveat', 'cursive'],
             },
             colors: {
-              // Brand palette
-              'brand-light': '#66CCFF',
-              'brand-blue': '#0066CC',
-              'brand-dark': '#002B55',
-              'accent-purple': '#7A4BD1',
-              'accent-cyan': '#3EC7D3',
-              'accent-lime': '#CFE46B',
-              'navy': '#05052A',
-              'cool-gray': '#9EA3AA',
-              'light-gray': '#AFC3D3',
-              primary: '#002B55',
-              secondary: '#0066CC',
-              accent: '#66CCFF',
+              // Brand palette — source of truth
+              'brand-light': '#66CCFF',   // Light Main Blue — background panels, large UI areas
+              'brand-blue': '#0099FF',    // Main Blue — primary brand, buttons, links
+              'dark-blue':  '#0066CC',    // Dark Blue — headers, strong emphasis, dark-blue sections
+              'brand-dark': '#060026',    // alias → Deep Navy (primary text + darkest backgrounds)
+              'navy':       '#060026',    // Deep Navy — dark backgrounds, footer
+              'accent-purple': '#8B57F4', // Purple Accent — illustrations, graphic accents
+              'accent-cyan':   '#43E5FF', // Cyan Accent — data visualizations, secondary highlights
+              'accent-lime':   '#E1F77E', // Lime Accent — highlights, key callouts
+              'cool-gray':  '#B4D9C0',    // Cool Grey — secondary text, UI elements
+              'light-blue': '#d9f0ff',    // Light Blue — background areas, panels
+              // Semantic aliases
+              primary:   '#060026',       // body text → Deep Navy
+              secondary: '#0099FF',       // CTAs → Main Blue
+              accent:    '#43E5FF',       // data highlights → Cyan Accent
             }
           }
         }
@@ -54,7 +56,7 @@
         font-size: 16px;    /* body spec: 14–16px; 16px default */
         line-height: 1.5;   /* brand rule: 1.5 body */
         background-color: #ffffff;
-        color: #002B55;
+        color: #060026;
         font-feature-settings: "ss01", "cv11";
       }
       h1, h2, h3, h4, h5, h6 {
@@ -71,21 +73,22 @@
       .font-mono, .tabular-nums { font-variant-numeric: tabular-nums; }
       /* Hero gradient: Light Blue → White (per brand spec) */
       .hero-gradient {
+        /* Brand gradient: Light Main Blue (#66CCFF) → White — per palette Gradients spec */
         background:
           radial-gradient(ellipse 70% 50% at 20% 10%, rgba(102, 204, 255, 0.45), transparent 60%),
-          radial-gradient(ellipse 60% 50% at 90% 50%, rgba(62, 199, 211, 0.2), transparent 60%),
-          linear-gradient(180deg, #eaf6ff 0%, #ffffff 70%);
+          radial-gradient(ellipse 60% 50% at 90% 50%, rgba(67, 229, 255, 0.2), transparent 60%),
+          linear-gradient(180deg, #d9f0ff 0%, #ffffff 70%);
       }
       /* Subtle rule used between editorial sections */
       .editorial-rule {
         height: 1px;
-        background: linear-gradient(90deg, transparent, rgba(0, 43, 85, 0.15), transparent);
+        background: linear-gradient(90deg, transparent, rgba(6, 0, 38, 0.15), transparent);
       }
       /* Legacy drop-cap removed — Geist doesn't work as drop cap; we use a Caveat monogram instead */
       /* Light Blue panel (the v3 signature) */
       .panel-light-blue { background-color: #66CCFF; }
       /* Dark Blue panel */
-      .panel-dark-blue { background-color: #002B55; }
+      .panel-dark-blue { background-color: #060026; }  /* Deep Navy — dark backgrounds */
 
       /* ---------------------------------------------------------------
          Brand Layout Grid
@@ -120,12 +123,12 @@
   </head>
   <body class="antialiased">
     <!-- Version switcher ribbon -->
-    <div class="bg-[#CFE46B] text-[#05052A] py-2.5 px-4 flex items-center justify-center gap-3 text-[12px] font-mono uppercase tracking-[0.15em] font-medium border-b border-black/10">
+    <div class="bg-[#E1F77E] text-navy py-2.5 px-4 flex items-center justify-center gap-3 text-[12px] font-mono uppercase tracking-[0.15em] font-medium border-b border-black/10">
       <span class="opacity-60 hidden sm:inline">Preview</span>
       <span class="opacity-40 hidden sm:inline">·</span>
       <a href="index.html" class="px-3 py-1 rounded-full hover:bg-black/10 transition-colors">V1 · Original</a>
       <a href="v2.html" class="px-3 py-1 rounded-full hover:bg-black/10 transition-colors">V2 · Dark</a>
-      <a href="v3.html" class="px-3 py-1 rounded-full bg-[#05052A] text-white">V3 · Executive</a>
+      <a href="v3.html" class="px-3 py-1 rounded-full bg-navy text-white">V3 · Executive</a>
       <a href="v4.html" class="px-3 py-1 rounded-full hover:bg-black/10 transition-colors">V4 · Playbook</a>
     </div>
 
@@ -323,7 +326,7 @@
       <!-- Named case studies -->
       <section id="case-studies" class="panel-light-blue relative overflow-hidden">
         <!-- Subtle pattern overlay -->
-        <div class="absolute inset-0 opacity-[0.04] pointer-events-none" style="background-image: radial-gradient(circle, #002B55 1px, transparent 1px); background-size: 24px 24px;"></div>
+        <div class="absolute inset-0 opacity-[0.04] pointer-events-none" style="background-image: radial-gradient(circle, #060026 1px, transparent 1px); background-size: 24px 24px;"></div>
 
         <div class="relative container-brand py-24 md:py-32">
           <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-16">
@@ -494,7 +497,7 @@
                 <span class="font-mono text-[12px] text-white/40 uppercase tracking-widest font-medium tabular-nums">01</span>
               </div>
               <h3 class="text-xl font-medium mb-3 leading-[1.25]">Pipeline Intelligence</h3>
-              <p class="text-light-gray text-[14px] leading-[1.55] mb-6">Attribution models, RevOps audits, and data infrastructure. Uncover what marketing is really producing.</p>
+              <p class="text-cool-gray text-[14px] leading-[1.55] mb-6">Attribution models, RevOps audits, and data infrastructure. Uncover what marketing is really producing.</p>
               <p class="text-white/70 text-[12px] font-medium font-mono uppercase tracking-wider inline-flex items-center gap-2 opacity-70 group-hover:opacity-100 transition-opacity">
                 Typical outcome: <span class="text-white">+40% attributable pipeline</span>
               </p>
@@ -506,7 +509,7 @@
                 <span class="font-mono text-[12px] text-white/40 uppercase tracking-widest font-medium tabular-nums">02</span>
               </div>
               <h3 class="text-xl font-medium mb-3 leading-[1.25]">Pipeline-Driven Paid Media</h3>
-              <p class="text-light-gray text-[14px] leading-[1.55] mb-6">Media buying optimized on SQL rate, not CTR. Buyer-intent signals fed into every bid strategy.</p>
+              <p class="text-cool-gray text-[14px] leading-[1.55] mb-6">Media buying optimized on SQL rate, not CTR. Buyer-intent signals fed into every bid strategy.</p>
               <p class="text-white/70 text-[12px] font-medium font-mono uppercase tracking-wider inline-flex items-center gap-2 opacity-70 group-hover:opacity-100 transition-opacity">
                 Typical outcome: <span class="text-white">−38% CAC</span>
               </p>
@@ -518,7 +521,7 @@
                 <span class="font-mono text-[12px] text-white/40 uppercase tracking-widest font-medium tabular-nums">03</span>
               </div>
               <h3 class="text-xl font-medium mb-3 leading-[1.25]">LinkedIn Influence</h3>
-              <p class="text-light-gray text-[14px] leading-[1.55] mb-6">Executive thought leadership, decision-maker targeting, and dark-social measurement. The B2B channel that matters.</p>
+              <p class="text-cool-gray text-[14px] leading-[1.55] mb-6">Executive thought leadership, decision-maker targeting, and dark-social measurement. The B2B channel that matters.</p>
               <p class="text-white/70 text-[12px] font-medium font-mono uppercase tracking-wider inline-flex items-center gap-2 opacity-70 group-hover:opacity-100 transition-opacity">
                 Typical outcome: <span class="text-white">70% pipeline influence</span>
               </p>
@@ -530,7 +533,7 @@
                 <span class="font-mono text-[12px] text-white/40 uppercase tracking-widest font-medium tabular-nums">04</span>
               </div>
               <h3 class="text-xl font-medium mb-3 leading-[1.25]">Organic Growth</h3>
-              <p class="text-light-gray text-[14px] leading-[1.55] mb-6">SEO architected for demo requests. Technical content that ranks, converts, and outlives the algorithm.</p>
+              <p class="text-cool-gray text-[14px] leading-[1.55] mb-6">SEO architected for demo requests. Technical content that ranks, converts, and outlives the algorithm.</p>
               <p class="text-white/70 text-[12px] font-medium font-mono uppercase tracking-wider inline-flex items-center gap-2 opacity-70 group-hover:opacity-100 transition-opacity">
                 Typical outcome: <span class="text-white">3× organic SQLs</span>
               </p>
@@ -542,7 +545,7 @@
                 <span class="font-mono text-[12px] text-white/40 uppercase tracking-widest font-medium tabular-nums">05</span>
               </div>
               <h3 class="text-xl font-medium mb-3 leading-[1.25]">ABM Programs</h3>
-              <p class="text-light-gray text-[14px] leading-[1.55] mb-6">One-to-one, one-to-few, and hybrid ABM orchestration. Enterprise engagement at scale.</p>
+              <p class="text-cool-gray text-[14px] leading-[1.55] mb-6">One-to-one, one-to-few, and hybrid ABM orchestration. Enterprise engagement at scale.</p>
               <p class="text-white/70 text-[12px] font-medium font-mono uppercase tracking-wider inline-flex items-center gap-2 opacity-70 group-hover:opacity-100 transition-opacity">
                 Typical outcome: <span class="text-white">+125% Stage 1 opps</span>
               </p>
@@ -556,7 +559,7 @@
                 <span class="font-mono text-[12px] uppercase tracking-widest font-medium text-white bg-white/15 px-2 py-1 rounded-full">New · 2026</span>
               </div>
               <h3 class="relative text-xl font-medium mb-3 leading-[1.25]">AI Visibility & GEO</h3>
-              <p class="relative text-light-gray text-[14px] leading-[1.55] mb-6">Be the brand ChatGPT, Claude, and Gemini recommend when your buyers ask "best vendor for…". The new SEO.</p>
+              <p class="relative text-cool-gray text-[14px] leading-[1.55] mb-6">Be the brand ChatGPT, Claude, and Gemini recommend when your buyers ask "best vendor for…". The new SEO.</p>
               <p class="relative text-white text-[12px] font-medium font-mono uppercase tracking-wider inline-flex items-center gap-2">
                 First-mover advantage window: <span class="text-accent-lime">12 months</span>
               </p>
@@ -759,11 +762,11 @@
                 Annual Research · 2026 Edition
               </div>
               <h2 class="text-[24px] md:text-[32px] font-medium leading-[1.2] tracking-[-0.02em]">The <span class="font-script text-brand-light text-[1.1em] leading-none">2026 B2B Pipeline</span> Report.</h2>
-              <p class="text-lg md:text-xl text-light-gray leading-[1.55] max-w-[62ch]">
+              <p class="text-lg md:text-xl text-cool-gray leading-[1.55] max-w-[62ch]">
                 Based on <span class="text-white font-medium">$450M+ in audited ad spend</span> across 150 B2B technology companies. What's working. What's not. What you should tell your board.
               </p>
 
-              <ul class="space-y-3 pt-2 text-light-gray text-[15px]">
+              <ul class="space-y-3 pt-2 text-cool-gray text-[15px]">
                 <li class="flex items-start gap-3">
                   <i data-lucide="check" class="w-5 h-5 text-white flex-shrink-0 mt-0.5"></i>
                   <span>Median pipeline benchmarks by ARR tier ($10M, $50M, $100M+)</span>
@@ -787,7 +790,7 @@
                   <i data-lucide="download" class="w-5 h-5"></i>
                   Download the report (PDF · 48 pages)
                 </a>
-                <p class="text-sm text-light-gray self-center">Free · No form for CMOs at &gt;$20M ARR</p>
+                <p class="text-sm text-cool-gray self-center">Free · No form for CMOs at &gt;$20M ARR</p>
               </div>
             </div>
 
@@ -825,7 +828,7 @@
 
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
             <!-- Primary: Book with Paul -->
-            <div class="lg:col-span-7 bg-gradient-to-br from-brand-dark to-brand-blue text-white p-10 md:p-12 rounded-2xl relative overflow-hidden">
+            <div class="lg:col-span-7 bg-gradient-to-br from-dark-blue to-brand-blue text-white p-10 md:p-12 rounded-2xl relative overflow-hidden">
               <div class="absolute -top-24 -right-24 w-80 h-80 bg-accent-cyan/20 rounded-full blur-3xl"></div>
               <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-brand-light/15 rounded-full blur-3xl"></div>
 
@@ -834,7 +837,7 @@
                 <div class="min-w-0">
                   <p class="font-mono text-[12px] text-brand-light uppercase tracking-widest font-medium mb-2">Your call is with</p>
                   <h3 class="font-script text-[40px] md:text-[48px] leading-none mb-1">Paul Green</h3>
-                  <p class="text-light-gray text-sm mt-2">Founder, VertoDigital · Boston, MA</p>
+                  <p class="text-cool-gray text-sm mt-2">Founder, VertoDigital · Boston, MA</p>
                 </div>
               </div>
 
@@ -870,7 +873,7 @@
             </div>
 
             <!-- Secondary: Compact form -->
-            <div class="lg:col-span-5 bg-[#d9f0ff] border border-brand-dark/10 p-8 md:p-10 rounded-2xl">
+            <div class="lg:col-span-5 bg-light-blue border border-brand-dark/10 p-8 md:p-10 rounded-2xl">
               <p class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium mb-2">Not ready for a call?</p>
               <h3 class="text-2xl font-medium text-brand-dark mb-2 leading-[1.2]">Send a note instead.</h3>
               <p class="text-[14px] text-brand-dark/70 mb-8 leading-[1.55]">Tell us about your pipeline. We'll reply within one business day.</p>
@@ -900,7 +903,7 @@
       <!-- Final CTA — Dark Blue → Main Blue gradient (per brand spec) -->
       <section class="py-20 md:py-32 bg-white">
         <div class="container-brand">
-          <div class="relative bg-gradient-to-r from-brand-dark to-brand-blue rounded-3xl overflow-hidden p-12 md:p-20 text-center border border-brand-dark/10">
+          <div class="relative bg-gradient-to-r from-dark-blue to-brand-blue rounded-3xl overflow-hidden p-12 md:p-20 text-center border border-brand-dark/10">
             <div class="absolute inset-0 opacity-[0.05] pointer-events-none" style="background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 24px 24px;"></div>
             <div class="absolute -top-32 -right-32 w-96 h-96 bg-brand-light/20 rounded-full blur-3xl"></div>
             <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-accent-cyan/15 rounded-full blur-3xl"></div>
@@ -908,7 +911,7 @@
             <div class="relative max-w-3xl mx-auto text-white space-y-8">
               <p class="font-mono text-[12px] text-brand-light uppercase tracking-[0.3em] font-medium">For the CMO Reading This</p>
               <h2 class="text-[24px] md:text-[32px] font-medium leading-[1.2] tracking-[-0.02em]">Your next board meeting is in <span class="font-script text-brand-light text-[1.1em] leading-none">four weeks</span>.</h2>
-              <p class="text-lg md:text-xl text-light-gray leading-[1.55] max-w-[62ch] mx-auto">That's long enough to rebuild your attribution model, redeploy 15% of your media budget, and walk in with a pipeline forecast your CFO can sign off on. Let's start on Monday.</p>
+              <p class="text-lg md:text-xl text-cool-gray leading-[1.55] max-w-[62ch] mx-auto">That's long enough to rebuild your attribution model, redeploy 15% of your media budget, and walk in with a pipeline forecast your CFO can sign off on. Let's start on Monday.</p>
               <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                 <a href="#contact" class="bg-accent-lime hover:bg-white text-brand-dark px-8 py-4 rounded-lg font-medium text-lg transition-colors inline-flex items-center justify-center gap-2 group">
                   Book with Paul
@@ -925,40 +928,40 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-[#060026] text-white">
+    <footer class="bg-navy text-white">
       <div class="container-brand py-20">
         <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-16">
           <div class="md:col-span-4 space-y-6">
             <a href="#" class="flex items-center"><img src="VertoDigital-brandmark-color-white.png" alt="VertoDigital" class="h-10 w-auto" /></a>
-            <p class="text-light-gray text-sm leading-relaxed max-w-xs">The pipeline agency for B2B technology companies. Based in Boston. Trusted by CMOs globally.</p>
+            <p class="text-cool-gray text-sm leading-relaxed max-w-xs">The pipeline agency for B2B technology companies. Based in Boston. Trusted by CMOs globally.</p>
             <div class="flex gap-4">
-              <a class="text-light-gray hover:text-white transition-colors" href="#"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
-              <a class="text-light-gray hover:text-white transition-colors" href="#"><i data-lucide="globe" class="w-5 h-5"></i></a>
-              <a class="text-light-gray hover:text-white transition-colors" href="#"><i data-lucide="mail" class="w-5 h-5"></i></a>
+              <a class="text-cool-gray hover:text-white transition-colors" href="#"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+              <a class="text-cool-gray hover:text-white transition-colors" href="#"><i data-lucide="globe" class="w-5 h-5"></i></a>
+              <a class="text-cool-gray hover:text-white transition-colors" href="#"><i data-lucide="mail" class="w-5 h-5"></i></a>
             </div>
           </div>
           <div class="md:col-span-2 space-y-5">
             <p class="font-medium text-sm">Services</p>
             <ul class="space-y-3 text-sm">
-              <li><a class="text-light-gray hover:text-white transition-colors" href="#">Pipeline Intelligence</a></li>
-              <li><a class="text-light-gray hover:text-white transition-colors" href="#">Paid Media</a></li>
-              <li><a class="text-light-gray hover:text-white transition-colors" href="#">LinkedIn</a></li>
-              <li><a class="text-light-gray hover:text-white transition-colors" href="#">ABM</a></li>
-              <li><a class="text-light-gray hover:text-white transition-colors" href="#">AI Visibility</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="#">Pipeline Intelligence</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="#">Paid Media</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="#">LinkedIn</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="#">ABM</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="#">AI Visibility</a></li>
             </ul>
           </div>
           <div class="md:col-span-2 space-y-5">
             <p class="font-medium text-sm">Company</p>
             <ul class="space-y-3 text-sm">
-              <li><a class="text-light-gray hover:text-white transition-colors" href="#">About</a></li>
-              <li><a class="text-light-gray hover:text-white transition-colors" href="#">Case Studies</a></li>
-              <li><a class="text-light-gray hover:text-white transition-colors" href="#">Careers</a></li>
-              <li><a class="text-light-gray hover:text-white transition-colors" href="#">Press</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="#">About</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="#">Case Studies</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="#">Careers</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="#">Press</a></li>
             </ul>
           </div>
           <div class="md:col-span-4 space-y-5">
             <p class="font-medium text-sm">Research & Insights</p>
-            <p class="text-light-gray text-sm leading-[1.55]">Monthly dispatches for B2B marketing leaders. Data, benchmarks, and pipeline frameworks.</p>
+            <p class="text-cool-gray text-sm leading-[1.55]">Monthly dispatches for B2B marketing leaders. Data, benchmarks, and pipeline frameworks.</p>
             <form class="flex gap-2">
               <input type="email" placeholder="work@email.com" class="flex-1 bg-white/5 border border-white/15 text-white placeholder:text-cool-gray text-sm rounded-lg px-4 py-2.5 focus:border-brand-light focus:ring-1 focus:ring-brand-light/30 transition-colors" />
               <button class="bg-brand-light text-brand-dark px-4 py-2.5 rounded-lg font-medium text-sm hover:bg-white transition-colors">Subscribe</button>

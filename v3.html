@@ -119,6 +119,22 @@
       .marquee-track { animation: marquee 40s linear infinite; }
       /* Before/after bar chart bars */
       .bar { transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1); }
+
+      /* ---------------------------------------------------------------
+         Brand grid overlay — decorative pattern for section backgrounds
+         - 24px dot grid (matches brand 24px column-gutter module)
+         - Opacity 0.05 (subtle, non-competing with content)
+         - Single pattern type used across every section for consistency
+         --------------------------------------------------------------- */
+      .grid-overlay {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.05;
+        background-size: 24px 24px;
+      }
+      .grid-overlay--dark  { background-image: radial-gradient(circle, #060026 1px, transparent 1px); }
+      .grid-overlay--light { background-image: radial-gradient(circle, #ffffff 1px, transparent 1px); }
     </style>
   </head>
   <body class="antialiased">
@@ -325,8 +341,8 @@
 
       <!-- Named case studies -->
       <section id="case-studies" class="panel-light-blue relative overflow-hidden">
-        <!-- Subtle pattern overlay -->
-        <div class="absolute inset-0 opacity-[0.04] pointer-events-none" style="background-image: radial-gradient(circle, #060026 1px, transparent 1px); background-size: 24px 24px;"></div>
+        <!-- Subtle brand grid overlay (24px dot grid · Deep Navy · opacity 0.05) -->
+        <div class="grid-overlay grid-overlay--dark"></div>
 
         <div class="relative container-brand py-24 md:py-32">
           <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-16">
@@ -476,7 +492,8 @@
 
       <!-- Services -->
       <section id="services" class="panel-dark-blue text-white py-24 md:py-32 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-[0.04] pointer-events-none" style="background-image: linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px); background-size: 48px 48px;"></div>
+        <!-- Subtle brand grid overlay (24px dot grid · white · opacity 0.05) -->
+        <div class="grid-overlay grid-overlay--light"></div>
         <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-blue/20 rounded-full blur-3xl pointer-events-none"></div>
 
         <div class="relative container-brand">
@@ -904,7 +921,8 @@
       <section class="py-20 md:py-32 bg-white">
         <div class="container-brand">
           <div class="relative bg-gradient-to-r from-dark-blue to-brand-blue rounded-3xl overflow-hidden p-12 md:p-20 text-center border border-brand-dark/10">
-            <div class="absolute inset-0 opacity-[0.05] pointer-events-none" style="background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 24px 24px;"></div>
+            <!-- Subtle brand grid overlay (24px dot grid · white · opacity 0.05) -->
+            <div class="grid-overlay grid-overlay--light"></div>
             <div class="absolute -top-32 -right-32 w-96 h-96 bg-brand-light/20 rounded-full blur-3xl"></div>
             <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-accent-cyan/15 rounded-full blur-3xl"></div>
 

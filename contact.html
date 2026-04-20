@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact · Book a Pipeline Diagnostic · VertoDigital</title>
+    <meta name="description" content="Book a pipeline diagnostic with VertoDigital. Short form, real reply — from a human who'll also be on the call." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono:wght@400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Geist', 'Inter', 'system-ui', '-apple-system', '"Segoe UI"', 'Roboto', 'sans-serif'],
+              display: ['Geist', 'Inter', 'system-ui', '-apple-system', '"Segoe UI"', 'Roboto', 'sans-serif'],
+              mono: ['"Geist Mono"', 'ui-monospace', 'monospace'],
+              script: ['Caveat', 'cursive'],
+            },
+            colors: {
+              'brand-light': '#66CCFF',
+              'brand-blue': '#0099FF',
+              'dark-blue':  '#0066CC',
+              'brand-dark': '#060026',
+              'navy':       '#060026',
+              'accent-purple': '#8B57F4',
+              'accent-cyan':   '#43E5FF',
+              'accent-lime':   '#E1F77E',
+              'cool-gray':  '#B4D9C0',
+              'light-blue': '#d9f0ff',
+              primary:   '#060026',
+              secondary: '#0099FF',
+              accent:    '#43E5FF',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      html { scroll-padding-top: 96px; }
+      body {
+        font-family: 'Geist', 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        background-color: #ffffff;
+        color: #060026;
+        font-feature-settings: "ss01", "cv11";
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Geist', 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: -0.015em;
+      }
+      .font-script { font-family: 'Caveat', cursive; font-weight: 400; }
+      .font-mono, .tabular-nums { font-variant-numeric: tabular-nums; }
+      .hero-gradient {
+        background:
+          radial-gradient(ellipse 70% 50% at 20% 10%, rgba(102, 204, 255, 0.45), transparent 60%),
+          radial-gradient(ellipse 60% 50% at 90% 50%, rgba(67, 229, 255, 0.2), transparent 60%),
+          linear-gradient(180deg, #d9f0ff 0%, #ffffff 70%);
+      }
+      .container-brand {
+        width: 100%;
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+      @media (min-width: 768px) {
+        .container-brand { padding-left: 80px; padding-right: 80px; }
+      }
+      @media (min-width: 1280px) {
+        .container-brand { padding-left: 120px; padding-right: 120px; }
+      }
+      .section-eyebrow {
+        font-family: 'Geist Mono', ui-monospace, monospace;
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: rgba(6, 0, 38, 0.55);
+        font-weight: 500;
+      }
+      /* Form controls */
+      .field-label {
+        display: block;
+        font-family: 'Geist Mono', ui-monospace, monospace;
+        font-size: 11px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: rgba(6, 0, 38, 0.7);
+        font-weight: 500;
+        margin-bottom: 8px;
+      }
+      .field-label .req { color: #0099FF; margin-left: 4px; }
+      .field-input,
+      .field-select,
+      .field-textarea {
+        width: 100%;
+        background: #ffffff;
+        border: 1px solid rgba(6, 0, 38, 0.15);
+        border-radius: 10px;
+        padding: 12px 14px;
+        font-size: 15px;
+        font-family: inherit;
+        color: #060026;
+        line-height: 1.4;
+        transition: border-color 120ms ease, box-shadow 120ms ease;
+      }
+      .field-input::placeholder,
+      .field-textarea::placeholder { color: rgba(6, 0, 38, 0.35); }
+      .field-input:focus,
+      .field-select:focus,
+      .field-textarea:focus {
+        outline: none;
+        border-color: #0099FF;
+        box-shadow: 0 0 0 3px rgba(0, 153, 255, 0.15);
+      }
+      .field-select {
+        appearance: none;
+        -webkit-appearance: none;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23060026' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'/%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right 14px center;
+        padding-right: 40px;
+      }
+      .field-textarea { min-height: 120px; resize: vertical; }
+      .hidden { display: none !important; }
+    </style>
+  </head>
+  <body class="antialiased">
+    <!-- Announcement ribbon -->
+    <a href="/#services-linkedin" class="group bg-[#E1F77E] text-navy py-2.5 px-4 flex items-center justify-center gap-3 text-[12px] font-mono uppercase tracking-[0.15em] font-medium border-b border-black/10 hover:bg-[#d7ef6e] transition-colors">
+      <span>VertoDigital is now a LinkedIn Ads Premier Partner — see how we use it</span>
+      <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform"></i>
+    </a>
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 w-full z-50 bg-white/85 backdrop-blur-xl border-b border-brand-dark/10">
+      <div class="container-brand flex justify-between items-center py-5">
+        <a href="/" class="flex items-center"><img src="VertoDigital-brandmark-color-black.png" alt="VertoDigital" class="h-11 w-auto" /></a>
+        <div class="hidden md:flex items-center space-x-10 text-[15px]">
+          <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/#case-studies">Case studies</a>
+          <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/#services">Services</a>
+          <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/#insights">Research</a>
+          <a class="text-brand-blue font-medium transition-colors" href="/contact" aria-current="page">Contact</a>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="/#report" class="hidden lg:inline-flex items-center gap-2 text-brand-dark text-sm font-medium hover:text-brand-blue transition-colors">
+            <i data-lucide="file-text" class="w-4 h-4"></i>
+            2026 Pipeline Report
+          </a>
+          <a href="/contact" class="bg-brand-dark hover:bg-brand-blue text-white px-5 py-2.5 rounded-lg font-medium text-sm transition-colors inline-flex items-center gap-2">
+            Book a call <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero-gradient">
+        <div class="container-brand pt-14 pb-10 md:pt-20 md:pb-14">
+          <div class="max-w-[72ch] space-y-5">
+            <div class="inline-flex items-center gap-2 section-eyebrow">
+              <span class="w-8 h-px bg-brand-blue"></span>
+              Contact · Book a pipeline diagnostic
+            </div>
+            <h1 class="text-[32px] md:text-[48px] font-medium leading-[1.15] tracking-[-0.02em] text-brand-dark">
+              Let's see if we can make your <span class="font-script text-brand-blue text-[1.15em] leading-none">pipeline</span> work harder.
+            </h1>
+            <p class="text-[16px] md:text-[18px] text-brand-dark/75 leading-[1.55] max-w-[60ch]">
+              Short form. Real reply. From a human who'll also be on the call.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Form + sidebar -->
+      <section class="bg-white">
+        <div class="container-brand py-12 md:py-20">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
+
+            <!-- Form column -->
+            <div class="lg:col-span-7">
+              <!-- Form card -->
+              <div id="contact-form-wrapper" class="bg-white rounded-2xl border border-brand-dark/10 shadow-xl shadow-brand-blue/5 p-6 md:p-10">
+                <div class="mb-8">
+                  <p class="section-eyebrow mb-2">The form</p>
+                  <h2 class="text-[24px] md:text-[28px] font-medium text-brand-dark leading-[1.2] tracking-[-0.015em]">A few details, then we'll be in touch.</h2>
+                  <p class="text-sm text-brand-dark/65 mt-3 leading-[1.6]">We use your answers to prep the diagnostic call. Nothing here is sold, shared, or fed to a tool without your consent — see our <a href="/privacy" class="text-brand-blue hover:underline">Privacy Policy</a>.</p>
+                </div>
+
+                <form id="contact-form" action="#" method="post" novalidate class="space-y-6">
+                  <!-- Name + Email row -->
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                      <label for="name" class="field-label">Full name<span class="req">*</span></label>
+                      <input id="name" name="name" type="text" autocomplete="name" required placeholder="Jane Rivera" class="field-input" />
+                    </div>
+                    <div>
+                      <label for="email" class="field-label">Work email<span class="req">*</span></label>
+                      <input id="email" name="email" type="email" autocomplete="email" required placeholder="jane@company.com" class="field-input" />
+                    </div>
+                  </div>
+
+                  <!-- Company + Website row -->
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                      <label for="company" class="field-label">Company<span class="req">*</span></label>
+                      <input id="company" name="company" type="text" autocomplete="organization" required placeholder="Acme Technologies" class="field-input" />
+                    </div>
+                    <div>
+                      <label for="website" class="field-label">Website</label>
+                      <input id="website" name="website" type="url" autocomplete="url" placeholder="https://acme.com" class="field-input" />
+                    </div>
+                  </div>
+
+                  <!-- Role dropdown -->
+                  <div>
+                    <label for="role" class="field-label">Your role<span class="req">*</span></label>
+                    <select id="role" name="role" required class="field-select">
+                      <option value="" disabled selected>Select one</option>
+                      <option value="cmo">CMO</option>
+                      <option value="vp_marketing">VP / Head of Marketing</option>
+                      <option value="founder_ceo">Founder / CEO</option>
+                      <option value="head_growth">Head of Growth</option>
+                      <option value="demand_gen">Demand Gen / Performance lead</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+
+                  <!-- Budget dropdown -->
+                  <div>
+                    <label for="budget" class="field-label">Monthly marketing budget<span class="req">*</span></label>
+                    <select id="budget" name="budget" required class="field-select">
+                      <option value="" disabled selected>Select a range</option>
+                      <option value="lt_25k">Under $25k / month</option>
+                      <option value="25_100k">$25k – $100k / month</option>
+                      <option value="100_500k">$100k – $500k / month</option>
+                      <option value="gt_500k">$500k+ / month</option>
+                      <option value="unsure">Not sure yet</option>
+                    </select>
+                  </div>
+
+                  <!-- Problem textarea -->
+                  <div>
+                    <label for="problem" class="field-label">What pipeline problem are you trying to solve?<span class="req">*</span></label>
+                    <textarea id="problem" name="problem" required rows="5" placeholder="e.g. MQLs are up but Stage 1 pipeline is flat. CAC keeps climbing. Paid isn't converting below Q3 plan." class="field-textarea"></textarea>
+                    <p class="text-xs text-brand-dark/50 mt-2">A sentence or two is plenty. Enough that we can come prepared.</p>
+                  </div>
+
+                  <!-- Submit -->
+                  <div class="pt-2 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
+                    <button type="submit" class="bg-brand-dark hover:bg-brand-blue text-white px-7 py-3.5 rounded-lg font-medium text-[15px] transition-colors inline-flex items-center justify-center gap-2 group">
+                      Book the diagnostic
+                      <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-0.5 transition-transform"></i>
+                    </button>
+                    <p class="text-xs text-brand-dark/55 leading-[1.5]">
+                      By submitting, you agree to our <a href="/privacy" class="text-brand-dark hover:text-brand-blue underline underline-offset-2">Privacy Policy</a>.
+                    </p>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Inline success state -->
+              <div id="contact-success" class="hidden bg-white rounded-2xl border border-brand-dark/10 shadow-xl shadow-brand-blue/5 p-8 md:p-12 text-center">
+                <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-brand-blue to-accent-cyan text-white mb-5">
+                  <i data-lucide="check" class="w-7 h-7"></i>
+                </div>
+                <p class="section-eyebrow mb-2">Message received</p>
+                <h2 class="text-[24px] md:text-[28px] font-medium text-brand-dark leading-[1.2] tracking-[-0.015em]">Got it. We'll be in touch within 1 business day.</h2>
+                <p class="text-[15px] text-brand-dark/70 mt-3 max-w-[48ch] mx-auto leading-[1.6]">
+                  A human reads every submission. Expect a short reply from the lead who'll actually be on the diagnostic call — not a templated auto-response.
+                </p>
+                <div class="mt-7 flex flex-col sm:flex-row items-center justify-center gap-3">
+                  <a href="/" class="border border-brand-dark/20 hover:border-brand-dark hover:bg-brand-light/20 text-brand-dark px-5 py-2.5 rounded-lg font-medium text-sm transition-all inline-flex items-center gap-2">
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                    Back to homepage
+                  </a>
+                  <a href="/#report" class="text-brand-blue hover:underline text-sm font-medium inline-flex items-center gap-1">
+                    Read the 2026 Pipeline Report <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sidebar column -->
+            <aside class="lg:col-span-5 space-y-5">
+
+              <!-- Founder direct line -->
+              <a href="[INSERT Paul's LinkedIn URL]"
+                 target="_blank" rel="noopener noreferrer"
+                 class="group block rounded-2xl border border-brand-dark/10 bg-white p-6 hover:border-brand-blue/40 hover:shadow-lg hover:shadow-brand-blue/5 transition-all">
+                <p class="section-eyebrow mb-4">Rather skip the form?</p>
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 rounded-full bg-gradient-to-br from-brand-blue to-accent-cyan flex items-center justify-center text-white font-medium text-sm flex-shrink-0">PG</div>
+                  <div class="min-w-0 flex-1">
+                    <p class="font-medium text-brand-dark leading-tight">Paul Green</p>
+                    <p class="text-sm text-brand-dark/60 mt-0.5">Founder · Boston, MA</p>
+                    <p class="mt-3 text-[14px] text-brand-dark/80 leading-[1.5]">
+                      Message me directly on LinkedIn — I read everything that lands in my inbox.
+                    </p>
+                    <p class="mt-3 inline-flex items-center gap-1.5 text-brand-blue text-sm font-medium">
+                      <i data-lucide="linkedin" class="w-4 h-4"></i>
+                      Open LinkedIn
+                      <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                    </p>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Reply time -->
+              <div class="rounded-2xl border border-brand-dark/10 bg-brand-light/25 p-6">
+                <div class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-brand-blue flex-shrink-0">
+                    <i data-lucide="clock" class="w-5 h-5"></i>
+                  </div>
+                  <div class="min-w-0 flex-1">
+                    <p class="section-eyebrow mb-1">Reply time</p>
+                    <p class="text-brand-dark font-medium text-[17px] leading-[1.3]">Within 1 business day.</p>
+                    <p class="text-[14px] text-brand-dark/70 mt-2 leading-[1.55]">
+                      Every message read by a human and routed to the right lead — not a shared inbox, not a bot.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- In good company -->
+              <div class="rounded-2xl bg-navy text-white p-6">
+                <div class="flex items-center justify-between mb-5">
+                  <p class="font-mono text-[12px] uppercase tracking-[0.2em] text-white/55 font-medium">In good company</p>
+                  <i data-lucide="trending-up" class="w-4 h-4 text-brand-light"></i>
+                </div>
+                <div class="flex flex-wrap gap-x-6 gap-y-3 text-[16px] font-medium text-white/90">
+                  <span>Neo4j</span>
+                  <span>Payhawk</span>
+                  <span>Cribl</span>
+                  <span>Camunda</span>
+                  <span>SnapLogic</span>
+                  <span>Scalefocus</span>
+                  <span>Netgain</span>
+                </div>
+                <div class="mt-5 pt-5 border-t border-white/10 flex items-center justify-between text-[13px] text-white/60">
+                  <span>200+ B2B clients</span>
+                  <span class="font-mono tabular-nums">$450M+ managed spend</span>
+                </div>
+              </div>
+
+              <!-- Built for -->
+              <div class="rounded-2xl border border-brand-dark/10 p-6">
+                <p class="section-eyebrow mb-3">Who we work best with</p>
+                <ul class="space-y-2.5 text-[14px] text-brand-dark/80">
+                  <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-0.5"></i><span>B2B SaaS and B2B tech, post product–market fit</span></li>
+                  <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-0.5"></i><span>CMO, VP Marketing, or founder-led growth teams</span></li>
+                  <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-0.5"></i><span>Actively investing in paid, LinkedIn, or ABM</span></li>
+                  <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-0.5"></i><span>Measuring success in pipeline and revenue — not MQLs</span></li>
+                </ul>
+              </div>
+
+            </aside>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white">
+      <div class="container-brand py-20">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-16">
+          <div class="md:col-span-4 space-y-6">
+            <a href="/" class="flex items-center"><img src="VertoDigital-brandmark-color-white.png" alt="VertoDigital" class="h-10 w-auto" /></a>
+            <p class="text-cool-gray text-sm leading-relaxed max-w-xs">The pipeline agency for B2B technology companies. Based in Boston. Trusted by CMOs globally.</p>
+            <div class="flex gap-4">
+              <a class="text-cool-gray hover:text-white transition-colors" href="#"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+              <a class="text-cool-gray hover:text-white transition-colors" href="#"><i data-lucide="globe" class="w-5 h-5"></i></a>
+              <a class="text-cool-gray hover:text-white transition-colors" href="mailto:team@vertodigital.com"><i data-lucide="mail" class="w-5 h-5"></i></a>
+            </div>
+          </div>
+          <div class="md:col-span-2 space-y-5">
+            <p class="font-medium text-sm">Services</p>
+            <ul class="space-y-3 text-sm">
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#services">Pipeline Intelligence</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#services">Paid Media</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#services">LinkedIn</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#services">ABM</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#services">AI Visibility</a></li>
+            </ul>
+          </div>
+          <div class="md:col-span-2 space-y-5">
+            <p class="font-medium text-sm">Company</p>
+            <ul class="space-y-3 text-sm">
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#about">About</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#case-studies">Case Studies</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#careers">Careers</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#press">Press</a></li>
+            </ul>
+          </div>
+          <div class="md:col-span-4 space-y-5">
+            <p class="font-medium text-sm">Research &amp; Insights</p>
+            <p class="text-cool-gray text-sm leading-[1.55]">Monthly dispatches for B2B marketing leaders. Data, benchmarks, and pipeline frameworks.</p>
+            <form class="flex gap-2">
+              <input type="email" placeholder="work@email.com" class="flex-1 bg-white/5 border border-white/15 text-white placeholder:text-cool-gray text-sm rounded-lg px-4 py-2.5 focus:border-brand-light focus:ring-1 focus:ring-brand-light/30 transition-colors" />
+              <button class="bg-brand-light text-brand-dark px-4 py-2.5 rounded-lg font-medium text-sm hover:bg-white transition-colors">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-xs text-cool-gray">
+          <p>© 2026 VertoDigital. Designed in Boston 🇺🇸 · Engineered in Sofia 🇧🇬. Deployed wherever pipeline leaks.</p>
+          <div class="flex gap-6">
+            <a href="/privacy" class="hover:text-white transition-colors">Privacy</a>
+            <a href="/terms" class="hover:text-white transition-colors">Terms</a>
+            <a href="/privacy#cookies" class="hover:text-white transition-colors">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      lucide.createIcons();
+      // Inline success state — placeholder UX until the form endpoint is wired.
+      (function () {
+        var form = document.getElementById('contact-form');
+        var wrapper = document.getElementById('contact-form-wrapper');
+        var success = document.getElementById('contact-success');
+        if (!form) return;
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          if (!form.checkValidity()) { form.reportValidity(); return; }
+          wrapper.classList.add('hidden');
+          success.classList.remove('hidden');
+          lucide.createIcons();
+          success.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      })();
+    </script>
+  </body>
+</html>

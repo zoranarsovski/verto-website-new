@@ -45,6 +45,8 @@
       }
     </script>
     <style>
+      /* Offset anchor jumps so content isn't hidden behind the sticky navbar */
+      html { scroll-padding-top: 96px; }
       /* Brand type system
          - Geist Regular (400) for body
          - Geist Medium (500) for headings + emphasis
@@ -136,14 +138,14 @@
           <a class="text-brand-dark hover:text-brand-blue transition-colors" href="#case-studies">Case studies</a>
           <a class="text-brand-dark hover:text-brand-blue transition-colors" href="#services">Services</a>
           <a class="text-brand-dark hover:text-brand-blue transition-colors" href="#insights">Research</a>
-          <a class="text-brand-dark hover:text-brand-blue transition-colors" href="#contact">Contact</a>
+          <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/contact">Contact</a>
         </div>
         <div class="flex items-center space-x-4">
           <a href="#report" class="hidden lg:inline-flex items-center gap-2 text-brand-dark text-sm font-medium hover:text-brand-blue transition-colors">
             <i data-lucide="file-text" class="w-4 h-4"></i>
             2026 Pipeline Report
           </a>
-          <a href="#contact" class="bg-brand-dark hover:bg-brand-blue text-white px-5 py-2.5 rounded-lg font-medium text-sm transition-colors inline-flex items-center gap-2">
+          <a href="/contact" class="bg-brand-dark hover:bg-brand-blue text-white px-5 py-2.5 rounded-lg font-medium text-sm transition-colors inline-flex items-center gap-2">
             Book a call <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </a>
         </div>
@@ -166,7 +168,7 @@
               We've managed <span class="font-medium text-brand-dark">$450M+ in ad spend</span> across 200+ B2B technology companies. The pattern is always the same — too many leads, not enough pipeline. We fix that.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 pt-2">
-              <a href="#contact" class="bg-brand-dark hover:bg-brand-blue text-white px-7 py-4 rounded-lg font-medium text-base transition-colors inline-flex items-center justify-center gap-2 group">
+              <a href="/contact" class="bg-brand-dark hover:bg-brand-blue text-white px-7 py-4 rounded-lg font-medium text-base transition-colors inline-flex items-center justify-center gap-2 group">
                 Book a pipeline diagnostic
                 <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-0.5 transition-transform"></i>
               </a>
@@ -922,7 +924,7 @@
               <h2 class="text-[24px] md:text-[32px] font-medium leading-[1.2] tracking-[-0.02em]">Your next board meeting is in <span class="font-script text-dark-blue text-[1.1em] leading-none">four weeks</span>.</h2>
               <p class="text-lg md:text-xl text-brand-dark/80 leading-[1.5] max-w-[62ch] mx-auto">That's long enough to rebuild your attribution model, redeploy 15% of your media budget, and walk in with a pipeline forecast your CFO can sign off on. Let's start on Monday.</p>
               <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-                <a href="#contact" class="bg-accent-lime hover:bg-white text-brand-dark px-8 py-4 rounded-lg font-medium text-lg transition-colors inline-flex items-center justify-center gap-2 group">
+                <a href="/contact" class="bg-accent-lime hover:bg-white text-brand-dark px-8 py-4 rounded-lg font-medium text-lg transition-colors inline-flex items-center justify-center gap-2 group">
                   Book with Paul
                   <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-0.5 transition-transform"></i>
                 </a>

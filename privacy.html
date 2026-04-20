@@ -40,6 +40,8 @@
       }
     </script>
     <style>
+      /* Offset anchor jumps so content isn't hidden behind the sticky navbar */
+      html { scroll-padding-top: 96px; }
       body {
         font-family: 'Geist', 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
         font-weight: 400;
@@ -143,14 +145,14 @@
           <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/#case-studies">Case studies</a>
           <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/#services">Services</a>
           <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/#insights">Research</a>
-          <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/#contact">Contact</a>
+          <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/contact">Contact</a>
         </div>
         <div class="flex items-center space-x-4">
           <a href="/#report" class="hidden lg:inline-flex items-center gap-2 text-brand-dark text-sm font-medium hover:text-brand-blue transition-colors">
             <i data-lucide="file-text" class="w-4 h-4"></i>
             2026 Pipeline Report
           </a>
-          <a href="/#contact" class="bg-brand-dark hover:bg-brand-blue text-white px-5 py-2.5 rounded-lg font-medium text-sm transition-colors inline-flex items-center gap-2">
+          <a href="/contact" class="bg-brand-dark hover:bg-brand-blue text-white px-5 py-2.5 rounded-lg font-medium text-sm transition-colors inline-flex items-center gap-2">
             Book a call <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </a>
         </div>

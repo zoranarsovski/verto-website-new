@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy · VertoDigital</title>
+    <meta name="description" content="How VertoDigital collects, uses, and protects your personal information — including cookies, international transfers, and your rights." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono:wght@400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Geist', 'Inter', 'system-ui', '-apple-system', '"Segoe UI"', 'Roboto', 'sans-serif'],
+              display: ['Geist', 'Inter', 'system-ui', '-apple-system', '"Segoe UI"', 'Roboto', 'sans-serif'],
+              mono: ['"Geist Mono"', 'ui-monospace', 'monospace'],
+              script: ['Caveat', 'cursive'],
+            },
+            colors: {
+              'brand-light': '#66CCFF',
+              'brand-blue': '#0099FF',
+              'dark-blue':  '#0066CC',
+              'brand-dark': '#060026',
+              'navy':       '#060026',
+              'accent-purple': '#8B57F4',
+              'accent-cyan':   '#43E5FF',
+              'accent-lime':   '#E1F77E',
+              'cool-gray':  '#B4D9C0',
+              'light-blue': '#d9f0ff',
+              primary:   '#060026',
+              secondary: '#0099FF',
+              accent:    '#43E5FF',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Geist', 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        background-color: #ffffff;
+        color: #060026;
+        font-feature-settings: "ss01", "cv11";
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Geist', 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: -0.015em;
+      }
+      .font-script { font-family: 'Caveat', cursive; font-weight: 400; }
+      .prose-readable { max-width: 72ch; }
+      .font-mono, .tabular-nums { font-variant-numeric: tabular-nums; }
+      .hero-gradient {
+        background:
+          radial-gradient(ellipse 70% 50% at 20% 10%, rgba(102, 204, 255, 0.45), transparent 60%),
+          radial-gradient(ellipse 60% 50% at 90% 50%, rgba(67, 229, 255, 0.2), transparent 60%),
+          linear-gradient(180deg, #d9f0ff 0%, #ffffff 70%);
+      }
+      .editorial-rule {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(6, 0, 38, 0.15), transparent);
+      }
+      .container-brand {
+        width: 100%;
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+      @media (min-width: 768px) {
+        .container-brand { padding-left: 80px; padding-right: 80px; }
+      }
+      @media (min-width: 1280px) {
+        .container-brand { padding-left: 120px; padding-right: 120px; }
+      }
+      /* Legal-page prose helpers */
+      .legal-prose p { margin-bottom: 1rem; }
+      .legal-prose p:last-child { margin-bottom: 0; }
+      .legal-prose ul { list-style: disc; padding-left: 1.25rem; margin-bottom: 1rem; }
+      .legal-prose ul li { margin-bottom: 0.35rem; }
+      .legal-prose a { color: #0099FF; text-decoration: underline; text-underline-offset: 2px; }
+      .legal-prose a:hover { color: #0066CC; }
+      .legal-prose h3 { font-size: 1rem; font-weight: 500; margin-top: 1.25rem; margin-bottom: 0.5rem; color: #060026; }
+      .section-eyebrow {
+        font-family: 'Geist Mono', ui-monospace, monospace;
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: rgba(6, 0, 38, 0.55);
+        font-weight: 500;
+      }
+      .section-number {
+        font-family: 'Geist Mono', ui-monospace, monospace;
+        color: #0099FF;
+        font-weight: 500;
+        margin-right: 0.5rem;
+      }
+      .processor-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+      .processor-table th,
+      .processor-table td {
+        text-align: left;
+        padding: 10px 12px;
+        border-bottom: 1px solid rgba(6, 0, 38, 0.08);
+        vertical-align: top;
+      }
+      .processor-table th {
+        font-family: 'Geist Mono', ui-monospace, monospace;
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba(6, 0, 38, 0.6);
+        background: rgba(6, 0, 38, 0.03);
+        font-weight: 500;
+      }
+      .processor-table tr:last-child td { border-bottom: none; }
+    </style>
+  </head>
+  <body class="antialiased">
+    <!-- Announcement ribbon -->
+    <a href="/#services-linkedin" class="group bg-[#E1F77E] text-navy py-2.5 px-4 flex items-center justify-center gap-3 text-[12px] font-mono uppercase tracking-[0.15em] font-medium border-b border-black/10 hover:bg-[#d7ef6e] transition-colors">
+      <span>VertoDigital is now a LinkedIn Ads Premier Partner — see how we use it</span>
+      <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform"></i>
+    </a>
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 w-full z-50 bg-white/85 backdrop-blur-xl border-b border-brand-dark/10">
+      <div class="container-brand flex justify-between items-center py-5">
+        <a href="/" class="flex items-center"><img src="VertoDigital-brandmark-color-black.png" alt="VertoDigital" class="h-11 w-auto" /></a>
+        <div class="hidden md:flex items-center space-x-10 text-[15px]">
+          <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/#case-studies">Case studies</a>
+          <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/#services">Services</a>
+          <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/#insights">Research</a>
+          <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/#contact">Contact</a>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="/#report" class="hidden lg:inline-flex items-center gap-2 text-brand-dark text-sm font-medium hover:text-brand-blue transition-colors">
+            <i data-lucide="file-text" class="w-4 h-4"></i>
+            2026 Pipeline Report
+          </a>
+          <a href="/#contact" class="bg-brand-dark hover:bg-brand-blue text-white px-5 py-2.5 rounded-lg font-medium text-sm transition-colors inline-flex items-center gap-2">
+            Book a call <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Header -->
+      <section class="hero-gradient">
+        <div class="container-brand pt-14 pb-12 md:pt-20 md:pb-16">
+          <div class="max-w-[72ch] space-y-5">
+            <div class="inline-flex items-center gap-2 section-eyebrow">
+              <span class="w-8 h-px bg-brand-blue"></span>
+              Privacy Policy · Cookies
+            </div>
+            <h1 class="text-[32px] md:text-[44px] font-medium leading-[1.15] tracking-[-0.02em] text-brand-dark">
+              Your data, our <span class="font-script text-brand-blue text-[1.15em] leading-none">policy</span>.
+            </h1>
+            <p class="font-mono text-[13px] text-brand-dark/70 uppercase tracking-[0.15em]">
+              Effective 20 April 2026 · Last updated 20 April 2026
+            </p>
+            <p class="text-[15px] text-brand-dark/70 leading-[1.6]">
+              This policy covers the VertoDigital website (vertodigital.com) and our marketing activities. Personal data processed as part of a paid client engagement is governed by the Data Processing Agreement attached to your Master Services Agreement — not this policy.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Body -->
+      <section class="bg-white">
+        <div class="container-brand py-14 md:py-20">
+          <div class="max-w-[72ch] mx-auto">
+
+            <!-- Opener -->
+            <div class="legal-prose text-[15.5px] leading-[1.7] text-brand-dark/85">
+              <p>A quick note before the formal sections. We're a marketing agency, so we of course run marketing on ourselves — analytics, paid ads, a newsletter. But we've tried to write this policy the way we'd want to read one: plainly, with the tracking tools named, the lawful bases stated, and the controls for turning things off in one place.</p>
+              <p>If anything here is unclear, email <a href="mailto:privacy@vertodigital.com">privacy@vertodigital.com</a> and a human will reply.</p>
+              <p class="text-sm text-brand-dark/60">— Paul Green, Founder</p>
+            </div>
+
+            <div class="editorial-rule my-10"></div>
+
+            <!-- Table of contents -->
+            <nav aria-label="Sections" class="mb-12">
+              <p class="section-eyebrow mb-4">In this policy</p>
+              <ol class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-[14px] font-mono list-none p-0 m-0">
+                <li><a href="#s01" class="text-brand-dark/80 hover:text-brand-blue"><span class="text-brand-blue">01</span> &nbsp;Who we are</a></li>
+                <li><a href="#s02" class="text-brand-dark/80 hover:text-brand-blue"><span class="text-brand-blue">02</span> &nbsp;What this policy covers</a></li>
+                <li><a href="#s03" class="text-brand-dark/80 hover:text-brand-blue"><span class="text-brand-blue">03</span> &nbsp;What we collect</a></li>
+                <li><a href="#s04" class="text-brand-dark/80 hover:text-brand-blue"><span class="text-brand-blue">04</span> &nbsp;How we use your information</a></li>
+                <li><a href="#s05" class="text-brand-dark/80 hover:text-brand-blue"><span class="text-brand-blue">05</span> &nbsp;Legal bases</a></li>
+                <li><a href="#cookies" class="text-brand-dark/80 hover:text-brand-blue"><span class="text-brand-blue">06</span> &nbsp;Cookies &amp; tracking</a></li>
+                <li><a href="#s07" class="text-brand-dark/80 hover:text-brand-blue"><span class="text-brand-blue">07</span> &nbsp;Third parties &amp; processors</a></li>
+                <li><a href="#s08" class="text-brand-dark/80 hover:text-brand-blue"><span class="text-brand-blue">08</span> &nbsp;International data transfers</a></li>
+                <li><a href="#s09" class="text-brand-dark/80 hover:text-brand-blue"><span class="text-brand-blue">09</span> &nbsp;Retention</a></li>
+                <li><a href="#s10" class="text-brand-dark/80 hover:text-brand-blue"><span class="text-brand-blue">10</span> &nbsp;Your rights</a></li>
+                <li><a href="#s11" class="text-brand-dark/80 hover:text-brand-blue"><span class="text-brand-blue">11</span> &nbsp;Security</a></li>
+                <li><a href="#s12" class="text-brand-dark/80 hover:text-brand-blue"><span class="text-brand-blue">12</span> &nbsp;Children</a></li>
+                <li><a href="#s13" class="text-brand-dark/80 hover:text-brand-blue"><span class="text-brand-blue">13</span> &nbsp;Changes</a></li>
+                <li><a href="#s14" class="text-brand-dark/80 hover:text-brand-blue"><span class="text-brand-blue">14</span> &nbsp;Contact us</a></li>
+              </ol>
+            </nav>
+
+            <div class="space-y-12 legal-prose text-[15.5px] leading-[1.7] text-brand-dark/85">
+
+              <!-- 01 -->
+              <section id="s01">
+                <p class="section-eyebrow mb-2"><span class="section-number">01</span>Who we are</p>
+                <h2 class="text-[24px] md:text-[28px] font-medium text-brand-dark mb-4">Who we are</h2>
+                <p>VertoDigital is the trading name of <strong>Advert Ltd.</strong>, a company registered in Bulgaria. Advert Ltd. is the data controller for the personal information described in this policy.</p>
+                <ul>
+                  <li><strong>Registered office:</strong> [INSERT registered address]</li>
+                  <li><strong>Company registration number:</strong> [INSERT company registration number]</li>
+                  <li><strong>Operating offices:</strong> Sofia, Bulgaria · Boston, MA, USA</li>
+                  <li><strong>Privacy contact:</strong> <a href="mailto:privacy@vertodigital.com">privacy@vertodigital.com</a></li>
+                </ul>
+                <p>We have not appointed a statutory Data Protection Officer because our processing does not meet the GDPR Art. 37 threshold. For all privacy matters, use the address above.</p>
+              </section>
+
+              <!-- 02 -->
+              <section id="s02">
+                <p class="section-eyebrow mb-2"><span class="section-number">02</span>What this policy covers</p>
+                <h2 class="text-[24px] md:text-[28px] font-medium text-brand-dark mb-4">What this policy covers</h2>
+                <p>This policy applies to personal information we collect when you:</p>
+                <ul>
+                  <li>Visit <a href="https://vertodigital.com">vertodigital.com</a> or any VertoDigital sub-page.</li>
+                  <li>Fill in a form on our site — for example, to book a call, download the Pipeline Report, or subscribe to our research dispatch.</li>
+                  <li>Receive or reply to outbound marketing email we send to business contacts.</li>
+                  <li>Interact with VertoDigital on a third-party platform we control (for example, our LinkedIn company page).</li>
+                </ul>
+                <p>It does <em>not</em> cover personal data we process on behalf of a paying client as part of a campaign we run for them. That processing is governed by the Data Processing Agreement attached to the Master Services Agreement with that client.</p>
+              </section>
+
+              <!-- 03 -->
+              <section id="s03">
+                <p class="section-eyebrow mb-2"><span class="section-number">03</span>What we collect</p>
+                <h2 class="text-[24px] md:text-[28px] font-medium text-brand-dark mb-4">What we collect</h2>
+                <h3>Information you give us</h3>
+                <ul>
+                  <li><strong>Identity and contact data</strong> — name, work email, company, job title, phone number (if provided).</li>
+                  <li><strong>Message content</strong> — anything you type into a form field or send us by email.</li>
+                  <li><strong>Engagement preferences</strong> — newsletter topic interests, unsubscribe status.</li>
+                </ul>
+                <h3>Information collected automatically</h3>
+                <ul>
+                  <li><strong>Device and browser data</strong> — IP address (truncated where possible), user-agent, screen size, language.</li>
+                  <li><strong>Usage data</strong> — pages viewed, time on page, referrer, clicks on outbound links and form submissions.</li>
+                  <li><strong>Cookie and similar identifiers</strong> — set by the tools listed in Section 07. Non-essential cookies only fire after you accept them in our consent banner.</li>
+                </ul>
+                <h3>Information we receive from third parties</h3>
+                <ul>
+                  <li><strong>Firmographic enrichment</strong> — when you submit a form, we may enrich your company data (industry, employee band, revenue band) via Clearbit or a similar provider, to route your request internally.</li>
+                  <li><strong>Ad network signals</strong> — LinkedIn, Meta, Google, 6sense and similar platforms may share aggregated audience or conversion signals with us.</li>
+                  <li><strong>Public professional profiles</strong> — publicly available information (for example, LinkedIn profile data) when we research a company we'd like to reach out to.</li>
+                </ul>
+              </section>
+
+              <!-- 04 -->
+              <section id="s04">
+                <p class="section-eyebrow mb-2"><span class="section-number">04</span>How we use your information</p>
+                <h2 class="text-[24px] md:text-[28px] font-medium text-brand-dark mb-4">How we use your information</h2>
+                <ul>
+                  <li><strong>To respond to you</strong> — reply to enquiries, book meetings, send materials you've asked for.</li>
+                  <li><strong>To run our marketing</strong> — send our newsletter and research dispatches to people who subscribed; show relevant ads on LinkedIn, Google and other platforms; measure whether those ads work.</li>
+                  <li><strong>To do B2B outreach</strong> — email a small, targeted list of business contacts at companies that match our ideal client profile, with a clear unsubscribe link and identifying information in every message.</li>
+                  <li><strong>To improve the website</strong> — understand which pages resonate, diagnose bugs, test new page layouts.</li>
+                  <li><strong>To run the business</strong> — contracting, billing, accounting, fraud prevention, legal compliance.</li>
+                  <li><strong>To keep things secure</strong> — detect and block abuse, bots, and attempted attacks.</li>
+                </ul>
+                <p>We do not use your information to make fully automated decisions that produce legal or similarly significant effects on you.</p>
+              </section>
+
+              <!-- 05 -->
+              <section id="s05">
+                <p class="section-eyebrow mb-2"><span class="section-number">05</span>Legal bases for processing</p>
+                <h2 class="text-[24px] md:text-[28px] font-medium text-brand-dark mb-4">Legal bases for processing</h2>
+                <p>Under the EU GDPR and UK GDPR, we rely on the following legal bases:</p>
+                <ul>
+                  <li><strong>Consent</strong> — for non-essential cookies, third-party analytics and advertising tags, and sending our newsletter to subscribers. You can withdraw consent at any time (see Section 06 and Section 10).</li>
+                  <li><strong>Legitimate interests</strong> — for targeted B2B outreach to business contacts at companies that fit our ideal client profile, basic site analytics that cannot identify you, fraud prevention, and direct marketing to existing business contacts about similar services. We have weighed these interests against your rights and believe they are proportionate; you can object at any time.</li>
+                  <li><strong>Performance of a contract</strong> — where you've engaged us or are negotiating an engagement.</li>
+                  <li><strong>Legal obligation</strong> — where we must process data to comply with applicable law (for example, tax records).</li>
+                </ul>
+                <p>If you're in California or another US state with a comprehensive privacy law, we rely on the equivalent "business purpose" and "commercial purpose" categories described in Section 10.</p>
+              </section>
+
+              <!-- 06 -->
+              <section id="cookies">
+                <p class="section-eyebrow mb-2"><span class="section-number">06</span>Cookies &amp; tracking</p>
+                <h2 class="text-[24px] md:text-[28px] font-medium text-brand-dark mb-4">Cookies &amp; tracking</h2>
+                <p>We use cookies, pixels and similar technologies (collectively, "cookies") for four purposes:</p>
+                <ul>
+                  <li><strong>Strictly necessary</strong> — required to run the site: session management, security, load balancing, remembering your cookie choices. These cannot be turned off.</li>
+                  <li><strong>Analytics</strong> — help us understand which pages work. We use a mix of cookie-based (Google Analytics 4, Amplitude, Microsoft Clarity) and cookieless (Simple Analytics, Dreamdata) analytics. These fire only with your consent where required by law.</li>
+                  <li><strong>Advertising</strong> — let us show relevant ads and measure their performance on platforms like LinkedIn, Meta, Google, 6sense and Influ2. These fire only with your consent.</li>
+                  <li><strong>Functionality</strong> — remember preferences (for example, which Pipeline Report chapter you last read). Only with your consent where required.</li>
+                </ul>
+                <p>We use a consent management platform (Usercentrics) to collect and record your cookie preferences. You can change your choices at any time:</p>
+                <p class="mt-3 mb-3">
+                  <button type="button"
+                          onclick="if(window.UC_UI&amp;&amp;typeof window.UC_UI.showSecondLayer==='function'){window.UC_UI.showSecondLayer();}else{window.location.hash='cookies';}"
+                          class="inline-flex items-center gap-2 bg-brand-dark hover:bg-brand-blue text-white px-5 py-2.5 rounded-lg font-medium text-sm transition-colors">
+                    <i data-lucide="sliders-horizontal" class="w-4 h-4"></i>
+                    Manage cookie preferences
+                  </button>
+                </p>
+                <p>You can also block cookies at the browser level. Blocking strictly-necessary cookies may break the site. We honor the Global Privacy Control (GPC) signal as an opt-out of "sale" and "sharing" for US residents (see Section 10).</p>
+                <p>A detailed, per-cookie inventory — including vendor, duration and purpose — is available inside the cookie preferences dialog above, and is updated automatically as vendors change.</p>
+              </section>
+
+              <!-- 07 -->
+              <section id="s07">
+                <p class="section-eyebrow mb-2"><span class="section-number">07</span>Third parties &amp; processors</p>
+                <h2 class="text-[24px] md:text-[28px] font-medium text-brand-dark mb-4">Third parties &amp; processors</h2>
+                <p>We share personal information only with service providers that help us run the website and our marketing. Each one acts under a written agreement with appropriate data-protection terms. The current list:</p>
+
+                <div class="overflow-x-auto -mx-4 sm:mx-0 mt-5">
+                  <table class="processor-table">
+                    <thead>
+                      <tr>
+                        <th>Provider</th>
+                        <th>Purpose</th>
+                        <th>Category</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Google Analytics 4 / Google Tag Manager</td><td>Site analytics, tag orchestration</td><td>Analytics</td></tr>
+                      <tr><td>Meta (Facebook) Pixel</td><td>Advertising measurement and audiences</td><td>Advertising</td></tr>
+                      <tr><td>LinkedIn Insight Tag</td><td>Advertising measurement and audiences</td><td>Advertising</td></tr>
+                      <tr><td>6sense</td><td>Account identification and ABM targeting</td><td>Advertising</td></tr>
+                      <tr><td>Influ2</td><td>Person-based advertising</td><td>Advertising</td></tr>
+                      <tr><td>Amplitude</td><td>Product analytics</td><td>Analytics</td></tr>
+                      <tr><td>Microsoft Clarity</td><td>Session replay and heatmaps</td><td>Analytics</td></tr>
+                      <tr><td>Dreamdata</td><td>B2B revenue attribution</td><td>Analytics</td></tr>
+                      <tr><td>Simple Analytics</td><td>Cookieless site analytics</td><td>Analytics</td></tr>
+                      <tr><td>HubSpot</td><td>CRM, forms, email marketing</td><td>Marketing / CRM</td></tr>
+                      <tr><td>Lemlist</td><td>Outbound email sequencing</td><td>Marketing</td></tr>
+                      <tr><td>Clearbit</td><td>Firmographic enrichment of form submissions</td><td>Enrichment</td></tr>
+                      <tr><td>Google Ads</td><td>Advertising delivery and conversion tracking</td><td>Advertising</td></tr>
+                      <tr><td>Cloudflare</td><td>Hosting, CDN, bot mitigation</td><td>Infrastructure</td></tr>
+                      <tr><td>Google Workspace</td><td>Email, documents, internal collaboration</td><td>Infrastructure</td></tr>
+                      <tr><td>Usercentrics</td><td>Cookie consent management</td><td>Consent</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <p class="mt-5">We do not sell your personal information for money. Some transfers to advertising platforms may constitute "sharing" or "sale" under the California CPRA definition; our cookie banner lets California residents opt out, and we honor the GPC signal automatically.</p>
+              </section>
+
+              <!-- 08 -->
+              <section id="s08">
+                <p class="section-eyebrow mb-2"><span class="section-number">08</span>International data transfers</p>
+                <h2 class="text-[24px] md:text-[28px] font-medium text-brand-dark mb-4">International data transfers</h2>
+                <p>We're based in the EU (Bulgaria) with a presence in the US. Several of the providers in Section 07 are headquartered in the United States or route data through the United States.</p>
+                <ul>
+                  <li>For transfers out of the EEA, we rely on the European Commission's <strong>Standard Contractual Clauses (2021/914)</strong>, together with any supplementary measures a transfer requires.</li>
+                  <li>For transfers out of the UK, we rely on the <strong>UK International Data Transfer Addendum</strong> to the SCCs, or the UK IDTA where appropriate.</li>
+                  <li>We have <strong>not</strong> certified Advert Ltd. under the EU–US Data Privacy Framework. Where a US provider is DPF-certified, we may additionally rely on its certification; where it is not, SCCs are the transfer mechanism.</li>
+                </ul>
+                <p>You can ask for a copy of our transfer safeguards (redacted where needed) at <a href="mailto:privacy@vertodigital.com">privacy@vertodigital.com</a>.</p>
+              </section>
+
+              <!-- 09 -->
+              <section id="s09">
+                <p class="section-eyebrow mb-2"><span class="section-number">09</span>Retention</p>
+                <h2 class="text-[24px] md:text-[28px] font-medium text-brand-dark mb-4">Retention</h2>
+                <p>We keep personal information only as long as we need it for the purpose we collected it for, plus any period required by law.</p>
+                <ul>
+                  <li><strong>Marketing contacts</strong> (form submissions, newsletter subscribers) — up to 24 months from the last meaningful interaction, after which the record is deleted or anonymized.</li>
+                  <li><strong>CRM records in HubSpot</strong> (clients, active sales conversations) — up to 7 years from the last engagement, to preserve account history for a reasonable business relationship cycle.</li>
+                  <li><strong>Contractual and financial records</strong> — as long as required by tax, accounting and corporate law (generally up to 10 years under Bulgarian law).</li>
+                  <li><strong>Analytics</strong> — aggregated or truncated, retained for up to 26 months.</li>
+                  <li><strong>Server and security logs</strong> — up to 12 months.</li>
+                  <li><strong>Cookie consent records</strong> — up to 24 months, so we can prove you consented if challenged.</li>
+                </ul>
+              </section>
+
+              <!-- 10 -->
+              <section id="s10">
+                <p class="section-eyebrow mb-2"><span class="section-number">10</span>Your rights</p>
+                <h2 class="text-[24px] md:text-[28px] font-medium text-brand-dark mb-4">Your rights</h2>
+                <p>Depending on where you live, you have some or all of the following rights:</p>
+                <h3>Under the EU GDPR and UK GDPR</h3>
+                <ul>
+                  <li>Access the personal information we hold about you.</li>
+                  <li>Correct information that's inaccurate or out of date.</li>
+                  <li>Delete your information (the "right to be forgotten"), subject to exceptions.</li>
+                  <li>Restrict how we process your information.</li>
+                  <li>Object to processing based on legitimate interests, including direct marketing.</li>
+                  <li>Receive a machine-readable copy of information you provided (data portability).</li>
+                  <li>Withdraw consent at any time, without affecting prior lawful processing.</li>
+                  <li>Lodge a complaint with your local supervisory authority. In Bulgaria that's the <a href="https://www.cpdp.bg">Commission for Personal Data Protection (CPDP)</a>. In the UK, the <a href="https://ico.org.uk">Information Commissioner's Office (ICO)</a>.</li>
+                </ul>
+                <h3>Under California's CCPA/CPRA (and similar US state laws)</h3>
+                <ul>
+                  <li>Know what personal information we collect and how we use it.</li>
+                  <li>Access, correct or delete your personal information.</li>
+                  <li>Opt out of "sale" or "sharing" of personal information. We do not sell for money; some advertising activity constitutes "sharing" under CPRA — you can opt out via the cookie preferences dialog, and we automatically honor the <strong>Global Privacy Control (GPC)</strong> browser signal.</li>
+                  <li>Limit the use of "sensitive personal information" — we do not knowingly process sensitive personal information through this site.</li>
+                  <li>Non-discrimination — we will not treat you differently for exercising any of these rights.</li>
+                </ul>
+                <p>To exercise any right, email <a href="mailto:privacy@vertodigital.com">privacy@vertodigital.com</a> with enough detail for us to identify you. We'll respond within the timeframe required by the applicable law (typically one month under GDPR, 45 days under CCPA).</p>
+              </section>
+
+
+              <!-- 11 -->
+              <section id="s11">
+                <p class="section-eyebrow mb-2"><span class="section-number">11</span>Security</p>
+                <h2 class="text-[24px] md:text-[28px] font-medium text-brand-dark mb-4">Security</h2>
+                <p>We apply organizational and technical measures appropriate to the risk, including:</p>
+                <ul>
+                  <li>TLS (HTTPS) in transit across all forms and pages.</li>
+                  <li>Encryption at rest for CRM, email and file storage systems.</li>
+                  <li>Single sign-on and two-factor authentication for employee access to systems that hold personal data.</li>
+                  <li>Role-based access — employees see only what they need for their role.</li>
+                  <li>Periodic review of processors and sub-processors for their security posture.</li>
+                  <li>Incident response procedures and breach-notification routines aligned with Art. 33 GDPR.</li>
+                </ul>
+                <p>No system is perfectly secure. If you believe your account or information has been compromised, contact <a href="mailto:privacy@vertodigital.com">privacy@vertodigital.com</a> immediately.</p>
+              </section>
+
+              <!-- 12 -->
+              <section id="s12">
+                <p class="section-eyebrow mb-2"><span class="section-number">12</span>Children</p>
+                <h2 class="text-[24px] md:text-[28px] font-medium text-brand-dark mb-4">Children</h2>
+                <p>The VertoDigital website is a business-to-business service and is not intended for children under 16. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, contact us and we will delete it.</p>
+              </section>
+
+              <!-- 13 -->
+              <section id="s13">
+                <p class="section-eyebrow mb-2"><span class="section-number">13</span>Changes to this policy</p>
+                <h2 class="text-[24px] md:text-[28px] font-medium text-brand-dark mb-4">Changes to this policy</h2>
+                <p>We may update this policy to reflect new services, new legal requirements, or changes in the tools we use. The "Last updated" date at the top always shows the latest version. If we make a material change — for example, new categories of personal data or a new legal basis — we'll highlight it on this page and, where appropriate, notify you by email.</p>
+              </section>
+
+              <!-- 14 -->
+              <section id="s14">
+                <p class="section-eyebrow mb-2"><span class="section-number">14</span>Contact us</p>
+                <h2 class="text-[24px] md:text-[28px] font-medium text-brand-dark mb-4">Contact us</h2>
+                <p>For any question about this policy or how we handle your information:</p>
+                <ul>
+                  <li><strong>Email:</strong> <a href="mailto:privacy@vertodigital.com">privacy@vertodigital.com</a></li>
+                  <li><strong>Post:</strong> Advert Ltd. — Privacy, [INSERT registered address]</li>
+                </ul>
+                <p>We read every message, and we reply — usually within a few business days, always within the timeframe required by law.</p>
+              </section>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white">
+      <div class="container-brand py-20">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-16">
+          <div class="md:col-span-4 space-y-6">
+            <a href="/" class="flex items-center"><img src="VertoDigital-brandmark-color-white.png" alt="VertoDigital" class="h-10 w-auto" /></a>
+            <p class="text-cool-gray text-sm leading-relaxed max-w-xs">The pipeline agency for B2B technology companies. Based in Boston. Trusted by CMOs globally.</p>
+            <div class="flex gap-4">
+              <a class="text-cool-gray hover:text-white transition-colors" href="#"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+              <a class="text-cool-gray hover:text-white transition-colors" href="#"><i data-lucide="globe" class="w-5 h-5"></i></a>
+              <a class="text-cool-gray hover:text-white transition-colors" href="mailto:hello@vertodigital.com"><i data-lucide="mail" class="w-5 h-5"></i></a>
+            </div>
+          </div>
+          <div class="md:col-span-2 space-y-5">
+            <p class="font-medium text-sm">Services</p>
+            <ul class="space-y-3 text-sm">
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#services">Pipeline Intelligence</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#services">Paid Media</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#services">LinkedIn</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#services">ABM</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#services">AI Visibility</a></li>
+            </ul>
+          </div>
+          <div class="md:col-span-2 space-y-5">
+            <p class="font-medium text-sm">Company</p>
+            <ul class="space-y-3 text-sm">
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#about">About</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#case-studies">Case Studies</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#careers">Careers</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#press">Press</a></li>
+            </ul>
+          </div>
+          <div class="md:col-span-4 space-y-5">
+            <p class="font-medium text-sm">Research &amp; Insights</p>
+            <p class="text-cool-gray text-sm leading-[1.55]">Monthly dispatches for B2B marketing leaders. Data, benchmarks, and pipeline frameworks.</p>
+            <form class="flex gap-2">
+              <input type="email" placeholder="work@email.com" class="flex-1 bg-white/5 border border-white/15 text-white placeholder:text-cool-gray text-sm rounded-lg px-4 py-2.5 focus:border-brand-light focus:ring-1 focus:ring-brand-light/30 transition-colors" />
+              <button class="bg-brand-light text-brand-dark px-4 py-2.5 rounded-lg font-medium text-sm hover:bg-white transition-colors">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-xs text-cool-gray">
+          <p>© 2026 VertoDigital. Architected in Boston, MA.</p>
+          <div class="flex gap-6">
+            <a href="/privacy" class="hover:text-white transition-colors">Privacy</a>
+            <a href="/terms" class="hover:text-white transition-colors">Terms</a>
+            <a href="/privacy#cookies" class="hover:text-white transition-colors">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

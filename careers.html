@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Careers · VertoDigital</title>
+    <meta name="description" content="Work on global B2B marketing with teammates who sharpen your craft — from Bulgaria, without the ceiling. Three offices in Bulgaria, one outpost in Boston. We're hiring across Sofia, Ruse, and Blagoevgrad." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono:wght@400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Geist', 'Inter', 'system-ui', '-apple-system', '"Segoe UI"', 'Roboto', 'sans-serif'],
+              display: ['Geist', 'Inter', 'system-ui', '-apple-system', '"Segoe UI"', 'Roboto', 'sans-serif'],
+              mono: ['"Geist Mono"', 'ui-monospace', 'monospace'],
+              script: ['Caveat', 'cursive'],
+            },
+            colors: {
+              'brand-light': '#66CCFF',
+              'brand-blue': '#0099FF',
+              'dark-blue':  '#0066CC',
+              'brand-dark': '#060026',
+              'navy':       '#060026',
+              'accent-purple': '#8B57F4',
+              'accent-cyan':   '#43E5FF',
+              'accent-lime':   '#E1F77E',
+              'cool-gray':  '#B4D9C0',
+              'light-blue': '#d9f0ff',
+              primary:   '#060026',
+              secondary: '#0099FF',
+              accent:    '#43E5FF',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      html { scroll-padding-top: 96px; }
+      body {
+        font-family: 'Geist', 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        background-color: #ffffff;
+        color: #060026;
+        font-feature-settings: "ss01", "cv11";
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Geist', 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: -0.015em;
+      }
+      .font-script { font-family: 'Caveat', cursive; font-weight: 400; }
+      .font-mono, .tabular-nums { font-variant-numeric: tabular-nums; }
+      .hero-gradient {
+        background:
+          radial-gradient(ellipse 70% 50% at 20% 10%, rgba(102, 204, 255, 0.45), transparent 60%),
+          radial-gradient(ellipse 60% 50% at 90% 50%, rgba(67, 229, 255, 0.2), transparent 60%),
+          linear-gradient(180deg, #d9f0ff 0%, #ffffff 70%);
+      }
+      .editorial-rule {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(6, 0, 38, 0.15), transparent);
+      }
+      .container-brand {
+        width: 100%;
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+      @media (min-width: 768px) {
+        .container-brand { padding-left: 80px; padding-right: 80px; }
+      }
+      @media (min-width: 1280px) {
+        .container-brand { padding-left: 120px; padding-right: 120px; }
+      }
+      .section-eyebrow {
+        font-family: 'Geist Mono', ui-monospace, monospace;
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: rgba(6, 0, 38, 0.55);
+        font-weight: 500;
+      }
+      .section-eyebrow-blue {
+        font-family: 'Geist Mono', ui-monospace, monospace;
+        font-size: 12px;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: #0099FF;
+        font-weight: 500;
+      }
+      details.faq summary { list-style: none; cursor: pointer; }
+      details.faq summary::-webkit-details-marker { display: none; }
+      details.faq[open] .chev { transform: rotate(180deg); }
+      .chev { transition: transform 200ms ease; }
+    </style>
+  </head>
+  <body class="antialiased">
+    <!-- Announcement ribbon -->
+    <a href="/#services-linkedin" class="group bg-[#E1F77E] text-navy py-2.5 px-4 flex items-center justify-center gap-3 text-[12px] font-mono uppercase tracking-[0.15em] font-medium border-b border-black/10 hover:bg-[#d7ef6e] transition-colors">
+      <span>VertoDigital is now a LinkedIn Ads Premier Partner — see how we use it</span>
+      <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform"></i>
+    </a>
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 w-full z-50 bg-white/85 backdrop-blur-xl border-b border-brand-dark/10">
+      <div class="container-brand flex justify-between items-center py-5">
+        <a href="/" class="flex items-center"><img src="VertoDigital-brandmark-color-black.svg" alt="VertoDigital" class="h-11 w-auto" /></a>
+        <div class="hidden md:flex items-center space-x-10 text-[15px]">
+          <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/#case-studies">Case studies</a>
+          <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/#services">Services</a>
+          <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/#insights">Research</a>
+          <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/contact">Contact</a>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="/#report" class="hidden lg:inline-flex items-center gap-2 text-brand-dark text-sm font-medium hover:text-brand-blue transition-colors">
+            <i data-lucide="file-text" class="w-4 h-4"></i>
+            2026 Pipeline Report
+          </a>
+          <a href="/contact" class="bg-brand-dark hover:bg-brand-blue text-white px-5 py-2.5 rounded-lg font-medium text-sm transition-colors inline-flex items-center gap-2">
+            Book a call <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+
+      <!-- HERO -->
+      <section class="hero-gradient relative overflow-hidden">
+        <div class="container-brand pt-16 pb-16 md:pt-24 md:pb-24 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-7 space-y-8">
+            <div class="inline-flex items-center gap-2 section-eyebrow">
+              <span class="w-8 h-px bg-brand-blue"></span>
+              Careers at Verto
+            </div>
+            <h1 class="text-[32px] md:text-[52px] font-medium leading-[1.1] tracking-[-0.02em] text-brand-dark">
+              Sharpen your <span class="font-script text-brand-blue text-[1.15em] leading-none">craft</span> on work that matters.
+            </h1>
+            <p class="text-[16px] md:text-[18px] text-brand-dark/80 max-w-[62ch] leading-[1.55]">
+              Data, paid media, SEO, and the AI agents we're building on top — for scale-up B2B companies across Europe and the US. Three offices in Bulgaria, one outpost in Boston.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 pt-2">
+              <a href="#open-roles" class="bg-brand-dark hover:bg-brand-blue text-white px-7 py-4 rounded-lg font-medium text-base transition-colors inline-flex items-center justify-center gap-2 group">
+                See open roles
+                <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-0.5 transition-transform"></i>
+              </a>
+              <a href="mailto:careers@vertodigital.com" class="border border-brand-dark/20 hover:border-brand-dark hover:bg-white text-brand-dark px-7 py-4 rounded-lg font-medium text-base transition-all inline-flex items-center justify-center gap-2">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+                Send a speculative application
+              </a>
+            </div>
+          </div>
+
+          <!-- Right column: Employee experience card -->
+          <div class="lg:col-span-5">
+            <div class="bg-white rounded-2xl border border-brand-dark/10 shadow-xl shadow-brand-blue/10 overflow-hidden">
+              <div class="px-6 py-5 border-b border-brand-dark/10 flex items-center justify-between">
+                <div>
+                  <p class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium">Life at Verto · 2025 numbers</p>
+                  <p class="text-xl font-medium text-brand-dark mt-1">The team speaks</p>
+                </div>
+                <span class="inline-flex items-center gap-1.5 text-[12px] font-mono font-medium text-brand-blue uppercase tracking-wider bg-brand-light/30 px-2.5 py-1 rounded-full">
+                  <i data-lucide="users" class="w-3 h-3"></i> Verified
+                </span>
+              </div>
+              <div class="p-6 space-y-5">
+                <div class="grid grid-cols-2 gap-5">
+                  <div>
+                    <p class="font-mono text-[11px] uppercase tracking-wider text-brand-dark/60 font-medium">eNPS</p>
+                    <p class="font-mono text-3xl font-medium text-brand-blue mt-1 tabular-nums">100<span class="text-lg">%</span></p>
+                  </div>
+                  <div>
+                    <p class="font-mono text-[11px] uppercase tracking-wider text-brand-dark/60 font-medium">Retention</p>
+                    <p class="font-mono text-3xl font-medium text-brand-dark mt-1 tabular-nums">94.6<span class="text-lg">%</span></p>
+                  </div>
+                  <div>
+                    <p class="font-mono text-[11px] uppercase tracking-wider text-brand-dark/60 font-medium">Training / year</p>
+                    <p class="font-mono text-3xl font-medium text-brand-dark mt-1 tabular-nums">130<span class="text-lg">h+</span></p>
+                  </div>
+                  <div>
+                    <p class="font-mono text-[11px] uppercase tracking-wider text-brand-dark/60 font-medium">Avg PTO taken</p>
+                    <p class="font-mono text-3xl font-medium text-brand-dark mt-1 tabular-nums">33<span class="text-lg"> days</span></p>
+                  </div>
+                </div>
+                <div class="pt-4 border-t border-brand-dark/10">
+                  <p class="text-[13px] text-brand-dark/70 leading-[1.55]">
+                    Engagement score of <span class="font-medium text-brand-dark font-mono">4.33 / 5</span> — measured annually, independently, and published inside the team.
+                  </p>
+                </div>
+              </div>
+              <div class="px-6 py-4 bg-brand-light/15 border-t border-brand-dark/10 flex items-center justify-between">
+                <p class="text-[12px] text-brand-dark/70">Numbers from the 2025 Verto team survey</p>
+                <a href="#perks" class="text-xs font-medium text-brand-blue hover:underline inline-flex items-center gap-1">
+                  See the full list <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proof strip -->
+        <div class="border-t border-brand-dark/10">
+          <div class="container-brand py-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 font-mono text-[11px] md:text-[12px] uppercase tracking-[0.2em] text-brand-dark/70 font-medium">
+            <span>~50 teammates</span>
+            <span class="w-1 h-1 rounded-full bg-brand-dark/25" aria-hidden="true"></span>
+            <span>4 offices · 2 countries</span>
+            <span class="w-1 h-1 rounded-full bg-brand-dark/25" aria-hidden="true"></span>
+            <span>33 days avg PTO</span>
+            <span class="w-1 h-1 rounded-full bg-brand-dark/25" aria-hidden="true"></span>
+            <span>100% eNPS</span>
+            <span class="w-1 h-1 rounded-full bg-brand-dark/25" aria-hidden="true"></span>
+            <span>94.6% retention</span>
+            <span class="w-1 h-1 rounded-full bg-brand-dark/25" aria-hidden="true"></span>
+            <span>Founded 2018</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 30-SECOND PITCH -->
+      <section class="py-20 md:py-28 bg-white">
+        <div class="container-brand">
+          <div class="max-w-[72ch] mx-auto">
+            <p class="section-eyebrow-blue mb-5">The short version</p>
+            <div class="space-y-6 text-[17px] md:text-[19px] text-brand-dark leading-[1.55]">
+              <p>Most Bulgarian agencies serve local clients with generalist services. We don't.</p>
+              <p>We're B2B-only, data-first, and we help European and US-based scale-up tech companies grow into new markets. Our teams in <span class="font-medium">Sofia, Ruse, and Blagoevgrad</span> work on global marketing problems alongside senior peers who care about the craft as much as you do.</p>
+              <p>If you want to stop explaining what GA4 is and start learning from people who live and breathe it, this is that place.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- THE WORK YOU'D ACTUALLY DO -->
+      <section id="work" class="py-20 md:py-28 bg-[#fafbff]">
+        <div class="container-brand">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 mb-14">
+            <div class="lg:col-span-5">
+              <p class="section-eyebrow-blue mb-5">What you'd build on</p>
+              <h2 class="text-[28px] md:text-[40px] font-medium leading-[1.15] tracking-[-0.02em] text-brand-dark">
+                The <span class="font-script text-brand-blue text-[1.15em] leading-none">work</span> you'd actually do.
+              </h2>
+            </div>
+            <div class="lg:col-span-7 space-y-5 text-[16px] md:text-[17px] text-brand-dark/85 leading-[1.6] max-w-[68ch]">
+              <p>We help European and US-based B2B tech companies grow into new markets.</p>
+              <p>That means building the measurement foundation (GA4, server-side tagging, CDPs), running paid acquisition (LinkedIn, Google, Meta, ABM), and earning organic visibility (SEO and AI search) for companies in fintech, developer tools, and product-led SaaS.</p>
+              <p>Our clients are scale-ups — past the scrappy phase, not yet at enterprise bureaucracy. Budgets are real, decisions move fast, and the work has teeth. If you've spent years optimizing CTRs on campaigns nobody cares about, you'll feel the difference in your first month.</p>
+            </div>
+          </div>
+
+          <!-- Understated logo / client-name strip -->
+          <div class="mb-12">
+            <p class="section-eyebrow mb-5 text-center md:text-left">A few of the companies we've partnered with</p>
+            <div class="flex flex-wrap gap-x-10 gap-y-4 text-lg font-medium text-brand-dark/55">
+              <span>Neo4j</span>
+              <span>Payhawk</span>
+              <span>Cribl</span>
+              <span>Camunda</span>
+              <span>SnapLogic</span>
+              <span>Scalefocus</span>
+              <span>Netgain</span>
+            </div>
+          </div>
+
+          <!-- Case study tiles -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <a href="/#case-studies" class="group rounded-2xl border border-brand-dark/10 bg-white p-7 hover:border-brand-blue/40 hover:shadow-lg hover:shadow-brand-blue/5 transition-all">
+              <p class="section-eyebrow mb-4">Case study · [INSERT client]</p>
+              <h3 class="text-[20px] md:text-[22px] font-medium text-brand-dark leading-[1.25] mb-3">[INSERT one-line outcome — e.g., 2.4× pipeline in 6 months, same spend]</h3>
+              <p class="text-[14.5px] text-brand-dark/65 leading-[1.55] mb-5">[INSERT 2-sentence summary: what the client was stuck on, what we changed, the outcome that matters.]</p>
+              <span class="inline-flex items-center gap-1.5 text-brand-blue text-sm font-medium">See how we did it <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i></span>
+            </a>
+            <a href="/#case-studies" class="group rounded-2xl border border-brand-dark/10 bg-white p-7 hover:border-brand-blue/40 hover:shadow-lg hover:shadow-brand-blue/5 transition-all">
+              <p class="section-eyebrow mb-4">Case study · [INSERT client]</p>
+              <h3 class="text-[20px] md:text-[22px] font-medium text-brand-dark leading-[1.25] mb-3">[INSERT one-line outcome]</h3>
+              <p class="text-[14.5px] text-brand-dark/65 leading-[1.55] mb-5">[INSERT 2-sentence summary.]</p>
+              <span class="inline-flex items-center gap-1.5 text-brand-blue text-sm font-medium">See how we did it <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i></span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHERE WE WORK -->
+      <section id="offices" class="py-20 md:py-28 bg-white">
+        <div class="container-brand">
+          <div class="max-w-[72ch] mb-12">
+            <p class="section-eyebrow-blue mb-5">Where we work</p>
+            <h2 class="text-[28px] md:text-[40px] font-medium leading-[1.15] tracking-[-0.02em] text-brand-dark mb-5">
+              Three offices + a Boston outpost.
+            </h2>
+            <p class="text-[16px] md:text-[17px] text-brand-dark/80 leading-[1.6]">
+              We're a Bulgarian agency with global reach. Three offices across the country and an outpost in Boston — pick the one that makes your commute sane. Wherever you land, the specialty coffee bar works the same way.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            <!-- Sofia -->
+            <div class="rounded-2xl overflow-hidden border border-brand-dark/10 bg-gradient-to-br from-brand-light/40 via-light-blue/60 to-white">
+              <div class="p-6 h-full flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                  <span class="text-[12px] font-mono uppercase tracking-widest text-brand-blue font-medium">HQ · Sofia</span>
+                  <span class="text-[11px] font-mono text-brand-dark/50">Since 2018</span>
+                </div>
+                <h3 class="text-[22px] font-medium text-brand-dark leading-[1.2] mb-2">Sofia — Campus X</h3>
+                <p class="text-[14.5px] text-brand-dark/75 leading-[1.55] flex-1">Our home since day one. Part of the Campus X startup ecosystem, with everything that comes with it — gym, showers, events, and a few hundred other founders and operators within walking distance.</p>
+              </div>
+            </div>
+            <!-- Ruse -->
+            <div class="rounded-2xl overflow-hidden border border-brand-dark/10 bg-white">
+              <div class="p-6 h-full flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                  <span class="text-[12px] font-mono uppercase tracking-widest text-brand-dark/60 font-medium">BG · Ruse</span>
+                  <span class="text-[11px] font-mono text-accent-purple font-medium">New · Jan 2026</span>
+                </div>
+                <h3 class="text-[22px] font-medium text-brand-dark leading-[1.2] mb-2">Ruse</h3>
+                <p class="text-[14.5px] text-brand-dark/75 leading-[1.55] flex-1">Full team, same craft bar, same coffee. Built for talent that lives on the Danube and didn't previously have a shot at international B2B work without relocating.</p>
+              </div>
+            </div>
+            <!-- Blagoevgrad -->
+            <div class="rounded-2xl overflow-hidden border border-brand-dark/10 bg-white">
+              <div class="p-6 h-full flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                  <span class="text-[12px] font-mono uppercase tracking-widest text-brand-dark/60 font-medium">BG · Blagoevgrad</span>
+                  <span class="text-[11px] font-mono text-accent-purple font-medium">New · Jan 2026</span>
+                </div>
+                <h3 class="text-[22px] font-medium text-brand-dark leading-[1.2] mb-2">Blagoevgrad</h3>
+                <p class="text-[14.5px] text-brand-dark/75 leading-[1.55] flex-1">Full team, same craft bar, same coffee. Opening the door to marketers and analysts in the south-west who want international clients without the Sofia commute.</p>
+              </div>
+            </div>
+            <!-- Boston -->
+            <div class="rounded-2xl overflow-hidden border border-brand-dark/10 bg-gradient-to-br from-brand-dark to-[#1a0f5e] text-white">
+              <div class="p-6 h-full flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                  <span class="text-[12px] font-mono uppercase tracking-widest text-brand-light font-medium">US · Boston</span>
+                  <span class="text-[11px] font-mono text-white/60">Outpost</span>
+                </div>
+                <h3 class="text-[22px] font-medium leading-[1.2] mb-2">Boston</h3>
+                <p class="text-[14.5px] text-white/75 leading-[1.55] flex-1">Our US outpost. Paul Green runs the ground game for our American clients — and keeps us on US time zones when the pipeline calls for it.</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="mt-8 text-[14px] text-brand-dark/55 max-w-[60ch]">Not hiring in the US in 2026. Boston is included here as footprint, not as a role location.</p>
+        </div>
+      </section>
+
+      <!-- LIFE AT VERTO -->
+      <section id="life-at-verto" class="py-20 md:py-28 bg-navy text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-accent-purple/15 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brand-blue/15 rounded-full blur-3xl"></div>
+        <div class="container-brand relative">
+          <div class="max-w-[72ch] mb-12">
+            <p class="font-mono text-[12px] uppercase tracking-[0.3em] text-brand-light font-medium mb-5">Life at Verto</p>
+            <h2 class="text-[28px] md:text-[40px] font-medium leading-[1.15] tracking-[-0.02em] mb-5">
+              The part that's hard to write and <span class="font-script text-brand-light text-[1.15em] leading-none">easy</span> to show.
+            </h2>
+            <p class="text-[16px] md:text-[17px] text-white/80 leading-[1.6]">
+              Life at Verto is our platform for the stuff between deliverables: Thirsty Thursdays, Verto Value Week, team offsites, the coffee bar, whatever the team's cooking up this month. If you want a real sense of how it feels to work here, our Instagram is the feed to check.
+            </p>
+          </div>
+
+          <!--
+            INSTAGRAM EMBED — placeholder grid.
+            Swap this 6-tile grid for a Meta official embed or an EmbedSocial / Elfsight widget
+            when credentials + posting cadence are confirmed. Keep the "Follow on Instagram" CTA
+            as a complementary link even after the feed is live.
+          -->
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4 mb-10">
+            <div class="aspect-square rounded-xl bg-gradient-to-br from-brand-blue/30 to-accent-cyan/20 border border-white/10 flex items-center justify-center">
+              <i data-lucide="image" class="w-6 h-6 text-white/40"></i>
+            </div>
+            <div class="aspect-square rounded-xl bg-gradient-to-br from-accent-purple/30 to-brand-blue/20 border border-white/10 flex items-center justify-center">
+              <i data-lucide="image" class="w-6 h-6 text-white/40"></i>
+            </div>
+            <div class="aspect-square rounded-xl bg-gradient-to-br from-brand-light/30 to-accent-cyan/20 border border-white/10 flex items-center justify-center">
+              <i data-lucide="image" class="w-6 h-6 text-white/40"></i>
+            </div>
+            <div class="aspect-square rounded-xl bg-gradient-to-br from-accent-cyan/30 to-brand-blue/20 border border-white/10 flex items-center justify-center">
+              <i data-lucide="image" class="w-6 h-6 text-white/40"></i>
+            </div>
+            <div class="aspect-square rounded-xl bg-gradient-to-br from-brand-blue/30 to-accent-purple/20 border border-white/10 flex items-center justify-center">
+              <i data-lucide="image" class="w-6 h-6 text-white/40"></i>
+            </div>
+            <div class="aspect-square rounded-xl bg-gradient-to-br from-accent-lime/20 to-brand-light/20 border border-white/10 flex items-center justify-center">
+              <i data-lucide="image" class="w-6 h-6 text-white/40"></i>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-8 border-t border-white/10">
+            <p class="text-[14px] text-white/60 leading-[1.55] max-w-[52ch]">Instagram feed loads the latest posts from <span class="font-medium text-white">@vertodigitalagency</span>. When it's quiet, it's quiet — we don't script this.</p>
+            <a href="https://www.instagram.com/vertodigitalagency/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white text-brand-dark hover:bg-accent-lime px-5 py-3 rounded-lg font-medium text-sm transition-colors whitespace-nowrap">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              Follow @vertodigitalagency
+            </a>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- HOW WE GROW OUR PEOPLE -->
+      <section id="growth" class="py-20 md:py-28 bg-white">
+        <div class="container-brand">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+            <div class="lg:col-span-5">
+              <p class="section-eyebrow-blue mb-5">Craft</p>
+              <h2 class="text-[28px] md:text-[40px] font-medium leading-[1.15] tracking-[-0.02em] text-brand-dark mb-5">
+                We invest in your <span class="font-script text-brand-blue text-[1.15em] leading-none">craft</span>.
+              </h2>
+              <p class="text-[16px] md:text-[17px] text-brand-dark/80 leading-[1.6] max-w-[48ch]">
+                Most agencies promise growth. We put a number on it.
+              </p>
+            </div>
+            <div class="lg:col-span-7">
+              <ul class="space-y-5 text-[15.5px] md:text-[16px] text-brand-dark/85 leading-[1.55]">
+                <li class="flex gap-4 pb-5 border-b border-brand-dark/10">
+                  <div class="w-9 h-9 rounded-full bg-brand-light/30 flex items-center justify-center flex-shrink-0"><i data-lucide="banknote" class="w-4 h-4 text-brand-blue"></i></div>
+                  <div>
+                    <p class="font-medium text-brand-dark mb-1">Personal training budget</p>
+                    <p class="text-brand-dark/70">Scales with seniority. Use it on the conferences, courses, or coaches that matter for your level — not just a shared L&D pot.</p>
+                  </div>
+                </li>
+                <li class="flex gap-4 pb-5 border-b border-brand-dark/10">
+                  <div class="w-9 h-9 rounded-full bg-brand-light/30 flex items-center justify-center flex-shrink-0"><i data-lucide="book-open" class="w-4 h-4 text-brand-blue"></i></div>
+                  <div>
+                    <p class="font-medium text-brand-dark mb-1">Coursera for everyone</p>
+                    <p class="text-brand-dark/70">Plus any other course you can make a case for. The bar is low — a paragraph on why it helps you or a client is usually enough.</p>
+                  </div>
+                </li>
+                <li class="flex gap-4 pb-5 border-b border-brand-dark/10">
+                  <div class="w-9 h-9 rounded-full bg-brand-light/30 flex items-center justify-center flex-shrink-0"><i data-lucide="clock" class="w-4 h-4 text-brand-blue"></i></div>
+                  <div>
+                    <p class="font-medium text-brand-dark mb-1">130–160 training hours a year</p>
+                    <p class="text-brand-dark/70">That's 11–14% of working time — a line item in the plan, not a wish-list.</p>
+                  </div>
+                </li>
+                <li class="flex gap-4 pb-5 border-b border-brand-dark/10">
+                  <div class="w-9 h-9 rounded-full bg-brand-light/30 flex items-center justify-center flex-shrink-0"><i data-lucide="message-circle" class="w-4 h-4 text-brand-blue"></i></div>
+                  <div>
+                    <p class="font-medium text-brand-dark mb-1">Coaching for senior team members</p>
+                    <p class="text-brand-dark/70">External coaches, paid for, scheduled during working hours. Not a reward — an assumption.</p>
+                  </div>
+                </li>
+                <li class="flex gap-4 pb-5 border-b border-brand-dark/10">
+                  <div class="w-9 h-9 rounded-full bg-brand-light/30 flex items-center justify-center flex-shrink-0"><i data-lucide="sparkles" class="w-4 h-4 text-brand-blue"></i></div>
+                  <div>
+                    <p class="font-medium text-brand-dark mb-1">Power skills training, twice a year</p>
+                    <p class="text-brand-dark/70">The stuff that compounds: feedback, presenting, running a difficult meeting, managing up.</p>
+                  </div>
+                </li>
+                <li class="flex gap-4 pb-5 border-b border-brand-dark/10">
+                  <div class="w-9 h-9 rounded-full bg-brand-light/30 flex items-center justify-center flex-shrink-0"><i data-lucide="route" class="w-4 h-4 text-brand-blue"></i></div>
+                  <div>
+                    <p class="font-medium text-brand-dark mb-1">Transparent career paths</p>
+                    <p class="text-brand-dark/70">The criteria to move to the next level are written down and shared — so "what do I need to do to get promoted?" has an actual answer.</p>
+                  </div>
+                </li>
+                <li class="flex gap-4">
+                  <div class="w-9 h-9 rounded-full bg-brand-light/30 flex items-center justify-center flex-shrink-0"><i data-lucide="target" class="w-4 h-4 text-brand-blue"></i></div>
+                  <div>
+                    <p class="font-medium text-brand-dark mb-1">Real reviews, not ratings</p>
+                    <p class="text-brand-dark/70">Annual goal setting, a mid-year, and an end-of-year — with concrete feedback, not a number on a spreadsheet.</p>
+                  </div>
+                </li>
+              </ul>
+              <p class="mt-8 pt-6 border-t border-brand-dark/10 text-[15px] md:text-[16px] text-brand-dark italic leading-[1.55]">
+                Growth here isn't a slide in the onboarding deck. It's a line item.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PERKS & BENEFITS -->
+      <section id="perks" class="py-20 md:py-28 bg-[#fafbff]">
+        <div class="container-brand">
+          <div class="max-w-[72ch] mb-12">
+            <p class="section-eyebrow-blue mb-5">The actual list</p>
+            <h2 class="text-[28px] md:text-[40px] font-medium leading-[1.15] tracking-[-0.02em] text-brand-dark mb-5">
+              Perks &amp; benefits.
+            </h2>
+            <p class="text-[16px] md:text-[17px] text-brand-dark/80 leading-[1.6]">
+              No metaphors. Just the things that make working here better than the alternative.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <!-- Time -->
+            <div class="rounded-2xl bg-white border border-brand-dark/10 p-7">
+              <div class="flex items-center gap-3 mb-5">
+                <div class="w-10 h-10 rounded-lg bg-brand-light/25 flex items-center justify-center"><i data-lucide="clock" class="w-5 h-5 text-brand-blue"></i></div>
+                <h3 class="text-[18px] font-medium text-brand-dark">Time</h3>
+              </div>
+              <ul class="space-y-2.5 text-[14.5px] text-brand-dark/80 leading-[1.55]">
+                <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-0.5"></i><span>Unlimited paid leave — avg 33 days used / year (industry norm: 25)</span></li>
+                <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-0.5"></i><span>Flexible working hours</span></li>
+                <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-0.5"></i><span>3-day hybrid model</span></li>
+              </ul>
+            </div>
+
+            <!-- Money -->
+            <div class="rounded-2xl bg-white border border-brand-dark/10 p-7">
+              <div class="flex items-center gap-3 mb-5">
+                <div class="w-10 h-10 rounded-lg bg-brand-light/25 flex items-center justify-center"><i data-lucide="banknote" class="w-5 h-5 text-brand-blue"></i></div>
+                <h3 class="text-[18px] font-medium text-brand-dark">Money</h3>
+              </div>
+              <ul class="space-y-2.5 text-[14.5px] text-brand-dark/80 leading-[1.55]">
+                <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-0.5"></i><span>Competitive, benchmarked base salary</span></li>
+                <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-0.5"></i><span>Annual profit sharing</span></li>
+                <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-0.5"></i><span>Bonus tied to company + individual performance</span></li>
+              </ul>
+            </div>
+
+            <!-- Health -->
+            <div class="rounded-2xl bg-white border border-brand-dark/10 p-7">
+              <div class="flex items-center gap-3 mb-5">
+                <div class="w-10 h-10 rounded-lg bg-brand-light/25 flex items-center justify-center"><i data-lucide="heart-pulse" class="w-5 h-5 text-brand-blue"></i></div>
+                <h3 class="text-[18px] font-medium text-brand-dark">Health</h3>
+              </div>
+              <ul class="space-y-2.5 text-[14.5px] text-brand-dark/80 leading-[1.55]">
+                <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-0.5"></i><span>Additional private health insurance</span></li>
+                <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-0.5"></i><span>Campus X gym, showers, and leisure access (Sofia)</span></li>
+              </ul>
+            </div>
+
+            <!-- Growth -->
+            <div class="rounded-2xl bg-white border border-brand-dark/10 p-7">
+              <div class="flex items-center gap-3 mb-5">
+                <div class="w-10 h-10 rounded-lg bg-brand-light/25 flex items-center justify-center"><i data-lucide="trending-up" class="w-5 h-5 text-brand-blue"></i></div>
+                <h3 class="text-[18px] font-medium text-brand-dark">Growth</h3>
+              </div>
+              <ul class="space-y-2.5 text-[14.5px] text-brand-dark/80 leading-[1.55]">
+                <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-0.5"></i><span>Personal training budget</span></li>
+                <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-0.5"></i><span>Coursera for everyone</span></li>
+                <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-0.5"></i><span>Coaching for senior roles</span></li>
+                <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-0.5"></i><span>Power skills training</span></li>
+              </ul>
+            </div>
+
+            <!-- Community -->
+            <div class="rounded-2xl bg-white border border-brand-dark/10 p-7">
+              <div class="flex items-center gap-3 mb-5">
+                <div class="w-10 h-10 rounded-lg bg-brand-light/25 flex items-center justify-center"><i data-lucide="users" class="w-5 h-5 text-brand-blue"></i></div>
+                <h3 class="text-[18px] font-medium text-brand-dark">Community</h3>
+              </div>
+              <ul class="space-y-2.5 text-[14.5px] text-brand-dark/80 leading-[1.55]">
+                <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-0.5"></i><span>Specialty coffee bar in every office</span></li>
+                <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-0.5"></i><span>Thirsty Thursday (monthly)</span></li>
+                <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-0.5"></i><span>Verto Value Week (annual)</span></li>
+                <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-0.5"></i><span>Quarterly team budgets</span></li>
+                <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-0.5"></i><span>Two company-wide events / year</span></li>
+                <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-0.5"></i><span>Peer recognition tokens — 24 / year / person</span></li>
+                <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-0.5"></i><span>Campus X perks (Sofia)</span></li>
+              </ul>
+            </div>
+
+            <!-- Kit -->
+            <div class="rounded-2xl bg-white border border-brand-dark/10 p-7">
+              <div class="flex items-center gap-3 mb-5">
+                <div class="w-10 h-10 rounded-lg bg-brand-light/25 flex items-center justify-center"><i data-lucide="laptop" class="w-5 h-5 text-brand-blue"></i></div>
+                <h3 class="text-[18px] font-medium text-brand-dark">Kit</h3>
+              </div>
+              <ul class="space-y-2.5 text-[14.5px] text-brand-dark/80 leading-[1.55]">
+                <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-0.5"></i><span>MacBook Pro</span></li>
+                <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-0.5"></i><span>Logitech peripherals</span></li>
+                <li class="flex gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-blue flex-shrink-0 mt-0.5"></i><span>Whatever else you need to do the job</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AI & AUTOMATION -->
+      <section id="ai-automation" class="py-20 md:py-28 bg-gradient-to-br from-navy via-[#0a0440] to-navy text-white relative overflow-hidden">
+        <div class="absolute top-1/4 right-0 w-[600px] h-[600px] bg-accent-purple/20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-brand-blue/20 rounded-full blur-3xl"></div>
+        <div class="container-brand relative">
+          <div class="max-w-[72ch] mx-auto">
+            <div class="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full bg-white/10 border border-white/15">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5 text-accent-lime"></i>
+              <span class="font-mono text-[11px] uppercase tracking-[0.25em] text-accent-lime font-medium">2026 strategic bet</span>
+            </div>
+            <h2 class="text-[28px] md:text-[44px] font-medium leading-[1.1] tracking-[-0.02em] mb-8">
+              We're building what's next — and you'll <span class="font-script text-brand-light text-[1.15em] leading-none">work alongside</span> it.
+            </h2>
+            <div class="space-y-5 text-[16px] md:text-[18px] text-white/80 leading-[1.6]">
+              <p>AI &amp; Automation is our strategic bet for 2026 and beyond.</p>
+              <p>A dedicated team inside Verto — led by <span class="text-white font-medium">Simeon Penev</span>, with <span class="text-white font-medium">Yasen Lilov</span> on architecture — has already shipped <span class="text-accent-lime font-medium">10+ production AI agents</span> for B2B marketing workflows: LinkedIn audience targeting, ad copy generation, SEO content briefs, GA4 reporting, competitor research.</p>
+              <p>We're not just using AI. We're engineering it, for the specific problems our clients face.</p>
+              <p>Every role at Verto works with these tools. As the team ships more, you ship more — without needing to learn a new stack.</p>
+            </div>
+            <p class="mt-10 pt-6 border-t border-white/15 text-[13px] text-white/55 leading-[1.55]">
+              Not hiring into the AI &amp; Automation team in 2026 — it's an internal team that ships alongside the agency. Mentioned here because it shapes how every role at Verto operates.
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- VALUES -->
+      <!--
+        Existing 6 values. Copy below is Claude's read of the VertoVoice — confirm against
+        the live careers page wording, and refine before launch.
+      -->
+      <section id="values" class="py-20 md:py-28 bg-white">
+        <div class="container-brand">
+          <div class="max-w-[72ch] mb-14">
+            <p class="section-eyebrow-blue mb-5">What we believe</p>
+            <h2 class="text-[28px] md:text-[40px] font-medium leading-[1.15] tracking-[-0.02em] text-brand-dark mb-5">
+              Our <span class="font-script text-brand-blue text-[1.15em] leading-none">values</span>.
+            </h2>
+            <p class="text-[16px] md:text-[17px] text-brand-dark/80 leading-[1.6]">
+              Six lines we wrote down, then tried to keep honest. If they sound like the people you'd want to work with, you'll like it here.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div class="rounded-2xl border border-brand-dark/10 p-7 hover:border-brand-blue/30 transition-colors">
+              <p class="font-mono text-[11px] uppercase tracking-[0.25em] text-brand-blue font-medium mb-3">01 — Explore</p>
+              <h3 class="text-[20px] font-medium text-brand-dark mb-3">We Explore</h3>
+              <p class="text-[14.5px] text-brand-dark/70 leading-[1.55]">Curiosity before certainty. We'd rather ship a rough experiment and learn than argue the perfect framework for a quarter.</p>
+            </div>
+            <div class="rounded-2xl border border-brand-dark/10 p-7 hover:border-brand-blue/30 transition-colors">
+              <p class="font-mono text-[11px] uppercase tracking-[0.25em] text-brand-blue font-medium mb-3">02 — Create Value</p>
+              <h3 class="text-[20px] font-medium text-brand-dark mb-3">We Create Value</h3>
+              <p class="text-[14.5px] text-brand-dark/70 leading-[1.55]">Pipeline and revenue are the scoreboard. If the work doesn't move one of them, we ask why before we ask for the budget.</p>
+            </div>
+            <div class="rounded-2xl border border-brand-dark/10 p-7 hover:border-brand-blue/30 transition-colors">
+              <p class="font-mono text-[11px] uppercase tracking-[0.25em] text-brand-blue font-medium mb-3">03 — Shine</p>
+              <h3 class="text-[20px] font-medium text-brand-dark mb-3">We Shine</h3>
+              <p class="text-[14.5px] text-brand-dark/70 leading-[1.55]">Own your craft. Bring your best, visibly — in the work, in the meeting, in the pull request. Quiet excellence still counts.</p>
+            </div>
+            <div class="rounded-2xl border border-brand-dark/10 p-7 hover:border-brand-blue/30 transition-colors">
+              <p class="font-mono text-[11px] uppercase tracking-[0.25em] text-brand-blue font-medium mb-3">04 — Get It Done</p>
+              <h3 class="text-[20px] font-medium text-brand-dark mb-3">We Get It Done</h3>
+              <p class="text-[14.5px] text-brand-dark/70 leading-[1.55]">Ship beats perfect. When the path is obvious, move. When it isn't, pick one and commit. Rework is cheap; drift is expensive.</p>
+            </div>
+            <div class="rounded-2xl border border-brand-dark/10 p-7 hover:border-brand-blue/30 transition-colors">
+              <p class="font-mono text-[11px] uppercase tracking-[0.25em] text-brand-blue font-medium mb-3">05 — Share</p>
+              <h3 class="text-[20px] font-medium text-brand-dark mb-3">We Share</h3>
+              <p class="text-[14.5px] text-brand-dark/70 leading-[1.55]">Defaults to open. What you learn belongs to the team before it belongs to you — the playbook, the failure, the Loom, the one useful line.</p>
+            </div>
+            <div class="rounded-2xl border border-brand-dark/10 p-7 hover:border-brand-blue/30 transition-colors">
+              <p class="font-mono text-[11px] uppercase tracking-[0.25em] text-brand-blue font-medium mb-3">06 — Care</p>
+              <h3 class="text-[20px] font-medium text-brand-dark mb-3">We Care</h3>
+              <p class="text-[14.5px] text-brand-dark/70 leading-[1.55]">About teammates, about clients, about the work — on the hard days especially. "Yes, and" beats "no, but" almost every time.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OPEN ROLES -->
+      <section id="open-roles" class="py-20 md:py-28 bg-[#fafbff]">
+        <div class="container-brand">
+          <div class="max-w-[72ch] mb-12">
+            <p class="section-eyebrow-blue mb-5">Apply</p>
+            <h2 class="text-[28px] md:text-[40px] font-medium leading-[1.15] tracking-[-0.02em] text-brand-dark mb-5">
+              Open roles.
+            </h2>
+            <p class="text-[16px] md:text-[17px] text-brand-dark/80 leading-[1.6]">
+              Current openings across Sofia, Ruse, and Blagoevgrad. Pick your base, pick your craft.
+            </p>
+          </div>
+
+          <!--
+            TALENTHR EMBED — placeholder.
+            Preferred: inline TalentHR widget with location filter (Sofia / Ruse / Blagoevgrad).
+            Fallback (current): branded redirect card linking to jobs.talenthr.io/vertodigital.
+            When embed feasibility is confirmed, swap the card below for the widget script.
+          -->
+          <div class="rounded-2xl border border-brand-dark/10 bg-white shadow-xl shadow-brand-blue/5 overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+              <div class="lg:col-span-7 p-8 md:p-10 space-y-5">
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-brand-light/30 text-brand-blue text-[11px] font-mono uppercase tracking-wider font-medium">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-blue"></span> Sofia
+                  </span>
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-brand-light/30 text-brand-blue text-[11px] font-mono uppercase tracking-wider font-medium">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-blue"></span> Ruse
+                  </span>
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-brand-light/30 text-brand-blue text-[11px] font-mono uppercase tracking-wider font-medium">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-blue"></span> Blagoevgrad
+                  </span>
+                </div>
+                <h3 class="text-[22px] md:text-[26px] font-medium text-brand-dark leading-[1.2]">Browse and apply on our hiring portal</h3>
+                <p class="text-[15px] text-brand-dark/75 leading-[1.6]">
+                  Every open role, every office, every level. Filter by location, read the full job description, and apply in a few minutes. You'll hear back from a human at Verto — not an auto-reply.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                  <a href="https://jobs.talenthr.io/vertodigital" target="_blank" rel="noopener noreferrer" class="bg-brand-dark hover:bg-brand-blue text-white px-6 py-3.5 rounded-lg font-medium text-[15px] transition-colors inline-flex items-center justify-center gap-2 group">
+                    See all open roles
+                    <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                  </a>
+                  <a href="#speculative" class="border border-brand-dark/20 hover:border-brand-dark hover:bg-brand-light/20 text-brand-dark px-6 py-3.5 rounded-lg font-medium text-[15px] transition-all inline-flex items-center justify-center gap-2">
+                    No role fits?
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="lg:col-span-5 bg-gradient-to-br from-brand-light/30 to-light-blue/40 p-8 md:p-10 flex flex-col justify-center">
+                <p class="font-mono text-[11px] uppercase tracking-[0.25em] text-brand-blue font-medium mb-4">What happens after you apply</p>
+                <ol class="space-y-4 text-[14.5px] text-brand-dark/80 leading-[1.55]">
+                  <li class="flex gap-3">
+                    <span class="w-6 h-6 rounded-full bg-white border border-brand-dark/10 flex items-center justify-center text-[11px] font-mono text-brand-blue font-medium flex-shrink-0 mt-0.5">1</span>
+                    <span>First chat with the hiring manager — craft and context.</span>
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="w-6 h-6 rounded-full bg-white border border-brand-dark/10 flex items-center justify-center text-[11px] font-mono text-brand-blue font-medium flex-shrink-0 mt-0.5">2</span>
+                    <span>A practical task or work sample — the kind of thing you'd do on the job.</span>
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="w-6 h-6 rounded-full bg-white border border-brand-dark/10 flex items-center justify-center text-[11px] font-mono text-brand-blue font-medium flex-shrink-0 mt-0.5">3</span>
+                    <span>Final round with the team you'd actually work with.</span>
+                  </li>
+                </ol>
+                <p class="mt-5 pt-5 border-t border-brand-dark/15 text-[13px] text-brand-dark/65 leading-[1.5]">
+                  End-to-end: <span class="font-medium text-brand-dark">2–3 weeks</span>. No trick questions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DON'T SEE YOUR ROLE -->
+      <section id="speculative" class="py-20 md:py-28 bg-white">
+        <div class="container-brand">
+          <div class="max-w-[64ch] mx-auto text-center">
+            <p class="section-eyebrow-blue mb-5">Still interested?</p>
+            <h2 class="text-[28px] md:text-[40px] font-medium leading-[1.15] tracking-[-0.02em] text-brand-dark mb-5">
+              Don't see your <span class="font-script text-brand-blue text-[1.15em] leading-none">role</span>?
+            </h2>
+            <p class="text-[16px] md:text-[17px] text-brand-dark/80 leading-[1.6] mb-8">
+              Doesn't mean there isn't one. If Verto feels like the right fit, send us a CV or LinkedIn link with a few lines on why. We actually read them.
+            </p>
+            <a href="mailto:careers@vertodigital.com" class="inline-flex items-center gap-2 bg-brand-dark hover:bg-brand-blue text-white px-7 py-4 rounded-lg font-medium text-[15px] transition-colors group">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+              careers@vertodigital.com
+              <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-0.5 transition-transform"></i>
+            </a>
+            <p class="mt-5 text-[13px] text-brand-dark/55">
+              Typical reply time: 1 business week for speculative applications. Not a queue.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="py-20 md:py-28 bg-[#fafbff]">
+        <div class="container-brand">
+          <div class="max-w-[72ch] mx-auto">
+            <div class="mb-12">
+              <p class="section-eyebrow-blue mb-5">FAQ</p>
+              <h2 class="text-[28px] md:text-[40px] font-medium leading-[1.15] tracking-[-0.02em] text-brand-dark">
+                Questions <span class="font-script text-brand-blue text-[1.15em] leading-none">people</span> ask.
+              </h2>
+            </div>
+
+            <div class="space-y-3">
+              <details class="faq group rounded-2xl border border-brand-dark/10 bg-white px-6 py-5 hover:border-brand-blue/30 transition-colors">
+                <summary class="flex items-center justify-between gap-4 text-[17px] font-medium text-brand-dark">
+                  <span>What's the interview process like?</span>
+                  <i data-lucide="chevron-down" class="chev w-5 h-5 text-brand-dark/60 flex-shrink-0"></i>
+                </summary>
+                <p class="mt-4 text-[15px] text-brand-dark/75 leading-[1.6]">Usually a first chat with the hiring manager, a craft-focused task or work sample, and a final round with the team you'd work with. Two to three weeks end-to-end. No trick questions.</p>
+              </details>
+
+              <details class="faq group rounded-2xl border border-brand-dark/10 bg-white px-6 py-5 hover:border-brand-blue/30 transition-colors">
+                <summary class="flex items-center justify-between gap-4 text-[17px] font-medium text-brand-dark">
+                  <span>What does hybrid actually mean?</span>
+                  <i data-lucide="chevron-down" class="chev w-5 h-5 text-brand-dark/60 flex-shrink-0"></i>
+                </summary>
+                <p class="mt-4 text-[15px] text-brand-dark/75 leading-[1.6]">Three days in the office, two flexible. We value the in-person time — especially in your first 3–6 months when you're ramping up.</p>
+              </details>
+
+              <details class="faq group rounded-2xl border border-brand-dark/10 bg-white px-6 py-5 hover:border-brand-blue/30 transition-colors">
+                <summary class="flex items-center justify-between gap-4 text-[17px] font-medium text-brand-dark">
+                  <span>Which offices hire for which teams?</span>
+                  <i data-lucide="chevron-down" class="chev w-5 h-5 text-brand-dark/60 flex-shrink-0"></i>
+                </summary>
+                <p class="mt-4 text-[15px] text-brand-dark/75 leading-[1.6]">Most roles can be based in any of our three Bulgarian offices. A few roles are Sofia-only by default — we'll note that clearly in the job description.</p>
+              </details>
+
+              <details class="faq group rounded-2xl border border-brand-dark/10 bg-white px-6 py-5 hover:border-brand-blue/30 transition-colors">
+                <summary class="flex items-center justify-between gap-4 text-[17px] font-medium text-brand-dark">
+                  <span>Do you hire juniors?</span>
+                  <i data-lucide="chevron-down" class="chev w-5 h-5 text-brand-dark/60 flex-shrink-0"></i>
+                </summary>
+                <p class="mt-4 text-[15px] text-brand-dark/75 leading-[1.6]">Yes, regularly. We hire for curiosity and trajectory as much as current skills — especially in SEO, Paid, and Analytics.</p>
+              </details>
+
+              <details class="faq group rounded-2xl border border-brand-dark/10 bg-white px-6 py-5 hover:border-brand-blue/30 transition-colors">
+                <summary class="flex items-center justify-between gap-4 text-[17px] font-medium text-brand-dark">
+                  <span>What languages do I need?</span>
+                  <i data-lucide="chevron-down" class="chev w-5 h-5 text-brand-dark/60 flex-shrink-0"></i>
+                </summary>
+                <p class="mt-4 text-[15px] text-brand-dark/75 leading-[1.6]">Fluent English for client work. Bulgarian is useful internally but not required for most roles.</p>
+              </details>
+
+              <details class="faq group rounded-2xl border border-brand-dark/10 bg-white px-6 py-5 hover:border-brand-blue/30 transition-colors">
+                <summary class="flex items-center justify-between gap-4 text-[17px] font-medium text-brand-dark">
+                  <span>Do I need to be in Bulgaria?</span>
+                  <i data-lucide="chevron-down" class="chev w-5 h-5 text-brand-dark/60 flex-shrink-0"></i>
+                </summary>
+                <p class="mt-4 text-[15px] text-brand-dark/75 leading-[1.6]">For most roles, yes. Some remote flexibility exists, but we expect you to be in-country and in the office for your first 3–6 months.</p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white">
+      <div class="container-brand py-20">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-16">
+          <div class="md:col-span-4 space-y-6">
+            <a href="/" class="flex items-center"><img src="VertoDigital-brandmark-color-white.svg" alt="VertoDigital" class="h-11 w-auto" /></a>
+            <p class="text-cool-gray text-sm leading-relaxed max-w-xs">The pipeline agency for B2B technology companies. Based in Boston. Trusted by CMOs globally.</p>
+            <div class="flex gap-4">
+              <a class="text-cool-gray hover:text-white transition-colors" href="https://www.linkedin.com/company/vertodigital" target="_blank" rel="noopener noreferrer" aria-label="VertoDigital on LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a class="text-cool-gray hover:text-white transition-colors" href="https://www.youtube.com/@vertodigital" target="_blank" rel="noopener noreferrer" aria-label="VertoDigital on YouTube"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+              <a class="text-cool-gray hover:text-white transition-colors" href="https://www.instagram.com/vertodigitalagency/" target="_blank" rel="noopener noreferrer" aria-label="VertoDigital on Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+            </div>
+          </div>
+          <div class="md:col-span-2 space-y-5">
+            <p class="font-medium text-sm">Services</p>
+            <ul class="space-y-3 text-sm">
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#services">Pipeline Intelligence</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#services">Paid Media</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#services">LinkedIn</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#services">ABM</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#services">AI Visibility</a></li>
+            </ul>
+          </div>
+          <div class="md:col-span-2 space-y-5">
+            <p class="font-medium text-sm">Company</p>
+            <ul class="space-y-3 text-sm">
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#about">About</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#case-studies">Case Studies</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/careers">Careers</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#press">Press</a></li>
+            </ul>
+          </div>
+          <div class="md:col-span-4 space-y-5">
+            <p class="font-medium text-sm">Research &amp; Insights</p>
+            <p class="text-cool-gray text-sm leading-[1.55]">Monthly dispatches for B2B marketing leaders. Data, benchmarks, and pipeline frameworks.</p>
+            <form class="flex gap-2">
+              <input type="email" placeholder="work@email.com" class="flex-1 bg-white/5 border border-white/15 text-white placeholder:text-cool-gray text-sm rounded-lg px-4 py-2.5 focus:border-brand-light focus:ring-1 focus:ring-brand-light/30 transition-colors" />
+              <button class="bg-brand-light text-brand-dark px-4 py-2.5 rounded-lg font-medium text-sm hover:bg-white transition-colors">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-xs text-cool-gray">
+          <p>© 2026 VertoDigital. Designed in Boston 🇺🇸 · Engineered in Sofia 🇧🇬. Deployed wherever pipeline leaks.</p>
+          <div class="flex gap-6">
+            <a href="/privacy" class="hover:text-white transition-colors">Privacy</a>
+            <a href="/terms" class="hover:text-white transition-colors">Terms</a>
+            <a href="/privacy#cookies" class="hover:text-white transition-colors">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

@@ -204,44 +204,6 @@
         box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.6);
       }
 
-      /* Sticky page table of contents (desktop only) */
-      .page-toc {
-        position: fixed;
-        left: 24px;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 40;
-        display: none;
-        max-width: 170px;
-      }
-      @media (min-width: 1280px) {
-        .page-toc { display: block; }
-      }
-      .page-toc ul { list-style: none; margin: 0; padding: 0; }
-      .page-toc li { margin: 0; }
-      .page-toc a {
-        display: block;
-        padding: 7px 0 7px 14px;
-        border-left: 2px solid rgba(6, 0, 38, 0.08);
-        font-family: 'Geist Mono', ui-monospace, monospace;
-        font-size: 10px;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-        color: rgba(6, 0, 38, 0.45);
-        text-decoration: none;
-        transition: color 150ms ease, border-color 150ms ease, padding-left 150ms ease;
-        line-height: 1.2;
-      }
-      .page-toc a:hover { color: rgba(6, 0, 38, 0.85); }
-      .page-toc a.active {
-        color: #0099FF;
-        border-left-color: #0099FF;
-        padding-left: 16px;
-      }
-      /* TOC turns light when over dark sections */
-      .page-toc.on-dark a { color: rgba(255, 255, 255, 0.55); border-left-color: rgba(255, 255, 255, 0.15); }
-      .page-toc.on-dark a:hover { color: white; }
-      .page-toc.on-dark a.active { color: #43E5FF; border-left-color: #43E5FF; }
     </style>
   </head>
   <body class="antialiased">
@@ -271,22 +233,6 @@
           </a>
         </div>
       </div>
-    </nav>
-
-    <!-- Sticky page TOC (desktop ≥1280px) -->
-    <nav class="page-toc" aria-label="Sections on this page">
-      <ul>
-        <li><a href="#numbers" data-toc="numbers">By the numbers</a></li>
-        <li><a href="#work" data-toc="work">The work</a></li>
-        <li><a href="#offices" data-toc="offices">Offices</a></li>
-        <li><a href="#life-at-verto" data-toc="life-at-verto">Life at Verto</a></li>
-        <li><a href="#growth" data-toc="growth">Craft</a></li>
-        <li><a href="#perks" data-toc="perks">Perks</a></li>
-        <li><a href="#ai-automation" data-toc="ai-automation">AI &amp; Automation</a></li>
-        <li><a href="#values" data-toc="values">Values</a></li>
-        <li><a href="#open-roles" data-toc="open-roles">Open roles</a></li>
-        <li><a href="#faq" data-toc="faq">FAQ</a></li>
-      </ul>
     </nav>
 
     <main>
@@ -1399,40 +1345,6 @@
 
     <script>
       lucide.createIcons();
-
-      // Sticky TOC — scroll spy + dark-section tint
-      (function () {
-        var tocLinks = document.querySelectorAll('.page-toc a[data-toc]');
-        if (!tocLinks.length) return;
-        var byId = {};
-        tocLinks.forEach(function (a) { byId[a.getAttribute('data-toc')] = a; });
-
-        // Mark the section currently closest to the top as active
-        var sections = Array.prototype.map.call(tocLinks, function (a) {
-          var id = a.getAttribute('data-toc');
-          return { id: id, el: document.getElementById(id) };
-        }).filter(function (s) { return !!s.el; });
-
-        var toc = document.querySelector('.page-toc');
-        var darkSections = new Set(['numbers', 'life-at-verto', 'ai-automation']);
-
-        function update() {
-          var scrollY = window.scrollY + window.innerHeight * 0.35;
-          var activeId = sections[0] && sections[0].id;
-          for (var i = 0; i < sections.length; i++) {
-            var top = sections[i].el.getBoundingClientRect().top + window.scrollY;
-            if (top <= scrollY) activeId = sections[i].id;
-          }
-          tocLinks.forEach(function (a) { a.classList.remove('active'); });
-          if (byId[activeId]) byId[activeId].classList.add('active');
-          if (darkSections.has(activeId)) toc.classList.add('on-dark');
-          else toc.classList.remove('on-dark');
-        }
-
-        update();
-        window.addEventListener('scroll', update, { passive: true });
-        window.addEventListener('resize', update);
-      })();
     </script>
   </body>
 </html>

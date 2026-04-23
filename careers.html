@@ -102,6 +102,126 @@
       details.faq summary::-webkit-details-marker { display: none; }
       details.faq[open] .chev { transform: rotate(180deg); }
       .chev { transition: transform 200ms ease; }
+
+      /* ----------------------------------------------------------------
+         Visual storytelling utilities
+         ---------------------------------------------------------------- */
+
+      /* Oversized editorial numbers ("By the numbers" moments) */
+      .mega-num {
+        font-family: 'Geist', sans-serif;
+        font-weight: 500;
+        font-size: clamp(64px, 11vw, 128px);
+        line-height: 0.92;
+        letter-spacing: -0.04em;
+        font-variant-numeric: tabular-nums;
+      }
+      .mega-num .unit {
+        font-size: 0.38em;
+        font-weight: 400;
+        opacity: 0.55;
+        margin-left: 4px;
+      }
+
+      /* Pull-quote editorial callouts (Caveat / script) */
+      .pull-quote {
+        font-family: 'Caveat', cursive;
+        font-weight: 400;
+        font-size: clamp(32px, 5vw, 56px);
+        line-height: 1.12;
+        letter-spacing: -0.01em;
+      }
+
+      /* Dashboard / work-sample tile mocks */
+      .mock-tile {
+        background: #ffffff;
+        border: 1px solid rgba(6, 0, 38, 0.08);
+        border-radius: 16px;
+        overflow: hidden;
+        transition: border-color 200ms ease, transform 200ms ease, box-shadow 200ms ease;
+      }
+      .mock-tile:hover {
+        border-color: rgba(0, 153, 255, 0.35);
+        transform: translateY(-2px);
+        box-shadow: 0 12px 32px -12px rgba(0, 153, 255, 0.18);
+      }
+      .mock-bar { height: 6px; background: rgba(6, 0, 38, 0.07); border-radius: 3px; overflow: hidden; }
+      .mock-bar-fill { height: 100%; border-radius: 3px; }
+
+      /* Agent cards (terminal-style on dark bg) */
+      .agent-card {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 14px;
+        padding: 22px;
+        transition: border-color 200ms ease, background 200ms ease, transform 200ms ease;
+      }
+      .agent-card:hover {
+        border-color: rgba(67, 229, 255, 0.45);
+        background: linear-gradient(135deg, rgba(67, 229, 255, 0.08), rgba(139, 87, 244, 0.04));
+        transform: translateY(-2px);
+      }
+      .agent-prompt {
+        font-family: 'Geist Mono', ui-monospace, monospace;
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #43E5FF;
+        opacity: 0.75;
+      }
+
+      /* Placeholder avatar circles (swap for real headshots when available) */
+      .avatar-placeholder {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 9999px;
+        color: white;
+        font-weight: 500;
+        font-family: 'Geist', sans-serif;
+        letter-spacing: -0.01em;
+        flex-shrink: 0;
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.6);
+      }
+
+      /* Sticky page table of contents (desktop only) */
+      .page-toc {
+        position: fixed;
+        left: 24px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 40;
+        display: none;
+        max-width: 170px;
+      }
+      @media (min-width: 1280px) {
+        .page-toc { display: block; }
+      }
+      .page-toc ul { list-style: none; margin: 0; padding: 0; }
+      .page-toc li { margin: 0; }
+      .page-toc a {
+        display: block;
+        padding: 7px 0 7px 14px;
+        border-left: 2px solid rgba(6, 0, 38, 0.08);
+        font-family: 'Geist Mono', ui-monospace, monospace;
+        font-size: 10px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: rgba(6, 0, 38, 0.45);
+        text-decoration: none;
+        transition: color 150ms ease, border-color 150ms ease, padding-left 150ms ease;
+        line-height: 1.2;
+      }
+      .page-toc a:hover { color: rgba(6, 0, 38, 0.85); }
+      .page-toc a.active {
+        color: #0099FF;
+        border-left-color: #0099FF;
+        padding-left: 16px;
+      }
+      /* TOC turns light when over dark sections */
+      .page-toc.on-dark a { color: rgba(255, 255, 255, 0.55); border-left-color: rgba(255, 255, 255, 0.15); }
+      .page-toc.on-dark a:hover { color: white; }
+      .page-toc.on-dark a.active { color: #43E5FF; border-left-color: #43E5FF; }
     </style>
   </head>
   <body class="antialiased">
@@ -131,6 +251,22 @@
           </a>
         </div>
       </div>
+    </nav>
+
+    <!-- Sticky page TOC (desktop ≥1280px) -->
+    <nav class="page-toc" aria-label="Sections on this page">
+      <ul>
+        <li><a href="#numbers" data-toc="numbers">By the numbers</a></li>
+        <li><a href="#work" data-toc="work">The work</a></li>
+        <li><a href="#offices" data-toc="offices">Offices</a></li>
+        <li><a href="#life-at-verto" data-toc="life-at-verto">Life at Verto</a></li>
+        <li><a href="#growth" data-toc="growth">Craft</a></li>
+        <li><a href="#perks" data-toc="perks">Perks</a></li>
+        <li><a href="#ai-automation" data-toc="ai-automation">AI &amp; Automation</a></li>
+        <li><a href="#values" data-toc="values">Values</a></li>
+        <li><a href="#open-roles" data-toc="open-roles">Open roles</a></li>
+        <li><a href="#faq" data-toc="faq">FAQ</a></li>
+      </ul>
     </nav>
 
     <main>
@@ -226,40 +362,219 @@
         </div>
       </section>
 
-      <!-- 30-SECOND PITCH -->
-      <section class="py-20 md:py-28 bg-white">
-        <div class="container-brand">
-          <div class="max-w-[72ch] mx-auto">
-            <p class="section-eyebrow-blue mb-5">The short version</p>
-            <div class="space-y-6 text-[17px] md:text-[19px] text-brand-dark leading-[1.55]">
-              <p>Most Bulgarian agencies serve local clients with generalist services. We don't.</p>
-              <p>We're B2B-only, data-first, and we help European and US-based scale-up tech companies grow into new markets. Our teams in <span class="font-medium">Sofia, Ruse, and Blagoevgrad</span> work on global marketing problems alongside senior peers who care about the craft as much as you do.</p>
-              <p>If you want to stop explaining what GA4 is and start learning from people who live and breathe it, this is that place.</p>
+      <!-- BY THE NUMBERS — mega numbers on navy -->
+      <section id="numbers" class="py-24 md:py-32 bg-navy text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-blue/15 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent-purple/15 rounded-full blur-3xl"></div>
+        <div class="container-brand relative">
+          <div class="mb-14 md:mb-20 max-w-[62ch]">
+            <p class="font-mono text-[12px] uppercase tracking-[0.3em] text-brand-light font-medium mb-5">By the numbers</p>
+            <h2 class="text-[28px] md:text-[40px] font-medium leading-[1.15] tracking-[-0.02em]">
+              Most Bulgarian agencies serve local clients with generalist services. <span class="text-brand-light">We don't.</span>
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 mb-16 md:mb-20">
+            <div class="border-t border-white/20 pt-5">
+              <p class="mega-num text-white">100<span class="unit text-brand-light">%</span></p>
+              <p class="mt-4 font-mono text-[11px] uppercase tracking-[0.2em] text-brand-light/90 font-medium">eNPS</p>
+              <p class="mt-2 text-[13.5px] text-white/65 leading-[1.55] max-w-[28ch]">Every person on the team would recommend working here. Measured annually. Published internally.</p>
             </div>
+            <div class="border-t border-white/20 pt-5">
+              <p class="mega-num text-white">94.6<span class="unit text-brand-light">%</span></p>
+              <p class="mt-4 font-mono text-[11px] uppercase tracking-[0.2em] text-brand-light/90 font-medium">Retention · 2025</p>
+              <p class="mt-2 text-[13.5px] text-white/65 leading-[1.55] max-w-[28ch]">People stay. When they don't, we want to know why — and we usually do.</p>
+            </div>
+            <div class="border-t border-white/20 pt-5">
+              <p class="mega-num text-white">130<span class="unit text-brand-light">h+</span></p>
+              <p class="mt-4 font-mono text-[11px] uppercase tracking-[0.2em] text-brand-light/90 font-medium">Training / person / year</p>
+              <p class="mt-2 text-[13.5px] text-white/65 leading-[1.55] max-w-[28ch]">11–14% of working time, by design. A line item — not a wish-list.</p>
+            </div>
+            <div class="border-t border-white/20 pt-5">
+              <p class="mega-num text-white">33<span class="unit text-brand-light"> d</span></p>
+              <p class="mt-4 font-mono text-[11px] uppercase tracking-[0.2em] text-brand-light/90 font-medium">Avg PTO taken</p>
+              <p class="mt-2 text-[13.5px] text-white/65 leading-[1.55] max-w-[28ch]">Unlimited leave that people actually use. Industry norm is 25.</p>
+            </div>
+          </div>
+
+          <div class="max-w-[72ch] pt-10 border-t border-white/15">
+            <p class="pull-quote text-brand-light">
+              "If you want to stop explaining what GA4 is, and start learning from people who live and breathe it — this is that place."
+            </p>
+            <p class="mt-6 text-[15px] text-white/70 leading-[1.6] max-w-[60ch]">
+              We're B2B-only, data-first, and we help European and US scale-up tech companies grow into new markets. Our teams in Sofia, Ruse, and Blagoevgrad work on global marketing problems alongside senior peers who care about the craft as much as you do.
+            </p>
           </div>
         </div>
       </section>
 
       <!-- THE WORK YOU'D ACTUALLY DO -->
-      <section id="work" class="py-20 md:py-28 bg-[#fafbff]">
+      <section id="work" class="py-20 md:py-28 bg-white">
         <div class="container-brand">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 mb-14">
-            <div class="lg:col-span-5">
-              <p class="section-eyebrow-blue mb-5">What you'd build on</p>
-              <h2 class="text-[28px] md:text-[40px] font-medium leading-[1.15] tracking-[-0.02em] text-brand-dark">
-                The <span class="font-script text-brand-blue text-[1.15em] leading-none">work</span> you'd actually do.
-              </h2>
+          <div class="max-w-[72ch] mb-12">
+            <p class="section-eyebrow-blue mb-5">What you'd build on</p>
+            <h2 class="text-[28px] md:text-[40px] font-medium leading-[1.15] tracking-[-0.02em] text-brand-dark mb-5">
+              The <span class="font-script text-brand-blue text-[1.15em] leading-none">work</span> you'd actually do.
+            </h2>
+            <p class="text-[16px] md:text-[17px] text-brand-dark/80 leading-[1.6]">
+              Three crafts, one outcome: pipeline. For fintech, dev tools, and product-led SaaS scale-ups across Europe and the US.
+            </p>
+          </div>
+
+          <!-- Three work-sample tiles -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-16">
+
+            <!-- Measurement tile -->
+            <div class="mock-tile">
+              <div class="flex items-center justify-between px-5 py-3 border-b border-brand-dark/5 bg-[#fafbff]">
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-brand-blue"></span>
+                  <span class="font-mono text-[11px] uppercase tracking-widest text-brand-dark/70 font-medium">Measurement</span>
+                </div>
+                <span class="font-mono text-[11px] text-brand-dark/35">Q3 · Live</span>
+              </div>
+              <div class="px-5 pt-4 pb-5">
+                <p class="font-mono text-[10px] uppercase tracking-widest text-brand-dark/45 mb-2">Pipeline stage funnel</p>
+                <div class="space-y-2.5 mb-5">
+                  <div class="flex items-center gap-3">
+                    <span class="w-14 font-mono text-[11px] text-brand-dark/60">Visit</span>
+                    <div class="flex-1 mock-bar"><div class="mock-bar-fill bg-brand-dark" style="width: 96%"></div></div>
+                    <span class="w-12 text-right font-mono text-[11px] text-brand-dark font-medium tabular-nums">48,2k</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="w-14 font-mono text-[11px] text-brand-dark/60">MQL</span>
+                    <div class="flex-1 mock-bar"><div class="mock-bar-fill bg-brand-blue" style="width: 62%"></div></div>
+                    <span class="w-12 text-right font-mono text-[11px] text-brand-dark font-medium tabular-nums">1,140</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="w-14 font-mono text-[11px] text-brand-dark/60">Stage 1</span>
+                    <div class="flex-1 mock-bar"><div class="mock-bar-fill bg-accent-cyan" style="width: 38%"></div></div>
+                    <span class="w-12 text-right font-mono text-[11px] text-brand-blue font-medium tabular-nums">382</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="w-14 font-mono text-[11px] text-brand-dark/60">Won</span>
+                    <div class="flex-1 mock-bar"><div class="mock-bar-fill bg-accent-lime" style="width: 14%"></div></div>
+                    <span class="w-12 text-right font-mono text-[11px] text-brand-dark font-medium tabular-nums">48</span>
+                  </div>
+                </div>
+                <div class="pt-4 border-t border-brand-dark/5 flex items-start gap-2">
+                  <i data-lucide="bar-chart-3" class="w-3.5 h-3.5 text-brand-blue mt-0.5 flex-shrink-0"></i>
+                  <p class="text-[13px] text-brand-dark/75 leading-[1.45]">GA4, server-side tagging, CDPs — wired to revenue, not vanity.</p>
+                </div>
+              </div>
             </div>
-            <div class="lg:col-span-7 space-y-5 text-[16px] md:text-[17px] text-brand-dark/85 leading-[1.6] max-w-[68ch]">
-              <p>We help European and US-based B2B tech companies grow into new markets.</p>
-              <p>That means building the measurement foundation (GA4, server-side tagging, CDPs), running paid acquisition (LinkedIn, Google, Meta, ABM), and earning organic visibility (SEO and AI search) for companies in fintech, developer tools, and product-led SaaS.</p>
-              <p>Our clients are scale-ups — past the scrappy phase, not yet at enterprise bureaucracy. Budgets are real, decisions move fast, and the work has teeth. If you've spent years optimizing CTRs on campaigns nobody cares about, you'll feel the difference in your first month.</p>
+
+            <!-- Paid acquisition tile -->
+            <div class="mock-tile">
+              <div class="flex items-center justify-between px-5 py-3 border-b border-brand-dark/5 bg-[#fafbff]">
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-accent-purple"></span>
+                  <span class="font-mono text-[11px] uppercase tracking-widest text-brand-dark/70 font-medium">Paid acquisition</span>
+                </div>
+                <span class="font-mono text-[11px] text-brand-dark/35">7 day</span>
+              </div>
+              <div class="px-5 pt-4 pb-5">
+                <p class="font-mono text-[10px] uppercase tracking-widest text-brand-dark/45 mb-3">Campaign · CPA by channel</p>
+                <div class="space-y-2">
+                  <div class="flex items-center justify-between py-1.5 border-b border-brand-dark/5">
+                    <div class="flex items-center gap-2">
+                      <span class="w-1.5 h-1.5 rounded-full bg-brand-blue"></span>
+                      <span class="text-[12px] text-brand-dark font-medium">LinkedIn · ABM</span>
+                    </div>
+                    <span class="font-mono text-[12px] text-brand-dark tabular-nums">$184</span>
+                  </div>
+                  <div class="flex items-center justify-between py-1.5 border-b border-brand-dark/5">
+                    <div class="flex items-center gap-2">
+                      <span class="w-1.5 h-1.5 rounded-full bg-accent-cyan"></span>
+                      <span class="text-[12px] text-brand-dark font-medium">Google Search</span>
+                    </div>
+                    <span class="font-mono text-[12px] text-brand-dark tabular-nums">$231</span>
+                  </div>
+                  <div class="flex items-center justify-between py-1.5 border-b border-brand-dark/5">
+                    <div class="flex items-center gap-2">
+                      <span class="w-1.5 h-1.5 rounded-full bg-accent-purple"></span>
+                      <span class="text-[12px] text-brand-dark font-medium">Meta · Retarget</span>
+                    </div>
+                    <span class="font-mono text-[12px] text-brand-dark tabular-nums">$92</span>
+                  </div>
+                  <div class="flex items-center justify-between py-1.5">
+                    <div class="flex items-center gap-2">
+                      <span class="w-1.5 h-1.5 rounded-full bg-accent-lime"></span>
+                      <span class="text-[12px] text-brand-dark font-medium">6sense / ABM</span>
+                    </div>
+                    <span class="font-mono text-[12px] text-brand-dark tabular-nums">$267</span>
+                  </div>
+                </div>
+                <div class="pt-4 mt-2 border-t border-brand-dark/5 flex items-start gap-2">
+                  <i data-lucide="target" class="w-3.5 h-3.5 text-accent-purple mt-0.5 flex-shrink-0"></i>
+                  <p class="text-[13px] text-brand-dark/75 leading-[1.45]">LinkedIn, Google, Meta, 6sense, Influ2 — spending where it earns.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Organic visibility tile -->
+            <div class="mock-tile">
+              <div class="flex items-center justify-between px-5 py-3 border-b border-brand-dark/5 bg-[#fafbff]">
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-accent-cyan"></span>
+                  <span class="font-mono text-[11px] uppercase tracking-widest text-brand-dark/70 font-medium">Organic visibility</span>
+                </div>
+                <span class="font-mono text-[11px] text-brand-dark/35">SEO + AI</span>
+              </div>
+              <div class="px-5 pt-4 pb-5">
+                <p class="font-mono text-[10px] uppercase tracking-widest text-brand-dark/45 mb-3">Content brief · graph databases</p>
+                <div class="space-y-2 mb-3">
+                  <div class="flex items-center gap-2 text-[12px]">
+                    <i data-lucide="check" class="w-3.5 h-3.5 text-brand-blue flex-shrink-0"></i>
+                    <span class="text-brand-dark/85">Entities · <span class="font-mono text-brand-dark">cypher · neo4j · property graph</span></span>
+                  </div>
+                  <div class="flex items-center gap-2 text-[12px]">
+                    <i data-lucide="check" class="w-3.5 h-3.5 text-brand-blue flex-shrink-0"></i>
+                    <span class="text-brand-dark/85">Intent · <span class="font-mono text-brand-dark">commercial / evaluation</span></span>
+                  </div>
+                  <div class="flex items-center gap-2 text-[12px]">
+                    <i data-lucide="check" class="w-3.5 h-3.5 text-brand-blue flex-shrink-0"></i>
+                    <span class="text-brand-dark/85">AI surfaces · <span class="font-mono text-brand-dark">ChatGPT · Perplexity</span></span>
+                  </div>
+                </div>
+                <div class="bg-[#fafbff] rounded-lg p-3 mb-3 border border-brand-dark/5">
+                  <p class="text-[11px] text-brand-dark/55 leading-[1.5] mb-1"><span class="font-mono text-accent-purple">▎</span> Draft outline</p>
+                  <div class="space-y-1">
+                    <div class="h-1.5 w-full bg-brand-dark/10 rounded"></div>
+                    <div class="h-1.5 w-4/5 bg-brand-dark/10 rounded"></div>
+                    <div class="h-1.5 w-2/3 bg-brand-dark/10 rounded"></div>
+                  </div>
+                </div>
+                <div class="pt-3 border-t border-brand-dark/5 flex items-start gap-2">
+                  <i data-lucide="search" class="w-3.5 h-3.5 text-accent-cyan mt-0.5 flex-shrink-0"></i>
+                  <p class="text-[13px] text-brand-dark/75 leading-[1.45]">SEO briefs that win in both Google and AI search.</p>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- Understated logo / client-name strip -->
+          <!-- Team face strip — placeholder avatars; swap for real headshots when available -->
+          <div class="mb-14 pb-10 border-b border-brand-dark/10">
+            <p class="section-eyebrow mb-5">The people doing it</p>
+            <div class="flex items-center gap-5 flex-wrap">
+              <div class="flex -space-x-3">
+                <img src="paul-green-headshot.avif" alt="Paul Green" class="avatar-placeholder w-11 h-11 object-cover bg-brand-dark" />
+                <span class="avatar-placeholder w-11 h-11 text-sm" style="background: linear-gradient(135deg, #0099FF, #43E5FF);" aria-label="Team member">SP</span>
+                <span class="avatar-placeholder w-11 h-11 text-sm" style="background: linear-gradient(135deg, #8B57F4, #0099FF);" aria-label="Team member">YL</span>
+                <span class="avatar-placeholder w-11 h-11 text-sm" style="background: linear-gradient(135deg, #0066CC, #66CCFF);" aria-label="Team member">MI</span>
+                <span class="avatar-placeholder w-11 h-11 text-sm" style="background: linear-gradient(135deg, #43E5FF, #0099FF);" aria-label="Team member">VS</span>
+                <span class="avatar-placeholder w-11 h-11 text-sm" style="background: linear-gradient(135deg, #8B57F4, #43E5FF);" aria-label="Team member">AK</span>
+                <span class="avatar-placeholder w-11 h-11 text-sm bg-brand-dark text-white" aria-label="And ~45 more">+44</span>
+              </div>
+              <p class="text-[13.5px] text-brand-dark/65 leading-[1.5] max-w-[40ch]">
+                ~50 teammates across four offices. Paid, SEO, analytics, engineering, creative, strategy — all in one team.
+              </p>
+            </div>
+          </div>
+
+          <!-- Understated client-name strip -->
           <div class="mb-12">
-            <p class="section-eyebrow mb-5 text-center md:text-left">A few of the companies we've partnered with</p>
+            <p class="section-eyebrow mb-5">A few of the companies we've partnered with</p>
             <div class="flex flex-wrap gap-x-10 gap-y-4 text-lg font-medium text-brand-dark/55">
               <span>Neo4j</span>
               <span>Payhawk</span>
@@ -290,16 +605,91 @@
       </section>
 
       <!-- WHERE WE WORK -->
-      <section id="offices" class="py-20 md:py-28 bg-white">
+      <section id="offices" class="py-20 md:py-28 bg-[#fafbff]">
         <div class="container-brand">
-          <div class="max-w-[72ch] mb-12">
-            <p class="section-eyebrow-blue mb-5">Where we work</p>
-            <h2 class="text-[28px] md:text-[40px] font-medium leading-[1.15] tracking-[-0.02em] text-brand-dark mb-5">
-              Three offices + a Boston outpost.
-            </h2>
-            <p class="text-[16px] md:text-[17px] text-brand-dark/80 leading-[1.6]">
-              We're a Bulgarian agency with global reach. Three offices across the country and an outpost in Boston — pick the one that makes your commute sane. Wherever you land, the specialty coffee bar works the same way.
-            </p>
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 mb-12 items-start">
+            <div class="lg:col-span-6">
+              <p class="section-eyebrow-blue mb-5">Where we work</p>
+              <h2 class="text-[28px] md:text-[40px] font-medium leading-[1.15] tracking-[-0.02em] text-brand-dark mb-5">
+                Three offices + a <span class="font-script text-brand-blue text-[1.15em] leading-none">Boston</span> outpost.
+              </h2>
+              <p class="text-[16px] md:text-[17px] text-brand-dark/80 leading-[1.6]">
+                We're a Bulgarian agency with global reach. Three offices across the country and an outpost in Boston — pick the one that makes your commute sane. Wherever you land, the specialty coffee bar works the same way.
+              </p>
+            </div>
+
+            <!-- Stylized geography visual -->
+            <div class="lg:col-span-6">
+              <div class="rounded-2xl border border-brand-dark/10 bg-white p-6 md:p-8 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-brand-light/15 rounded-full blur-3xl"></div>
+                <div class="flex items-center justify-between mb-5 relative">
+                  <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-dark/55 font-medium">Verto · Footprint</p>
+                  <p class="font-mono text-[11px] text-brand-dark/45 tabular-nums">2 countries · 4 offices</p>
+                </div>
+                <div class="relative">
+                  <svg viewBox="0 0 640 280" class="w-full h-auto" aria-label="Map showing Verto offices in Bulgaria and Boston">
+                    <!-- US (Boston) region on far left -->
+                    <g opacity="0.55">
+                      <path d="M 30 110 Q 42 100 56 104 L 78 98 L 96 106 L 108 118 L 102 132 L 86 138 L 68 134 L 50 128 L 34 120 Z" fill="rgba(6, 0, 38, 0.06)" stroke="rgba(6, 0, 38, 0.12)" stroke-width="1"/>
+                    </g>
+                    <!-- Dashed transatlantic line from Boston toward Bulgaria -->
+                    <path d="M 86 122 Q 230 60 380 110" fill="none" stroke="#0099FF" stroke-width="1.25" stroke-dasharray="4 5" opacity="0.5"/>
+                    <!-- Bulgaria outline (stylized) -->
+                    <path d="M 360 115 L 385 108 L 412 106 L 444 108 L 476 112 L 510 118 L 540 126 L 562 138 L 576 152 L 582 170 L 572 184 L 548 194 L 520 196 L 488 192 L 456 186 L 428 178 L 402 170 L 378 158 L 362 142 Z"
+                          fill="rgba(0, 153, 255, 0.07)" stroke="rgba(0, 153, 255, 0.35)" stroke-width="1.25"/>
+
+                    <!-- Boston marker -->
+                    <g transform="translate(80, 118)">
+                      <circle r="6" fill="#060026"/>
+                      <circle r="12" fill="#060026" fill-opacity="0.12"/>
+                      <text x="0" y="-18" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" fill="#060026" font-weight="500" letter-spacing="1.2">BOS</text>
+                      <text x="0" y="28" text-anchor="middle" font-family="Geist Mono, monospace" font-size="9" fill="rgba(6,0,38,0.5)" letter-spacing="0.6">Outpost</text>
+                    </g>
+
+                    <!-- Sofia -->
+                    <g transform="translate(402, 158)">
+                      <circle r="7" fill="#0099FF"/>
+                      <circle r="14" fill="#0099FF" fill-opacity="0.2"/>
+                      <circle r="22" fill="#0099FF" fill-opacity="0.08"/>
+                      <text x="-4" y="-16" text-anchor="end" font-family="Geist, sans-serif" font-size="13" fill="#060026" font-weight="500">Sofia</text>
+                      <text x="-4" y="-4" text-anchor="end" font-family="Geist Mono, monospace" font-size="9" fill="#0099FF" letter-spacing="0.8" font-weight="500">HQ</text>
+                    </g>
+                    <!-- Blagoevgrad (south-west of Sofia) -->
+                    <g transform="translate(404, 188)">
+                      <circle r="5" fill="#0099FF"/>
+                      <circle r="10" fill="#0099FF" fill-opacity="0.18"/>
+                      <text x="10" y="3" font-family="Geist, sans-serif" font-size="12" fill="#060026" font-weight="500">Blagoevgrad</text>
+                      <text x="10" y="16" font-family="Geist Mono, monospace" font-size="8" fill="#8B57F4" letter-spacing="0.6" font-weight="500">NEW · JAN 2026</text>
+                    </g>
+                    <!-- Ruse (northeast of Sofia, on Danube) -->
+                    <g transform="translate(500, 124)">
+                      <circle r="5" fill="#0099FF"/>
+                      <circle r="10" fill="#0099FF" fill-opacity="0.18"/>
+                      <text x="0" y="-12" text-anchor="middle" font-family="Geist, sans-serif" font-size="12" fill="#060026" font-weight="500">Ruse</text>
+                      <text x="0" y="-24" text-anchor="middle" font-family="Geist Mono, monospace" font-size="8" fill="#8B57F4" letter-spacing="0.6" font-weight="500">NEW · JAN 2026</text>
+                    </g>
+                  </svg>
+                </div>
+                <div class="mt-5 pt-5 border-t border-brand-dark/10 grid grid-cols-4 gap-2 text-center">
+                  <div>
+                    <p class="font-mono text-[10px] uppercase tracking-widest text-brand-dark/45">Sofia</p>
+                    <p class="font-mono text-[13px] text-brand-dark font-medium tabular-nums mt-0.5">Since '18</p>
+                  </div>
+                  <div>
+                    <p class="font-mono text-[10px] uppercase tracking-widest text-brand-dark/45">Ruse</p>
+                    <p class="font-mono text-[13px] text-accent-purple font-medium tabular-nums mt-0.5">Jan '26</p>
+                  </div>
+                  <div>
+                    <p class="font-mono text-[10px] uppercase tracking-widest text-brand-dark/45">Blagoevgrad</p>
+                    <p class="font-mono text-[13px] text-accent-purple font-medium tabular-nums mt-0.5">Jan '26</p>
+                  </div>
+                  <div>
+                    <p class="font-mono text-[10px] uppercase tracking-widest text-brand-dark/45">Boston</p>
+                    <p class="font-mono text-[13px] text-brand-dark font-medium tabular-nums mt-0.5">Outpost</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -406,6 +796,18 @@
       </section>
 
 
+
+      <!-- PULL QUOTE 1 — lime accent pause between Life at Verto and How we grow -->
+      <section aria-hidden="true" class="py-16 md:py-20 bg-accent-lime/20 border-y border-brand-dark/5">
+        <div class="container-brand">
+          <div class="max-w-[52ch] mx-auto text-center">
+            <i data-lucide="quote" class="w-6 h-6 text-brand-blue/60 mx-auto mb-4"></i>
+            <p class="pull-quote text-brand-dark">
+              Growth here isn't a slide in the onboarding deck. It's a line item.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <!-- HOW WE GROW OUR PEOPLE -->
       <section id="growth" class="py-20 md:py-28 bg-white">
@@ -579,33 +981,129 @@
         </div>
       </section>
 
-      <!-- AI & AUTOMATION -->
+      <!-- AI & AUTOMATION — agent showcase -->
       <section id="ai-automation" class="py-20 md:py-28 bg-gradient-to-br from-navy via-[#0a0440] to-navy text-white relative overflow-hidden">
         <div class="absolute top-1/4 right-0 w-[600px] h-[600px] bg-accent-purple/20 rounded-full blur-3xl"></div>
         <div class="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-brand-blue/20 rounded-full blur-3xl"></div>
         <div class="container-brand relative">
-          <div class="max-w-[72ch] mx-auto">
-            <div class="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full bg-white/10 border border-white/15">
-              <i data-lucide="sparkles" class="w-3.5 h-3.5 text-accent-lime"></i>
-              <span class="font-mono text-[11px] uppercase tracking-[0.25em] text-accent-lime font-medium">2026 strategic bet</span>
+          <!-- Header -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-14 md:mb-20 items-end">
+            <div class="lg:col-span-8">
+              <div class="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full bg-white/10 border border-white/15">
+                <i data-lucide="sparkles" class="w-3.5 h-3.5 text-accent-lime"></i>
+                <span class="font-mono text-[11px] uppercase tracking-[0.25em] text-accent-lime font-medium">2026 strategic bet</span>
+              </div>
+              <h2 class="text-[28px] md:text-[44px] font-medium leading-[1.1] tracking-[-0.02em] mb-5">
+                We're building what's next — and you'll <span class="font-script text-brand-light text-[1.15em] leading-none">work alongside</span> it.
+              </h2>
+              <p class="text-[16px] md:text-[18px] text-white/75 leading-[1.6] max-w-[64ch]">
+                Not using AI. Engineering it — for the specific problems our clients face. Every role at Verto works with these tools. As the team ships more, you ship more.
+              </p>
             </div>
-            <h2 class="text-[28px] md:text-[44px] font-medium leading-[1.1] tracking-[-0.02em] mb-8">
-              We're building what's next — and you'll <span class="font-script text-brand-light text-[1.15em] leading-none">work alongside</span> it.
-            </h2>
-            <div class="space-y-5 text-[16px] md:text-[18px] text-white/80 leading-[1.6]">
-              <p>AI &amp; Automation is our strategic bet for 2026 and beyond.</p>
-              <p>A dedicated team inside Verto — led by <span class="text-white font-medium">Simeon Penev</span>, with <span class="text-white font-medium">Yasen Lilov</span> on architecture — has already shipped <span class="text-accent-lime font-medium">10+ production AI agents</span> for B2B marketing workflows: LinkedIn audience targeting, ad copy generation, SEO content briefs, GA4 reporting, competitor research.</p>
-              <p>We're not just using AI. We're engineering it, for the specific problems our clients face.</p>
-              <p>Every role at Verto works with these tools. As the team ships more, you ship more — without needing to learn a new stack.</p>
+            <!-- Mega counter -->
+            <div class="lg:col-span-4 text-left lg:text-right">
+              <p class="mega-num text-white">10<span class="unit text-accent-lime">+</span></p>
+              <p class="mt-3 font-mono text-[11px] uppercase tracking-[0.2em] text-accent-lime font-medium">Agents in production</p>
             </div>
-            <p class="mt-10 pt-6 border-t border-white/15 text-[13px] text-white/55 leading-[1.55]">
-              Not hiring into the AI &amp; Automation team in 2026 — it's an internal team that ships alongside the agency. Mentioned here because it shapes how every role at Verto operates.
+          </div>
+
+          <!-- Agent grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
+            <div class="agent-card">
+              <div class="flex items-center justify-between mb-3">
+                <p class="agent-prompt">Agent · 01</p>
+                <span class="w-1.5 h-1.5 rounded-full bg-accent-lime animate-pulse"></span>
+              </div>
+              <h3 class="text-[17px] text-white font-medium mb-2 leading-[1.25]">LinkedIn Audience Agent</h3>
+              <p class="text-[13.5px] text-white/60 leading-[1.55]">Builds ideal-customer-profile audiences from CRM + firmographics. Keeps them fresh without a human touching Campaign Manager.</p>
+            </div>
+            <div class="agent-card">
+              <div class="flex items-center justify-between mb-3">
+                <p class="agent-prompt">Agent · 02</p>
+                <span class="w-1.5 h-1.5 rounded-full bg-accent-lime animate-pulse"></span>
+              </div>
+              <h3 class="text-[17px] text-white font-medium mb-2 leading-[1.25]">Ad Copy Agent</h3>
+              <p class="text-[13.5px] text-white/60 leading-[1.55]">Writes and tests headline / body / CTA variations per audience — in our clients' voice, not a stock LLM voice.</p>
+            </div>
+            <div class="agent-card">
+              <div class="flex items-center justify-between mb-3">
+                <p class="agent-prompt">Agent · 03</p>
+                <span class="w-1.5 h-1.5 rounded-full bg-accent-lime animate-pulse"></span>
+              </div>
+              <h3 class="text-[17px] text-white font-medium mb-2 leading-[1.25]">SEO Content Brief Agent</h3>
+              <p class="text-[13.5px] text-white/60 leading-[1.55]">Turns a target keyword into a writer-ready brief: entities, intent, outline, AI-search signals.</p>
+            </div>
+            <div class="agent-card">
+              <div class="flex items-center justify-between mb-3">
+                <p class="agent-prompt">Agent · 04</p>
+                <span class="w-1.5 h-1.5 rounded-full bg-accent-lime animate-pulse"></span>
+              </div>
+              <h3 class="text-[17px] text-white font-medium mb-2 leading-[1.25]">GA4 Reporting Agent</h3>
+              <p class="text-[13.5px] text-white/60 leading-[1.55]">Produces weekly client reports directly from GA4 + CRM joins. No copy-paste, no screenshots.</p>
+            </div>
+            <div class="agent-card">
+              <div class="flex items-center justify-between mb-3">
+                <p class="agent-prompt">Agent · 05</p>
+                <span class="w-1.5 h-1.5 rounded-full bg-accent-lime animate-pulse"></span>
+              </div>
+              <h3 class="text-[17px] text-white font-medium mb-2 leading-[1.25]">Competitor Research Agent</h3>
+              <p class="text-[13.5px] text-white/60 leading-[1.55]">Monitors competitor ads, landing pages, and SERP shifts — flags the ones that should change how we're buying.</p>
+            </div>
+            <!-- "And more" card -->
+            <div class="agent-card flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <p class="agent-prompt">+ 5 more</p>
+                  <i data-lucide="plus" class="w-3.5 h-3.5 text-accent-lime/70"></i>
+                </div>
+                <h3 class="text-[17px] text-white font-medium mb-2 leading-[1.25]">A few still in staging</h3>
+                <p class="text-[13.5px] text-white/60 leading-[1.55]">Pricing intelligence, account-tier scoring, pipeline anomaly detection, ICP refinement, briefing automation.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Built by strip -->
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pt-10 border-t border-white/15">
+            <div class="flex items-center gap-5">
+              <p class="font-mono text-[11px] uppercase tracking-[0.25em] text-white/60 font-medium whitespace-nowrap">Built by</p>
+              <div class="flex items-center gap-4 flex-wrap">
+                <div class="flex items-center gap-3">
+                  <span class="avatar-placeholder w-10 h-10 text-sm" style="background: linear-gradient(135deg, #8B57F4, #0099FF);" aria-label="Simeon Penev">SP</span>
+                  <div>
+                    <p class="text-[14px] text-white font-medium leading-tight">Simeon Penev</p>
+                    <p class="text-[12px] text-white/55 leading-tight mt-0.5">Lead · AI &amp; Automation</p>
+                  </div>
+                </div>
+                <div class="w-px h-10 bg-white/15 hidden sm:block"></div>
+                <div class="flex items-center gap-3">
+                  <span class="avatar-placeholder w-10 h-10 text-sm" style="background: linear-gradient(135deg, #0066CC, #43E5FF);" aria-label="Yasen Lilov">YL</span>
+                  <div>
+                    <p class="text-[14px] text-white font-medium leading-tight">Yasen Lilov</p>
+                    <p class="text-[12px] text-white/55 leading-tight mt-0.5">Architecture</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="text-[13px] text-white/55 leading-[1.55] max-w-[48ch]">
+              Not hiring into the AI &amp; Automation team in 2026 — but every role at Verto works alongside these tools.
             </p>
           </div>
         </div>
       </section>
 
 
+
+      <!-- PULL QUOTE 2 — light blue accent pause between AI and Values -->
+      <section aria-hidden="true" class="py-16 md:py-20 bg-brand-light/25 border-y border-brand-dark/5">
+        <div class="container-brand">
+          <div class="max-w-[56ch] mx-auto text-center">
+            <i data-lucide="quote" class="w-6 h-6 text-brand-blue/60 mx-auto mb-4"></i>
+            <p class="pull-quote text-brand-dark">
+              Stop explaining GA4. Start building with people who live and breathe it.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <!-- VALUES -->
       <!--
@@ -878,6 +1376,40 @@
 
     <script>
       lucide.createIcons();
+
+      // Sticky TOC — scroll spy + dark-section tint
+      (function () {
+        var tocLinks = document.querySelectorAll('.page-toc a[data-toc]');
+        if (!tocLinks.length) return;
+        var byId = {};
+        tocLinks.forEach(function (a) { byId[a.getAttribute('data-toc')] = a; });
+
+        // Mark the section currently closest to the top as active
+        var sections = Array.prototype.map.call(tocLinks, function (a) {
+          var id = a.getAttribute('data-toc');
+          return { id: id, el: document.getElementById(id) };
+        }).filter(function (s) { return !!s.el; });
+
+        var toc = document.querySelector('.page-toc');
+        var darkSections = new Set(['numbers', 'life-at-verto', 'ai-automation']);
+
+        function update() {
+          var scrollY = window.scrollY + window.innerHeight * 0.35;
+          var activeId = sections[0] && sections[0].id;
+          for (var i = 0; i < sections.length; i++) {
+            var top = sections[i].el.getBoundingClientRect().top + window.scrollY;
+            if (top <= scrollY) activeId = sections[i].id;
+          }
+          tocLinks.forEach(function (a) { a.classList.remove('active'); });
+          if (byId[activeId]) byId[activeId].classList.add('active');
+          if (darkSections.has(activeId)) toc.classList.add('on-dark');
+          else toc.classList.remove('on-dark');
+        }
+
+        update();
+        window.addEventListener('scroll', update, { passive: true });
+        window.addEventListener('resize', update);
+      })();
     </script>
   </body>
 </html>

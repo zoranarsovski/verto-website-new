@@ -111,16 +111,36 @@
       .mega-num {
         font-family: 'Geist', sans-serif;
         font-weight: 500;
-        font-size: clamp(64px, 11vw, 128px);
-        line-height: 0.92;
+        font-size: clamp(56px, 8vw, 96px);
+        line-height: 1;
         letter-spacing: -0.04em;
         font-variant-numeric: tabular-nums;
+        display: inline-flex;
+        align-items: flex-start;
       }
       .mega-num .unit {
-        font-size: 0.38em;
+        font-size: 0.36em;
         font-weight: 400;
-        opacity: 0.55;
+        opacity: 0.7;
         margin-left: 4px;
+        margin-top: 0.18em;
+        letter-spacing: -0.02em;
+      }
+      /* Stat cell — used in "By the numbers" section */
+      .stat-cell { position: relative; padding-top: 20px; }
+      .stat-cell::before {
+        content: "";
+        position: absolute;
+        left: 0; top: 0;
+        width: 32px; height: 2px;
+        background: #43E5FF;
+      }
+      .stat-num-label {
+        font-family: 'Geist Mono', ui-monospace, monospace;
+        font-size: 11px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        font-weight: 500;
       }
 
       /* Pull-quote editorial callouts (Caveat / script) */
@@ -297,67 +317,57 @@
             </div>
           </div>
 
-          <!-- Right column: Employee experience card -->
+          <!-- Right column: Founder's invitation card -->
           <div class="lg:col-span-5">
             <div class="bg-white rounded-2xl border border-brand-dark/10 shadow-xl shadow-brand-blue/10 overflow-hidden">
-              <div class="px-6 py-5 border-b border-brand-dark/10 flex items-center justify-between">
-                <div>
-                  <p class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium">Life at Verto · 2025 numbers</p>
-                  <p class="text-xl font-medium text-brand-dark mt-1">The team speaks</p>
-                </div>
-                <span class="inline-flex items-center gap-1.5 text-[12px] font-mono font-medium text-brand-blue uppercase tracking-wider bg-brand-light/30 px-2.5 py-1 rounded-full">
-                  <i data-lucide="users" class="w-3 h-3"></i> Verified
-                </span>
+              <div class="px-6 py-5 border-b border-brand-dark/10">
+                <p class="font-mono text-[12px] text-brand-dark/60 uppercase tracking-widest font-medium">A note from the founder</p>
               </div>
               <div class="p-6 space-y-5">
-                <div class="grid grid-cols-2 gap-5">
+                <div class="flex items-start gap-4">
+                  <img src="paul-green-headshot.avif" alt="Paul Green, Founder" class="w-14 h-14 rounded-full object-cover flex-shrink-0 ring-2 ring-brand-light/40" />
                   <div>
-                    <p class="font-mono text-[11px] uppercase tracking-wider text-brand-dark/60 font-medium">eNPS</p>
-                    <p class="font-mono text-3xl font-medium text-brand-blue mt-1 tabular-nums">100<span class="text-lg">%</span></p>
-                  </div>
-                  <div>
-                    <p class="font-mono text-[11px] uppercase tracking-wider text-brand-dark/60 font-medium">Retention</p>
-                    <p class="font-mono text-3xl font-medium text-brand-dark mt-1 tabular-nums">94.6<span class="text-lg">%</span></p>
-                  </div>
-                  <div>
-                    <p class="font-mono text-[11px] uppercase tracking-wider text-brand-dark/60 font-medium">Training / year</p>
-                    <p class="font-mono text-3xl font-medium text-brand-dark mt-1 tabular-nums">130<span class="text-lg">h+</span></p>
-                  </div>
-                  <div>
-                    <p class="font-mono text-[11px] uppercase tracking-wider text-brand-dark/60 font-medium">Avg PTO taken</p>
-                    <p class="font-mono text-3xl font-medium text-brand-dark mt-1 tabular-nums">33<span class="text-lg"> days</span></p>
+                    <p class="font-script text-[32px] text-brand-blue leading-[1.05]">Come build with&nbsp;us.</p>
+                    <p class="text-[13px] text-brand-dark/65 mt-1">Paul Green · Founder · Boston</p>
                   </div>
                 </div>
-                <div class="pt-4 border-t border-brand-dark/10">
-                  <p class="text-[13px] text-brand-dark/70 leading-[1.55]">
-                    Engagement score of <span class="font-medium text-brand-dark font-mono">4.33 / 5</span> — measured annually, independently, and published inside the team.
-                  </p>
-                </div>
+                <p class="text-[15px] text-brand-dark/85 leading-[1.6]">
+                  "We've spent years building a place where marketers can stop explaining themselves and start doing the work they actually care about. If that sounds like the job you've been trying to find — we'd like to meet you."
+                </p>
               </div>
-              <div class="px-6 py-4 bg-brand-light/15 border-t border-brand-dark/10 flex items-center justify-between">
-                <p class="text-[12px] text-brand-dark/70">Numbers from the 2025 Verto team survey</p>
-                <a href="#perks" class="text-xs font-medium text-brand-blue hover:underline inline-flex items-center gap-1">
-                  See the full list <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
-                </a>
+              <div class="px-6 py-5 bg-brand-light/15 border-t border-brand-dark/10">
+                <p class="text-[11px] font-mono uppercase tracking-[0.2em] text-brand-dark/55 mb-3">The team you'd join</p>
+                <div class="flex items-center gap-3 flex-wrap">
+                  <div class="flex -space-x-2">
+                    <img src="paul-green-headshot.avif" alt="Paul Green" class="avatar-placeholder w-9 h-9 object-cover bg-brand-dark" />
+                    <span class="avatar-placeholder w-9 h-9 text-xs" style="background: linear-gradient(135deg, #0099FF, #43E5FF);" aria-label="Team member">SP</span>
+                    <span class="avatar-placeholder w-9 h-9 text-xs" style="background: linear-gradient(135deg, #8B57F4, #0099FF);" aria-label="Team member">YL</span>
+                    <span class="avatar-placeholder w-9 h-9 text-xs" style="background: linear-gradient(135deg, #0066CC, #66CCFF);" aria-label="Team member">MI</span>
+                    <span class="avatar-placeholder w-9 h-9 text-xs" style="background: linear-gradient(135deg, #43E5FF, #0099FF);" aria-label="Team member">VS</span>
+                  </div>
+                  <p class="text-[13px] text-brand-dark/70">Marketers, engineers, strategists, creatives — across four offices.</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Proof strip -->
+        <!-- Disciplines strip — what you'd work alongside -->
         <div class="border-t border-brand-dark/10">
           <div class="container-brand py-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 font-mono text-[11px] md:text-[12px] uppercase tracking-[0.2em] text-brand-dark/70 font-medium">
-            <span>~50 teammates</span>
+            <span>Paid Media</span>
             <span class="w-1 h-1 rounded-full bg-brand-dark/25" aria-hidden="true"></span>
-            <span>4 offices · 2 countries</span>
+            <span>SEO &amp; AI Search</span>
             <span class="w-1 h-1 rounded-full bg-brand-dark/25" aria-hidden="true"></span>
-            <span>33 days avg PTO</span>
+            <span>Analytics</span>
             <span class="w-1 h-1 rounded-full bg-brand-dark/25" aria-hidden="true"></span>
-            <span>100% eNPS</span>
+            <span>ABM</span>
             <span class="w-1 h-1 rounded-full bg-brand-dark/25" aria-hidden="true"></span>
-            <span>94.6% retention</span>
+            <span>Creative</span>
             <span class="w-1 h-1 rounded-full bg-brand-dark/25" aria-hidden="true"></span>
-            <span>Founded 2018</span>
+            <span>Engineering</span>
+            <span class="w-1 h-1 rounded-full bg-brand-dark/25" aria-hidden="true"></span>
+            <span>Strategy</span>
           </div>
         </div>
       </section>
@@ -374,26 +384,26 @@
             </h2>
           </div>
 
-          <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 mb-16 md:mb-20">
-            <div class="border-t border-white/20 pt-5">
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 md:gap-x-10 md:gap-y-14 mb-16 md:mb-20">
+            <div class="stat-cell">
+              <p class="stat-num-label text-accent-cyan mb-4">eNPS</p>
               <p class="mega-num text-white">100<span class="unit text-brand-light">%</span></p>
-              <p class="mt-4 font-mono text-[11px] uppercase tracking-[0.2em] text-brand-light/90 font-medium">eNPS</p>
-              <p class="mt-2 text-[13.5px] text-white/65 leading-[1.55] max-w-[28ch]">Every person on the team would recommend working here. Measured annually. Published internally.</p>
+              <p class="mt-5 text-[13.5px] text-white/65 leading-[1.55] max-w-[28ch]">Every person on the team would recommend working here. Measured annually. Published internally.</p>
             </div>
-            <div class="border-t border-white/20 pt-5">
+            <div class="stat-cell">
+              <p class="stat-num-label text-accent-cyan mb-4">Retention · 2025</p>
               <p class="mega-num text-white">94.6<span class="unit text-brand-light">%</span></p>
-              <p class="mt-4 font-mono text-[11px] uppercase tracking-[0.2em] text-brand-light/90 font-medium">Retention · 2025</p>
-              <p class="mt-2 text-[13.5px] text-white/65 leading-[1.55] max-w-[28ch]">People stay. When they don't, we want to know why — and we usually do.</p>
+              <p class="mt-5 text-[13.5px] text-white/65 leading-[1.55] max-w-[28ch]">People stay. When they don't, we want to know why — and we usually do.</p>
             </div>
-            <div class="border-t border-white/20 pt-5">
+            <div class="stat-cell">
+              <p class="stat-num-label text-accent-cyan mb-4">Training · per year</p>
               <p class="mega-num text-white">130<span class="unit text-brand-light">h+</span></p>
-              <p class="mt-4 font-mono text-[11px] uppercase tracking-[0.2em] text-brand-light/90 font-medium">Training / person / year</p>
-              <p class="mt-2 text-[13.5px] text-white/65 leading-[1.55] max-w-[28ch]">11–14% of working time, by design. A line item — not a wish-list.</p>
+              <p class="mt-5 text-[13.5px] text-white/65 leading-[1.55] max-w-[28ch]">11–14% of working time, by design. A line item — not a wish-list.</p>
             </div>
-            <div class="border-t border-white/20 pt-5">
-              <p class="mega-num text-white">33<span class="unit text-brand-light"> d</span></p>
-              <p class="mt-4 font-mono text-[11px] uppercase tracking-[0.2em] text-brand-light/90 font-medium">Avg PTO taken</p>
-              <p class="mt-2 text-[13.5px] text-white/65 leading-[1.55] max-w-[28ch]">Unlimited leave that people actually use. Industry norm is 25.</p>
+            <div class="stat-cell">
+              <p class="stat-num-label text-accent-cyan mb-4">Avg PTO taken</p>
+              <p class="mega-num text-white">33<span class="unit text-brand-light">d</span></p>
+              <p class="mt-5 text-[13.5px] text-white/65 leading-[1.55] max-w-[28ch]">Unlimited leave that people actually use. Industry norm is 25.</p>
             </div>
           </div>
 
@@ -692,54 +702,67 @@
             </div>
           </div>
 
+          <!--
+            Office cards with city background images.
+            Expected filenames in repo root: office-sofia.jpg, office-ruse.jpg,
+            office-blagoevgrad.jpg, office-boston.jpg. Until they're uploaded,
+            the gradient overlay + fallback color still looks good on its own.
+          -->
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             <!-- Sofia -->
-            <div class="rounded-2xl overflow-hidden border border-brand-dark/10 bg-gradient-to-br from-brand-light/40 via-light-blue/60 to-white">
-              <div class="p-6 h-full flex flex-col">
+            <div class="office-card rounded-2xl overflow-hidden border border-brand-dark/10 text-white relative min-h-[280px]"
+                 style="background-image: linear-gradient(180deg, rgba(6, 0, 38, 0.25) 0%, rgba(6, 0, 38, 0.85) 100%), url('office-sofia.jpg'); background-size: cover; background-position: center; background-color: #0066CC;">
+              <div class="p-6 h-full flex flex-col min-h-[280px]">
                 <div class="flex items-start justify-between mb-4">
-                  <span class="text-[12px] font-mono uppercase tracking-widest text-brand-blue font-medium">HQ · Sofia</span>
-                  <span class="text-[11px] font-mono text-brand-dark/50">Since 2018</span>
+                  <span class="text-[12px] font-mono uppercase tracking-widest text-brand-light font-medium">HQ · Sofia</span>
+                  <span class="text-[11px] font-mono text-white/60">Since 2018</span>
                 </div>
-                <h3 class="text-[22px] font-medium text-brand-dark leading-[1.2] mb-2">Sofia — Campus X</h3>
-                <p class="text-[14.5px] text-brand-dark/75 leading-[1.55] flex-1">Our home since day one. Part of the Campus X startup ecosystem, with everything that comes with it — gym, showers, events, and a few hundred other founders and operators within walking distance.</p>
+                <div class="flex-1"></div>
+                <h3 class="text-[22px] font-medium leading-[1.2] mb-2">Sofia — Campus X</h3>
+                <p class="text-[14.5px] text-white/85 leading-[1.55]">Our home since day one. Part of the Campus X startup ecosystem — gym, events, and a few hundred other founders within walking distance.</p>
               </div>
             </div>
             <!-- Ruse -->
-            <div class="rounded-2xl overflow-hidden border border-brand-dark/10 bg-white">
-              <div class="p-6 h-full flex flex-col">
+            <div class="office-card rounded-2xl overflow-hidden border border-brand-dark/10 text-white relative min-h-[280px]"
+                 style="background-image: linear-gradient(180deg, rgba(6, 0, 38, 0.25) 0%, rgba(6, 0, 38, 0.85) 100%), url('office-ruse.jpg'); background-size: cover; background-position: center; background-color: #8B57F4;">
+              <div class="p-6 h-full flex flex-col min-h-[280px]">
                 <div class="flex items-start justify-between mb-4">
-                  <span class="text-[12px] font-mono uppercase tracking-widest text-brand-dark/60 font-medium">BG · Ruse</span>
-                  <span class="text-[11px] font-mono text-accent-purple font-medium">New · Jan 2026</span>
+                  <span class="text-[12px] font-mono uppercase tracking-widest text-brand-light font-medium">BG · Ruse</span>
+                  <span class="text-[11px] font-mono text-accent-lime font-medium">New · Jan 2026</span>
                 </div>
-                <h3 class="text-[22px] font-medium text-brand-dark leading-[1.2] mb-2">Ruse</h3>
-                <p class="text-[14.5px] text-brand-dark/75 leading-[1.55] flex-1">Full team, same craft bar, same coffee. Built for talent that lives on the Danube and didn't previously have a shot at international B2B work without relocating.</p>
+                <div class="flex-1"></div>
+                <h3 class="text-[22px] font-medium leading-[1.2] mb-2">Ruse</h3>
+                <p class="text-[14.5px] text-white/85 leading-[1.55]">Full team, same craft bar, same coffee. Built for talent that lives on the Danube and wants international clients without relocating.</p>
               </div>
             </div>
             <!-- Blagoevgrad -->
-            <div class="rounded-2xl overflow-hidden border border-brand-dark/10 bg-white">
-              <div class="p-6 h-full flex flex-col">
+            <div class="office-card rounded-2xl overflow-hidden border border-brand-dark/10 text-white relative min-h-[280px]"
+                 style="background-image: linear-gradient(180deg, rgba(6, 0, 38, 0.25) 0%, rgba(6, 0, 38, 0.85) 100%), url('office-blagoevgrad.jpg'); background-size: cover; background-position: center; background-color: #0099FF;">
+              <div class="p-6 h-full flex flex-col min-h-[280px]">
                 <div class="flex items-start justify-between mb-4">
-                  <span class="text-[12px] font-mono uppercase tracking-widest text-brand-dark/60 font-medium">BG · Blagoevgrad</span>
-                  <span class="text-[11px] font-mono text-accent-purple font-medium">New · Jan 2026</span>
+                  <span class="text-[12px] font-mono uppercase tracking-widest text-brand-light font-medium">BG · Blagoevgrad</span>
+                  <span class="text-[11px] font-mono text-accent-lime font-medium">New · Jan 2026</span>
                 </div>
-                <h3 class="text-[22px] font-medium text-brand-dark leading-[1.2] mb-2">Blagoevgrad</h3>
-                <p class="text-[14.5px] text-brand-dark/75 leading-[1.55] flex-1">Full team, same craft bar, same coffee. Opening the door to marketers and analysts in the south-west who want international clients without the Sofia commute.</p>
+                <div class="flex-1"></div>
+                <h3 class="text-[22px] font-medium leading-[1.2] mb-2">Blagoevgrad</h3>
+                <p class="text-[14.5px] text-white/85 leading-[1.55]">Full team, same craft bar, same coffee. A home for marketers and analysts in the south-west who want international work without the Sofia commute.</p>
               </div>
             </div>
             <!-- Boston -->
-            <div class="rounded-2xl overflow-hidden border border-brand-dark/10 bg-gradient-to-br from-brand-dark to-[#1a0f5e] text-white">
-              <div class="p-6 h-full flex flex-col">
+            <div class="office-card rounded-2xl overflow-hidden border border-brand-dark/10 text-white relative min-h-[280px]"
+                 style="background-image: linear-gradient(180deg, rgba(6, 0, 38, 0.3) 0%, rgba(6, 0, 38, 0.9) 100%), url('office-boston.jpg'); background-size: cover; background-position: center; background-color: #060026;">
+              <div class="p-6 h-full flex flex-col min-h-[280px]">
                 <div class="flex items-start justify-between mb-4">
                   <span class="text-[12px] font-mono uppercase tracking-widest text-brand-light font-medium">US · Boston</span>
                   <span class="text-[11px] font-mono text-white/60">Outpost</span>
                 </div>
+                <div class="flex-1"></div>
                 <h3 class="text-[22px] font-medium leading-[1.2] mb-2">Boston</h3>
-                <p class="text-[14.5px] text-white/75 leading-[1.55] flex-1">Our US outpost. Paul Green runs the ground game for our American clients — and keeps us on US time zones when the pipeline calls for it.</p>
+                <p class="text-[14.5px] text-white/85 leading-[1.55]">Our US outpost. Paul Green runs the ground game for American clients — and keeps us on US time zones when the pipeline calls for it.</p>
               </div>
             </div>
           </div>
 
-          <p class="mt-8 text-[14px] text-brand-dark/55 max-w-[60ch]">Not hiring in the US in 2026. Boston is included here as footprint, not as a role location.</p>
         </div>
       </section>
 
@@ -1085,7 +1108,7 @@
               </div>
             </div>
             <p class="text-[13px] text-white/55 leading-[1.55] max-w-[48ch]">
-              Not hiring into the AI &amp; Automation team in 2026 — but every role at Verto works alongside these tools.
+              Every role at Verto works alongside these tools — and helps shape what ships next.
             </p>
           </div>
         </div>

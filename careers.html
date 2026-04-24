@@ -658,131 +658,42 @@
         </div>
       </section>
 
-      <!-- WHERE WE WORK -->
-      <section id="offices" class="py-20 md:py-28 bg-[#fafbff]">
+      <!-- WHERE WE WORK — compact strip; not a competitive advantage -->
+      <section id="offices" class="py-14 md:py-16 bg-[#fafbff]">
         <div class="container-brand">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 mb-12 items-start">
-            <div class="lg:col-span-6">
-              <p class="section-eyebrow-blue mb-5">Where we work</p>
-              <h2 class="text-[28px] md:text-[40px] font-medium leading-[1.15] tracking-[-0.02em] text-brand-dark mb-5">
-                Pick where you'd open your <span class="font-script text-brand-blue text-[1.15em] leading-none">laptop</span>.
-              </h2>
-              <p class="text-[16px] md:text-[17px] text-brand-dark/80 leading-[1.6]">
-                Three offices in Bulgaria, plus a small Boston outpost. Pick the one closest to your couch — the work, the team, and the specialty coffee bar are the same in all of them.
-              </p>
+          <div class="max-w-[64ch] mb-8">
+            <p class="section-eyebrow-blue mb-3">Where we work</p>
+            <h2 class="text-[22px] md:text-[26px] font-medium leading-[1.2] tracking-[-0.02em] text-brand-dark">
+              Pick the base closest to your couch.
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+            <div class="rounded-xl border border-brand-dark/10 bg-white p-5">
+              <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-blue font-medium mb-2">HQ</p>
+              <h3 class="text-[16px] font-medium text-brand-dark leading-tight">Sofia</h3>
+              <p class="text-[12.5px] text-brand-dark/60 leading-[1.5] mt-1.5">Campus X — most senior staff.</p>
             </div>
-
-            <!-- Stylized geography visual -->
-            <div class="lg:col-span-6">
-              <div class="rounded-2xl border border-brand-dark/10 bg-white p-6 md:p-8 relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-64 h-64 bg-brand-light/15 rounded-full blur-3xl"></div>
-                <div class="flex items-center justify-between mb-5 relative">
-                  <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-dark/55 font-medium">Verto · Footprint</p>
-                  <p class="font-mono text-[11px] text-brand-dark/45 tabular-nums">2 countries · 4 offices</p>
-                </div>
-                <div class="relative">
-                  <svg viewBox="0 0 640 280" class="w-full h-auto" aria-label="Map showing Verto offices in Bulgaria and Boston">
-                    <!-- US (Boston) region on far left -->
-                    <g opacity="0.55">
-                      <path d="M 30 110 Q 42 100 56 104 L 78 98 L 96 106 L 108 118 L 102 132 L 86 138 L 68 134 L 50 128 L 34 120 Z" fill="rgba(6, 0, 38, 0.06)" stroke="rgba(6, 0, 38, 0.12)" stroke-width="1"/>
-                    </g>
-                    <!-- Dashed transatlantic line from Boston toward Bulgaria -->
-                    <path d="M 86 122 Q 230 60 380 110" fill="none" stroke="#0099FF" stroke-width="1.25" stroke-dasharray="4 5" opacity="0.5"/>
-                    <!-- Bulgaria outline (stylized) -->
-                    <path d="M 360 115 L 385 108 L 412 106 L 444 108 L 476 112 L 510 118 L 540 126 L 562 138 L 576 152 L 582 170 L 572 184 L 548 194 L 520 196 L 488 192 L 456 186 L 428 178 L 402 170 L 378 158 L 362 142 Z"
-                          fill="rgba(0, 153, 255, 0.07)" stroke="rgba(0, 153, 255, 0.35)" stroke-width="1.25"/>
-
-                    <!-- Boston marker -->
-                    <g transform="translate(80, 118)">
-                      <circle r="6" fill="#060026"/>
-                      <circle r="12" fill="#060026" fill-opacity="0.12"/>
-                      <text x="0" y="-18" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" fill="#060026" font-weight="500" letter-spacing="1.2">BOS</text>
-                      <text x="0" y="28" text-anchor="middle" font-family="Geist Mono, monospace" font-size="9" fill="rgba(6,0,38,0.5)" letter-spacing="0.6">Outpost</text>
-                    </g>
-
-                    <!-- Sofia -->
-                    <g transform="translate(402, 158)">
-                      <circle r="7" fill="#0099FF"/>
-                      <circle r="14" fill="#0099FF" fill-opacity="0.2"/>
-                      <circle r="22" fill="#0099FF" fill-opacity="0.08"/>
-                      <text x="-4" y="-16" text-anchor="end" font-family="Geist, sans-serif" font-size="13" fill="#060026" font-weight="500">Sofia</text>
-                      <text x="-4" y="-4" text-anchor="end" font-family="Geist Mono, monospace" font-size="9" fill="#0099FF" letter-spacing="0.8" font-weight="500">HQ</text>
-                    </g>
-                    <!-- Blagoevgrad (south-west of Sofia) -->
-                    <g transform="translate(404, 188)">
-                      <circle r="5" fill="#0099FF"/>
-                      <circle r="10" fill="#0099FF" fill-opacity="0.18"/>
-                      <text x="10" y="3" font-family="Geist, sans-serif" font-size="12" fill="#060026" font-weight="500">Blagoevgrad</text>
-                    </g>
-                    <!-- Ruse (northeast of Sofia, on Danube) -->
-                    <g transform="translate(500, 124)">
-                      <circle r="5" fill="#0099FF"/>
-                      <circle r="10" fill="#0099FF" fill-opacity="0.18"/>
-                      <text x="0" y="-12" text-anchor="middle" font-family="Geist, sans-serif" font-size="12" fill="#060026" font-weight="500">Ruse</text>
-                    </g>
-                  </svg>
-                </div>
-              </div>
+            <div class="rounded-xl border border-brand-dark/10 bg-white p-5">
+              <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-dark/45 font-medium mb-2">BG</p>
+              <h3 class="text-[16px] font-medium text-brand-dark leading-tight">Ruse</h3>
+              <p class="text-[12.5px] text-brand-dark/60 leading-[1.5] mt-1.5">Riverside, near the university.</p>
+            </div>
+            <div class="rounded-xl border border-brand-dark/10 bg-white p-5">
+              <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-dark/45 font-medium mb-2">BG</p>
+              <h3 class="text-[16px] font-medium text-brand-dark leading-tight">Blagoevgrad</h3>
+              <p class="text-[12.5px] text-brand-dark/60 leading-[1.5] mt-1.5">South-west, near AUBG.</p>
+            </div>
+            <div class="rounded-xl border border-brand-dark/10 bg-white p-5">
+              <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-dark/45 font-medium mb-2">US</p>
+              <h3 class="text-[16px] font-medium text-brand-dark leading-tight">Boston</h3>
+              <p class="text-[12.5px] text-brand-dark/60 leading-[1.5] mt-1.5">Small outpost. Nobody relocates here.</p>
             </div>
           </div>
 
-          <!--
-            Office cards with city background images.
-            Expected filenames in repo root: office-sofia.jpg, office-ruse.jpg,
-            office-blagoevgrad.jpg, office-boston.jpg. Until they're uploaded,
-            the gradient overlay + fallback color still looks good on its own.
-          -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-            <!-- Sofia -->
-            <div class="office-card rounded-2xl overflow-hidden border border-brand-dark/10 text-white relative min-h-[280px]"
-                 style="background-image: linear-gradient(180deg, rgba(6, 0, 38, 0.25) 0%, rgba(6, 0, 38, 0.85) 100%), url('office-sofia.jpg'); background-size: cover; background-position: center; background-color: #0066CC;">
-              <div class="p-6 h-full flex flex-col min-h-[280px]">
-                <div class="flex items-start mb-4">
-                  <span class="text-[12px] font-mono uppercase tracking-widest text-brand-light font-medium">HQ · Sofia</span>
-                </div>
-                <div class="flex-1"></div>
-                <h3 class="text-[22px] font-medium leading-[1.2] mb-2">Sofia — Campus X</h3>
-                <p class="text-[14.5px] text-white/85 leading-[1.55]">Home base. Inside the Campus X startup hub — gym, events, and a few hundred other founders two floors down. Most of our senior bench sits here.</p>
-              </div>
-            </div>
-            <!-- Ruse -->
-            <div class="office-card rounded-2xl overflow-hidden border border-brand-dark/10 text-white relative min-h-[280px]"
-                 style="background-image: linear-gradient(180deg, rgba(6, 0, 38, 0.25) 0%, rgba(6, 0, 38, 0.85) 100%), url('office-ruse.jpg'); background-size: cover; background-position: center; background-color: #8B57F4;">
-              <div class="p-6 h-full flex flex-col min-h-[280px]">
-                <div class="flex items-start mb-4">
-                  <span class="text-[12px] font-mono uppercase tracking-widest text-brand-light font-medium">BG · Ruse</span>
-                </div>
-                <div class="flex-1"></div>
-                <h3 class="text-[22px] font-medium leading-[1.2] mb-2">Ruse</h3>
-                <p class="text-[14.5px] text-white/85 leading-[1.55]">Opened for people who want US and EU clients without trading the Danube for a Sofia commute. Central riverside location, walking distance to the university.</p>
-              </div>
-            </div>
-            <!-- Blagoevgrad -->
-            <div class="office-card rounded-2xl overflow-hidden border border-brand-dark/10 text-white relative min-h-[280px]"
-                 style="background-image: linear-gradient(180deg, rgba(6, 0, 38, 0.25) 0%, rgba(6, 0, 38, 0.85) 100%), url('office-blagoevgrad.jpg'); background-size: cover; background-position: center; background-color: #0099FF;">
-              <div class="p-6 h-full flex flex-col min-h-[280px]">
-                <div class="flex items-start mb-4">
-                  <span class="text-[12px] font-mono uppercase tracking-widest text-brand-light font-medium">BG · Blagoevgrad</span>
-                </div>
-                <div class="flex-1"></div>
-                <h3 class="text-[22px] font-medium leading-[1.2] mb-2">Blagoevgrad</h3>
-                <p class="text-[14.5px] text-white/85 leading-[1.55]">Our south-west base. Close to AUBG's bilingual talent pool and a drive away from the mountains for the inevitable team offsite.</p>
-              </div>
-            </div>
-            <!-- Boston -->
-            <div class="office-card rounded-2xl overflow-hidden border border-brand-dark/10 text-white relative min-h-[280px]"
-                 style="background-image: linear-gradient(180deg, rgba(6, 0, 38, 0.3) 0%, rgba(6, 0, 38, 0.9) 100%), url('office-boston.jpg'); background-size: cover; background-position: center; background-color: #060026;">
-              <div class="p-6 h-full flex flex-col min-h-[280px]">
-                <div class="flex items-start mb-4">
-                  <span class="text-[12px] font-mono uppercase tracking-widest text-brand-light font-medium">US · Boston · Outpost</span>
-                </div>
-                <div class="flex-1"></div>
-                <h3 class="text-[22px] font-medium leading-[1.2] mb-2">Boston</h3>
-                <p class="text-[14.5px] text-white/85 leading-[1.55]">A small US outpost for client-facing work in Eastern time. Nobody relocates here — it exists so Sofia doesn't have to cover late-evening calls.</p>
-              </div>
-            </div>
-          </div>
-
+          <p class="text-[13px] text-brand-dark/55 leading-[1.5] mt-6">
+            Same team, same work, same specialty coffee in all of them.
+          </p>
         </div>
       </section>
 

@@ -561,14 +561,14 @@
             </div>
 
             <!-- Purple accent card — the novel/differentiated service -->
-            <div class="bg-gradient-to-br from-accent-purple/40 to-accent-purple/15 hover:from-accent-purple/50 hover:to-accent-purple/20 p-8 rounded-xl transition-all group relative overflow-hidden">
-              <div class="absolute -top-10 -right-10 w-32 h-32 bg-accent-purple/30 rounded-full blur-2xl"></div>
+            <div class="bg-accent-purple hover:bg-accent-purple/90 p-8 rounded-xl transition-colors group relative overflow-hidden">
+              <div class="absolute -top-10 -right-10 w-32 h-32 bg-white/15 rounded-full blur-2xl"></div>
               <div class="relative flex items-center justify-between mb-6">
                 <i data-lucide="brain" class="w-8 h-8 text-white"></i>
                 <span class="font-mono text-[12px] uppercase tracking-widest font-medium text-white bg-white/15 px-2 py-1 rounded-full">New · 2026</span>
               </div>
-              <h3 class="relative text-xl font-medium mb-3 leading-[1.25]">AI Visibility & GEO</h3>
-              <p class="relative text-white/75 text-[14px] leading-[1.5] mb-6">Be the brand ChatGPT, Claude, and Gemini recommend when your buyers ask "best vendor for…". The new SEO.</p>
+              <h3 class="relative text-xl font-medium mb-3 leading-[1.25] text-white">AI Visibility & GEO</h3>
+              <p class="relative text-white/85 text-[14px] leading-[1.5] mb-6">Be the brand ChatGPT, Claude, and Gemini recommend when your buyers ask "best vendor for…". The new SEO.</p>
               <p class="relative text-white text-[12px] font-medium font-mono uppercase tracking-wider inline-flex items-center gap-2">
                 First-mover advantage window: <span class="text-white">12 months</span>
               </p>
@@ -840,7 +840,7 @@
 
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
             <!-- Primary: Book with Paul -->
-            <div class="lg:col-span-7 bg-gradient-to-br from-dark-blue to-brand-blue text-white p-10 md:p-12 rounded-2xl relative overflow-hidden">
+            <div class="lg:col-span-7 bg-gradient-to-br from-[#002B55] to-[#0066CC] text-white p-10 md:p-12 rounded-2xl relative overflow-hidden">
               <div class="absolute -top-24 -right-24 w-80 h-80 bg-accent-cyan/20 rounded-full blur-3xl"></div>
               <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-brand-light/15 rounded-full blur-3xl"></div>
 
@@ -912,26 +912,23 @@
         </div>
       </section>
 
-      <!-- Final CTA — Main Blue → Cyan Accent gradient (per brand spec) -->
-      <section class="py-20 md:py-32 bg-white">
-        <div class="container-brand">
-          <div class="relative bg-gradient-to-r from-brand-blue to-accent-cyan rounded-3xl overflow-hidden p-12 md:p-20 text-center">
-            <div class="absolute -top-32 -right-32 w-96 h-96 bg-brand-light/30 rounded-full blur-3xl"></div>
-            <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-white/20 rounded-full blur-3xl"></div>
-
-            <div class="relative max-w-3xl mx-auto text-brand-dark space-y-8">
-              <p class="font-mono text-[12px] text-brand-dark/70 uppercase tracking-[0.3em] font-medium">For the CMO Reading This</p>
-              <h2 class="text-[24px] md:text-[32px] font-medium leading-[1.2] tracking-[-0.02em]">Your next board meeting is in <span class="font-script text-dark-blue text-[1.1em] leading-none">four weeks</span>.</h2>
-              <p class="text-lg md:text-xl text-brand-dark/80 leading-[1.5] max-w-[62ch] mx-auto">That's long enough to rebuild your attribution model, redeploy 15% of your media budget, and walk in with a pipeline forecast your CFO can sign off on. Let's start on Monday.</p>
-              <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-                <a href="/contact" class="bg-accent-lime hover:bg-white text-brand-dark px-8 py-4 rounded-lg font-medium text-lg transition-colors inline-flex items-center justify-center gap-2 group">
-                  Book with Paul
-                  <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-0.5 transition-transform"></i>
-                </a>
-                <a href="#report" class="bg-brand-dark/5 hover:bg-brand-dark/15 text-brand-dark px-8 py-4 rounded-lg font-medium text-lg transition-colors">
-                  Read the report first
-                </a>
-              </div>
+      <!-- Final CTA — full-width layer with Light Blue → White gradient -->
+      <section class="relative bg-gradient-to-r from-brand-light to-white py-20 md:py-32 overflow-hidden">
+        <div class="absolute -top-32 -right-32 w-96 h-96 bg-white/40 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-brand-light/40 rounded-full blur-3xl"></div>
+        <div class="container-brand relative">
+          <div class="max-w-3xl mx-auto text-brand-dark text-center space-y-8">
+            <p class="font-mono text-[12px] text-brand-dark/70 uppercase tracking-[0.3em] font-medium">For the CMO Reading This</p>
+            <h2 class="text-[24px] md:text-[32px] font-medium leading-[1.2] tracking-[-0.02em]">Your next board meeting is in <span class="font-script text-dark-blue text-[1.1em] leading-none">four weeks</span>.</h2>
+            <p class="text-lg md:text-xl text-brand-dark/80 leading-[1.5] max-w-[62ch] mx-auto">That's long enough to rebuild your attribution model, redeploy 15% of your media budget, and walk in with a pipeline forecast your CFO can sign off on. Let's start on Monday.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+              <a href="/contact" class="bg-accent-lime hover:bg-white text-brand-dark px-8 py-4 rounded-lg font-medium text-lg transition-colors inline-flex items-center justify-center gap-2 group">
+                Book with Paul
+                <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-0.5 transition-transform"></i>
+              </a>
+              <a href="#report" class="bg-brand-dark/5 hover:bg-brand-dark/15 text-brand-dark px-8 py-4 rounded-lg font-medium text-lg transition-colors">
+                Read the report first
+              </a>
             </div>
           </div>
         </div>
@@ -939,7 +936,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-navy text-white">
+    <footer class="bg-navy text-cool-gray">
       <div class="container-brand py-20">
         <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-16">
           <div class="md:col-span-4 space-y-6">

@@ -31,5 +31,10 @@ has standing approval to ship every change they ask for.
 - Brand rule: **no grey card outlines.** Cards are `bg-white` on tinted panels
   with hover shadows. Form inputs are the only place `border border-brand-dark/15`
   is acceptable. (Originally enforced in commit `d5631e2`.)
+- Brand rule: **light text on deep-navy backgrounds is `cool-gray` (#B4D9C0).**
+  Never reach for white-with-opacity (`text-white/65`, `text-white/80`, etc.) for
+  body or secondary text on dark sections. Pure `text-white` for headlines is
+  fine. Colored accents (e.g. `text-brand-light` for eyebrows) need explicit
+  approval — they're a brand-color choice, not a "lighter text" choice.
 - Primary CTA across the site is "Book a call" / "Book a pipeline diagnostic" —
   do not introduce competing primary CTAs.

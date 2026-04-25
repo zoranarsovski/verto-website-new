@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About VertoDigital · The Pipeline Agency for B2B Tech</title>
+    <meta name="description" content="Founded in Boston in 2018. 200+ B2B technology clients. $450M+ in audited media spend. Meet the team behind the pipeline agency CMOs come back to." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono:wght@400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Geist', 'Inter', 'system-ui', '-apple-system', '"Segoe UI"', 'Roboto', 'sans-serif'],
+              display: ['Geist', 'Inter', 'system-ui', '-apple-system', '"Segoe UI"', 'Roboto', 'sans-serif'],
+              mono: ['"Geist Mono"', 'ui-monospace', 'monospace'],
+              script: ['Caveat', 'cursive'],
+            },
+            colors: {
+              'brand-light': '#66CCFF',
+              'brand-blue': '#0099FF',
+              'dark-blue':  '#0066CC',
+              'brand-dark': '#060026',
+              'navy':       '#060026',
+              'accent-purple': '#8B57F4',
+              'accent-cyan':   '#43E5FF',
+              'accent-lime':   '#E1F77E',
+              'cool-gray':  '#B4D9C0',
+              'light-blue': '#d9f0ff',
+              primary:   '#060026',
+              secondary: '#0099FF',
+              accent:    '#43E5FF',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      html { scroll-padding-top: 96px; }
+      body {
+        font-family: 'Geist', 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        background-color: #ffffff;
+        color: #060026;
+        font-feature-settings: "ss01", "cv11";
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Geist', 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: -0.015em;
+      }
+      .font-script { font-family: 'Caveat', cursive; font-weight: 400; }
+      .font-mono, .tabular-nums { font-variant-numeric: tabular-nums; }
+      .hero-gradient {
+        background:
+          radial-gradient(ellipse 70% 50% at 20% 10%, rgba(102, 204, 255, 0.45), transparent 60%),
+          radial-gradient(ellipse 60% 50% at 90% 50%, rgba(67, 229, 255, 0.2), transparent 60%),
+          linear-gradient(180deg, #d9f0ff 0%, #ffffff 70%);
+      }
+      .container-brand {
+        width: 100%;
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+      @media (min-width: 768px) {
+        .container-brand { padding-left: 80px; padding-right: 80px; }
+      }
+      @media (min-width: 1280px) {
+        .container-brand { padding-left: 120px; padding-right: 120px; }
+      }
+      .section-eyebrow {
+        font-family: 'Geist Mono', ui-monospace, monospace;
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: rgba(6, 0, 38, 0.55);
+        font-weight: 500;
+      }
+      .section-eyebrow-light {
+        font-family: 'Geist Mono', ui-monospace, monospace;
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.65);
+        font-weight: 500;
+      }
+      .rule-mono {
+        font-family: 'Geist Mono', ui-monospace, monospace;
+        font-size: 11px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: rgba(6, 0, 38, 0.5);
+      }
+      /* Team card placeholder treatment */
+      .team-placeholder {
+        background: linear-gradient(135deg, rgba(102, 204, 255, 0.12), rgba(180, 217, 192, 0.18));
+        border: 1px dashed rgba(6, 0, 38, 0.18);
+      }
+    </style>
+  </head>
+  <body class="antialiased">
+    <!-- Navbar -->
+    <nav class="sticky top-0 w-full z-50 bg-white/85 backdrop-blur-xl border-b border-brand-dark/10">
+      <div class="container-brand flex justify-between items-center py-5">
+        <a href="/" class="flex items-center"><img src="VertoDigital-brandmark-color-black.svg" alt="VertoDigital" class="h-11 w-auto" /></a>
+        <div class="hidden md:flex items-center space-x-10 text-[15px]">
+          <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/#case-studies">Case studies</a>
+          <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/#services">Services</a>
+          <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/#insights">Research</a>
+          <a class="text-brand-blue font-medium transition-colors" href="/about" aria-current="page">About</a>
+          <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/contact">Contact</a>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="/#report" class="hidden lg:inline-flex items-center gap-2 text-brand-dark text-sm font-medium hover:text-brand-blue transition-colors">
+            <i data-lucide="file-text" class="w-4 h-4"></i>
+            2026 Pipeline Report
+          </a>
+          <a href="/contact" class="bg-brand-dark hover:bg-brand-blue text-white px-5 py-2.5 rounded-lg font-medium text-sm transition-colors inline-flex items-center gap-2">
+            Book a call <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero-gradient">
+        <div class="container-brand pt-16 md:pt-24 pb-20 md:pb-28">
+          <div class="max-w-4xl">
+            <p class="section-eyebrow mb-6">About VertoDigital</p>
+            <h1 class="text-[44px] md:text-[64px] lg:text-[76px] leading-[1.05] tracking-[-0.02em] text-brand-dark">
+              We're the agency CMOs come to when <span class="font-script text-brand-blue text-[1.05em]">the pipeline</span> doesn't add up.
+            </h1>
+            <p class="mt-8 text-[19px] md:text-[21px] leading-[1.55] text-brand-dark/75 max-w-3xl">
+              Since 2018, we've worked exclusively with B2B technology companies — auditing $450M+ in media spend across 200+ clients to build pipeline forecasts a CFO will actually sign.
+            </p>
+            <div class="mt-10 flex flex-wrap gap-3">
+              <a href="/contact" class="bg-brand-dark hover:bg-brand-blue text-white px-6 py-3 rounded-lg font-medium text-[15px] transition-colors inline-flex items-center gap-2">
+                Book a pipeline diagnostic <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+              <a href="#team" class="bg-white border border-brand-dark/15 hover:border-brand-blue text-brand-dark px-6 py-3 rounded-lg font-medium text-[15px] transition-colors inline-flex items-center gap-2">
+                Meet the team
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick stat strip -->
+          <div class="mt-20 md:mt-24 grid grid-cols-2 md:grid-cols-4 gap-px bg-brand-dark/10 border border-brand-dark/10 rounded-2xl overflow-hidden">
+            <div class="bg-white p-6 md:p-7">
+              <p class="rule-mono mb-2">Founded</p>
+              <p class="text-[28px] md:text-[34px] font-medium text-brand-dark tabular-nums leading-none">2018</p>
+              <p class="text-[13px] text-brand-dark/55 mt-2">Boston, Massachusetts</p>
+            </div>
+            <div class="bg-white p-6 md:p-7">
+              <p class="rule-mono mb-2">Clients served</p>
+              <p class="text-[28px] md:text-[34px] font-medium text-brand-dark tabular-nums leading-none">200+</p>
+              <p class="text-[13px] text-brand-dark/55 mt-2">B2B technology only</p>
+            </div>
+            <div class="bg-white p-6 md:p-7">
+              <p class="rule-mono mb-2">Audited spend</p>
+              <p class="text-[28px] md:text-[34px] font-medium text-brand-dark tabular-nums leading-none">$450M+</p>
+              <p class="text-[13px] text-brand-dark/55 mt-2">Across 45 paid channels</p>
+            </div>
+            <div class="bg-white p-6 md:p-7">
+              <p class="rule-mono mb-2">Team</p>
+              <p class="text-[28px] md:text-[34px] font-medium text-brand-dark tabular-nums leading-none">50+</p>
+              <p class="text-[13px] text-brand-dark/55 mt-2">Boston · Sofia</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY WE EXIST -->
+      <section class="bg-white">
+        <div class="container-brand py-24 md:py-32">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+            <div class="lg:col-span-4">
+              <p class="section-eyebrow mb-6">Why VertoDigital exists</p>
+              <h2 class="text-[34px] md:text-[44px] leading-[1.1] tracking-[-0.02em] text-brand-dark">
+                Most B2B funnels look healthy at the top and break in the middle.
+              </h2>
+            </div>
+            <div class="lg:col-span-8 space-y-6 text-[17px] md:text-[18px] leading-[1.65] text-brand-dark/80">
+              <p>
+                VertoDigital was founded in Boston in 2018 — built around a single observation. CMOs were walking into board meetings with MQL counts, while CFOs were asking the only question that mattered: <em class="not-italic text-brand-dark">where's the pipeline?</em> The two numbers rarely matched. Most agencies didn't seem to notice.
+              </p>
+              <p>
+                So we built one that did. We narrowed the practice to B2B technology — long sales cycles, multi-stakeholder buying committees, ARR that has to be defended quarter after quarter. The work isn't easier there. It's just measurable. A click is a click. A pipeline-stage opportunity, attached to a deal, weighted by close probability — that's a number you can stake a forecast on.
+              </p>
+              <p>
+                Eight years later, the team is 50+ people across Boston and Sofia. The clients changed. The mission didn't. We still optimize for the only metric that survives a board review: <strong class="font-medium text-brand-dark">pipeline that closes</strong>.
+              </p>
+              <div class="pt-4 flex items-center gap-4">
+                <div class="h-px flex-1 bg-brand-dark/15"></div>
+                <p class="font-script text-[22px] text-brand-blue">— Paul Green, Founder</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BY THE NUMBERS -->
+      <section class="bg-light-blue/40 border-y border-brand-dark/10">
+        <div class="container-brand py-24 md:py-32">
+          <div class="max-w-3xl mb-16">
+            <p class="section-eyebrow mb-6">By the numbers</p>
+            <h2 class="text-[34px] md:text-[44px] leading-[1.1] tracking-[-0.02em] text-brand-dark">
+              Eight years. Numbers we'd let an audit committee look at.
+            </h2>
+            <p class="mt-6 text-[17px] md:text-[18px] leading-[1.6] text-brand-dark/70">
+              Every figure below is reconciled to a CRM, an ad platform, or a signed contract. Nothing is rounded for the website.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div class="bg-white rounded-2xl p-7 border border-brand-dark/10">
+              <p class="rule-mono mb-3">01 · Tenure</p>
+              <p class="text-[44px] md:text-[52px] font-medium text-brand-dark tabular-nums leading-none">8<span class="text-brand-blue">yr</span></p>
+              <p class="mt-4 text-[14px] leading-[1.55] text-brand-dark/65">Operating since 2018. The agency has shipped through three downturns and two AI cycles without changing its thesis.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-7 border border-brand-dark/10">
+              <p class="rule-mono mb-3">02 · Clients</p>
+              <p class="text-[44px] md:text-[52px] font-medium text-brand-dark tabular-nums leading-none">200<span class="text-brand-blue">+</span></p>
+              <p class="mt-4 text-[14px] leading-[1.55] text-brand-dark/65">B2B technology companies — Series A through public. No DTC. No detours. Specialism compounds.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-7 border border-brand-dark/10">
+              <p class="rule-mono mb-3">03 · Spend audited</p>
+              <p class="text-[44px] md:text-[52px] font-medium text-brand-dark tabular-nums leading-none">$450<span class="text-brand-blue">M</span></p>
+              <p class="mt-4 text-[14px] leading-[1.55] text-brand-dark/65">Across LinkedIn, Google, Meta, programmatic, and 41 other channels. Reconciled to platform invoices.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-7 border border-brand-dark/10">
+              <p class="rule-mono mb-3">04 · Team</p>
+              <p class="text-[44px] md:text-[52px] font-medium text-brand-dark tabular-nums leading-none">50<span class="text-brand-blue">+</span></p>
+              <p class="mt-4 text-[14px] leading-[1.55] text-brand-dark/65">Strategy and creative in Boston. Engineering, analytics, and operations in Sofia. One Slack, one calendar.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- THE TEAM -->
+      <section id="team" class="bg-white">
+        <div class="container-brand py-24 md:py-32">
+          <div class="max-w-3xl mb-16">
+            <p class="section-eyebrow mb-6">Meet the team</p>
+            <h2 class="text-[34px] md:text-[44px] leading-[1.1] tracking-[-0.02em] text-brand-dark">
+              Designed in Boston <span class="inline-block">🇺🇸</span> · Engineered in Sofia <span class="inline-block">🇧🇬</span>
+            </h2>
+            <p class="mt-6 text-[17px] md:text-[18px] leading-[1.6] text-brand-dark/70">
+              50+ people, two continents, one obsession. Strategy, creative, and client leadership in Boston. Engineering, analytics, and operations in Sofia. The same Slack channel for both.
+            </p>
+          </div>
+
+          <!-- Team grid: 1 real card + 7 placeholders. Replace each placeholder by swapping the
+               <div class="team-placeholder ..."> ... </div> with a structured <a> card matching
+               the Paul Green example below. Image format: 800×800 .avif (or .jpg fallback). -->
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+            <!-- Paul Green (real) -->
+            <a href="https://www.linkedin.com/in/psgreen222/" target="_blank" rel="noopener noreferrer" class="group block">
+              <div class="aspect-square rounded-2xl overflow-hidden mb-4 bg-brand-light/15 border border-brand-dark/10">
+                <img src="paul-green-headshot.avif" alt="Paul Green, Founder of VertoDigital" loading="lazy" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500" />
+              </div>
+              <h3 class="text-[16px] font-medium text-brand-dark leading-tight">Paul Green</h3>
+              <p class="text-[13px] text-brand-dark/60 mt-1">Founder · Boston</p>
+              <span class="inline-flex items-center gap-1 mt-2 text-[12px] text-brand-blue group-hover:underline">
+                LinkedIn <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+              </span>
+            </a>
+
+            <!-- Placeholder 1 -->
+            <div class="block" aria-hidden="true">
+              <div class="team-placeholder aspect-square rounded-2xl mb-4 flex items-center justify-center">
+                <i data-lucide="user" class="w-12 h-12 text-brand-dark/25"></i>
+              </div>
+              <h3 class="text-[16px] font-medium text-brand-dark/45 leading-tight">Team member</h3>
+              <p class="text-[13px] text-brand-dark/35 mt-1">Role · Boston</p>
+            </div>
+
+            <!-- Placeholder 2 -->
+            <div class="block" aria-hidden="true">
+              <div class="team-placeholder aspect-square rounded-2xl mb-4 flex items-center justify-center">
+                <i data-lucide="user" class="w-12 h-12 text-brand-dark/25"></i>
+              </div>
+              <h3 class="text-[16px] font-medium text-brand-dark/45 leading-tight">Team member</h3>
+              <p class="text-[13px] text-brand-dark/35 mt-1">Role · Boston</p>
+            </div>
+
+            <!-- Placeholder 3 -->
+            <div class="block" aria-hidden="true">
+              <div class="team-placeholder aspect-square rounded-2xl mb-4 flex items-center justify-center">
+                <i data-lucide="user" class="w-12 h-12 text-brand-dark/25"></i>
+              </div>
+              <h3 class="text-[16px] font-medium text-brand-dark/45 leading-tight">Team member</h3>
+              <p class="text-[13px] text-brand-dark/35 mt-1">Role · Sofia</p>
+            </div>
+
+            <!-- Placeholder 4 -->
+            <div class="block" aria-hidden="true">
+              <div class="team-placeholder aspect-square rounded-2xl mb-4 flex items-center justify-center">
+                <i data-lucide="user" class="w-12 h-12 text-brand-dark/25"></i>
+              </div>
+              <h3 class="text-[16px] font-medium text-brand-dark/45 leading-tight">Team member</h3>
+              <p class="text-[13px] text-brand-dark/35 mt-1">Role · Sofia</p>
+            </div>
+
+            <!-- Placeholder 5 -->
+            <div class="block" aria-hidden="true">
+              <div class="team-placeholder aspect-square rounded-2xl mb-4 flex items-center justify-center">
+                <i data-lucide="user" class="w-12 h-12 text-brand-dark/25"></i>
+              </div>
+              <h3 class="text-[16px] font-medium text-brand-dark/45 leading-tight">Team member</h3>
+              <p class="text-[13px] text-brand-dark/35 mt-1">Role · Boston</p>
+            </div>
+
+            <!-- Placeholder 6 -->
+            <div class="block" aria-hidden="true">
+              <div class="team-placeholder aspect-square rounded-2xl mb-4 flex items-center justify-center">
+                <i data-lucide="user" class="w-12 h-12 text-brand-dark/25"></i>
+              </div>
+              <h3 class="text-[16px] font-medium text-brand-dark/45 leading-tight">Team member</h3>
+              <p class="text-[13px] text-brand-dark/35 mt-1">Role · Sofia</p>
+            </div>
+
+            <!-- Placeholder 7 -->
+            <div class="block" aria-hidden="true">
+              <div class="team-placeholder aspect-square rounded-2xl mb-4 flex items-center justify-center">
+                <i data-lucide="user" class="w-12 h-12 text-brand-dark/25"></i>
+              </div>
+              <h3 class="text-[16px] font-medium text-brand-dark/45 leading-tight">Team member</h3>
+              <p class="text-[13px] text-brand-dark/35 mt-1">Role · Boston</p>
+            </div>
+
+          </div>
+
+          <div class="mt-12 flex flex-wrap items-center gap-4">
+            <a href="https://www.linkedin.com/company/vertodigital" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-[14px] text-brand-dark/70 hover:text-brand-blue transition-colors">
+              Find the rest of the team on LinkedIn <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+            </a>
+            <span class="text-brand-dark/25">·</span>
+            <a href="/careers" class="inline-flex items-center gap-2 text-[14px] text-brand-dark/70 hover:text-brand-blue transition-colors">
+              We're hiring <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW WE WORK -->
+      <section class="bg-navy text-white">
+        <div class="container-brand py-24 md:py-32">
+          <div class="max-w-3xl mb-16">
+            <p class="section-eyebrow-light mb-6">How we work</p>
+            <h2 class="text-[34px] md:text-[44px] leading-[1.1] tracking-[-0.02em] text-white">
+              Three commitments we won't trade for a renewal.
+            </h2>
+            <p class="mt-6 text-[17px] md:text-[18px] leading-[1.6] text-cool-gray">
+              The shortlist of operating principles we'll defend in any room — board meeting, client review, or 11pm Slack.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/[0.07] transition-colors">
+              <p class="font-mono text-[12px] tracking-[0.2em] text-brand-light/80 mb-5">PRINCIPLE 01</p>
+              <h3 class="text-[22px] md:text-[26px] font-medium text-white leading-[1.2] tracking-[-0.01em]">Pipeline, not vanity metrics.</h3>
+              <p class="mt-4 text-[15px] leading-[1.6] text-cool-gray">An MQL that doesn't reach an opportunity stage is a cost line, not a result. Every dashboard we ship reconciles back to the CRM. If a number can't survive a CFO's question, we don't put it in a deck.</p>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/[0.07] transition-colors">
+              <p class="font-mono text-[12px] tracking-[0.2em] text-brand-light/80 mb-5">PRINCIPLE 02</p>
+              <h3 class="text-[22px] md:text-[26px] font-medium text-white leading-[1.2] tracking-[-0.01em]">Data over opinion. Always.</h3>
+              <p class="mt-4 text-[15px] leading-[1.6] text-cool-gray">We run an audited benchmark cohort with 45 client accounts contributing anonymized data. When we recommend a channel, a budget shift, or a creative pivot, we can show you what it did across the cohort first.</p>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/[0.07] transition-colors">
+              <p class="font-mono text-[12px] tracking-[0.2em] text-brand-light/80 mb-5">PRINCIPLE 03</p>
+              <h3 class="text-[22px] md:text-[26px] font-medium text-white leading-[1.2] tracking-[-0.01em]">Specialists, not generalists.</h3>
+              <p class="mt-4 text-[15px] leading-[1.6] text-cool-gray">Eight years in B2B technology. No DTC accounts. No retail detours. Specialism compounds — every quarter we learn from 200+ clients facing the same buying-committee problems your team faces.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RECOGNITION / AUTHORITY -->
+      <section class="bg-white">
+        <div class="container-brand py-24 md:py-32">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+            <div class="lg:col-span-4">
+              <p class="section-eyebrow mb-6">Recognition</p>
+              <h2 class="text-[34px] md:text-[44px] leading-[1.1] tracking-[-0.02em] text-brand-dark">
+                Where the work is verified.
+              </h2>
+              <p class="mt-6 text-[17px] leading-[1.6] text-brand-dark/70">
+                Credentials matter when the stakes are pipeline forecasts. Each item below is independently verifiable — no badge collecting, no pay-to-play directories.
+              </p>
+            </div>
+
+            <div class="lg:col-span-8">
+              <ul class="divide-y divide-brand-dark/10 border-y border-brand-dark/10">
+
+                <li class="py-7 grid grid-cols-12 gap-6 items-start">
+                  <div class="col-span-12 md:col-span-3">
+                    <p class="rule-mono">Partner status</p>
+                  </div>
+                  <div class="col-span-12 md:col-span-9">
+                    <h3 class="text-[20px] md:text-[22px] font-medium text-brand-dark leading-[1.25]">LinkedIn Ads Premier Partner</h3>
+                    <p class="mt-2 text-[15px] leading-[1.6] text-brand-dark/65">One of a small group of agencies invited to LinkedIn's top partnership tier. The status is granted by spend volume, performance benchmarks, and certified-team headcount — and reviewed annually.</p>
+                  </div>
+                </li>
+
+                <li class="py-7 grid grid-cols-12 gap-6 items-start">
+                  <div class="col-span-12 md:col-span-3">
+                    <p class="rule-mono">Research</p>
+                  </div>
+                  <div class="col-span-12 md:col-span-9">
+                    <h3 class="text-[20px] md:text-[22px] font-medium text-brand-dark leading-[1.25]">2026 B2B Pipeline Report</h3>
+                    <p class="mt-2 text-[15px] leading-[1.6] text-brand-dark/65">Our annual benchmark on B2B paid-channel performance, sales-cycle length, and pipeline-conversion math. Built from anonymized data across 45 cohort accounts and read by CMOs at over 1,200 companies.</p>
+                    <a href="/#report" class="inline-flex items-center gap-1 mt-3 text-[14px] text-brand-blue hover:underline">Read the 2026 report <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+                  </div>
+                </li>
+
+                <li class="py-7 grid grid-cols-12 gap-6 items-start">
+                  <div class="col-span-12 md:col-span-3">
+                    <p class="rule-mono">Methodology</p>
+                  </div>
+                  <div class="col-span-12 md:col-span-9">
+                    <h3 class="text-[20px] md:text-[22px] font-medium text-brand-dark leading-[1.25]">45-client audited benchmark cohort</h3>
+                    <p class="mt-2 text-[15px] leading-[1.6] text-brand-dark/65">Forty-five active client accounts contribute anonymized channel, funnel, and pipeline data. We use the cohort to pressure-test recommendations before they reach a client deck — and to calibrate the forecasts we put our name on.</p>
+                  </div>
+                </li>
+
+                <li class="py-7 grid grid-cols-12 gap-6 items-start">
+                  <div class="col-span-12 md:col-span-3">
+                    <p class="rule-mono">Toolchain</p>
+                  </div>
+                  <div class="col-span-12 md:col-span-9">
+                    <h3 class="text-[20px] md:text-[22px] font-medium text-brand-dark leading-[1.25]">Certified across the modern B2B stack</h3>
+                    <p class="mt-2 text-[15px] leading-[1.6] text-brand-dark/65">Active partnerships and certified team members across Salesforce, HubSpot, 6sense, Clay, Profound, Ahrefs, and the major ad platforms. We don't sell tools. We use them so well our clients stop second-guessing the data.</p>
+                  </div>
+                </li>
+
+                <li class="py-7 grid grid-cols-12 gap-6 items-start">
+                  <div class="col-span-12 md:col-span-3">
+                    <p class="rule-mono">Coverage</p>
+                  </div>
+                  <div class="col-span-12 md:col-span-9">
+                    <h3 class="text-[20px] md:text-[22px] font-medium text-brand-dark leading-[1.25]">Cited in industry press &amp; B2B podcasts</h3>
+                    <p class="mt-2 text-[15px] leading-[1.6] text-brand-dark/65">Pipeline frameworks and benchmarks from VertoDigital have been picked up by trade publications and B2B marketing podcasts. We don't gate the methodology — if it helps the category move past MQL theatre, that's a good day.</p>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- THREE DOORS -->
+      <section class="bg-light-blue/40 border-y border-brand-dark/10">
+        <div class="container-brand py-24 md:py-32">
+          <div class="max-w-3xl mb-14">
+            <p class="section-eyebrow mb-6">What's next</p>
+            <h2 class="text-[34px] md:text-[44px] leading-[1.1] tracking-[-0.02em] text-brand-dark">
+              Three doors. Pick yours.
+            </h2>
+            <p class="mt-6 text-[17px] md:text-[18px] leading-[1.6] text-brand-dark/70">
+              Different reason for being here? Same answer either way — talk to a human within one business day.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+            <a href="/contact" class="group block bg-white border border-brand-dark/10 rounded-2xl p-8 hover:border-brand-blue hover:shadow-lg hover:shadow-brand-blue/5 transition-all">
+              <div class="w-12 h-12 rounded-xl bg-brand-light/30 flex items-center justify-center mb-6 group-hover:bg-brand-blue/15 transition-colors">
+                <i data-lucide="line-chart" class="w-6 h-6 text-brand-blue"></i>
+              </div>
+              <p class="rule-mono mb-3">For B2B CMOs</p>
+              <h3 class="text-[22px] md:text-[24px] font-medium text-brand-dark leading-[1.2]">Book a pipeline diagnostic</h3>
+              <p class="mt-3 text-[15px] leading-[1.6] text-brand-dark/65">A 45-minute working session. We pull your funnel apart, find the leak, and tell you what we'd do in your seat. No deck, no pitch.</p>
+              <span class="inline-flex items-center gap-1 mt-5 text-[14px] text-brand-blue font-medium">
+                Start with a diagnostic <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-0.5 transition-transform"></i>
+              </span>
+            </a>
+
+            <a href="mailto:partnerships@vertodigital.com" class="group block bg-white border border-brand-dark/10 rounded-2xl p-8 hover:border-brand-blue hover:shadow-lg hover:shadow-brand-blue/5 transition-all">
+              <div class="w-12 h-12 rounded-xl bg-brand-light/30 flex items-center justify-center mb-6 group-hover:bg-brand-blue/15 transition-colors">
+                <i data-lucide="handshake" class="w-6 h-6 text-brand-blue"></i>
+              </div>
+              <p class="rule-mono mb-3">For platforms &amp; tools</p>
+              <h3 class="text-[22px] md:text-[24px] font-medium text-brand-dark leading-[1.2]">Tell us about your integration</h3>
+              <p class="mt-3 text-[15px] leading-[1.6] text-brand-dark/65">If your tool genuinely moves pipeline for B2B tech buyers, we'd like to talk. Bring proof. We'll bring a candid take and, if it fits, 200+ accounts that should know.</p>
+              <span class="inline-flex items-center gap-1 mt-5 text-[14px] text-brand-blue font-medium">
+                Email partnerships <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-0.5 transition-transform"></i>
+              </span>
+            </a>
+
+            <a href="/careers" class="group block bg-white border border-brand-dark/10 rounded-2xl p-8 hover:border-brand-blue hover:shadow-lg hover:shadow-brand-blue/5 transition-all">
+              <div class="w-12 h-12 rounded-xl bg-brand-light/30 flex items-center justify-center mb-6 group-hover:bg-brand-blue/15 transition-colors">
+                <i data-lucide="users" class="w-6 h-6 text-brand-blue"></i>
+              </div>
+              <p class="rule-mono mb-3">For operators</p>
+              <h3 class="text-[22px] md:text-[24px] font-medium text-brand-dark leading-[1.2]">We're hiring across both offices</h3>
+              <p class="mt-3 text-[15px] leading-[1.6] text-brand-dark/65">Strategy, paid media, analytics, engineering. Boston or Sofia. The bar is sharp thinking, plain language, and the patience to teach a CFO how the funnel actually works.</p>
+              <span class="inline-flex items-center gap-1 mt-5 text-[14px] text-brand-blue font-medium">
+                See open roles <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-0.5 transition-transform"></i>
+              </span>
+            </a>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section class="hero-gradient">
+        <div class="container-brand py-24 md:py-32">
+          <div class="max-w-4xl">
+            <p class="section-eyebrow mb-6">One last thing</p>
+            <h2 class="text-[40px] md:text-[56px] lg:text-[64px] leading-[1.05] tracking-[-0.02em] text-brand-dark">
+              200+ clients in. The pattern hasn't changed — <span class="font-script text-brand-blue text-[1.05em]">funnels leak</span> at the top, and pipeline gets fixed in the middle.
+            </h2>
+            <p class="mt-8 text-[18px] md:text-[20px] leading-[1.55] text-brand-dark/75 max-w-3xl">
+              If yours is leaking, we've probably already seen the version of it. Bring the funnel. We'll bring the math.
+            </p>
+            <div class="mt-10 flex flex-wrap gap-3">
+              <a href="/contact" class="bg-brand-dark hover:bg-brand-blue text-white px-6 py-3 rounded-lg font-medium text-[15px] transition-colors inline-flex items-center gap-2">
+                Book a pipeline diagnostic <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+              <a href="/#case-studies" class="bg-white border border-brand-dark/15 hover:border-brand-blue text-brand-dark px-6 py-3 rounded-lg font-medium text-[15px] transition-colors inline-flex items-center gap-2">
+                See case studies first
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-navy text-cool-gray">
+      <div class="container-brand py-20">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-16">
+          <div class="md:col-span-4 space-y-6">
+            <a href="/" class="flex items-center"><img src="VertoDigital-brandmark-color-white.svg" alt="VertoDigital" class="h-11 w-auto" /></a>
+            <p class="text-cool-gray text-sm leading-relaxed max-w-xs">The pipeline agency for B2B technology companies. Based in Boston. Trusted by CMOs globally.</p>
+            <div class="flex gap-4">
+              <a class="text-cool-gray hover:text-white transition-colors" href="https://www.linkedin.com/company/vertodigital" target="_blank" rel="noopener noreferrer" aria-label="VertoDigital on LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a class="text-cool-gray hover:text-white transition-colors" href="https://www.youtube.com/@vertodigital" target="_blank" rel="noopener noreferrer" aria-label="VertoDigital on YouTube"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+              <a class="text-cool-gray hover:text-white transition-colors" href="https://www.instagram.com/vertodigitalagency/" target="_blank" rel="noopener noreferrer" aria-label="VertoDigital on Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+            </div>
+          </div>
+          <div class="md:col-span-2 space-y-5">
+            <p class="font-medium text-sm">Services</p>
+            <ul class="space-y-3 text-sm">
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#services">Pipeline Intelligence</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#services">Paid Media</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#services">LinkedIn</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#services">ABM</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#services">AI Visibility</a></li>
+            </ul>
+          </div>
+          <div class="md:col-span-2 space-y-5">
+            <p class="font-medium text-sm">Company</p>
+            <ul class="space-y-3 text-sm">
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/about">About</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#case-studies">Case Studies</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/careers">Careers</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#press">Press</a></li>
+            </ul>
+          </div>
+          <div class="md:col-span-4 space-y-5">
+            <p class="font-medium text-sm">Research &amp; Insights</p>
+            <p class="text-cool-gray text-sm leading-[1.55]">Monthly dispatches for B2B marketing leaders. Data, benchmarks, and pipeline frameworks.</p>
+            <form class="flex gap-2">
+              <input type="email" placeholder="work@email.com" class="flex-1 bg-white/5 border border-white/15 text-white placeholder:text-cool-gray text-sm rounded-lg px-4 py-2.5 focus:border-brand-light focus:ring-1 focus:ring-brand-light/30 transition-colors" />
+              <button class="bg-brand-light text-brand-dark px-4 py-2.5 rounded-lg font-medium text-sm hover:bg-white transition-colors">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-xs text-cool-gray">
+          <p>© 2026 VertoDigital. Designed in Boston 🇺🇸 · Engineered in Sofia 🇧🇬. Deployed wherever pipeline leaks.</p>
+          <div class="flex gap-6">
+            <a href="/privacy" class="hover:text-white transition-colors">Privacy</a>
+            <a href="/terms" class="hover:text-white transition-colors">Terms</a>
+            <a href="/privacy#cookies" class="hover:text-white transition-colors">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

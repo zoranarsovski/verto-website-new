@@ -28,9 +28,18 @@ has standing approval to ship every change they ask for.
 - Static HTML served by Cloudflare Pages. No build step. Edit `*.html` and the
   preview deploys.
 - Tailwind via CDN; design tokens defined inline in each page's `<head>`.
-- Brand rule: **no grey card outlines.** Cards are `bg-white` on tinted panels
-  with hover shadows. Form inputs are the only place `border border-brand-dark/15`
-  is acceptable. (Originally enforced in commit `d5631e2`.)
+- Brand rule: **no outlined boxes anywhere in the design.** Cards, sections,
+  list rows, and ghost buttons must not have a 4-side stroke (e.g.
+  `border border-brand-dark/10`, `border border-white/10`, dashed-border
+  placeholders). Use `bg-white` cards on tinted panels with hover shadows; let
+  background color carry section boundaries; use spacing — not strokes —
+  between list rows. If something needs separation, reach for spacing or a
+  softer background first. Allowed exceptions:
+    - Form inputs (`border border-brand-dark/15`).
+    - Single-side hairlines used as section rules — `border-b` under the
+      sticky nav, `border-t` above the footer's legal row, etc. These are
+      dividers, not outlines.
+  (Originally enforced in commit `d5631e2`.)
 - Brand rule: **light text on deep-navy backgrounds is `cool-gray` (#B4D9C0).**
   Never reach for white-with-opacity (`text-white/65`, `text-white/80`, etc.) for
   body or secondary text on dark sections. Pure `text-white` for headlines is

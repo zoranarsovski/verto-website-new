@@ -121,14 +121,23 @@
       .marquee-track { animation: marquee 40s linear infinite; }
       /* Before/after bar chart bars */
       .bar { transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1); }
-      /* Hamburger ↔ X morph (driven by aria-expanded on the parent button) */
-      .hamburger-icon {
+      /* Hamburger ↔ $ cross-fade (driven by aria-expanded on the parent button) */
+      .menu-icon-stack {
         position: relative;
         width: 22px;
-        height: 16px;
+        height: 22px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .hamburger-icon {
+        position: absolute;
+        inset: 0;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 5px;
+        transition: opacity 180ms ease;
       }
       .hamburger-line {
         display: block;
@@ -136,17 +145,27 @@
         width: 100%;
         background-color: currentColor;
         border-radius: 2px;
-        transform-origin: center;
-        transition: transform 250ms cubic-bezier(0.22, 1, 0.36, 1), opacity 180ms ease;
       }
-      [aria-expanded="true"] > .hamburger-icon .hamburger-line:nth-child(1) {
-        transform: translateY(7px) rotate(45deg);
+      .dollar-icon {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1;
+        color: #0099FF;
+        opacity: 0;
+        transform: scale(0.6);
+        transition: opacity 200ms ease, transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
       }
-      [aria-expanded="true"] > .hamburger-icon .hamburger-line:nth-child(2) {
+      [aria-expanded="true"] .hamburger-icon {
         opacity: 0;
       }
-      [aria-expanded="true"] > .hamburger-icon .hamburger-line:nth-child(3) {
-        transform: translateY(-7px) rotate(-45deg);
+      [aria-expanded="true"] .dollar-icon {
+        opacity: 1;
+        transform: scale(1);
       }
     </style>
   </head>
@@ -171,10 +190,13 @@
             Book a call <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </a>
           <button id="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu-panel" aria-label="Open menu" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-brand-dark hover:bg-brand-dark/5 transition-colors">
-            <span class="hamburger-icon" aria-hidden="true">
-              <span class="hamburger-line"></span>
-              <span class="hamburger-line"></span>
-              <span class="hamburger-line"></span>
+            <span class="menu-icon-stack" aria-hidden="true">
+              <span class="hamburger-icon">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+              </span>
+              <span class="dollar-icon">$</span>
             </span>
           </button>
         </div>

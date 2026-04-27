@@ -135,13 +135,31 @@
           <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/about">About</a>
           <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/contact">Contact</a>
         </div>
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center gap-3 md:gap-4">
           <a href="#report" class="hidden lg:inline-flex items-center gap-2 text-brand-dark text-sm font-medium hover:text-brand-blue transition-colors">
             <i data-lucide="file-text" class="w-4 h-4"></i>
             2026 Pipeline Report
           </a>
           <a href="/contact" class="bg-brand-dark hover:bg-brand-blue text-white px-5 py-2.5 rounded-lg font-medium text-sm transition-colors inline-flex items-center gap-2">
             Book a call <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+          <button id="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu-panel" aria-label="Open menu" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-brand-dark hover:bg-brand-dark/5 transition-colors">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile dropdown panel -->
+      <div id="mobile-menu-panel" class="hidden md:hidden border-t border-brand-dark/10 bg-white">
+        <div class="container-brand py-3 flex flex-col text-[15px]">
+          <a class="text-brand-dark hover:text-brand-blue py-3 transition-colors" href="#case-studies">Case studies</a>
+          <a class="text-brand-dark hover:text-brand-blue py-3 transition-colors" href="#services">Services</a>
+          <a class="text-brand-dark hover:text-brand-blue py-3 transition-colors" href="#insights">Research</a>
+          <a class="text-brand-dark hover:text-brand-blue py-3 transition-colors" href="/about">About</a>
+          <a class="text-brand-dark hover:text-brand-blue py-3 transition-colors" href="/contact">Contact</a>
+          <a class="text-brand-dark hover:text-brand-blue py-3 transition-colors inline-flex items-center gap-2" href="#report">
+            <i data-lucide="file-text" class="w-4 h-4"></i>
+            2026 Pipeline Report
           </a>
         </div>
       </div>
@@ -969,6 +987,27 @@
 
     <script>
       lucide.createIcons();
+
+      // Mobile menu toggle
+      (function () {
+        var btn = document.getElementById('mobile-menu-toggle');
+        var panel = document.getElementById('mobile-menu-panel');
+        if (!btn || !panel) return;
+        function close() {
+          panel.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+          btn.setAttribute('aria-label', 'Open menu');
+        }
+        btn.addEventListener('click', function () {
+          var willOpen = panel.classList.contains('hidden');
+          panel.classList.toggle('hidden');
+          btn.setAttribute('aria-expanded', String(willOpen));
+          btn.setAttribute('aria-label', willOpen ? 'Close menu' : 'Open menu');
+        });
+        panel.querySelectorAll('a').forEach(function (a) {
+          a.addEventListener('click', close);
+        });
+      })();
     </script>
   </body>
 </html>

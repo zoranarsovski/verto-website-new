@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pipeline Intelligence — B2B Marketing Attribution &amp; 1st-Party Data Activation | VertoDigital</title>
+    <meta name="description" content="Server-side GTM, GA4, CRM integration, offline conversion tracking, 1st-party data activation. The data layer that turns marketing spend into measurable pipeline. 73% more conversions matched than Salesforce native." />
+    <link rel="canonical" href="https://vertodigital.com/services/pipeline-intelligence" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Pipeline Intelligence — B2B Marketing Attribution &amp; 1st-Party Data Activation | VertoDigital" />
+    <meta property="og:description" content="The data layer behind every Verto campaign. Server-side GTM, GA4, BigQuery, CRM integration, offline conversion tracking. 73% more conversions matched than Salesforce native." />
+    <meta property="og:url" content="https://vertodigital.com/services/pipeline-intelligence" />
+    <meta property="og:site_name" content="VertoDigital" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Pipeline Intelligence",
+      "provider": { "@type": "Organization", "name": "VertoDigital", "url": "https://vertodigital.com" },
+      "areaServed": "Global",
+      "serviceType": "B2B Marketing Attribution & 1st-Party Data Activation",
+      "description": "The integration layer that connects website, product, GA4, BigQuery, CRM (HubSpot, Salesforce, Marketo) and ad platforms (Google, LinkedIn, Bing, Meta) so deal-stage signals optimize bidding. Server-side GTM, identity resolution, offline conversion tracking, full-funnel attribution.",
+      "url": "https://vertodigital.com/services/pipeline-intelligence",
+      "audience": { "@type": "Audience", "audienceType": "B2B SaaS CMOs, VPs of Marketing, RevOps, Marketing Ops" },
+      "isPartOf": { "@type": "Service", "name": "Pipeline-Driven Digital Marketing", "url": "https://vertodigital.com/services" },
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "37", "bestRating": "5" }
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono:wght@400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Geist', 'Inter', 'system-ui', '-apple-system', '"Segoe UI"', 'Roboto', 'sans-serif'],
+              display: ['Geist', 'Inter', 'system-ui', '-apple-system', '"Segoe UI"', 'Roboto', 'sans-serif'],
+              mono: ['"Geist Mono"', 'ui-monospace', 'monospace'],
+              script: ['Caveat', 'cursive'],
+            },
+            colors: {
+              'brand-light': '#66CCFF',
+              'brand-blue': '#0099FF',
+              'dark-blue':  '#0066CC',
+              'brand-dark': '#060026',
+              'navy':       '#060026',
+              'accent-purple': '#8B57F4',
+              'accent-cyan':   '#43E5FF',
+              'accent-lime':   '#E1F77E',
+              'cool-gray':  '#B4D9C0',
+              'light-blue': '#d9f0ff',
+              primary:   '#060026',
+              secondary: '#0099FF',
+              accent:    '#43E5FF',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      html { scroll-padding-top: 96px; }
+      body {
+        font-family: 'Geist', 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        background-color: #ffffff;
+        color: #060026;
+        font-feature-settings: "ss01", "cv11";
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Geist', 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: -0.015em;
+      }
+      .font-script { font-family: 'Caveat', cursive; font-weight: 400; }
+      .font-mono, .tabular-nums { font-variant-numeric: tabular-nums; }
+      .hero-gradient {
+        background:
+          radial-gradient(ellipse 70% 50% at 20% 10%, rgba(102, 204, 255, 0.45), transparent 60%),
+          radial-gradient(ellipse 60% 50% at 90% 50%, rgba(67, 229, 255, 0.2), transparent 60%),
+          linear-gradient(180deg, #d9f0ff 0%, #ffffff 70%);
+      }
+      .container-brand {
+        width: 100%;
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+      @media (min-width: 768px) {
+        .container-brand { padding-left: 80px; padding-right: 80px; }
+      }
+      @media (min-width: 1280px) {
+        .container-brand { padding-left: 120px; padding-right: 120px; }
+      }
+      .section-eyebrow {
+        font-family: 'Geist Mono', ui-monospace, monospace;
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: rgba(6, 0, 38, 0.55);
+        font-weight: 500;
+      }
+      .section-eyebrow-light {
+        font-family: 'Geist Mono', ui-monospace, monospace;
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #B4D9C0;
+        font-weight: 500;
+      }
+      .rule-mono {
+        font-family: 'Geist Mono', ui-monospace, monospace;
+        font-size: 11px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: rgba(6, 0, 38, 0.5);
+      }
+      .blueprint-grid {
+        background-image:
+          linear-gradient(rgba(6, 0, 38, 0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(6, 0, 38, 0.04) 1px, transparent 1px);
+        background-size: 32px 32px;
+      }
+      .hero-stat {
+        font-family: 'Geist', sans-serif;
+        font-weight: 500;
+        line-height: 0.85;
+        letter-spacing: -0.04em;
+      }
+      @keyframes dot-pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.35; }
+      }
+      .dot-pulse { animation: dot-pulse 2.4s ease-in-out infinite; }
+      /* Hamburger ↔ $ cross-fade */
+      .menu-icon-stack {
+        position: relative; width: 22px; height: 22px;
+        display: inline-flex; align-items: center; justify-content: center;
+      }
+      .hamburger-icon {
+        position: absolute; inset: 0;
+        display: flex; flex-direction: column; justify-content: center; gap: 5px;
+        transition: opacity 180ms ease;
+      }
+      .hamburger-line { display: block; height: 2px; width: 100%; background-color: currentColor; border-radius: 2px; }
+      .dollar-icon {
+        position: absolute; inset: 0;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 22px; font-weight: 700; line-height: 1; color: #0099FF;
+        opacity: 0; transform: scale(0.6);
+        transition: opacity 200ms ease, transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      [aria-expanded="true"] .hamburger-icon { opacity: 0; }
+      [aria-expanded="true"] .dollar-icon { opacity: 1; transform: scale(1); }
+      @media (prefers-reduced-motion: reduce) { .dot-pulse { animation: none; } }
+    </style>
+  </head>
+  <body class="antialiased">
+    <!-- Navbar -->
+    <nav class="sticky top-0 w-full z-50 bg-white/85 backdrop-blur-xl border-b border-brand-dark/10">
+      <div class="container-brand flex justify-between items-center py-5">
+        <a href="/" class="flex items-center" aria-label="VertoDigital home"><img src="/VertoDigital-brandmark-color-black.svg" alt="VertoDigital" class="h-11 w-auto" /></a>
+        <div class="hidden md:flex items-center space-x-10 text-[15px]">
+          <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/#case-studies">Case studies</a>
+          <a class="text-brand-blue font-medium transition-colors" href="/services" aria-current="true">Services</a>
+          <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/#insights">Research</a>
+          <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/about">About</a>
+          <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/contact">Contact</a>
+        </div>
+        <div class="flex items-center gap-3 md:gap-4">
+          <a href="/#report" class="hidden lg:inline-flex items-center gap-2 text-brand-dark text-sm font-medium hover:text-brand-blue transition-colors">
+            <i data-lucide="file-text" class="w-4 h-4"></i>
+            2026 Pipeline Report
+          </a>
+          <a href="/contact" class="hidden md:inline-flex bg-brand-dark hover:bg-brand-blue text-white px-5 py-2.5 rounded-lg font-medium text-sm transition-colors items-center gap-2">
+            Book a call <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+          <button id="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu-panel" aria-label="Open menu" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-brand-dark hover:bg-brand-dark/5 transition-colors">
+            <span class="menu-icon-stack" aria-hidden="true">
+              <span class="hamburger-icon">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+              </span>
+              <span class="dollar-icon">$</span>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile dropdown panel -->
+      <div id="mobile-menu-panel" class="hidden md:hidden absolute top-full left-0 right-0 border-t border-brand-dark/10 bg-white shadow-lg shadow-brand-dark/5">
+        <div class="container-brand py-3 flex flex-col text-[15px]">
+          <a class="text-brand-dark hover:text-brand-blue py-3 transition-colors" href="/#case-studies">Case studies</a>
+          <a class="text-brand-blue font-medium py-3 transition-colors" href="/services" aria-current="true">Services</a>
+          <a class="text-brand-dark hover:text-brand-blue py-3 transition-colors" href="/#insights">Research</a>
+          <a class="text-brand-dark hover:text-brand-blue py-3 transition-colors" href="/about">About</a>
+          <a class="text-brand-dark hover:text-brand-blue py-3 transition-colors" href="/contact">Contact</a>
+          <a class="text-brand-dark hover:text-brand-blue py-3 transition-colors inline-flex items-center gap-2" href="/#report">
+            <i data-lucide="file-text" class="w-4 h-4"></i>
+            2026 Pipeline Report
+          </a>
+          <a href="/contact" class="mt-3 bg-brand-dark hover:bg-brand-blue text-white py-3 rounded-lg font-medium text-[15px] transition-colors flex items-center justify-center gap-2">
+            Book a call <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Breadcrumb -->
+      <div class="bg-light-blue/40 border-b border-brand-dark/5">
+        <div class="container-brand py-3">
+          <nav aria-label="Breadcrumb" class="text-[12px] font-mono uppercase tracking-[0.18em] text-brand-dark/55 font-medium">
+            <ol class="flex items-center gap-2 flex-wrap">
+              <li><a href="/services" class="hover:text-brand-blue transition-colors">Services</a></li>
+              <li aria-hidden="true" class="text-brand-dark/30">/</li>
+              <li class="text-brand-dark">Pipeline Intelligence</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           HERO — "The reason the streams work"
+           Oversized 73% stat · CTAs · credentials row
+           ============================================================ -->
+      <section class="hero-gradient relative overflow-hidden">
+        <!-- Subtle motion-graphic backdrop: data points connecting -->
+        <svg aria-hidden="true" class="absolute inset-0 w-full h-full pointer-events-none opacity-[0.18]" preserveAspectRatio="none" viewBox="0 0 1440 720">
+          <defs>
+            <linearGradient id="signal-grad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#0099FF" stop-opacity="0"/>
+              <stop offset="50%" stop-color="#0099FF" stop-opacity="0.85"/>
+              <stop offset="100%" stop-color="#43E5FF" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <!-- Connecting node points -->
+          <g fill="#0099FF" fill-opacity="0.7">
+            <circle cx="120" cy="160" r="3"/>
+            <circle cx="320" cy="240" r="3"/>
+            <circle cx="540" cy="180" r="3"/>
+            <circle cx="780" cy="280" r="3"/>
+            <circle cx="980" cy="200" r="3"/>
+            <circle cx="1240" cy="280" r="3"/>
+            <circle cx="240" cy="480" r="3"/>
+            <circle cx="480" cy="540" r="3"/>
+            <circle cx="720" cy="500" r="3"/>
+            <circle cx="980" cy="560" r="3"/>
+            <circle cx="1220" cy="520" r="3"/>
+          </g>
+          <!-- Signal flow lines -->
+          <path d="M 120 160 L 320 240 L 540 180 L 780 280 L 980 200 L 1240 280" fill="none" stroke="url(#signal-grad)" stroke-width="1"/>
+          <path d="M 240 480 L 480 540 L 720 500 L 980 560 L 1220 520" fill="none" stroke="url(#signal-grad)" stroke-width="1"/>
+          <!-- Feedback curve -->
+          <path d="M 1240 280 C 1300 380, 1300 500, 1220 520" fill="none" stroke="url(#signal-grad)" stroke-width="1"/>
+        </svg>
+
+        <div class="relative container-brand pt-14 md:pt-20 pb-14 md:pb-20">
+          <div class="max-w-4xl">
+            <p class="section-eyebrow mb-6">Pipeline Intelligence · The data spine</p>
+            <h1 class="text-[40px] md:text-[60px] lg:text-[72px] leading-[1.05] tracking-[-0.02em] text-brand-dark">
+              The reason the <span class="font-script text-brand-blue text-[1.05em] leading-none">streams</span> work.
+            </h1>
+            <p class="mt-7 text-[18px] md:text-[20px] leading-[1.55] text-brand-dark/80 max-w-3xl">
+              Pipeline numbers come from a feedback loop, not a dashboard. Deal-stage signals flowing back to the ad platforms. The algorithm learning who buys, not who fills forms. That's the work the Pipeline Intelligence team does — and it's the reason every campaign Verto runs can be tied to revenue.
+            </p>
+          </div>
+
+          <!-- Oversized 73% typographic stat row -->
+          <div class="mt-12 md:mt-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+            <div class="lg:col-span-7">
+              <p class="hero-stat text-[140px] md:text-[200px] lg:text-[240px] text-brand-dark tabular-nums">
+                <span class="text-brand-blue">73%</span>
+              </p>
+              <p class="font-mono text-[12px] md:text-[13px] uppercase tracking-[0.25em] text-brand-dark/60 font-medium mt-2">more conversions matched than Salesforce native · IRONSCALES, 2025</p>
+            </div>
+
+            <div class="lg:col-span-5 lg:pb-6">
+              <div class="flex flex-col sm:flex-row gap-4">
+                <a href="/scan" data-track="cta_hero_primary" class="bg-brand-dark hover:bg-brand-blue text-white px-7 py-4 rounded-lg font-medium text-base transition-colors inline-flex items-center justify-center gap-2 group">
+                  Get your free Pipeline Readiness Scan
+                  <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-0.5 transition-transform"></i>
+                </a>
+                <a href="#architecture" data-track="cta_hero_secondary" class="bg-white hover:bg-brand-light/40 text-brand-dark px-7 py-4 rounded-lg font-medium text-base transition-colors inline-flex items-center justify-center gap-2">
+                  See the architecture
+                  <i data-lucide="arrow-down" class="w-5 h-5"></i>
+                </a>
+              </div>
+              <p class="mt-4 text-[13px] text-brand-dark/55 leading-[1.5]">Five business days. Thirty-minute debrief. No commitment.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Credentials row — matches /services hub (4 partners + G2 widget) -->
+        <div class="border-t border-brand-dark/10 bg-white/55 backdrop-blur-sm">
+          <div class="container-brand py-5 flex flex-wrap items-center justify-center md:justify-between gap-x-8 gap-y-4">
+            <div class="flex flex-wrap items-center gap-x-5 md:gap-x-6 gap-y-3">
+              <span class="inline-flex items-center gap-2 text-[13px] font-medium text-brand-dark">
+                <span class="inline-flex items-center justify-center w-7 h-7 rounded-md bg-[#0A66C2] text-white"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span>
+                LinkedIn Ads Partner
+              </span>
+              <span class="hidden md:inline-block w-1 h-1 rounded-full bg-brand-dark/25" aria-hidden="true"></span>
+              <span class="inline-flex items-center gap-2 text-[13px] font-medium text-brand-dark">
+                <span class="inline-flex items-center justify-center w-7 h-7 rounded-md bg-white shadow-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-3.5 h-3.5" aria-hidden="true"><path fill="#4285F4" d="M12 11v3.84h5.46c-.24 1.44-1.68 4.2-5.46 4.2-3.3 0-6-2.7-6-6.04S8.7 7 12 7c1.86 0 3.12.78 3.84 1.44l2.58-2.52C16.86 4.32 14.64 3.4 12 3.4 6.96 3.4 2.88 7.48 2.88 12.52S6.96 21.6 12 21.6c5.76 0 9.6-4.04 9.6-9.72 0-.66-.06-1.14-.18-1.68H12z"/></svg>
+                </span>
+                Google Premier Partner
+              </span>
+              <span class="hidden md:inline-block w-1 h-1 rounded-full bg-brand-dark/25" aria-hidden="true"></span>
+              <span class="inline-flex items-center gap-2 text-[13px] font-medium text-brand-dark">
+                <span class="inline-flex items-center justify-center w-7 h-7 rounded-md bg-white shadow-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-3.5 h-3.5" aria-hidden="true"><rect x="1" y="1" width="10" height="10" fill="#F25022"/><rect x="13" y="1" width="10" height="10" fill="#7FBA00"/><rect x="1" y="13" width="10" height="10" fill="#00A4EF"/><rect x="13" y="13" width="10" height="10" fill="#FFB900"/></svg>
+                </span>
+                Microsoft Select Partner
+              </span>
+              <span class="hidden md:inline-block w-1 h-1 rounded-full bg-brand-dark/25" aria-hidden="true"></span>
+              <span class="inline-flex items-center gap-2 text-[13px] font-medium text-brand-dark">
+                <span class="inline-flex items-center justify-center w-7 h-7 rounded-md bg-[#0866FF] text-white">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 16" class="w-4 h-3" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M 4 8 C 4 4, 7 4, 12 8 C 17 12, 20 12, 20 8 C 20 4, 17 4, 12 8 C 7 12, 4 12, 4 8 Z"/></svg>
+                </span>
+                Meta Business Partner
+              </span>
+            </div>
+            <a href="https://www.g2.com/products/vertodigital/reviews" target="_blank" rel="noopener noreferrer" data-track="g2_widget_click" class="inline-flex items-center gap-2 bg-white hover:bg-brand-light/30 px-3 py-2 rounded-lg transition-colors group">
+              <span class="inline-flex items-center justify-center w-6 h-6 rounded-md bg-[#FF492C] text-white font-bold text-[12px] tabular-nums">G2</span>
+              <span class="text-[13px] font-medium text-brand-dark"><span class="text-brand-blue">★ 4.9</span> · 37 verified reviews</span>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-brand-dark/55 group-hover:text-brand-blue transition-colors"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SECTION 1 — THE GAP
+           Dashboard says yes, pipeline says no
+           ============================================================ -->
+      <section id="the-gap" class="bg-white">
+        <div class="container-brand py-24 md:py-32">
+          <div class="max-w-3xl mb-14 md:mb-16">
+            <p class="section-eyebrow mb-6">The gap</p>
+            <h2 class="text-[34px] md:text-[44px] leading-[1.1] tracking-[-0.02em] text-brand-dark">
+              The dashboard says yes. The <span class="font-script text-brand-blue text-[1.05em] leading-none">pipeline</span> says no.
+            </h2>
+          </div>
+
+          <!-- Side-by-side: marketing dashboard mockup → empty Salesforce pipeline -->
+          <div class="blueprint-grid rounded-2xl p-5 md:p-8 mb-14 md:mb-16 bg-light-blue/30">
+            <div class="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-5 md:gap-4 items-center">
+              <!-- LEFT: marketing dashboard mockup -->
+              <div class="bg-white rounded-xl p-5 md:p-6">
+                <div class="flex items-center justify-between mb-5 pb-3 border-b border-brand-dark/10">
+                  <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-dark/55 font-medium">Marketing dashboard</p>
+                  <span class="inline-flex items-center gap-1 text-[10px] text-emerald-600 font-medium font-mono"><i data-lucide="trending-up" class="w-3 h-3"></i> All green</span>
+                </div>
+                <div class="space-y-4">
+                  <div>
+                    <div class="flex items-baseline justify-between mb-1.5"><span class="text-[11px] font-mono uppercase tracking-widest text-brand-dark/55 font-medium">CTR</span><span class="font-mono text-[12px] text-brand-blue tabular-nums">2.4% ↑</span></div>
+                    <div class="h-1.5 bg-brand-dark/5 rounded-full overflow-hidden"><div class="h-full bg-brand-blue rounded-full" style="width: 78%"></div></div>
+                  </div>
+                  <div>
+                    <div class="flex items-baseline justify-between mb-1.5"><span class="text-[11px] font-mono uppercase tracking-widest text-brand-dark/55 font-medium">Impressions</span><span class="font-mono text-[12px] text-brand-blue tabular-nums">2.1M ↑</span></div>
+                    <div class="h-1.5 bg-brand-dark/5 rounded-full overflow-hidden"><div class="h-full bg-brand-blue rounded-full" style="width: 92%"></div></div>
+                  </div>
+                  <div>
+                    <div class="flex items-baseline justify-between mb-1.5"><span class="text-[11px] font-mono uppercase tracking-widest text-brand-dark/55 font-medium">MQLs</span><span class="font-mono text-[12px] text-brand-blue tabular-nums">487 ↑</span></div>
+                    <div class="h-1.5 bg-brand-dark/5 rounded-full overflow-hidden"><div class="h-full bg-brand-blue rounded-full" style="width: 71%"></div></div>
+                  </div>
+                  <div>
+                    <div class="flex items-baseline justify-between mb-1.5"><span class="text-[11px] font-mono uppercase tracking-widest text-brand-dark/55 font-medium">Cost per MQL</span><span class="font-mono text-[12px] text-brand-blue tabular-nums">$184 ↓</span></div>
+                    <div class="h-1.5 bg-brand-dark/5 rounded-full overflow-hidden"><div class="h-full bg-brand-blue rounded-full" style="width: 38%"></div></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ARROW -->
+              <div class="hidden md:flex items-center justify-center w-10">
+                <svg viewBox="0 0 40 40" class="w-10 h-10" aria-hidden="true">
+                  <line x1="6" y1="20" x2="32" y2="20" stroke="#0099FF" stroke-width="1.5"/>
+                  <path d="M 28 14 L 34 20 L 28 26" fill="none" stroke="#0099FF" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <div class="md:hidden flex items-center justify-center py-2"><i data-lucide="arrow-down" class="w-6 h-6 text-brand-blue" aria-hidden="true"></i></div>
+
+              <!-- RIGHT: empty Salesforce pipeline -->
+              <div class="bg-white rounded-xl p-5 md:p-6">
+                <div class="flex items-center justify-between mb-5 pb-3 border-b border-brand-dark/10">
+                  <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-dark/55 font-medium">Salesforce pipeline · Q2</p>
+                  <span class="inline-flex items-center gap-1 text-[10px] text-rose-500 font-medium font-mono"><i data-lucide="trending-down" class="w-3 h-3"></i> Behind plan</span>
+                </div>
+                <div class="space-y-3">
+                  <div class="flex items-center justify-between text-[12px] text-brand-dark/70">
+                    <span>Stage 1 Opps</span><span class="font-mono tabular-nums text-brand-dark/40">14 / 60</span>
+                  </div>
+                  <div class="h-1.5 bg-brand-dark/5 rounded-full overflow-hidden"><div class="h-full bg-rose-300/70 rounded-full" style="width: 23%"></div></div>
+                  <div class="flex items-center justify-between text-[12px] text-brand-dark/70">
+                    <span>Stage 2 Opps</span><span class="font-mono tabular-nums text-brand-dark/40">5 / 35</span>
+                  </div>
+                  <div class="h-1.5 bg-brand-dark/5 rounded-full overflow-hidden"><div class="h-full bg-rose-300/70 rounded-full" style="width: 14%"></div></div>
+                  <div class="flex items-center justify-between text-[12px] text-brand-dark/70">
+                    <span>Marketing-sourced ARR</span><span class="font-mono tabular-nums text-rose-500">$1.4M</span>
+                  </div>
+                  <div class="h-1.5 bg-brand-dark/5 rounded-full overflow-hidden"><div class="h-full bg-rose-400/70 rounded-full" style="width: 28%"></div></div>
+                  <div class="pt-3 mt-3 border-t border-brand-dark/10">
+                    <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-dark/55 font-medium mb-1">Forecast attainment</p>
+                    <p class="font-mono text-[22px] font-medium text-rose-500 tabular-nums leading-none">42%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="text-center mt-5 text-[13px] italic text-brand-dark/60 leading-[1.55] max-w-[60ch] mx-auto">"This is the conversation every CMO has with their CFO."</p>
+          </div>
+
+          <!-- Body copy -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <div class="lg:col-span-8 space-y-5 text-[16px] md:text-[17px] leading-[1.65] text-brand-dark/80">
+              <p>
+                Most B2B marketing organizations measure activity. Clicks. Impressions. MQLs. The dashboard is healthy. Then the pipeline review starts and the numbers don't reconcile.
+              </p>
+              <p>Three things break the chain:</p>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-4">
+                  <span class="inline-flex items-center justify-center w-7 h-7 rounded-md bg-brand-blue/10 text-brand-blue font-mono text-[12px] tabular-nums flex-shrink-0 mt-0.5">01</span>
+                  <span><strong class="font-medium text-brand-dark">Form-fill leads aren't tied to deal outcomes.</strong> The algorithm is optimizing for whoever fills out a form — not whoever closes a deal.</span>
+                </li>
+                <li class="flex items-start gap-4">
+                  <span class="inline-flex items-center justify-center w-7 h-7 rounded-md bg-brand-blue/10 text-brand-blue font-mono text-[12px] tabular-nums flex-shrink-0 mt-0.5">02</span>
+                  <span><strong class="font-medium text-brand-dark">First-party data sits in the CRM.</strong> The ad platforms never see it. They're flying blind.</span>
+                </li>
+                <li class="flex items-start gap-4">
+                  <span class="inline-flex items-center justify-center w-7 h-7 rounded-md bg-brand-blue/10 text-brand-blue font-mono text-[12px] tabular-nums flex-shrink-0 mt-0.5">03</span>
+                  <span><strong class="font-medium text-brand-dark">Attribution stops at the click.</strong> What happens after — qualification, opportunity creation, won revenue — never feeds back into the bidding model.</span>
+                </li>
+              </ul>
+              <p class="pt-2"><span class="text-brand-dark font-medium">This is the gap Pipeline Intelligence closes.</span></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SECTION 2 — THE ARCHITECTURE
+           Full-fidelity Capture → Identify → Activate diagram.
+           This is the page's defining visual and the highest-fidelity
+           technical asset on the site.
+           ============================================================ -->
+      <section id="architecture" class="bg-navy text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[700px] h-[700px] bg-brand-blue/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-light/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative container-brand py-24 md:py-32">
+          <div class="max-w-3xl mb-12 md:mb-16">
+            <p class="section-eyebrow-light mb-6">The architecture</p>
+            <h2 class="text-[34px] md:text-[44px] leading-[1.1] tracking-[-0.02em] text-white">
+              What we build, <span class="font-script text-brand-light text-[1.05em] leading-none">end-to-end.</span>
+            </h2>
+            <p class="mt-6 text-[17px] md:text-[18px] leading-[1.6] text-cool-gray max-w-[68ch]">
+              Pipeline Intelligence is the data layer that connects every marketing dollar to every revenue outcome. Three stages. One closed loop.
+            </p>
+          </div>
+
+          <!-- Stat callouts row -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+            <div class="bg-white/[0.05] rounded-xl p-5 md:p-6">
+              <p class="font-mono text-[40px] md:text-[48px] font-medium text-white tabular-nums leading-none">+73%</p>
+              <p class="text-[13px] text-cool-gray mt-3 leading-[1.5]">more conversions matched vs SFDC native</p>
+            </div>
+            <div class="bg-white/[0.05] rounded-xl p-5 md:p-6">
+              <p class="font-mono text-[40px] md:text-[48px] font-medium text-white tabular-nums leading-none">9</p>
+              <p class="text-[13px] text-cool-gray mt-3 leading-[1.5]">ad platforms supported end-to-end</p>
+            </div>
+            <div class="bg-white/[0.05] rounded-xl p-5 md:p-6">
+              <p class="font-mono text-[40px] md:text-[48px] font-medium text-white tabular-nums leading-none">4–6</p>
+              <p class="text-[13px] text-cool-gray mt-3 leading-[1.5]">weeks · average deployment time</p>
+            </div>
+          </div>
+
+          <!-- The defining architecture diagram (full-width on white) -->
+          <div class="bg-white rounded-2xl p-5 md:p-8 mb-10">
+            <div class="flex items-center justify-between mb-5">
+              <div class="flex items-center gap-2">
+                <span class="inline-flex w-2 h-2 rounded-full bg-brand-blue dot-pulse" aria-hidden="true"></span>
+                <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-dark/60 font-medium">Live · Pipeline Intelligence reference architecture</p>
+              </div>
+              <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-brand-dark/45 font-medium hidden md:block">v · 2026.04 · full</p>
+            </div>
+
+            <svg viewBox="0 0 1120 700" class="w-full h-auto" role="img" aria-labelledby="arch-title arch-desc">
+              <title id="arch-title">Pipeline Intelligence reference architecture</title>
+              <desc id="arch-desc">Three columns — Capture, Identify, Activate — flow left to right. Capture: Website, Product, Forms, and Marketing Sites send events through a server-side Google Tag Manager container into GA4, which streams to BigQuery. Identify: a first-party identity layer stitches users by cookies, hashed emails, and userID, then a lead scoring engine applies ICP qualification rules. Activate: deal-stage signals (Lead, MQL, SQL, Opportunity, Closed-Won) flow bidirectionally between the CRM (HubSpot, Salesforce, Marketo) and ad platforms (Google Ads, LinkedIn, Bing, Meta) through offline conversion tracking, and the won-deal feedback loop returns to the bidding model.</desc>
+
+              <defs>
+                <pattern id="arch-grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                  <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#060026" stroke-opacity="0.05" stroke-width="1"/>
+                </pattern>
+                <marker id="ar-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M 0 0 L 10 5 L 0 10 z" fill="#0099FF"/>
+                </marker>
+                <marker id="ar-blue-start" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                  <path d="M 10 0 L 0 5 L 10 10 z" fill="#0099FF"/>
+                </marker>
+                <marker id="ar-cyan" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M 0 0 L 10 5 L 0 10 z" fill="#43E5FF"/>
+                </marker>
+                <marker id="ar-dark" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M 0 0 L 10 5 L 0 10 z" fill="#060026"/>
+                </marker>
+              </defs>
+
+              <rect width="1120" height="700" fill="url(#arch-grid)"/>
+
+              <!-- Column headers -->
+              <g font-family="Geist Mono, monospace" font-size="11" letter-spacing="2" fill="#060026" font-weight="500">
+                <text x="180" y="40" text-anchor="middle">01 · CAPTURE</text>
+                <text x="560" y="40" text-anchor="middle">02 · IDENTIFY</text>
+                <text x="940" y="40" text-anchor="middle">03 · ACTIVATE</text>
+              </g>
+
+              <!-- Vertical column dividers -->
+              <g stroke="#060026" stroke-opacity="0.06" stroke-width="1" stroke-dasharray="2 4">
+                <line x1="370" y1="60" x2="370" y2="640"/>
+                <line x1="750" y1="60" x2="750" y2="640"/>
+              </g>
+
+              <!-- ============== COLUMN 1 · CAPTURE ============== -->
+              <!-- Sources row -->
+              <g>
+                <rect x="40" y="70" width="130" height="44" rx="6" fill="#d9f0ff"/>
+                <text x="105" y="97" text-anchor="middle" font-family="Geist, sans-serif" font-size="12" font-weight="500" fill="#060026">Website</text>
+
+                <rect x="190" y="70" width="130" height="44" rx="6" fill="#d9f0ff"/>
+                <text x="255" y="97" text-anchor="middle" font-family="Geist, sans-serif" font-size="12" font-weight="500" fill="#060026">Product</text>
+
+                <rect x="40" y="124" width="130" height="44" rx="6" fill="#d9f0ff"/>
+                <text x="105" y="151" text-anchor="middle" font-family="Geist, sans-serif" font-size="12" font-weight="500" fill="#060026">Forms / Demo</text>
+
+                <rect x="190" y="124" width="130" height="44" rx="6" fill="#d9f0ff"/>
+                <text x="255" y="151" text-anchor="middle" font-family="Geist, sans-serif" font-size="12" font-weight="500" fill="#060026">Marketing Sites</text>
+              </g>
+
+              <!-- Sources → sGTM -->
+              <g stroke="#0099FF" stroke-width="1.5" fill="none">
+                <path d="M 105 168 C 105 200, 150 210, 180 222"  marker-end="url(#ar-blue)"/>
+                <path d="M 255 168 C 255 200, 220 210, 200 222"  marker-end="url(#ar-blue)"/>
+              </g>
+
+              <!-- Server-side GTM (the workhorse) -->
+              <rect x="60" y="220" width="240" height="62" rx="10" fill="#0099FF"/>
+              <text x="180" y="247" text-anchor="middle" font-family="Geist, sans-serif" font-size="14" font-weight="500" fill="#ffffff">Server-Side GTM</text>
+              <text x="180" y="266" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" letter-spacing="1.5" fill="#ffffff" fill-opacity="0.85">FIRST-PARTY · CONSENT-AWARE</text>
+
+              <!-- sGTM → GA4 -->
+              <line x1="180" y1="282" x2="180" y2="316" stroke="#0099FF" stroke-width="1.5" marker-end="url(#ar-blue)"/>
+
+              <!-- GA4 -->
+              <rect x="60" y="316" width="240" height="58" rx="10" fill="#ffffff" stroke="#0099FF" stroke-width="1.5"/>
+              <text x="180" y="342" text-anchor="middle" font-family="Geist, sans-serif" font-size="14" font-weight="500" fill="#060026">GA4</text>
+              <text x="180" y="360" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" letter-spacing="1.5" fill="#060026" fill-opacity="0.55">B2B FUNNEL EVENT MODEL</text>
+
+              <!-- GA4 → BigQuery -->
+              <line x1="180" y1="374" x2="180" y2="406" stroke="#0099FF" stroke-width="1.5" marker-end="url(#ar-blue)"/>
+
+              <!-- BigQuery -->
+              <rect x="60" y="406" width="240" height="62" rx="10" fill="#060026"/>
+              <text x="180" y="433" text-anchor="middle" font-family="Geist, sans-serif" font-size="14" font-weight="500" fill="#ffffff">BigQuery</text>
+              <text x="180" y="452" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" letter-spacing="1.5" fill="#B4D9C0">DATA WAREHOUSE · ZERO SAMPLING</text>
+
+              <!-- Tools strip under capture -->
+              <g font-family="Geist Mono, monospace" font-size="10" letter-spacing="1.5" fill="#060026" fill-opacity="0.5">
+                <text x="180" y="498" text-anchor="middle">EVENT TAXONOMY · CONSENT</text>
+                <text x="180" y="514" text-anchor="middle">DATA OWNERSHIP</text>
+              </g>
+
+              <!-- Capture → Identify (column bridge) -->
+              <line x1="300" y1="437" x2="380" y2="437" stroke="#0099FF" stroke-width="2" marker-end="url(#ar-blue)"/>
+
+              <!-- ============== COLUMN 2 · IDENTIFY ============== -->
+              <!-- Identity resolution -->
+              <rect x="430" y="220" width="260" height="62" rx="10" fill="#ffffff" stroke="#060026" stroke-width="1.5"/>
+              <text x="560" y="247" text-anchor="middle" font-family="Geist, sans-serif" font-size="14" font-weight="500" fill="#060026">Identity Resolution</text>
+              <text x="560" y="266" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" letter-spacing="1.5" fill="#060026" fill-opacity="0.55">COOKIES · HASHED EMAILS · USERID</text>
+
+              <line x1="560" y1="282" x2="560" y2="316" stroke="#0099FF" stroke-width="1.5" marker-end="url(#ar-blue)"/>
+
+              <!-- Lead scoring + ICP rules -->
+              <rect x="430" y="316" width="260" height="62" rx="10" fill="#ffffff" stroke="#060026" stroke-width="1.5"/>
+              <text x="560" y="343" text-anchor="middle" font-family="Geist, sans-serif" font-size="14" font-weight="500" fill="#060026">Lead Scoring + ICP Rules</text>
+              <text x="560" y="362" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" letter-spacing="1.5" fill="#060026" fill-opacity="0.55">FIRMOGRAPHIC · BEHAVIORAL · INTENT</text>
+
+              <line x1="560" y1="378" x2="560" y2="410" stroke="#0099FF" stroke-width="1.5" marker-end="url(#ar-blue)"/>
+
+              <!-- Qualified pipeline signal -->
+              <rect x="430" y="410" width="260" height="58" rx="10" fill="#43E5FF" fill-opacity="0.18" stroke="#0099FF" stroke-width="1.5"/>
+              <text x="560" y="436" text-anchor="middle" font-family="Geist, sans-serif" font-size="13" font-weight="500" fill="#060026">Qualified Pipeline Signal</text>
+              <text x="560" y="454" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" letter-spacing="1.5" fill="#060026" fill-opacity="0.6">ACTIVATABLE · ATTRIBUTED · WEIGHTED</text>
+
+              <!-- Tools strip under identify -->
+              <g font-family="Geist Mono, monospace" font-size="10" letter-spacing="1.5" fill="#060026" fill-opacity="0.5">
+                <text x="560" y="498" text-anchor="middle">DREAMDATA · CLAY · APOLLO</text>
+                <text x="560" y="514" text-anchor="middle">CLEARBIT · 6SENSE</text>
+              </g>
+
+              <!-- Identify → Activate (column bridge) -->
+              <line x1="690" y1="437" x2="770" y2="437" stroke="#0099FF" stroke-width="2" marker-end="url(#ar-blue)"/>
+
+              <!-- ============== COLUMN 3 · ACTIVATE ============== -->
+              <!-- CRM -->
+              <rect x="800" y="100" width="280" height="62" rx="10" fill="#ffffff" stroke="#060026" stroke-width="1.5"/>
+              <text x="940" y="125" text-anchor="middle" font-family="Geist, sans-serif" font-size="13" font-weight="500" fill="#060026">CRM</text>
+              <text x="940" y="146" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" letter-spacing="1.5" fill="#060026" fill-opacity="0.6">HUBSPOT · SALESFORCE · MARKETO</text>
+
+              <!-- Ad Platforms -->
+              <rect x="800" y="316" width="280" height="62" rx="10" fill="#ffffff" stroke="#060026" stroke-width="1.5"/>
+              <text x="940" y="341" text-anchor="middle" font-family="Geist, sans-serif" font-size="13" font-weight="500" fill="#060026">Ad Platforms</text>
+              <text x="940" y="362" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" letter-spacing="1.5" fill="#060026" fill-opacity="0.6">GOOGLE · LINKEDIN · BING · META</text>
+
+              <!-- Bidirectional CRM ↔ Ad Platforms (offline conversion loop) -->
+              <g>
+                <path d="M 940 162 L 940 316" stroke="#0099FF" stroke-width="2.5" fill="none" marker-end="url(#ar-blue)" marker-start="url(#ar-blue-start)"/>
+                <rect x="838" y="218" width="204" height="38" rx="8" fill="#ffffff"/>
+                <text x="940" y="237" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" letter-spacing="1.5" fill="#0099FF" font-weight="500">OFFLINE CONVERSION</text>
+                <text x="940" y="251" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" letter-spacing="1.5" fill="#0099FF" font-weight="500">TRACKING</text>
+              </g>
+
+              <!-- Pipeline stages strip below ad platforms -->
+              <g>
+                <rect x="800" y="406" width="280" height="62" rx="10" fill="#d9f0ff"/>
+                <text x="816" y="426" font-family="Geist Mono, monospace" font-size="10" letter-spacing="1.5" fill="#060026" fill-opacity="0.55" font-weight="500">PIPELINE STAGES · WEIGHTED FEEDBACK</text>
+                <g font-family="Geist, sans-serif" font-size="11" font-weight="500" fill="#060026">
+                  <text x="824" y="454">Lead</text>
+                  <text x="864" y="454">→</text>
+                  <text x="884" y="454">MQL</text>
+                  <text x="922" y="454">→</text>
+                  <text x="942" y="454">SQL</text>
+                  <text x="978" y="454">→</text>
+                  <text x="998" y="454">Opp</text>
+                  <text x="1032" y="454">→</text>
+                  <text x="1052" y="454">Won</text>
+                </g>
+              </g>
+
+              <!-- Ad Platforms ↔ Pipeline stages -->
+              <line x1="940" y1="378" x2="940" y2="406" stroke="#0099FF" stroke-width="1.5" marker-end="url(#ar-blue)"/>
+
+              <!-- The big feedback loop: Won → bidding model -->
+              <g stroke="#0099FF" stroke-width="2.5" fill="none">
+                <path d="M 1080 437 C 1100 437, 1100 347, 1080 347" marker-end="url(#ar-blue)"/>
+              </g>
+              <text x="1106" y="395" font-family="Geist Mono, monospace" font-size="10" letter-spacing="1.5" fill="#0099FF" font-weight="500" text-anchor="start">
+                <tspan x="1090" dy="0">FEEDBACK</tspan>
+                <tspan x="1090" dy="14">LOOP</tspan>
+              </text>
+
+              <!-- Tools strip under activate -->
+              <g font-family="Geist Mono, monospace" font-size="10" letter-spacing="1.5" fill="#060026" fill-opacity="0.5">
+                <text x="940" y="498" text-anchor="middle">VALUE-BASED BIDDING</text>
+                <text x="940" y="514" text-anchor="middle">CONVERSION API · CAPI</text>
+              </g>
+
+              <!-- BigQuery → Ad Platforms (audience activation, dashed cyan) -->
+              <g stroke="#43E5FF" stroke-width="1.25" stroke-dasharray="4 4" fill="none">
+                <path d="M 300 437 C 380 540, 700 580, 800 376" marker-end="url(#ar-cyan)"/>
+              </g>
+
+              <!-- BigQuery → CRM (sync, dashed cyan) -->
+              <g stroke="#43E5FF" stroke-width="1.25" stroke-dasharray="4 4" fill="none">
+                <path d="M 300 437 C 400 360, 700 220, 800 130" marker-end="url(#ar-cyan)"/>
+              </g>
+
+              <!-- ============== OUTCOME BAR (full width bottom) ============== -->
+              <g>
+                <rect x="40" y="580" width="1040" height="56" rx="10" fill="#060026"/>
+                <text x="560" y="606" text-anchor="middle" font-family="Geist, sans-serif" font-size="14" font-weight="500" fill="#ffffff">
+                  The output: ad platforms that learn who buys, not who fills forms.
+                </text>
+                <text x="560" y="624" text-anchor="middle" font-family="Geist Mono, monospace" font-size="11" letter-spacing="1.5" fill="#B4D9C0">
+                  THAT'S WHERE 11× ROAS AND 2.3× PIPELINE COME FROM
+                </text>
+              </g>
+
+              <!-- Legend -->
+              <g font-family="Geist Mono, monospace" font-size="10" letter-spacing="1.2" fill="#060026" fill-opacity="0.55">
+                <line x1="40" y1="660" x2="60" y2="660" stroke="#0099FF" stroke-width="1.5"/>
+                <text x="68" y="664">EVENT FLOW</text>
+                <line x1="180" y1="660" x2="200" y2="660" stroke="#43E5FF" stroke-width="1.25" stroke-dasharray="4 4"/>
+                <text x="208" y="664">AUDIENCE / SYNC</text>
+                <line x1="340" y1="660" x2="360" y2="660" stroke="#0099FF" stroke-width="2.5"/>
+                <text x="368" y="664">BIDIRECTIONAL · OFFLINE CONVERSIONS</text>
+              </g>
+            </svg>
+          </div>
+
+          <!-- Body copy: Capture / Identify / Activate -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-5">
+            <article class="bg-white/[0.05] rounded-2xl p-7 md:p-8">
+              <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-light font-medium mb-3">01 · Capture</p>
+              <h3 class="text-[20px] md:text-[22px] font-medium text-white leading-[1.25] mb-4">Server-side, no sampling, no defaults.</h3>
+              <p class="text-[15px] text-cool-gray leading-[1.6]">Server-side tracking with GTM. GA4 configured for B2B funnels — not e-commerce defaults. Event taxonomy mapped to your buyer journey. Data piped to BigQuery for full ownership and zero sampling.</p>
+            </article>
+            <article class="bg-white/[0.05] rounded-2xl p-7 md:p-8">
+              <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-light font-medium mb-3">02 · Identify</p>
+              <h3 class="text-[20px] md:text-[22px] font-medium text-white leading-[1.25] mb-4">First-party identity, ICP-scored.</h3>
+              <p class="text-[15px] text-cool-gray leading-[1.6]">First-party identity resolution. Cookieless tracking via hashed emails. UserID stitching across sessions, devices, and CRM records. ICP scoring rules that turn raw lead data into qualified pipeline signal.</p>
+            </article>
+            <article class="bg-white/[0.05] rounded-2xl p-7 md:p-8">
+              <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-light font-medium mb-3">03 · Activate</p>
+              <h3 class="text-[20px] md:text-[22px] font-medium text-white leading-[1.25] mb-4">Deal-stage signals, fed back live.</h3>
+              <p class="text-[15px] text-cool-gray leading-[1.6]">Offline conversion tracking pushed to Google Ads, LinkedIn, Bing, and Meta. Salesforce, HubSpot, or Marketo deal-stage signals feeding the bid algorithm. Lead → MQL → SQL → Opportunity → Closed-Won, all flowing back as conversion data the platforms can optimize against.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SECTION 3 — WHAT THIS REPLACES
+           Side-by-side: Standard B2B Stack vs Pipeline Intelligence Stack
+           ============================================================ -->
+      <section id="what-this-replaces" class="bg-white">
+        <div class="container-brand py-24 md:py-32">
+          <div class="max-w-3xl mb-12 md:mb-16">
+            <p class="section-eyebrow mb-6">What this replaces</p>
+            <h2 class="text-[34px] md:text-[44px] leading-[1.1] tracking-[-0.02em] text-brand-dark">
+              All the right tools. <span class="font-script text-brand-blue text-[1.05em] leading-none">None</span> of them talking.
+            </h2>
+          </div>
+
+          <!-- Comparison diagram -->
+          <div class="blueprint-grid rounded-2xl p-5 md:p-8 mb-14 md:mb-16 bg-light-blue/30">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+
+              <!-- LEFT: Standard B2B Stack -->
+              <div class="bg-white rounded-xl p-5 md:p-7">
+                <div class="flex items-center justify-between mb-5 pb-3 border-b border-brand-dark/10">
+                  <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-dark/55 font-medium">Standard B2B stack</p>
+                  <span class="inline-flex items-center gap-1 text-[10px] text-brand-dark/40 font-medium font-mono">DISCONNECTED</span>
+                </div>
+                <svg viewBox="0 0 360 240" class="w-full h-auto" role="img" aria-labelledby="std-title std-desc">
+                  <title id="std-title">Standard B2B marketing stack</title>
+                  <desc id="std-desc">GA4, ad platforms, and CRM exist as disconnected islands with no data flowing between them.</desc>
+                  <g>
+                    <rect x="20" y="40" width="100" height="48" rx="8" fill="#ffffff" stroke="#060026" stroke-opacity="0.25" stroke-width="1.25"/>
+                    <text x="70" y="68" text-anchor="middle" font-family="Geist, sans-serif" font-size="12" font-weight="500" fill="#060026" fill-opacity="0.7">GA4</text>
+
+                    <rect x="130" y="40" width="100" height="48" rx="8" fill="#ffffff" stroke="#060026" stroke-opacity="0.25" stroke-width="1.25"/>
+                    <text x="180" y="68" text-anchor="middle" font-family="Geist, sans-serif" font-size="12" font-weight="500" fill="#060026" fill-opacity="0.7">Ad Platforms</text>
+
+                    <rect x="240" y="40" width="100" height="48" rx="8" fill="#ffffff" stroke="#060026" stroke-opacity="0.25" stroke-width="1.25"/>
+                    <text x="290" y="68" text-anchor="middle" font-family="Geist, sans-serif" font-size="12" font-weight="500" fill="#060026" fill-opacity="0.7">CRM</text>
+
+                    <rect x="20" y="120" width="100" height="48" rx="8" fill="#ffffff" stroke="#060026" stroke-opacity="0.25" stroke-width="1.25"/>
+                    <text x="70" y="148" text-anchor="middle" font-family="Geist, sans-serif" font-size="12" font-weight="500" fill="#060026" fill-opacity="0.7">Dashboards</text>
+
+                    <rect x="130" y="120" width="100" height="48" rx="8" fill="#ffffff" stroke="#060026" stroke-opacity="0.25" stroke-width="1.25"/>
+                    <text x="180" y="148" text-anchor="middle" font-family="Geist, sans-serif" font-size="12" font-weight="500" fill="#060026" fill-opacity="0.7">MAP</text>
+
+                    <rect x="240" y="120" width="100" height="48" rx="8" fill="#ffffff" stroke="#060026" stroke-opacity="0.25" stroke-width="1.25"/>
+                    <text x="290" y="148" text-anchor="middle" font-family="Geist, sans-serif" font-size="12" font-weight="500" fill="#060026" fill-opacity="0.7">BI tool</text>
+                  </g>
+
+                  <!-- "broken" connector — dashed, faded, red X marks -->
+                  <g stroke="#060026" stroke-opacity="0.18" stroke-width="1" stroke-dasharray="3 4" fill="none">
+                    <line x1="120" y1="64" x2="130" y2="64"/>
+                    <line x1="230" y1="64" x2="240" y2="64"/>
+                    <line x1="120" y1="144" x2="130" y2="144"/>
+                    <line x1="230" y1="144" x2="240" y2="144"/>
+                  </g>
+                  <!-- Red X markers indicating broken links -->
+                  <g stroke="#FB7185" stroke-width="1.5" fill="none">
+                    <path d="M 122 60 L 128 68 M 128 60 L 122 68"/>
+                    <path d="M 232 60 L 238 68 M 238 60 L 232 68"/>
+                    <path d="M 122 140 L 128 148 M 128 140 L 122 148"/>
+                    <path d="M 232 140 L 238 148 M 238 140 L 232 148"/>
+                  </g>
+
+                  <text x="180" y="210" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" letter-spacing="1.5" fill="#060026" fill-opacity="0.5">EVERY ISLAND REPORTS UP · NOTHING LOOPS BACK</text>
+                </svg>
+              </div>
+
+              <!-- RIGHT: Pipeline Intelligence Stack -->
+              <div class="bg-white rounded-xl p-5 md:p-7">
+                <div class="flex items-center justify-between mb-5 pb-3 border-b border-brand-dark/10">
+                  <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-blue font-medium">Pipeline Intelligence stack</p>
+                  <span class="inline-flex items-center gap-1 text-[10px] text-brand-blue font-medium font-mono"><i data-lucide="check" class="w-3 h-3"></i> CONNECTED</span>
+                </div>
+                <svg viewBox="0 0 360 240" class="w-full h-auto" role="img" aria-labelledby="pi-title pi-desc">
+                  <title id="pi-title">Pipeline Intelligence connected stack</title>
+                  <desc id="pi-desc">The same components — GA4, ad platforms, CRM, MAP, BI — fully connected with bidirectional arrows and a continuous feedback loop.</desc>
+                  <defs>
+                    <marker id="cmp-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0099FF"/>
+                    </marker>
+                    <marker id="cmp-blue-start" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                      <path d="M 10 0 L 0 5 L 10 10 z" fill="#0099FF"/>
+                    </marker>
+                  </defs>
+
+                  <g>
+                    <rect x="20" y="40" width="100" height="48" rx="8" fill="#d9f0ff" stroke="#0099FF" stroke-width="1.25"/>
+                    <text x="70" y="68" text-anchor="middle" font-family="Geist, sans-serif" font-size="12" font-weight="500" fill="#060026">GA4</text>
+
+                    <rect x="130" y="40" width="100" height="48" rx="8" fill="#0099FF"/>
+                    <text x="180" y="68" text-anchor="middle" font-family="Geist, sans-serif" font-size="12" font-weight="500" fill="#ffffff">Ad Platforms</text>
+
+                    <rect x="240" y="40" width="100" height="48" rx="8" fill="#d9f0ff" stroke="#0099FF" stroke-width="1.25"/>
+                    <text x="290" y="68" text-anchor="middle" font-family="Geist, sans-serif" font-size="12" font-weight="500" fill="#060026">CRM</text>
+
+                    <rect x="20" y="120" width="100" height="48" rx="8" fill="#d9f0ff" stroke="#0099FF" stroke-width="1.25"/>
+                    <text x="70" y="148" text-anchor="middle" font-family="Geist, sans-serif" font-size="12" font-weight="500" fill="#060026">BigQuery</text>
+
+                    <rect x="130" y="120" width="100" height="48" rx="8" fill="#d9f0ff" stroke="#0099FF" stroke-width="1.25"/>
+                    <text x="180" y="148" text-anchor="middle" font-family="Geist, sans-serif" font-size="12" font-weight="500" fill="#060026">MAP</text>
+
+                    <rect x="240" y="120" width="100" height="48" rx="8" fill="#d9f0ff" stroke="#0099FF" stroke-width="1.25"/>
+                    <text x="290" y="148" text-anchor="middle" font-family="Geist, sans-serif" font-size="12" font-weight="500" fill="#060026">BI tool</text>
+                  </g>
+
+                  <!-- Bidirectional connectors -->
+                  <g stroke="#0099FF" stroke-width="1.5" fill="none">
+                    <line x1="120" y1="64" x2="130" y2="64" marker-end="url(#cmp-blue)" marker-start="url(#cmp-blue-start)"/>
+                    <line x1="230" y1="64" x2="240" y2="64" marker-end="url(#cmp-blue)" marker-start="url(#cmp-blue-start)"/>
+                    <line x1="120" y1="144" x2="130" y2="144" marker-end="url(#cmp-blue)" marker-start="url(#cmp-blue-start)"/>
+                    <line x1="230" y1="144" x2="240" y2="144" marker-end="url(#cmp-blue)" marker-start="url(#cmp-blue-start)"/>
+                    <!-- Vertical bridges (column-to-column) -->
+                    <line x1="70" y1="88" x2="70" y2="120" marker-end="url(#cmp-blue)" marker-start="url(#cmp-blue-start)"/>
+                    <line x1="180" y1="88" x2="180" y2="120" marker-end="url(#cmp-blue)" marker-start="url(#cmp-blue-start)"/>
+                    <line x1="290" y1="88" x2="290" y2="120" marker-end="url(#cmp-blue)" marker-start="url(#cmp-blue-start)"/>
+                  </g>
+
+                  <!-- Closed feedback loop overlay -->
+                  <g stroke="#0099FF" stroke-width="1.25" stroke-dasharray="4 4" fill="none">
+                    <path d="M 70 168 C 30 200, 30 30, 70 40"/>
+                    <path d="M 290 168 C 330 200, 330 30, 290 40"/>
+                  </g>
+
+                  <text x="180" y="210" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" letter-spacing="1.5" fill="#0099FF" font-weight="500">CONTINUOUS LOOP · DEAL-STAGE SIGNALS FEED BIDDING</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Body copy -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
+            <div class="lg:col-span-8 space-y-5 text-[16px] md:text-[17px] leading-[1.65] text-brand-dark/80">
+              <p>
+                Most B2B marketing stacks have all the right tools — and none of them talking to each other. GA4 is installed. The CRM is populated. The ad platforms are running. But the data never flows the right direction.
+              </p>
+              <p>
+                <span class="text-brand-dark font-medium">Pipeline Intelligence isn't a new tool.</span> It's the integration layer that connects what you already have, plus the data activation that makes those connections useful for revenue optimization — not just reporting.
+              </p>
+            </div>
+          </div>
+
+          <!-- "What changes" bullet block -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+            <div class="bg-light-blue/40 rounded-xl p-6 md:p-7 flex items-start gap-4">
+              <span class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-brand-blue text-white flex-shrink-0"><i data-lucide="repeat" class="w-5 h-5"></i></span>
+              <div>
+                <p class="text-brand-dark font-medium text-[16px] leading-[1.3] mb-2">From form-fills to deals.</p>
+                <p class="text-brand-dark/70 text-[14px] leading-[1.55]">Bid optimization aligns to revenue, not lead volume.</p>
+              </div>
+            </div>
+            <div class="bg-light-blue/40 rounded-xl p-6 md:p-7 flex items-start gap-4">
+              <span class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-brand-blue text-white flex-shrink-0"><i data-lucide="git-branch" class="w-5 h-5"></i></span>
+              <div>
+                <p class="text-brand-dark font-medium text-[16px] leading-[1.3] mb-2">From last-click to full-funnel.</p>
+                <p class="text-brand-dark/70 text-[14px] leading-[1.55]">Attribution covers awareness through closed-won, not just the final touch.</p>
+              </div>
+            </div>
+            <div class="bg-light-blue/40 rounded-xl p-6 md:p-7 flex items-start gap-4">
+              <span class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-brand-blue text-white flex-shrink-0"><i data-lucide="unlock" class="w-5 h-5"></i></span>
+              <div>
+                <p class="text-brand-dark font-medium text-[16px] leading-[1.3] mb-2">From CRM data trapped in CRM, to CRM data activated everywhere.</p>
+                <p class="text-brand-dark/70 text-[14px] leading-[1.55]">Sales-qualified signals power marketing decisions automatically.</p>
+              </div>
+            </div>
+            <div class="bg-light-blue/40 rounded-xl p-6 md:p-7 flex items-start gap-4">
+              <span class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-brand-blue text-white flex-shrink-0"><i data-lucide="check-circle-2" class="w-5 h-5"></i></span>
+              <div>
+                <p class="text-brand-dark font-medium text-[16px] leading-[1.3] mb-2">From dashboards no one trusts, to a single source of truth your CFO accepts.</p>
+                <p class="text-brand-dark/70 text-[14px] leading-[1.55]">Auditable, owned by you, reconciled to CRM truth.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SECTION 4 — PROOF
+           Four technically substantive client tiles
+           ============================================================ -->
+      <section id="proof" class="bg-light-blue/40">
+        <div class="container-brand py-24 md:py-32">
+          <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 md:mb-14">
+            <div class="max-w-2xl">
+              <p class="section-eyebrow mb-6">Proof · in production</p>
+              <h2 class="text-[34px] md:text-[44px] leading-[1.1] tracking-[-0.02em] text-brand-dark">
+                What this looks like <span class="font-script text-brand-blue text-[1.05em] leading-none">in production.</span>
+              </h2>
+            </div>
+            <a href="/case-studies" data-track="cta_section_proof" class="text-brand-dark font-medium text-sm inline-flex items-center gap-2 hover:gap-3 transition-all whitespace-nowrap">
+              See all case studies <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+            <!-- Tile 1 · IRONSCALES -->
+            <a href="/case-studies/ironscales" data-track="case_tile_ironscales" class="group bg-white rounded-2xl p-7 md:p-8 hover:shadow-2xl hover:shadow-brand-dark/10 transition-all flex flex-col">
+              <div class="flex items-center justify-between mb-6">
+                <span class="text-[20px] font-medium text-brand-dark leading-none">IRONSCALES</span>
+                <span class="font-mono text-[11px] uppercase tracking-[0.18em] text-brand-dark/55 font-medium">Email Security</span>
+              </div>
+              <p class="font-mono text-[44px] md:text-[52px] font-medium text-brand-blue leading-none tabular-nums">+73%</p>
+              <p class="text-[14px] text-brand-dark/65 mt-2 leading-[1.45] mb-5">more conversions matched vs SFDC native</p>
+              <p class="text-[14px] leading-[1.6] text-brand-dark/80">
+                Built first-party data activation with HubSpot offline conversion sync. The platform-side conversion volume jumped because the data layer surfaced opportunities Salesforce native couldn't match back to ad clicks. Outcome: <strong class="font-medium text-brand-dark">2.3× pipeline in 90 days, 4× opportunities at 50% budget.</strong>
+              </p>
+              <div class="mt-auto pt-5 mt-6 border-t border-brand-dark/10 flex items-center gap-2 flex-wrap">
+                <span class="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-dark/55 px-2 py-1 rounded bg-brand-light/30">HubSpot</span>
+                <span class="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-dark/55 px-2 py-1 rounded bg-brand-light/30">sGTM</span>
+                <span class="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-dark/55 px-2 py-1 rounded bg-brand-light/30">Offline Conv.</span>
+              </div>
+              <span class="mt-4 inline-flex items-center gap-1 text-[13px] font-medium text-brand-blue group-hover:gap-2 transition-all">See the work <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i></span>
+            </a>
+
+            <!-- Tile 2 · SnapLogic -->
+            <a href="/case-studies/snaplogic" data-track="case_tile_snaplogic" class="group bg-white rounded-2xl p-7 md:p-8 hover:shadow-2xl hover:shadow-brand-dark/10 transition-all flex flex-col">
+              <div class="flex items-center justify-between mb-6">
+                <span class="text-[20px] font-medium text-brand-dark leading-none">SnapLogic</span>
+                <span class="font-mono text-[11px] uppercase tracking-[0.18em] text-brand-dark/55 font-medium">iPaaS</span>
+              </div>
+              <p class="font-mono text-[44px] md:text-[52px] font-medium text-brand-blue leading-none tabular-nums">11×</p>
+              <p class="text-[14px] text-brand-dark/65 mt-2 leading-[1.45] mb-5">ROAS on opportunities</p>
+              <p class="text-[14px] leading-[1.6] text-brand-dark/80">
+                Value-based bidding tied to CRM-defined ICP signals. Lead scoring rules pushed to Google Ads as offline conversion values. Algorithm started bidding on accounts that close, not contacts that convert. <strong class="font-medium text-brand-dark">125% increase in Stage 1 Opps.</strong>
+              </p>
+              <div class="mt-auto pt-5 mt-6 border-t border-brand-dark/10 flex items-center gap-2 flex-wrap">
+                <span class="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-dark/55 px-2 py-1 rounded bg-brand-light/30">Salesforce</span>
+                <span class="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-dark/55 px-2 py-1 rounded bg-brand-light/30">Google Ads</span>
+                <span class="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-dark/55 px-2 py-1 rounded bg-brand-light/30">Value-based bidding</span>
+              </div>
+              <span class="mt-4 inline-flex items-center gap-1 text-[13px] font-medium text-brand-blue group-hover:gap-2 transition-all">See the work <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i></span>
+            </a>
+
+            <!-- Tile 3 · TBI Bank -->
+            <a href="/case-studies/tbi-bank" data-track="case_tile_tbi_bank" class="group bg-white rounded-2xl p-7 md:p-8 hover:shadow-2xl hover:shadow-brand-dark/10 transition-all flex flex-col">
+              <div class="flex items-center justify-between mb-6">
+                <span class="text-[20px] font-medium text-brand-dark leading-none">TBI Bank</span>
+                <span class="font-mono text-[11px] uppercase tracking-[0.18em] text-brand-dark/55 font-medium">Banking · Multi-market</span>
+              </div>
+              <p class="font-mono text-[28px] md:text-[34px] font-medium text-brand-blue leading-[1.05] tabular-nums">Unified data architecture</p>
+              <p class="text-[14px] text-brand-dark/65 mt-2 leading-[1.45] mb-5">across markets</p>
+              <p class="text-[14px] leading-[1.6] text-brand-dark/80">
+                UserID stitching across platforms, server-side tracking redesigned, MarTech integrated into CRM. Cross-platform user tracking that turns fragmented data into activatable signal. <em class="not-italic text-brand-dark/60">(Karolina S., G2 review.)</em>
+              </p>
+              <div class="mt-auto pt-5 mt-6 border-t border-brand-dark/10 flex items-center gap-2 flex-wrap">
+                <span class="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-dark/55 px-2 py-1 rounded bg-brand-light/30">UserID</span>
+                <span class="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-dark/55 px-2 py-1 rounded bg-brand-light/30">sGTM</span>
+                <span class="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-dark/55 px-2 py-1 rounded bg-brand-light/30">CRM integration</span>
+              </div>
+              <span class="mt-4 inline-flex items-center gap-1 text-[13px] font-medium text-brand-blue group-hover:gap-2 transition-all">See the work <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i></span>
+            </a>
+
+            <!-- Tile 4 · SmartRecruiters -->
+            <a href="/case-studies/smartrecruiters" data-track="case_tile_smartrecruiters" class="group bg-white rounded-2xl p-7 md:p-8 hover:shadow-2xl hover:shadow-brand-dark/10 transition-all flex flex-col">
+              <div class="flex items-center justify-between mb-6">
+                <span class="text-[20px] font-medium text-brand-dark leading-none">SmartRecruiters</span>
+                <span class="font-mono text-[11px] uppercase tracking-[0.18em] text-brand-dark/55 font-medium">HR Tech</span>
+              </div>
+              <p class="font-mono text-[44px] md:text-[52px] font-medium text-brand-blue leading-none tabular-nums">−88%</p>
+              <p class="text-[14px] text-brand-dark/65 mt-2 leading-[1.45] mb-5">cost per MQL</p>
+              <p class="text-[14px] leading-[1.6] text-brand-dark/80">
+                Marketo + Salesforce + Google Ads integration via Offline Conversion Tracking. The bid algorithm learned from MQL → SQL conversion rates, not raw lead volume. <strong class="font-medium text-brand-dark">4× opportunities at 50% budget.</strong>
+              </p>
+              <div class="mt-auto pt-5 mt-6 border-t border-brand-dark/10 flex items-center gap-2 flex-wrap">
+                <span class="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-dark/55 px-2 py-1 rounded bg-brand-light/30">Marketo</span>
+                <span class="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-dark/55 px-2 py-1 rounded bg-brand-light/30">Salesforce</span>
+                <span class="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-dark/55 px-2 py-1 rounded bg-brand-light/30">Google Ads</span>
+              </div>
+              <span class="mt-4 inline-flex items-center gap-1 text-[13px] font-medium text-brand-blue group-hover:gap-2 transition-all">See the work <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i></span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SECTION 5 — HOW IT GETS BUILT
+           12-week horizontal timeline
+           ============================================================ -->
+      <section id="timeline" class="bg-white">
+        <div class="container-brand py-24 md:py-32">
+          <div class="max-w-3xl mb-12 md:mb-14">
+            <p class="section-eyebrow mb-6">How it gets built</p>
+            <h2 class="text-[34px] md:text-[44px] leading-[1.1] tracking-[-0.02em] text-brand-dark">
+              Twelve weeks. <span class="font-script text-brand-blue text-[1.05em] leading-none">End to end.</span>
+            </h2>
+            <p class="mt-6 text-[17px] md:text-[18px] leading-[1.6] text-brand-dark/75 max-w-[68ch]">
+              Pipeline Intelligence isn't a six-month consulting engagement. The architecture above gets stood up in twelve weeks — most of it sooner.
+            </p>
+          </div>
+
+          <!-- Timeline -->
+          <div class="relative">
+            <!-- Connecting line behind the columns -->
+            <div class="hidden md:block absolute left-0 right-0 top-[58px] h-px bg-gradient-to-r from-brand-blue/20 via-brand-blue/60 to-brand-blue/20" aria-hidden="true"></div>
+            <!-- Forward arrow at the end -->
+            <div class="hidden md:block absolute right-0 top-[52px]" aria-hidden="true">
+              <svg viewBox="0 0 14 14" class="w-3.5 h-3.5"><path d="M 0 7 L 10 7 M 7 3 L 11 7 L 7 11" fill="none" stroke="#0099FF" stroke-width="1.5"/></svg>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-5">
+
+              <article class="bg-light-blue/40 rounded-2xl p-7 md:p-8 flex flex-col">
+                <div class="flex items-center gap-3 mb-6 relative z-10">
+                  <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand-blue text-white flex-shrink-0"><i data-lucide="search" class="w-5 h-5"></i></span>
+                  <span class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-dark font-medium px-2.5 py-1 rounded-md bg-brand-light">WEEK 1–2</span>
+                </div>
+                <h3 class="text-[22px] md:text-[24px] font-medium text-brand-dark leading-[1.2] mb-4">Audit and architect.</h3>
+                <p class="text-[15px] leading-[1.6] text-brand-dark/75">
+                  RevOps audit. CRM hygiene check. Server-side GTM container deployed. Data warehouse provisioned. Event taxonomy designed against your actual buyer journey.
+                </p>
+              </article>
+
+              <article class="bg-light-blue/40 rounded-2xl p-7 md:p-8 flex flex-col">
+                <div class="flex items-center gap-3 mb-6 relative z-10">
+                  <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand-blue text-white flex-shrink-0"><i data-lucide="zap" class="w-5 h-5"></i></span>
+                  <span class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-dark font-medium px-2.5 py-1 rounded-md bg-brand-light">WEEK 3–6</span>
+                </div>
+                <h3 class="text-[22px] md:text-[24px] font-medium text-brand-dark leading-[1.2] mb-4">Activate the loop.</h3>
+                <p class="text-[15px] leading-[1.6] text-brand-dark/75">
+                  Offline conversion tracking live across Google, LinkedIn, Bing. CRM deal-stage signals piping back to ad platforms. First-party identity stitching deployed. Lead scoring rules in production.
+                </p>
+              </article>
+
+              <article class="bg-light-blue/40 rounded-2xl p-7 md:p-8 flex flex-col">
+                <div class="flex items-center gap-3 mb-6 relative z-10">
+                  <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand-blue text-white flex-shrink-0"><i data-lucide="line-chart" class="w-5 h-5"></i></span>
+                  <span class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-dark font-medium px-2.5 py-1 rounded-md bg-accent-lime">WEEK 7–12</span>
+                </div>
+                <h3 class="text-[22px] md:text-[24px] font-medium text-brand-dark leading-[1.2] mb-4">Optimize and prove.</h3>
+                <p class="text-[15px] leading-[1.6] text-brand-dark/75">
+                  Attribution model live in Looker Studio or your BI tool of choice. CFO-grade reporting deck delivered monthly. Pipeline contribution measured against pre-engagement baseline.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SECTION 6 — CUSTOMER VOICE
+           Two technical-buyer quotes
+           ============================================================ -->
+      <section id="customer-voice" class="bg-light-blue/40">
+        <div class="container-brand py-24 md:py-32">
+          <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-12 md:mb-14">
+            <div class="max-w-2xl">
+              <p class="section-eyebrow mb-6">Customer voice · technical buyers</p>
+              <h2 class="text-[34px] md:text-[44px] leading-[1.1] tracking-[-0.02em] text-brand-dark">
+                What technical buyers <span class="font-script text-brand-blue text-[1.05em] leading-none">say.</span>
+              </h2>
+            </div>
+
+            <a href="https://www.g2.com/products/vertodigital/reviews" target="_blank" rel="noopener noreferrer" data-track="g2_widget_click_voice" class="group bg-white rounded-2xl p-6 md:p-7 inline-flex items-center gap-5 hover:shadow-xl hover:shadow-brand-dark/5 transition-shadow self-start md:self-auto">
+              <span class="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-[#FF492C] text-white font-bold text-[18px] tabular-nums flex-shrink-0">G2</span>
+              <div>
+                <p class="font-mono text-[34px] md:text-[40px] font-medium text-brand-dark leading-none tabular-nums">
+                  <span class="text-brand-blue">4.9</span><span class="text-brand-dark/40 text-[28px]"> / 5</span>
+                </p>
+                <p class="text-[13px] text-brand-dark/65 mt-2 leading-[1.4]">on G2 · 37 verified reviews</p>
+              </div>
+              <i data-lucide="arrow-up-right" class="w-4 h-4 text-brand-dark/45 group-hover:text-brand-blue transition-colors"></i>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+            <!-- Card 1 · Lauren McCormack · Neo4j -->
+            <figure class="bg-white rounded-2xl p-7 md:p-8 flex flex-col hover:shadow-xl hover:shadow-brand-dark/5 transition-shadow">
+              <i data-lucide="quote" class="w-7 h-7 text-brand-blue/30 mb-5"></i>
+              <blockquote class="text-[17px] md:text-[18px] font-medium text-brand-dark leading-[1.5] tracking-[-0.005em] mb-7">
+                "VertoDigital helped us tap into the power of machine learning to find new customer prospects and grow our high-performing audience segments to drive ROI."
+              </blockquote>
+              <figcaption class="mt-auto pt-5 border-t border-brand-dark/10 flex items-center gap-4">
+                <div class="w-11 h-11 rounded-full bg-gradient-to-br from-dark-blue to-brand-blue flex items-center justify-center text-white font-medium text-[14px] flex-shrink-0" aria-hidden="true">LM</div>
+                <div class="flex-1 min-w-0">
+                  <p class="font-medium text-brand-dark text-[14px] leading-tight">Lauren McCormack</p>
+                  <p class="text-brand-dark/60 text-[12px] leading-snug mt-1">Senior Manager, Digital and Marketing Automation, Neo4j</p>
+                </div>
+              </figcaption>
+              <p class="mt-3 inline-flex items-center gap-1.5 text-[11px] text-brand-dark/55">
+                <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+                Case study reference
+              </p>
+            </figure>
+
+            <!-- Card 2 · Boyan D. · G2 -->
+            <figure class="bg-white rounded-2xl p-7 md:p-8 flex flex-col hover:shadow-xl hover:shadow-brand-dark/5 transition-shadow">
+              <i data-lucide="quote" class="w-7 h-7 text-brand-blue/30 mb-5"></i>
+              <blockquote class="text-[17px] md:text-[18px] font-medium text-brand-dark leading-[1.5] tracking-[-0.005em] mb-7">
+                "You are dealing with world-level professionals but with the attitude of a team. They provided a detailed week by week plan and worked so well with the team that I did not feel a thing — just one day the problem was solved."
+              </blockquote>
+              <figcaption class="mt-auto pt-5 border-t border-brand-dark/10 flex items-center gap-4">
+                <div class="w-11 h-11 rounded-full bg-gradient-to-br from-accent-purple to-brand-blue flex items-center justify-center text-white font-medium text-[14px] flex-shrink-0" aria-hidden="true">BD</div>
+                <div class="flex-1 min-w-0">
+                  <p class="font-medium text-brand-dark text-[14px] leading-tight">Boyan D.</p>
+                  <p class="text-brand-dark/60 text-[12px] leading-snug mt-1">Mid-Market / Hospitality</p>
+                </div>
+              </figcaption>
+              <p class="mt-3 inline-flex items-center gap-1.5 text-[11px] text-brand-dark/55">
+                <span class="inline-flex items-center justify-center w-4 h-4 rounded bg-[#FF492C] text-white font-bold text-[8px] tabular-nums">G2</span>
+                G2 verified review · October 2024
+              </p>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SECTION 7 — COMMERCIAL CONFIDENCE
+           Why the 30-day notice is a feature, not a marketing claim
+           ============================================================ -->
+      <section id="commercial-confidence" class="bg-white">
+        <div class="container-brand py-24 md:py-32">
+          <div class="max-w-3xl mb-12 md:mb-14">
+            <p class="section-eyebrow mb-6">Commercial confidence</p>
+            <h2 class="text-[34px] md:text-[44px] leading-[1.1] tracking-[-0.02em] text-brand-dark">
+              Why we can offer <span class="font-script text-brand-blue text-[1.05em] leading-none">30-day notice.</span>
+            </h2>
+            <p class="mt-6 text-[17px] md:text-[18px] leading-[1.65] text-brand-dark/80 max-w-[68ch]">
+              Most agencies can't underwrite a 30-day notice clause because they can't prove what they're producing. We can — because the data layer above is auditable, owned by you, and tied to your CRM. <span class="text-brand-dark font-medium">If we're not generating pipeline, you'll see it before we do.</span>
+            </p>
+          </div>
+
+          <!-- Commercial guarantee strip -->
+          <div class="bg-brand-dark text-white rounded-2xl p-8 md:p-12 relative overflow-hidden">
+            <div class="absolute -top-24 -right-24 w-72 h-72 bg-brand-blue/25 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-brand-light/15 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="relative">
+              <p class="section-eyebrow-light mb-5">Commercial guarantee</p>
+              <h3 class="text-[26px] md:text-[36px] lg:text-[40px] font-medium leading-[1.15] tracking-[-0.02em] text-white max-w-[24ch]">
+                No 12-month lock-in. No surprise scope fees. <span class="font-script text-accent-lime text-[1.05em] leading-none">Renewal earned quarterly.</span>
+              </h3>
+
+              <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
+                <div class="flex items-start gap-4">
+                  <span class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-accent-lime text-brand-dark flex-shrink-0">
+                    <i data-lucide="check" class="w-5 h-5"></i>
+                  </span>
+                  <div>
+                    <p class="text-white font-medium text-[16px] leading-[1.3]">30-day notice from day one</p>
+                    <p class="text-cool-gray text-[14px] mt-1.5 leading-[1.55]">Cancel any time. The contract doesn't trap you.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <span class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-accent-lime text-brand-dark flex-shrink-0">
+                    <i data-lucide="check" class="w-5 h-5"></i>
+                  </span>
+                  <div>
+                    <p class="text-white font-medium text-[16px] leading-[1.3]">Fixed-fee pilots, no scope creep</p>
+                    <p class="text-cool-gray text-[14px] mt-1.5 leading-[1.55]">What you signed for is what you pay. Always.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <span class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-accent-lime text-brand-dark flex-shrink-0">
+                    <i data-lucide="check" class="w-5 h-5"></i>
+                  </span>
+                  <div>
+                    <p class="text-white font-medium text-[16px] leading-[1.3]">Renewal earned every quarter</p>
+                    <p class="text-cool-gray text-[14px] mt-1.5 leading-[1.55]">Pipeline targets reviewed at QBR. The work earns the next quarter.</p>
+                  </div>
+                </div>
+              </div>
+
+              <p class="mt-8 pt-6 border-t border-white/15 text-cool-gray text-[15px] leading-[1.55] max-w-[68ch]">
+                Every engagement runs on 30-day notice from day one. We back it because we own the data and prove the pipeline.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           BOTTOM CTA — Pipeline Readiness Scan with measurement-gap focus
+           ============================================================ -->
+      <section class="hero-gradient">
+        <div class="container-brand py-24 md:py-32">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div class="lg:col-span-7">
+              <p class="section-eyebrow mb-6">One last thing</p>
+              <h2 class="text-[34px] md:text-[44px] lg:text-[52px] leading-[1.05] tracking-[-0.02em] text-brand-dark">
+                See where your pipeline data is leaking. <span class="font-script text-brand-blue text-[1.05em] leading-none">In five days.</span>
+              </h2>
+              <p class="mt-7 text-[17px] md:text-[19px] leading-[1.55] text-brand-dark/75 max-w-[58ch]">
+                The Pipeline Readiness Scan includes a measurement gap analysis across GA4, sGTM, and CRM — a diagnostic of exactly what Pipeline Intelligence would build for you.
+              </p>
+              <p class="mt-3 text-[15px] text-brand-dark/60 leading-[1.55]">Five business days. Thirty-minute debrief. No commitment.</p>
+              <div class="mt-9 flex flex-col sm:flex-row gap-3">
+                <a href="/scan" data-track="cta_bottom_primary" class="bg-brand-dark hover:bg-brand-blue text-white px-7 py-4 rounded-lg font-medium text-base transition-colors inline-flex items-center justify-center gap-2 group">
+                  Get your free scan
+                  <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-0.5 transition-transform"></i>
+                </a>
+                <a href="/services" data-track="cta_bottom_secondary" class="bg-white hover:bg-brand-light/40 text-brand-dark px-7 py-4 rounded-lg font-medium text-base transition-colors inline-flex items-center justify-center gap-2">
+                  Back to all services
+                </a>
+              </div>
+            </div>
+
+            <!-- Measurement-gap analysis sample -->
+            <div class="lg:col-span-5">
+              <div class="relative mx-auto max-w-md">
+                <div class="bg-white rounded-2xl shadow-2xl shadow-brand-blue/15 p-6 md:p-7" aria-hidden="true">
+                  <div class="flex items-center justify-between mb-5 pb-4 border-b border-brand-dark/10">
+                    <div>
+                      <p class="font-mono text-[10px] uppercase tracking-[0.25em] text-brand-blue font-medium">Measurement gap analysis</p>
+                      <p class="text-[15px] font-medium text-brand-dark mt-1.5">Anonymized · sample</p>
+                    </div>
+                    <span class="inline-flex items-center gap-1 text-[10px] font-mono uppercase tracking-widest text-brand-blue bg-brand-light/30 px-2 py-1 rounded-full">
+                      <i data-lucide="lock" class="w-3 h-3"></i> Confidential
+                    </span>
+                  </div>
+
+                  <div class="space-y-4">
+                    <div>
+                      <div class="flex items-baseline justify-between mb-1.5">
+                        <span class="text-[11px] font-mono uppercase tracking-widest text-brand-dark/55 font-medium">Server-side GTM coverage</span>
+                        <span class="font-mono text-[12px] text-rose-500">22%</span>
+                      </div>
+                      <div class="h-1.5 bg-brand-dark/5 rounded-full overflow-hidden"><div class="h-full bg-rose-400/70 rounded-full" style="width: 22%"></div></div>
+                    </div>
+                    <div>
+                      <div class="flex items-baseline justify-between mb-1.5">
+                        <span class="text-[11px] font-mono uppercase tracking-widest text-brand-dark/55 font-medium">CRM ↔ ad platform sync</span>
+                        <span class="font-mono text-[12px] text-rose-500">0%</span>
+                      </div>
+                      <div class="h-1.5 bg-brand-dark/5 rounded-full overflow-hidden"><div class="h-full bg-rose-400/70 rounded-full" style="width: 4%"></div></div>
+                    </div>
+                    <div>
+                      <div class="flex items-baseline justify-between mb-1.5">
+                        <span class="text-[11px] font-mono uppercase tracking-widest text-brand-dark/55 font-medium">Pipeline-stage feedback</span>
+                        <span class="font-mono text-[12px] text-rose-500">12%</span>
+                      </div>
+                      <div class="h-1.5 bg-brand-dark/5 rounded-full overflow-hidden"><div class="h-full bg-rose-400/70 rounded-full" style="width: 12%"></div></div>
+                    </div>
+                    <div>
+                      <div class="flex items-baseline justify-between mb-1.5">
+                        <span class="text-[11px] font-mono uppercase tracking-widest text-brand-dark/55 font-medium">Identity resolution</span>
+                        <span class="font-mono text-[12px] text-amber-500">48%</span>
+                      </div>
+                      <div class="h-1.5 bg-brand-dark/5 rounded-full overflow-hidden"><div class="h-full bg-amber-400/70 rounded-full" style="width: 48%"></div></div>
+                    </div>
+                  </div>
+
+                  <div class="mt-5 pt-4 border-t border-brand-dark/10">
+                    <p class="font-mono text-[10px] uppercase tracking-widest text-brand-dark/50 font-medium mb-2">Top 3 gaps · prioritized</p>
+                    <ul class="space-y-1.5 text-[12px] text-brand-dark/75">
+                      <li class="flex items-start gap-2"><i data-lucide="alert-triangle" class="w-3.5 h-3.5 text-rose-500 flex-shrink-0 mt-0.5"></i>No offline conversions piped to LinkedIn or Google</li>
+                      <li class="flex items-start gap-2"><i data-lucide="alert-triangle" class="w-3.5 h-3.5 text-rose-500 flex-shrink-0 mt-0.5"></i>GA4 client-side only — 38% data loss to ad blockers</li>
+                      <li class="flex items-start gap-2"><i data-lucide="alert-triangle" class="w-3.5 h-3.5 text-amber-500 flex-shrink-0 mt-0.5"></i>UserID stitching missing across product → CRM</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-cool-gray">
+      <div class="container-brand py-20">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-16">
+          <div class="md:col-span-4 space-y-6">
+            <a href="/" class="flex items-center" aria-label="VertoDigital home"><img src="/VertoDigital-brandmark-color-white.svg" alt="VertoDigital" class="h-11 w-auto" /></a>
+            <p class="text-cool-gray text-sm leading-relaxed max-w-xs">The pipeline agency for B2B technology companies. Based in Boston. Trusted by CMOs globally.</p>
+            <div class="flex gap-4">
+              <a class="text-cool-gray hover:text-white transition-colors" href="https://www.linkedin.com/company/vertodigital" target="_blank" rel="noopener noreferrer" aria-label="VertoDigital on LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a class="text-cool-gray hover:text-white transition-colors" href="https://www.youtube.com/@vertodigital" target="_blank" rel="noopener noreferrer" aria-label="VertoDigital on YouTube"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+              <a class="text-cool-gray hover:text-white transition-colors" href="https://www.instagram.com/vertodigitalagency/" target="_blank" rel="noopener noreferrer" aria-label="VertoDigital on Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+            </div>
+            <a href="https://www.g2.com/products/vertodigital/reviews" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-cool-gray hover:text-white text-sm transition-colors">
+              ★ 4.9 on G2 · 37 reviews
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+          <div class="md:col-span-2 space-y-5">
+            <p class="font-medium text-sm">Services</p>
+            <ul class="space-y-3 text-sm">
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/services/inbound-pipeline-growth">Inbound</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/services/outbound-pipeline-growth">Outbound</a></li>
+              <li><a class="text-white transition-colors" href="/services/pipeline-intelligence" aria-current="true">Pipeline Intelligence</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/scan">Pipeline Readiness Scan</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/services">All services</a></li>
+            </ul>
+          </div>
+          <div class="md:col-span-2 space-y-5">
+            <p class="font-medium text-sm">Company</p>
+            <ul class="space-y-3 text-sm">
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/about">About</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/case-studies">Case Studies</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/careers">Careers</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#press">Press</a></li>
+            </ul>
+          </div>
+          <div class="md:col-span-4 space-y-5">
+            <p class="font-medium text-sm">Research &amp; Insights</p>
+            <p class="text-cool-gray text-sm leading-[1.55]">Weekly dispatches for B2B marketing leaders. Data, benchmarks, and growth playbooks.</p>
+            <form class="flex gap-2">
+              <input type="email" placeholder="work@email.com" class="flex-1 bg-white/5 border border-white/15 text-white placeholder:text-cool-gray text-sm rounded-lg px-4 py-2.5 focus:border-brand-light focus:ring-1 focus:ring-brand-light/30 transition-colors" />
+              <button class="bg-brand-light text-brand-dark px-4 py-2.5 rounded-lg font-medium text-sm hover:bg-white transition-colors">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <!-- Locations -->
+        <div class="mb-12">
+          <p class="font-medium text-sm mb-6">Locations</p>
+          <div class="flex flex-wrap items-start gap-x-10 gap-y-6">
+            <div class="flex flex-col items-center gap-2">
+              <i data-lucide="church" class="w-7 h-7"></i>
+              <span class="text-sm">Sofia</span>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+              <i data-lucide="building-2" class="w-7 h-7"></i>
+              <span class="text-sm">Ruse</span>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+              <i data-lucide="school" class="w-7 h-7"></i>
+              <span class="text-sm">Blagoevgrad</span>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+              <i data-lucide="landmark" class="w-7 h-7"></i>
+              <span class="text-sm">Boston</span>
+            </div>
+          </div>
+        </div>
+        <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-xs text-cool-gray">
+          <p>© 2026 VertoDigital. Designed in Boston 🇺🇸 · Engineered in Sofia 🇧🇬. Deployed wherever you need us.</p>
+          <div class="flex gap-6">
+            <a href="/privacy" class="hover:text-white transition-colors">Privacy</a>
+            <a href="/terms" class="hover:text-white transition-colors">Terms</a>
+            <a href="/privacy#cookies" class="hover:text-white transition-colors">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      lucide.createIcons();
+
+      // Mobile menu toggle
+      (function () {
+        var btn = document.getElementById('mobile-menu-toggle');
+        var panel = document.getElementById('mobile-menu-panel');
+        if (!btn || !panel) return;
+        function close() {
+          panel.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+          btn.setAttribute('aria-label', 'Open menu');
+        }
+        btn.addEventListener('click', function () {
+          var willOpen = panel.classList.contains('hidden');
+          panel.classList.toggle('hidden');
+          btn.setAttribute('aria-expanded', String(willOpen));
+          btn.setAttribute('aria-label', willOpen ? 'Close menu' : 'Open menu');
+        });
+        panel.querySelectorAll('a').forEach(function (a) {
+          a.addEventListener('click', close);
+        });
+      })();
+
+      // Tracking — pushes events to window.dataLayer (GTM/GA4) when present.
+      // Falls back to a no-op if no analytics is loaded.
+      (function () {
+        function track(name, payload) {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push(Object.assign({ event: name, page: 'services/pipeline-intelligence' }, payload || {}));
+        }
+
+        document.querySelectorAll('[data-track]').forEach(function (el) {
+          el.addEventListener('click', function () {
+            var name = el.getAttribute('data-track');
+            track(name, {
+              cta_href: el.getAttribute('href') || null,
+              cta_label: (el.textContent || '').trim().slice(0, 80)
+            });
+          });
+        });
+
+        if ('IntersectionObserver' in window) {
+          var ids = ['the-gap', 'architecture', 'what-this-replaces', 'proof', 'timeline', 'customer-voice', 'commercial-confidence'];
+          var seen = {};
+          var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting && !seen[entry.target.id]) {
+                seen[entry.target.id] = true;
+                track('section_view', { section_id: entry.target.id });
+              }
+            });
+          }, { threshold: 0.5 });
+          ids.forEach(function (id) {
+            var el = document.getElementById(id);
+            if (el) io.observe(el);
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>

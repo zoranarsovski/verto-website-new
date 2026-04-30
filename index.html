@@ -168,6 +168,9 @@
         transform: scale(1);
       }
     </style>
+  <!-- Google Calendar Appointment Scheduling -->
+  <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+  <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
   </head>
   <body class="antialiased">
     <!-- Navbar -->
@@ -995,30 +998,22 @@
                 “I run every introductory call personally. If we work together, you'll know by minute twenty whether we're a fit. If we're not, you'll leave with a plan you can execute with someone else.”
               </p>
 
-              <!-- Live availability — Google Calendar Appointment Scheduling -->
-              <div class="relative rounded-xl overflow-hidden mb-8">
-                <iframe
-                  id="booking-calendar-iframe"
-                  src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3704i-Iwro2fLK7bk2NyJYB0ET6WBBY5ZNKIuOahk76meEaHcCy9nBD172ZtkEJL-ZovNIGMVx?gv=true"
-                  style="border:0"
-                  width="100%"
-                  height="500"
-                  frameborder="0"
-                  loading="lazy"
-                  title="Book a 30-minute call with Paul Green"></iframe>
+              <!-- Google Calendar Appointment Scheduling -->
+              <div class="relative mb-8">
+                <script>
+                (function() {
+                  var target = document.currentScript;
+                  window.addEventListener('load', function() {
+                    calendar.schedulingButton.load({
+                      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3704i-Iwro2fLK7bk2NyJYB0ET6WBBY5ZNKIuOahk76meEaHcCy9nBD172ZtkEJL-ZovNIGMVx?gv=true',
+                      color: '#0099FF',
+                      label: 'Book a call',
+                      target,
+                    });
+                  });
+                })();
+                </script>
               </div>
-              <script>
-              (function(){
-                var el = document.getElementById('booking-calendar-iframe');
-                if (!el || !window.IntersectionObserver) return;
-                new IntersectionObserver(function(e, obs){
-                  if (!e[0].isIntersecting) return;
-                  window.dataLayer = window.dataLayer || [];
-                  window.dataLayer.push({ event: 'booking_calendar_view' });
-                  obs.disconnect();
-                }, { threshold: 0.3 }).observe(el);
-              })();
-              </script>
 
               <div class="relative flex flex-col sm:flex-row gap-3 pt-4 border-t border-white/15">
                 <a href="mailto:paul.green@vertodigital.com" class="inline-flex items-center justify-center gap-2 bg-white text-brand-dark px-5 py-3 rounded-lg font-medium text-sm hover:bg-accent-lime transition-colors flex-1">

@@ -171,9 +171,58 @@
     <nav class="sticky top-0 w-full z-50 bg-white/85 backdrop-blur-xl border-b border-brand-dark/10">
       <div class="container-brand flex justify-between items-center py-5">
         <a href="/" class="flex items-center" aria-label="VertoDigital home"><img src="/VertoDigital-brandmark-color-black.svg" alt="VertoDigital" class="h-11 w-auto" /></a>
-        <div class="hidden md:flex items-center space-x-10 text-[15px]">
+        <div class="hidden md:flex items-center space-x-8 lg:space-x-10 text-[15px]">
           <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/#case-studies">Case studies</a>
-          <a class="text-brand-blue font-medium transition-colors" href="/services" aria-current="true">Services</a>
+
+          <!-- Services · desktop dropdown -->
+          <div class="relative group">
+            <a class="text-brand-blue font-medium transition-colors inline-flex items-center gap-1" href="/services" aria-current="true" aria-haspopup="true">
+              Services
+              <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform group-hover:rotate-180 group-focus-within:rotate-180"></i>
+            </a>
+            <!-- Dropdown panel · group-hover and group-focus-within -->
+            <div class="absolute right-0 lg:left-1/2 lg:-translate-x-1/2 top-full pt-3 hidden group-hover:block group-focus-within:block z-50">
+              <div class="bg-white rounded-2xl shadow-2xl shadow-brand-dark/10 p-7 grid grid-cols-3 gap-7 w-[680px]">
+                <!-- Inbound -->
+                <div>
+                  <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-blue font-medium mb-3">Stream 1 · Inbound</p>
+                  <ul class="space-y-2.5 text-[14px]">
+                    <li><a class="text-brand-dark font-medium hover:text-brand-blue transition-colors" href="/services/inbound-pipeline-growth">Pipeline growth</a></li>
+                    <li><a class="text-brand-dark/75 hover:text-brand-blue transition-colors" href="/services/inbound/linkedin-paid-social">LinkedIn Paid Social</a></li>
+                    <li><a class="text-brand-dark/75 hover:text-brand-blue transition-colors" href="/services/inbound/paid-search">Paid Search</a></li>
+                    <li><a class="text-brand-dark/75 hover:text-brand-blue transition-colors" href="/services/inbound/seo-and-aeo">SEO &amp; AEO</a></li>
+                  </ul>
+                </div>
+                <!-- Outbound -->
+                <div>
+                  <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-blue font-medium mb-3">Stream 2 · Outbound</p>
+                  <ul class="space-y-2.5 text-[14px]">
+                    <li><a class="text-brand-dark font-medium hover:text-brand-blue transition-colors" href="/services/outbound-pipeline-growth">Pipeline growth</a></li>
+                    <li><a class="text-brand-dark/75 hover:text-brand-blue transition-colors" href="/services/outbound/abm-6sense-demandbase">6sense &amp; DemandBase</a></li>
+                    <li><a class="text-brand-dark/75 hover:text-brand-blue transition-colors" href="/services/outbound/linkedin-ai-targeting">LinkedIn AI Targeting</a></li>
+                    <li><a class="text-brand-dark/75 hover:text-brand-blue transition-colors" href="/services/outbound/contact-level-abm">Contact-Level ABM</a></li>
+                  </ul>
+                </div>
+                <!-- Spine + engagement -->
+                <div class="flex flex-col gap-5">
+                  <div>
+                    <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-blue font-medium mb-3">The spine</p>
+                    <ul class="space-y-2.5 text-[14px]">
+                      <li><a class="text-brand-dark font-medium hover:text-brand-blue transition-colors" href="/services/pipeline-intelligence">Pipeline Intelligence</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-blue font-medium mb-3">Start here</p>
+                    <ul class="space-y-2.5 text-[14px]">
+                      <li><a class="text-brand-dark hover:text-brand-blue transition-colors" href="/scan">Pipeline Readiness Scan</a></li>
+                      <li><a class="text-brand-dark/75 hover:text-brand-blue transition-colors" href="/services">All services</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/#insights">Research</a>
           <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/about">About</a>
           <a class="text-brand-dark hover:text-brand-blue transition-colors" href="/contact">Contact</a>
@@ -188,22 +237,42 @@
           </a>
           <button id="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu-panel" aria-label="Open menu" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-brand-dark hover:bg-brand-dark/5 transition-colors">
             <span class="menu-icon-stack" aria-hidden="true">
-              <span class="hamburger-icon">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-              </span>
+              <span class="hamburger-icon"><span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span></span>
               <span class="dollar-icon">$</span>
             </span>
           </button>
         </div>
       </div>
 
-      <!-- Mobile dropdown panel -->
-      <div id="mobile-menu-panel" class="hidden md:hidden absolute top-full left-0 right-0 border-t border-brand-dark/10 bg-white shadow-lg shadow-brand-dark/5">
+      <!-- Mobile dropdown panel · expandable Services via <details> -->
+      <div id="mobile-menu-panel" class="hidden md:hidden absolute top-full left-0 right-0 border-t border-brand-dark/10 bg-white shadow-lg shadow-brand-dark/5 max-h-[80vh] overflow-y-auto">
         <div class="container-brand py-3 flex flex-col text-[15px]">
           <a class="text-brand-dark hover:text-brand-blue py-3 transition-colors" href="/#case-studies">Case studies</a>
-          <a class="text-brand-blue font-medium py-3 transition-colors" href="/services" aria-current="true">Services</a>
+
+          <details class="group nav-services-mobile">
+            <summary class="flex items-center justify-between py-3 cursor-pointer text-brand-blue font-medium transition-colors">
+              <span>Services</span>
+              <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-open:rotate-180"></i>
+            </summary>
+            <div class="pb-3 pl-3 border-l-2 border-brand-light/40 ml-1 space-y-1">
+              <a class="block py-2 text-[14px] text-brand-dark hover:text-brand-blue font-medium" href="/services">All services · overview</a>
+              <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-blue font-medium mt-3 mb-1.5">Stream 1 · Inbound</p>
+              <a class="block py-1.5 text-[14px] text-brand-dark hover:text-brand-blue" href="/services/inbound-pipeline-growth">Pipeline growth</a>
+              <a class="block py-1.5 text-[14px] text-brand-dark/75 hover:text-brand-blue" href="/services/inbound/linkedin-paid-social">LinkedIn Paid Social</a>
+              <a class="block py-1.5 text-[14px] text-brand-dark/75 hover:text-brand-blue" href="/services/inbound/paid-search">Paid Search</a>
+              <a class="block py-1.5 text-[14px] text-brand-dark/75 hover:text-brand-blue" href="/services/inbound/seo-and-aeo">SEO &amp; AEO</a>
+              <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-blue font-medium mt-3 mb-1.5">Stream 2 · Outbound</p>
+              <a class="block py-1.5 text-[14px] text-brand-dark hover:text-brand-blue" href="/services/outbound-pipeline-growth">Pipeline growth</a>
+              <a class="block py-1.5 text-[14px] text-brand-dark/75 hover:text-brand-blue" href="/services/outbound/abm-6sense-demandbase">6sense &amp; DemandBase</a>
+              <a class="block py-1.5 text-[14px] text-brand-dark/75 hover:text-brand-blue" href="/services/outbound/linkedin-ai-targeting">LinkedIn AI Targeting</a>
+              <a class="block py-1.5 text-[14px] text-brand-dark/75 hover:text-brand-blue" href="/services/outbound/contact-level-abm">Contact-Level ABM</a>
+              <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-blue font-medium mt-3 mb-1.5">The spine</p>
+              <a class="block py-1.5 text-[14px] text-brand-dark hover:text-brand-blue" href="/services/pipeline-intelligence">Pipeline Intelligence</a>
+              <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-blue font-medium mt-3 mb-1.5">Start here</p>
+              <a class="block py-1.5 text-[14px] text-brand-dark hover:text-brand-blue" href="/scan">Pipeline Readiness Scan</a>
+            </div>
+          </details>
+
           <a class="text-brand-dark hover:text-brand-blue py-3 transition-colors" href="/#insights">Research</a>
           <a class="text-brand-dark hover:text-brand-blue py-3 transition-colors" href="/about">About</a>
           <a class="text-brand-dark hover:text-brand-blue py-3 transition-colors" href="/contact">Contact</a>
@@ -1282,8 +1351,9 @@
     <!-- Footer -->
     <footer class="bg-navy text-cool-gray">
       <div class="container-brand py-20">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-16">
-          <div class="md:col-span-4 space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-12">
+          <!-- Brand column -->
+          <div class="md:col-span-3 space-y-6">
             <a href="/" class="flex items-center" aria-label="VertoDigital home"><img src="/VertoDigital-brandmark-color-white.svg" alt="VertoDigital" class="h-11 w-auto" /></a>
             <p class="text-cool-gray text-sm leading-relaxed max-w-xs">The pipeline agency for B2B technology companies. Based in Boston. Trusted by CMOs globally.</p>
             <div class="flex gap-4">
@@ -1296,27 +1366,52 @@
               <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
             </a>
           </div>
+
+          <!-- Inbound -->
           <div class="md:col-span-2 space-y-5">
-            <p class="font-medium text-sm">Services</p>
+            <p class="font-medium text-sm text-white">Inbound</p>
             <ul class="space-y-3 text-sm">
-              <li><a class="text-cool-gray hover:text-white transition-colors" href="/services/inbound-pipeline-growth">Inbound</a></li>
-              <li><a class="text-cool-gray hover:text-white transition-colors" href="/services/outbound-pipeline-growth">Outbound</a></li>
-              <li><a class="text-white transition-colors" href="/services/pipeline-intelligence" aria-current="true">Pipeline Intelligence</a></li>
-              <li><a class="text-cool-gray hover:text-white transition-colors" href="/scan">Pipeline Readiness Scan</a></li>
-              <li><a class="text-cool-gray hover:text-white transition-colors" href="/services">All services</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/services/inbound-pipeline-growth">Pipeline growth</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/services/inbound/linkedin-paid-social">LinkedIn Paid Social</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/services/inbound/paid-search">Paid Search</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/services/inbound/seo-and-aeo">SEO &amp; AEO</a></li>
             </ul>
           </div>
+
+          <!-- Outbound -->
           <div class="md:col-span-2 space-y-5">
-            <p class="font-medium text-sm">Company</p>
+            <p class="font-medium text-sm text-white">Outbound</p>
             <ul class="space-y-3 text-sm">
-              <li><a class="text-cool-gray hover:text-white transition-colors" href="/about">About</a></li>
-              <li><a class="text-cool-gray hover:text-white transition-colors" href="/case-studies">Case Studies</a></li>
-              <li><a class="text-cool-gray hover:text-white transition-colors" href="/careers">Careers</a></li>
-              <li><a class="text-cool-gray hover:text-white transition-colors" href="/#press">Press</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/services/outbound-pipeline-growth">Pipeline growth</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/services/outbound/abm-6sense-demandbase">6sense &amp; DemandBase</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/services/outbound/linkedin-ai-targeting">LinkedIn AI Targeting</a></li>
+              <li><a class="text-cool-gray hover:text-white transition-colors" href="/services/outbound/contact-level-abm">Contact-Level ABM</a></li>
             </ul>
           </div>
-          <div class="md:col-span-4 space-y-5">
-            <p class="font-medium text-sm">Research &amp; Insights</p>
+
+          <!-- Spine + Company -->
+          <div class="md:col-span-2 space-y-6">
+            <div class="space-y-5">
+              <p class="font-medium text-sm text-white">Spine</p>
+              <ul class="space-y-3 text-sm">
+                <li><a class="text-cool-gray hover:text-white transition-colors" href="/services/pipeline-intelligence">Pipeline Intelligence</a></li>
+                <li><a class="text-cool-gray hover:text-white transition-colors" href="/scan">Pipeline Readiness Scan</a></li>
+                <li><a class="text-cool-gray hover:text-white transition-colors" href="/services">All services</a></li>
+              </ul>
+            </div>
+            <div class="space-y-5">
+              <p class="font-medium text-sm text-white">Company</p>
+              <ul class="space-y-3 text-sm">
+                <li><a class="text-cool-gray hover:text-white transition-colors" href="/about">About</a></li>
+                <li><a class="text-cool-gray hover:text-white transition-colors" href="/case-studies">Case studies</a></li>
+                <li><a class="text-cool-gray hover:text-white transition-colors" href="/careers">Careers</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="md:col-span-3 space-y-5">
+            <p class="font-medium text-sm text-white">Research &amp; Insights</p>
             <p class="text-cool-gray text-sm leading-[1.55]">Weekly dispatches for B2B marketing leaders. Data, benchmarks, and growth playbooks.</p>
             <form class="flex gap-2">
               <input type="email" placeholder="work@email.com" class="flex-1 bg-white/5 border border-white/15 text-white placeholder:text-cool-gray text-sm rounded-lg px-4 py-2.5 focus:border-brand-light focus:ring-1 focus:ring-brand-light/30 transition-colors" />
@@ -1324,28 +1419,18 @@
             </form>
           </div>
         </div>
-        <!-- Locations -->
+
+        <!-- Locations strip -->
         <div class="mb-12">
           <p class="font-medium text-sm mb-6">Locations</p>
           <div class="flex flex-wrap items-start gap-x-10 gap-y-6">
-            <div class="flex flex-col items-center gap-2">
-              <i data-lucide="church" class="w-7 h-7"></i>
-              <span class="text-sm">Sofia</span>
-            </div>
-            <div class="flex flex-col items-center gap-2">
-              <i data-lucide="building-2" class="w-7 h-7"></i>
-              <span class="text-sm">Ruse</span>
-            </div>
-            <div class="flex flex-col items-center gap-2">
-              <i data-lucide="school" class="w-7 h-7"></i>
-              <span class="text-sm">Blagoevgrad</span>
-            </div>
-            <div class="flex flex-col items-center gap-2">
-              <i data-lucide="landmark" class="w-7 h-7"></i>
-              <span class="text-sm">Boston</span>
-            </div>
+            <div class="flex flex-col items-center gap-2"><i data-lucide="church" class="w-7 h-7"></i><span class="text-sm">Sofia</span></div>
+            <div class="flex flex-col items-center gap-2"><i data-lucide="building-2" class="w-7 h-7"></i><span class="text-sm">Ruse</span></div>
+            <div class="flex flex-col items-center gap-2"><i data-lucide="school" class="w-7 h-7"></i><span class="text-sm">Blagoevgrad</span></div>
+            <div class="flex flex-col items-center gap-2"><i data-lucide="landmark" class="w-7 h-7"></i><span class="text-sm">Boston</span></div>
           </div>
         </div>
+
         <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-xs text-cool-gray">
           <p>© 2026 VertoDigital. Designed in Boston 🇺🇸 · Engineered in Sofia 🇧🇬. Deployed wherever you need us.</p>
           <div class="flex gap-6">

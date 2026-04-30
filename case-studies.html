@@ -460,8 +460,98 @@
       </section>
 
       <!-- ============================================================
-           CHUNK 3 — Section 2: Taxonomy orientation
+           SECTION 2 — TAXONOMY ORIENTATION
            ============================================================ -->
+      <section id="browse" class="py-16 md:py-20 bg-light-blue/40 border-y border-brand-dark/8">
+        <div class="container-brand">
+
+          <div class="mb-10 md:mb-12">
+            <p class="section-eyebrow mb-4">Browse</p>
+            <h2 class="text-[24px] md:text-[32px] font-medium text-brand-dark leading-[1.2] tracking-[-0.02em]">Browse by industry or by service.</h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
+
+            <!-- By industry -->
+            <div>
+              <p class="font-mono text-[11px] uppercase tracking-[0.22em] text-brand-blue font-medium mb-5">By industry</p>
+              <ul class="space-y-1">
+                <li>
+                  <a href="#cybersecurity" data-track="taxonomy_industry_click" data-industry="cybersecurity" class="group inline-flex items-center gap-2 py-1.5 text-[15px] text-brand-dark hover:text-brand-blue transition-colors">
+                    <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-brand-dark/40 group-hover:text-brand-blue group-hover:translate-x-1 transition-all"></i>
+                    Cybersecurity
+                  </a>
+                </li>
+                <li>
+                  <a href="#data-platforms" data-track="taxonomy_industry_click" data-industry="data-platforms" class="group inline-flex items-center gap-2 py-1.5 text-[15px] text-brand-dark hover:text-brand-blue transition-colors">
+                    <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-brand-dark/40 group-hover:text-brand-blue group-hover:translate-x-1 transition-all"></i>
+                    Data Platforms &amp; AI Infrastructure
+                  </a>
+                </li>
+                <li>
+                  <a href="#fintech" data-track="taxonomy_industry_click" data-industry="fintech" class="group inline-flex items-center gap-2 py-1.5 text-[15px] text-brand-dark hover:text-brand-blue transition-colors">
+                    <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-brand-dark/40 group-hover:text-brand-blue group-hover:translate-x-1 transition-all"></i>
+                    Fintech &amp; Financial Services
+                  </a>
+                </li>
+                <li>
+                  <a href="#cloud-infrastructure" data-track="taxonomy_industry_click" data-industry="cloud-infrastructure" class="group inline-flex items-center gap-2 py-1.5 text-[15px] text-brand-dark hover:text-brand-blue transition-colors">
+                    <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-brand-dark/40 group-hover:text-brand-blue group-hover:translate-x-1 transition-all"></i>
+                    Cloud Infrastructure &amp; DevOps
+                  </a>
+                </li>
+                <li>
+                  <a href="#gtm-saas" data-track="taxonomy_industry_click" data-industry="gtm-saas" class="group inline-flex items-center gap-2 py-1.5 text-[15px] text-brand-dark hover:text-brand-blue transition-colors">
+                    <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-brand-dark/40 group-hover:text-brand-blue group-hover:translate-x-1 transition-all"></i>
+                    GTM SaaS
+                  </a>
+                </li>
+                <li>
+                  <a href="#other-b2b" data-track="taxonomy_industry_click" data-industry="other-b2b" class="group inline-flex items-center gap-2 py-1.5 text-[15px] text-brand-dark hover:text-brand-blue transition-colors">
+                    <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-brand-dark/40 group-hover:text-brand-blue group-hover:translate-x-1 transition-all"></i>
+                    Other B2B Technology
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- By service -->
+            <div>
+              <p class="font-mono text-[11px] uppercase tracking-[0.22em] text-brand-blue font-medium mb-5">By service</p>
+              <ul class="space-y-1">
+                <li>
+                  <a href="/services/inbound-pipeline-growth" data-track="taxonomy_service_click" data-service="inbound" class="group inline-flex items-start gap-2 py-1.5 text-[15px] text-brand-dark hover:text-brand-blue transition-colors">
+                    <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-brand-dark/40 group-hover:text-brand-blue mt-1 flex-shrink-0 transition-colors"></i>
+                    <span>
+                      <span class="block">Inbound</span>
+                      <span class="block font-mono text-[11px] uppercase tracking-wider text-brand-dark/50 mt-0.5">LinkedIn Paid Social · Paid Search · SEO/AEO</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/services/outbound-pipeline-growth" data-track="taxonomy_service_click" data-service="outbound" class="group inline-flex items-start gap-2 py-1.5 text-[15px] text-brand-dark hover:text-brand-blue transition-colors">
+                    <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-brand-dark/40 group-hover:text-brand-blue mt-1 flex-shrink-0 transition-colors"></i>
+                    <span>
+                      <span class="block">Outbound</span>
+                      <span class="block font-mono text-[11px] uppercase tracking-wider text-brand-dark/50 mt-0.5">ABM · LinkedIn AI Targeting · Contact-Level ABM</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/services/pipeline-intelligence" data-track="taxonomy_service_click" data-service="pipeline-intelligence" class="group inline-flex items-start gap-2 py-1.5 text-[15px] text-brand-dark hover:text-brand-blue transition-colors">
+                    <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-brand-dark/40 group-hover:text-brand-blue mt-1 flex-shrink-0 transition-colors"></i>
+                    <span>
+                      <span class="block">Pipeline Intelligence</span>
+                      <span class="block font-mono text-[11px] uppercase tracking-wider text-brand-dark/50 mt-0.5">The measurement spine</span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </div><!-- /grid -->
+        </div><!-- /container -->
+      </section>
 
       <!-- ============================================================
            CHUNK 4 — Section 3: Full case study grid

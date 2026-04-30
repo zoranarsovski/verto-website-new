@@ -113,6 +113,29 @@
       [aria-expanded="true"] .hamburger-icon { opacity: 0; }
       [aria-expanded="true"] .dollar-icon { opacity: 1; transform: scale(1); }
       @media (prefers-reduced-motion: reduce) { .dot-pulse { animation: none; } }
+      /* Google Calendar scheduling button overrides */
+      .gcal-btn-wrapper button {
+        width: 100% !important;
+        padding: 14px 24px !important;
+        border-radius: 12px !important;
+        font-size: 15px !important;
+        font-weight: 600 !important;
+        font-family: 'Geist', 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif !important;
+        letter-spacing: -0.01em !important;
+        color: #060026 !important;
+        background-color: #E1F77E !important;
+        box-shadow: none !important;
+        border: none !important;
+        cursor: pointer !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        transition: background-color 150ms ease !important;
+      }
+      .gcal-btn-wrapper button:hover {
+        background-color: #d4eb6e !important;
+      }
     </style>
   <!-- Google Calendar Appointment Scheduling -->
   <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
@@ -738,7 +761,7 @@
               </p>
 
               <!-- Google Calendar Appointment Scheduling -->
-              <div class="relative mb-8">
+              <div class="relative mb-8 gcal-btn-wrapper">
                 <script>
                 (function() {
                   var target = document.currentScript;

@@ -249,7 +249,126 @@
 
     <main>
 
-      <!-- CHUNK 1 COMPLETE — HERO + REMAINING SECTIONS TO FOLLOW -->
+      <!-- ============================================================
+           HERO — Editorial credit + outcome H1 + secondary stats + CTAs
+           ============================================================ -->
+      <section class="hero-gradient relative overflow-hidden pt-16 pb-16 md:pt-24 md:pb-24 lg:pt-28 lg:pb-28">
+        <!-- Background depth blobs -->
+        <div class="absolute top-0 right-0 w-[700px] h-[700px] bg-brand-light/25 rounded-full blur-[140px] pointer-events-none" aria-hidden="true"></div>
+        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent-lime/8 rounded-full blur-[120px] pointer-events-none" aria-hidden="true"></div>
+
+        <div class="container-brand relative">
+
+          <!-- Breadcrumb / back link -->
+          <nav aria-label="Breadcrumb" class="mb-10 md:mb-14">
+            <a href="/case-studies" data-track="case_breadcrumb_back" class="inline-flex items-center gap-1.5 text-[13px] font-mono uppercase tracking-[0.2em] text-brand-dark/55 hover:text-brand-blue transition-colors">
+              <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>
+              All case studies
+            </a>
+          </nav>
+
+          <div class="max-w-5xl">
+            <!-- Client wordmark — editorial credit treatment -->
+            <p class="hero-stat text-[44px] md:text-[60px] text-brand-dark leading-none mb-6 md:mb-8 tracking-[-0.045em]">IRONSCALES</p>
+
+            <!-- Industry / service tags -->
+            <div class="flex flex-wrap gap-2 mb-10 md:mb-12">
+              <span class="inline-flex items-center bg-light-blue text-brand-dark/75 rounded-full px-3 py-1 font-mono text-[11px] uppercase tracking-wider font-medium">Cybersecurity · Email Security</span>
+              <span class="inline-flex items-center bg-brand-light/25 text-brand-blue rounded-full px-3 py-1 font-mono text-[11px] uppercase tracking-wider font-medium">Inbound Pipeline Growth</span>
+              <span class="inline-flex items-center bg-brand-light/25 text-brand-blue rounded-full px-3 py-1 font-mono text-[11px] uppercase tracking-wider font-medium">Pipeline Intelligence</span>
+            </div>
+
+            <!-- H1 — outcome stat is the H1 per brief -->
+            <h1 class="hero-stat text-[48px] md:text-[80px] lg:text-[96px] text-brand-dark mb-8 md:mb-10">
+              <span class="text-brand-blue">2.3×</span> pipeline in 90&nbsp;days.<br>
+              <span class="text-brand-blue">4×</span> opportunities at 50% budget.
+            </h1>
+
+            <!-- Supporting copy -->
+            <p class="text-[18px] md:text-[20px] text-brand-dark/75 leading-[1.55] max-w-3xl mb-10 md:mb-12">
+              Rebuilt the campaign infrastructure on first-party data activation. The bid algorithm stopped optimizing for form-fills. Started optimizing for opportunities.
+            </p>
+
+            <!-- Secondary stats row (3 stats) -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-10 mb-12 md:mb-14 pt-10 md:pt-12 border-t border-brand-dark/10">
+              <div>
+                <p class="hero-stat text-[42px] md:text-[52px] text-brand-blue mb-2">73%</p>
+                <p class="text-[13px] text-brand-dark/65 leading-[1.45]">more conversions matched than Salesforce native</p>
+              </div>
+              <div>
+                <p class="hero-stat text-[42px] md:text-[52px] text-brand-blue mb-2">4×</p>
+                <p class="text-[13px] text-brand-dark/65 leading-[1.45]">opportunities created</p>
+              </div>
+              <div>
+                <p class="hero-stat text-[42px] md:text-[52px] text-brand-blue mb-2">50%</p>
+                <p class="text-[13px] text-brand-dark/65 leading-[1.45]">reduction in paid media budget</p>
+              </div>
+            </div>
+
+            <!-- CTAs -->
+            <div class="flex flex-wrap gap-3">
+              <a href="/b2b-pipeline-assessment" data-track="case_cta_primary" data-source="hero" data-case="ironscales" class="inline-flex items-center gap-2 bg-brand-blue hover:bg-dark-blue text-white px-6 md:px-7 py-3.5 md:py-4 rounded-lg font-medium text-[15px] md:text-[16px] transition-colors">
+                Book your free Pipeline Assessment
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+              <a href="/industries/cybersecurity" data-track="case_cta_secondary" data-source="hero" data-case="ironscales" class="inline-flex items-center gap-2 bg-white hover:bg-brand-light/30 text-brand-dark px-6 md:px-7 py-3.5 md:py-4 rounded-lg font-medium text-[15px] md:text-[16px] transition-colors">
+                See similar work
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SECTION 1 — THE COMPANY
+           Text-led with at-a-glance sidebar
+           ============================================================ -->
+      <section id="company" class="py-20 md:py-24">
+        <div class="container-brand">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+
+            <!-- Body copy -->
+            <div class="lg:col-span-8">
+              <p class="section-eyebrow mb-5">Section 01 · The company</p>
+              <h2 class="text-[32px] md:text-[44px] font-medium text-brand-dark leading-[1.1] tracking-[-0.02em] mb-8">About IRONSCALES.</h2>
+              <div class="space-y-5 text-[17px] md:text-[18px] text-brand-dark/80 leading-[1.65] max-w-2xl">
+                <p>IRONSCALES is a self-learning email security platform that protects organizations from phishing, business email compromise, and account takeover at scale. The product sits inside the email security category &mdash; alongside Proofpoint, Mimecast, and Abnormal &mdash; and competes on AI-driven threat detection plus security awareness training built into the same platform.</p>
+                <p>The buyer is the security buying committee: CISO, security architect, IT director. The sales motion is named-account driven, with significant inbound demand from buyers actively evaluating the email security category.</p>
+              </div>
+            </div>
+
+            <!-- At a glance sidebar -->
+            <aside class="lg:col-span-4">
+              <div class="bg-light-blue/50 rounded-2xl p-7 md:p-8 lg:sticky lg:top-28">
+                <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-brand-blue font-medium mb-6">At a glance</p>
+                <dl class="space-y-5">
+                  <div>
+                    <dt class="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-dark/50 font-medium mb-1.5">Sub-category</dt>
+                    <dd class="text-[15px] text-brand-dark font-medium leading-snug">Email security</dd>
+                  </div>
+                  <div class="pt-5 border-t border-brand-dark/10">
+                    <dt class="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-dark/50 font-medium mb-1.5">Buyer</dt>
+                    <dd class="text-[15px] text-brand-dark font-medium leading-snug">CISO, security architect, IT director</dd>
+                  </div>
+                  <div class="pt-5 border-t border-brand-dark/10">
+                    <dt class="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-dark/50 font-medium mb-1.5">Sales motion</dt>
+                    <dd class="text-[15px] text-brand-dark font-medium leading-snug">Named-account inbound + outbound</dd>
+                  </div>
+                  <div class="pt-5 border-t border-brand-dark/10">
+                    <dt class="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-dark/50 font-medium mb-1.5">Engagement</dt>
+                    <dd class="text-[15px] text-brand-dark font-medium leading-snug">Inbound + Pipeline Intelligence</dd>
+                  </div>
+                </dl>
+                <p class="mt-6 pt-5 border-t border-brand-dark/10 text-[11px] text-brand-dark/45 leading-[1.5] italic">Sourced from public data; sensitive details omitted.</p>
+              </div>
+            </aside>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- CHUNK 2 COMPLETE — SECTIONS 2–7 + CTA + FOOTER TO FOLLOW -->
 
     </main>
 

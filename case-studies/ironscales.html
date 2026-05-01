@@ -368,7 +368,264 @@
         </div>
       </section>
 
-      <!-- CHUNK 2 COMPLETE — SECTIONS 2–7 + CTA + FOOTER TO FOLLOW -->
+      <!-- ============================================================
+           SECTION 2 — THE PROBLEM
+           ============================================================ -->
+      <section id="problem" class="py-20 md:py-24 bg-light-blue/30">
+        <div class="container-brand">
+          <div class="max-w-4xl">
+            <p class="section-eyebrow mb-5">Section 02 · The problem</p>
+            <h2 class="text-[32px] md:text-[44px] font-medium text-brand-dark leading-[1.1] tracking-[-0.02em] mb-10 md:mb-12">The problem.</h2>
+
+            <!-- Comparison callout -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-12">
+              <div class="bg-white rounded-2xl p-7 shadow-md shadow-brand-dark/5">
+                <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-dark/45 font-medium mb-4">What the dashboards said</p>
+                <div class="space-y-3">
+                  <div class="flex items-center gap-3">
+                    <span class="w-2 h-2 rounded-full bg-brand-blue flex-shrink-0" aria-hidden="true"></span>
+                    <p class="text-[15px] text-brand-dark/75">Click-through rates healthy</p>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="w-2 h-2 rounded-full bg-brand-blue flex-shrink-0" aria-hidden="true"></span>
+                    <p class="text-[15px] text-brand-dark/75">Lead volume trending up</p>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="w-2 h-2 rounded-full bg-brand-blue flex-shrink-0" aria-hidden="true"></span>
+                    <p class="text-[15px] text-brand-dark/75">Spend-to-conversion ratio stable</p>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-brand-dark rounded-2xl p-7 shadow-md shadow-brand-dark/20">
+                <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-cool-gray font-medium mb-4">What the pipeline review said</p>
+                <div class="space-y-3">
+                  <div class="flex items-center gap-3">
+                    <span class="w-2 h-2 rounded-full bg-accent-lime flex-shrink-0" aria-hidden="true"></span>
+                    <p class="text-[15px] text-cool-gray">CRM conversion data didn't reconcile</p>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="w-2 h-2 rounded-full bg-accent-lime flex-shrink-0" aria-hidden="true"></span>
+                    <p class="text-[15px] text-cool-gray">Bid algorithms training on form-fills</p>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="w-2 h-2 rounded-full bg-accent-lime flex-shrink-0" aria-hidden="true"></span>
+                    <p class="text-[15px] text-cool-gray">Pipeline not moving proportionally</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-5 text-[17px] md:text-[18px] text-brand-dark/80 leading-[1.65]">
+              <p>The campaign metrics looked good. Click-through rates were healthy. Lead volume was up. The dashboards told a consistent story.</p>
+              <p>The pipeline review told a different one.</p>
+              <p>When IRONSCALES looked at the conversion event data Salesforce was actually receiving from paid media, it didn't reconcile with what the ad platforms reported as "conversions." The bid algorithms &mdash; Google Ads, LinkedIn &mdash; were optimizing against form-fill data that didn't translate cleanly to opportunities. The team was spending more, getting more reported leads, and not seeing proportional pipeline.</p>
+              <p>This is the gap most B2B paid media programs hit at scale. The problem isn't the campaign. It's the data layer beneath it. Without an offline conversion feedback loop tied to CRM-defined deal stages, the ad platforms can't learn what a real buyer looks like. They learn what a form-filler looks like &mdash; and form-fillers include students, vendors, competitors, internal team members, and the occasional real prospect.</p>
+              <p>IRONSCALES needed the bid algorithms to see deal outcomes, not lead-gen events. That meant rebuilding the data infrastructure underneath the paid program before any campaign work could move the pipeline number.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SECTION 3 — THE WORK
+           Navy section + before/after architecture diagram
+           ============================================================ -->
+      <section id="work" class="panel-dark-blue text-white relative overflow-hidden py-20 md:py-28">
+        <!-- Blueprint grid overlay -->
+        <div class="absolute inset-0 opacity-[0.04]" style="background-image: linear-gradient(rgba(255,255,255,0.7) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.7) 1px, transparent 1px); background-size: 32px 32px;" aria-hidden="true"></div>
+
+        <div class="container-brand relative">
+          <div class="max-w-4xl mb-14 md:mb-16">
+            <p class="section-eyebrow-light mb-5">Section 03 · The work</p>
+            <h2 class="text-[32px] md:text-[44px] font-medium text-white leading-[1.1] tracking-[-0.02em] mb-6">What we built.</h2>
+            <p class="text-[17px] text-cool-gray leading-[1.65]">Three components, deployed in twelve weeks. Each is unremarkable on its own. The system is what produced the results.</p>
+          </div>
+
+          <!-- Three components -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 md:mb-20">
+            <!-- Component 1 -->
+            <div class="bg-white/5 rounded-2xl p-7 md:p-8">
+              <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-cool-gray font-medium mb-5">Component 01</p>
+              <h3 class="text-[18px] font-medium text-white mb-4 leading-snug">Server-side measurement foundation.</h3>
+              <p class="text-[14px] text-cool-gray leading-[1.65]">Server-side GTM container deployed. Event taxonomy redesigned for B2B funnel logic, not e-commerce defaults. GA4 cleaned and rebuilt around real conversion events. Data piped to BigQuery for ownership and zero sampling.</p>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="inline-flex px-2 py-1 rounded bg-brand-blue/20 font-mono text-[10px] uppercase tracking-[0.15em] text-brand-light font-medium">sGTM</span>
+                <span class="inline-flex px-2 py-1 rounded bg-brand-blue/20 font-mono text-[10px] uppercase tracking-[0.15em] text-brand-light font-medium">GA4</span>
+                <span class="inline-flex px-2 py-1 rounded bg-brand-blue/20 font-mono text-[10px] uppercase tracking-[0.15em] text-brand-light font-medium">BigQuery</span>
+              </div>
+            </div>
+
+            <!-- Component 2 -->
+            <div class="bg-white/5 rounded-2xl p-7 md:p-8">
+              <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-cool-gray font-medium mb-5">Component 02</p>
+              <h3 class="text-[18px] font-medium text-white mb-4 leading-snug">HubSpot offline conversion integration.</h3>
+              <p class="text-[14px] text-cool-gray leading-[1.65]">Lead-to-CRM stitching verified end-to-end. HubSpot deal-stage events &mdash; MQL, SQL, Opportunity, Closed-Won &mdash; pushed to Google Ads via offline conversion uploads. Same event stream piped to LinkedIn Conversions API. Microsoft Advertising added for harvest-channel coverage.</p>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="inline-flex px-2 py-1 rounded bg-brand-blue/20 font-mono text-[10px] uppercase tracking-[0.15em] text-brand-light font-medium">HubSpot</span>
+                <span class="inline-flex px-2 py-1 rounded bg-brand-blue/20 font-mono text-[10px] uppercase tracking-[0.15em] text-brand-light font-medium">Google Ads OC</span>
+                <span class="inline-flex px-2 py-1 rounded bg-brand-blue/20 font-mono text-[10px] uppercase tracking-[0.15em] text-brand-light font-medium">LinkedIn CAPI</span>
+              </div>
+            </div>
+
+            <!-- Component 3 -->
+            <div class="bg-white/5 rounded-2xl p-7 md:p-8">
+              <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-cool-gray font-medium mb-5">Component 03</p>
+              <h3 class="text-[18px] font-medium text-white mb-4 leading-snug">Value-based bidding and audience refinement.</h3>
+              <p class="text-[14px] text-cool-gray leading-[1.65]">Conversion values assigned per CRM stage and per ICP score. The bid algorithm started bidding harder on accounts that close, not contacts that convert. ICP audiences rebuilt against closed-won lookalikes &mdash; what a buyer actually looks like, not what a high-volume form-filler looks like.</p>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="inline-flex px-2 py-1 rounded bg-brand-blue/20 font-mono text-[10px] uppercase tracking-[0.15em] text-brand-light font-medium">Value-based bidding</span>
+                <span class="inline-flex px-2 py-1 rounded bg-brand-blue/20 font-mono text-[10px] uppercase tracking-[0.15em] text-brand-light font-medium">Lookalike audiences</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Before / after architecture diagram -->
+          <div class="bg-white rounded-2xl p-6 md:p-10 shadow-2xl shadow-brand-dark/30">
+            <p class="font-mono text-[11px] uppercase tracking-[0.22em] text-brand-dark/55 font-medium mb-8">Data architecture · Before vs. After</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+
+              <!-- BEFORE -->
+              <div>
+                <div class="flex items-center gap-3 mb-6">
+                  <span class="w-6 h-6 rounded-full bg-brand-dark/10 flex items-center justify-center" aria-hidden="true">
+                    <i data-lucide="x" class="w-3.5 h-3.5 text-brand-dark/50"></i>
+                  </span>
+                  <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-dark/50 font-medium">Before · Disconnected stack</p>
+                </div>
+                <svg viewBox="0 0 380 300" class="w-full h-auto" role="img" aria-label="Before state: fragmented data stack with CRM disconnected from ad platforms">
+                  <!-- Website -->
+                  <rect x="130" y="10" width="120" height="36" rx="8" fill="#F0F6FF" stroke="#D0E8FF" stroke-width="1"/>
+                  <text x="190" y="31" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" fill="#060026" font-weight="500">Website / Forms</text>
+
+                  <!-- Arrow down -->
+                  <line x1="190" y1="46" x2="190" y2="66" stroke="#C0D8F0" stroke-width="1.5" stroke-dasharray="3 3"/>
+                  <polygon points="186,64 194,64 190,72" fill="#C0D8F0"/>
+
+                  <!-- Client-side tag -->
+                  <rect x="110" y="72" width="160" height="36" rx="8" fill="#F0F6FF" stroke="#D0E8FF" stroke-width="1"/>
+                  <text x="190" y="88" text-anchor="middle" font-family="Geist Mono, monospace" font-size="9" fill="#060026" font-weight="500">Client-side Tag Manager</text>
+                  <text x="190" y="101" text-anchor="middle" font-family="Geist Mono, monospace" font-size="8" fill="rgba(6,0,38,0.45)">(browser-based, sampled)</text>
+
+                  <!-- Arrow down to GA4 -->
+                  <line x1="190" y1="108" x2="190" y2="128" stroke="#C0D8F0" stroke-width="1.5" stroke-dasharray="3 3"/>
+                  <polygon points="186,126 194,126 190,134" fill="#C0D8F0"/>
+
+                  <!-- GA4 -->
+                  <rect x="130" y="134" width="120" height="36" rx="8" fill="#F0F6FF" stroke="#D0E8FF" stroke-width="1"/>
+                  <text x="190" y="157" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" fill="#060026" font-weight="500">GA4</text>
+
+                  <!-- Fork arrows to ad platforms -->
+                  <line x1="150" y1="170" x2="80" y2="196" stroke="#C0D8F0" stroke-width="1.5" stroke-dasharray="3 3"/>
+                  <polygon points="76,191 83,197 76,202" fill="#C0D8F0"/>
+                  <line x1="230" y1="170" x2="300" y2="196" stroke="#C0D8F0" stroke-width="1.5" stroke-dasharray="3 3"/>
+                  <polygon points="297,191 304,197 297,202" fill="#C0D8F0"/>
+
+                  <!-- Google Ads -->
+                  <rect x="24" y="200" width="112" height="36" rx="8" fill="#F0F6FF" stroke="#D0E8FF" stroke-width="1"/>
+                  <text x="80" y="218" text-anchor="middle" font-family="Geist Mono, monospace" font-size="9" fill="#060026" font-weight="500">Google Ads</text>
+                  <text x="80" y="230" text-anchor="middle" font-family="Geist Mono, monospace" font-size="8" fill="rgba(6,0,38,0.45)">(form-fill signal)</text>
+
+                  <!-- LinkedIn -->
+                  <rect x="244" y="200" width="112" height="36" rx="8" fill="#F0F6FF" stroke="#D0E8FF" stroke-width="1"/>
+                  <text x="300" y="218" text-anchor="middle" font-family="Geist Mono, monospace" font-size="9" fill="#060026" font-weight="500">LinkedIn Ads</text>
+                  <text x="300" y="230" text-anchor="middle" font-family="Geist Mono, monospace" font-size="8" fill="rgba(6,0,38,0.45)">(form-fill signal)</text>
+
+                  <!-- CRM island — disconnected -->
+                  <rect x="120" y="254" width="140" height="36" rx="8" fill="rgba(6,0,38,0.04)" stroke="rgba(6,0,38,0.12)" stroke-width="1" stroke-dasharray="4 3"/>
+                  <text x="190" y="270" text-anchor="middle" font-family="Geist Mono, monospace" font-size="9" fill="rgba(6,0,38,0.45)" font-weight="500">CRM / HubSpot</text>
+                  <text x="190" y="283" text-anchor="middle" font-family="Geist Mono, monospace" font-size="8" fill="rgba(6,0,38,0.35)">(disconnected island)</text>
+                </svg>
+              </div>
+
+              <!-- AFTER -->
+              <div>
+                <div class="flex items-center gap-3 mb-6">
+                  <span class="w-6 h-6 rounded-full bg-brand-blue/15 flex items-center justify-center" aria-hidden="true">
+                    <i data-lucide="check" class="w-3.5 h-3.5 text-brand-blue"></i>
+                  </span>
+                  <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-dark/50 font-medium">After · Pipeline Intelligence stack</p>
+                </div>
+                <svg viewBox="0 0 380 300" class="w-full h-auto" role="img" aria-label="After state: Pipeline Intelligence stack with CRM bidirectionally connected to ad platforms via offline conversion API">
+                  <!-- Website -->
+                  <rect x="130" y="10" width="120" height="36" rx="8" fill="#EBF6FF" stroke="#99DDFF" stroke-width="1.5"/>
+                  <text x="190" y="31" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" fill="#060026" font-weight="500">Website / Forms</text>
+
+                  <!-- Arrow down -->
+                  <line x1="190" y1="46" x2="190" y2="64" stroke="#0099FF" stroke-width="1.5"/>
+                  <polygon points="186,62 194,62 190,70" fill="#0099FF"/>
+
+                  <!-- sGTM -->
+                  <rect x="115" y="70" width="150" height="38" rx="8" fill="#0099FF" />
+                  <text x="190" y="87" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" fill="white" font-weight="500">Server-side GTM</text>
+                  <text x="190" y="100" text-anchor="middle" font-family="Geist Mono, monospace" font-size="8" fill="rgba(255,255,255,0.75)">(sGTM · first-party)</text>
+
+                  <!-- Arrow fork: GA4 + BigQuery -->
+                  <line x1="165" y1="108" x2="110" y2="128" stroke="#0099FF" stroke-width="1.5"/>
+                  <polygon points="106,124 113,130 106,135" fill="#0099FF"/>
+                  <line x1="215" y1="108" x2="270" y2="128" stroke="#0099FF" stroke-width="1.5"/>
+                  <polygon points="267,124 274,130 267,135" fill="#0099FF"/>
+
+                  <!-- GA4 -->
+                  <rect x="50" y="132" width="120" height="34" rx="8" fill="#EBF6FF" stroke="#0099FF" stroke-width="1.5"/>
+                  <text x="110" y="153" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" fill="#060026" font-weight="500">GA4</text>
+
+                  <!-- BigQuery -->
+                  <rect x="210" y="132" width="120" height="34" rx="8" fill="#EBF6FF" stroke="#0099FF" stroke-width="1.5"/>
+                  <text x="270" y="153" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" fill="#060026" font-weight="500">BigQuery</text>
+
+                  <!-- CRM connected -->
+                  <rect x="130" y="194" width="120" height="38" rx="8" fill="#060026"/>
+                  <text x="190" y="211" text-anchor="middle" font-family="Geist Mono, monospace" font-size="9" fill="white" font-weight="500">CRM · HubSpot</text>
+                  <text x="190" y="224" text-anchor="middle" font-family="Geist Mono, monospace" font-size="8" fill="rgba(255,255,255,0.65)">deal-stage events</text>
+
+                  <!-- GA4 → CRM -->
+                  <line x1="110" y1="166" x2="160" y2="194" stroke="#0099FF" stroke-width="1.5"/>
+                  <polygon points="156,190 163,196 156,201" fill="#0099FF"/>
+
+                  <!-- Bidirectional arrows CRM ↔ Ad platforms -->
+                  <line x1="150" y1="228" x2="76" y2="254" stroke="#E1F77E" stroke-width="2"/>
+                  <polygon points="72,250 79,256 72,261" fill="#E1F77E"/>
+                  <line x1="76" y1="260" x2="150" y2="234" stroke="#E1F77E" stroke-width="1.5" stroke-dasharray="3 2"/>
+
+                  <line x1="230" y1="228" x2="304" y2="254" stroke="#E1F77E" stroke-width="2"/>
+                  <polygon points="301,250 308,256 301,261" fill="#E1F77E"/>
+                  <line x1="304" y1="260" x2="230" y2="234" stroke="#E1F77E" stroke-width="1.5" stroke-dasharray="3 2"/>
+
+                  <!-- Google Ads -->
+                  <rect x="16" y="258" width="120" height="34" rx="8" fill="#EBF6FF" stroke="#0099FF" stroke-width="1.5"/>
+                  <text x="76" y="275" text-anchor="middle" font-family="Geist Mono, monospace" font-size="9" fill="#060026" font-weight="500">Google Ads</text>
+                  <text x="76" y="287" text-anchor="middle" font-family="Geist Mono, monospace" font-size="8" fill="rgba(6,0,38,0.55)">(opp-stage signal)</text>
+
+                  <!-- LinkedIn -->
+                  <rect x="244" y="258" width="120" height="34" rx="8" fill="#EBF6FF" stroke="#0099FF" stroke-width="1.5"/>
+                  <text x="304" y="275" text-anchor="middle" font-family="Geist Mono, monospace" font-size="9" fill="#060026" font-weight="500">LinkedIn Ads</text>
+                  <text x="304" y="287" text-anchor="middle" font-family="Geist Mono, monospace" font-size="8" fill="rgba(6,0,38,0.55)">(opp-stage signal)</text>
+                </svg>
+              </div>
+
+            </div>
+
+            <!-- Diagram legend -->
+            <div class="mt-8 pt-6 border-t border-brand-dark/8 flex flex-wrap gap-5">
+              <div class="flex items-center gap-2">
+                <span class="block w-8 h-0.5 bg-brand-blue" aria-hidden="true"></span>
+                <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-dark/50">Data flow</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="block w-8 h-0.5 bg-accent-lime" aria-hidden="true"></span>
+                <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-dark/50">Offline conversion feedback loop</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="block w-8 h-0.5 border-t-2 border-dashed border-brand-dark/30" aria-hidden="true"></span>
+                <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-dark/50">Won-deal signal return</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- CHUNK 3 COMPLETE — SECTIONS 4–7 + CTA + FOOTER TO FOLLOW -->
 
     </main>
 

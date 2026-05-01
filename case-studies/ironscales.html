@@ -625,7 +625,166 @@
         </div>
       </section>
 
-      <!-- CHUNK 3 COMPLETE — SECTIONS 4–7 + CTA + FOOTER TO FOLLOW -->
+      <!-- ============================================================
+           SECTION 4 — THE OUTCOMES
+           Stat block + trajectory chart + team-impact passage
+           ============================================================ -->
+      <section id="outcomes" class="py-20 md:py-28">
+        <div class="container-brand">
+
+          <div class="max-w-4xl mb-14 md:mb-16">
+            <p class="section-eyebrow mb-5">Section 04 · The outcomes</p>
+            <h2 class="text-[32px] md:text-[44px] font-medium text-brand-dark leading-[1.1] tracking-[-0.02em]">What changed in 90 days.</h2>
+          </div>
+
+          <!-- Stat block + trajectory chart row -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mb-16 md:mb-20">
+
+            <!-- Three stat callouts -->
+            <div class="lg:col-span-7 space-y-6">
+              <div class="bg-light-blue/40 rounded-2xl p-7 md:p-9">
+                <p class="hero-stat text-[68px] md:text-[88px] text-brand-blue mb-3">2.3×</p>
+                <p class="text-[17px] font-medium text-brand-dark mb-2">pipeline in 90 days.</p>
+                <p class="text-[14px] text-brand-dark/65 leading-[1.6]">Pipeline-attributed to paid media more than doubled in the engagement's first quarter &mdash; without raising spend.</p>
+              </div>
+              <div class="bg-light-blue/40 rounded-2xl p-7 md:p-9">
+                <p class="hero-stat text-[68px] md:text-[88px] text-brand-blue mb-3">4×</p>
+                <p class="text-[17px] font-medium text-brand-dark mb-2">opportunities at 50% budget.</p>
+                <p class="text-[14px] text-brand-dark/65 leading-[1.6]">The bid algorithm, now optimizing against deal-stage signal, started finding more opportunities per dollar. Ad spend was reduced by half. Opportunities created quadrupled.</p>
+              </div>
+              <div class="bg-light-blue/40 rounded-2xl p-7 md:p-9">
+                <p class="hero-stat text-[68px] md:text-[88px] text-brand-blue mb-3">73%</p>
+                <p class="text-[17px] font-medium text-brand-dark mb-2">more conversions matched than Salesforce native.</p>
+                <p class="text-[14px] text-brand-dark/65 leading-[1.6]">The new data layer surfaced opportunity-level signal that Salesforce's native attribution couldn't connect to ad clicks. The ad platforms got a richer training signal &mdash; and the bid algorithm responded.</p>
+              </div>
+            </div>
+
+            <!-- 90-day trajectory chart -->
+            <div class="lg:col-span-5">
+              <div class="bg-brand-dark rounded-2xl p-7 md:p-9 lg:sticky lg:top-28">
+                <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-cool-gray font-medium mb-2">90-day trajectory</p>
+                <p class="text-[15px] text-white font-medium mb-6 leading-snug">Pipeline-attributed to paid media</p>
+
+                <!-- SVG bar chart -->
+                <svg viewBox="0 0 320 280" class="w-full h-auto" role="img" aria-label="Bar chart showing pipeline-attributed to paid media: pre-engagement baseline 1.0x, day 30 1.4x, day 60 1.9x, day 90 2.3x">
+                  <!-- Y axis grid -->
+                  <line x1="36" y1="40" x2="316" y2="40" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+                  <line x1="36" y1="100" x2="316" y2="100" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+                  <line x1="36" y1="160" x2="316" y2="160" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+                  <line x1="36" y1="220" x2="316" y2="220" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+
+                  <!-- Y axis labels -->
+                  <text x="28" y="44" text-anchor="end" font-family="Geist Mono, monospace" font-size="9" fill="rgba(255,255,255,0.45)">2.5×</text>
+                  <text x="28" y="104" text-anchor="end" font-family="Geist Mono, monospace" font-size="9" fill="rgba(255,255,255,0.45)">2.0×</text>
+                  <text x="28" y="164" text-anchor="end" font-family="Geist Mono, monospace" font-size="9" fill="rgba(255,255,255,0.45)">1.5×</text>
+                  <text x="28" y="224" text-anchor="end" font-family="Geist Mono, monospace" font-size="9" fill="rgba(255,255,255,0.65)">1.0×</text>
+
+                  <!-- Bars -->
+                  <!-- Pre-Verto: 1.0x — y=220, height=0 (baseline) -->
+                  <rect x="56" y="220" width="40" height="0" fill="rgba(180,217,192,0.35)"/>
+                  <line x1="56" y1="220" x2="96" y2="220" stroke="rgba(180,217,192,0.6)" stroke-width="2"/>
+
+                  <!-- Day 30: 1.4x — y=172, height=48 -->
+                  <rect x="120" y="172" width="40" height="48" fill="#0099FF" opacity="0.55" rx="2"/>
+
+                  <!-- Day 60: 1.9x — y=112, height=108 -->
+                  <rect x="184" y="112" width="40" height="108" fill="#0099FF" opacity="0.78" rx="2"/>
+
+                  <!-- Day 90: 2.3x — y=64, height=156 -->
+                  <rect x="248" y="64" width="40" height="156" fill="#E1F77E" rx="2"/>
+
+                  <!-- Bar value labels -->
+                  <text x="76" y="214" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" fill="rgba(255,255,255,0.85)" font-weight="500">1.0×</text>
+                  <text x="140" y="166" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" fill="white" font-weight="500">1.4×</text>
+                  <text x="204" y="106" text-anchor="middle" font-family="Geist Mono, monospace" font-size="10" fill="white" font-weight="500">1.9×</text>
+                  <text x="268" y="58" text-anchor="middle" font-family="Geist Mono, monospace" font-size="11" fill="#E1F77E" font-weight="500">2.3×</text>
+
+                  <!-- X axis -->
+                  <line x1="36" y1="240" x2="316" y2="240" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+
+                  <!-- X axis labels -->
+                  <text x="76" y="258" text-anchor="middle" font-family="Geist Mono, monospace" font-size="9" fill="rgba(255,255,255,0.55)">Pre</text>
+                  <text x="140" y="258" text-anchor="middle" font-family="Geist Mono, monospace" font-size="9" fill="rgba(255,255,255,0.55)">Day 30</text>
+                  <text x="204" y="258" text-anchor="middle" font-family="Geist Mono, monospace" font-size="9" fill="rgba(255,255,255,0.55)">Day 60</text>
+                  <text x="268" y="258" text-anchor="middle" font-family="Geist Mono, monospace" font-size="9" fill="rgba(255,255,255,0.85)" font-weight="500">Day 90</text>
+
+                  <text x="76" y="270" text-anchor="middle" font-family="Geist Mono, monospace" font-size="8" fill="rgba(255,255,255,0.38)">baseline</text>
+                  <text x="268" y="270" text-anchor="middle" font-family="Geist Mono, monospace" font-size="8" fill="rgba(225,247,126,0.7)">+130%</text>
+                </svg>
+
+                <p class="mt-6 pt-5 border-t border-white/10 text-[12px] text-cool-gray leading-[1.55] italic">Bid algorithm learning curve · Same spend, increasing yield as the offline conversion feedback loop matured.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- "What it meant for the team" passage -->
+          <div class="max-w-4xl border-t border-brand-dark/10 pt-12 md:pt-14">
+            <h3 class="text-[24px] md:text-[32px] font-medium text-brand-dark leading-[1.2] tracking-[-0.015em] mb-8">What it meant for the team.</h3>
+            <div class="space-y-5 text-[17px] md:text-[18px] text-brand-dark/80 leading-[1.65]">
+              <p>The conversation with finance shifted. Paid media stopped being a discretionary cost line and became a defensible source of pipeline. The marketing team could attribute opportunity revenue back to specific campaigns and channels with confidence. The data quality was high enough that quarterly pipeline reviews became conversations, not arguments.</p>
+              <p>Twelve months in, the program is still compounding. Every closed-won deal feeds back into the seed audience for LinkedIn AI Targeting. Every new opportunity refines the bid algorithm. The system gets sharper over time &mdash; not because the campaigns get better, but because the data layer makes the platforms smarter.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SECTION 5 — THE CUSTOMER VOICE
+           Hero quote (Grant Ho) + supporting quote (Andrew Roehm)
+           ============================================================ -->
+      <section id="customer-voice" class="bg-light-blue/30 py-20 md:py-28">
+        <div class="container-brand">
+
+          <div class="max-w-4xl mb-14 md:mb-16">
+            <p class="section-eyebrow mb-5">Section 05 · The customer voice</p>
+            <h2 class="text-[32px] md:text-[44px] font-medium text-brand-dark leading-[1.1] tracking-[-0.02em]">In their words.</h2>
+          </div>
+
+          <!-- HERO QUOTE — Grant Ho -->
+          <figure class="bg-white rounded-2xl p-8 md:p-12 lg:p-16 shadow-xl shadow-brand-dark/8 mb-8 md:mb-10">
+            <i data-lucide="quote" class="w-10 h-10 md:w-12 md:h-12 text-brand-blue/30 mb-8"></i>
+            <blockquote class="text-[24px] md:text-[34px] lg:text-[38px] font-medium text-brand-dark leading-[1.25] tracking-[-0.015em] mb-10 md:mb-12 max-w-4xl">
+              &ldquo;They built a paid acquisition program that became one of marketing's top three sources of pipeline generation for our business.&rdquo;
+            </blockquote>
+            <figcaption class="flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-6 pt-8 md:pt-10 border-t border-brand-dark/10">
+              <div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-dark-blue to-brand-blue flex items-center justify-center text-white font-medium text-[22px] md:text-[26px] flex-shrink-0" aria-hidden="true">GH</div>
+              <div class="flex-1 min-w-0">
+                <p class="font-medium text-brand-dark text-[17px] md:text-[19px] leading-tight mb-1.5">Grant Ho</p>
+                <p class="text-brand-dark/70 text-[14px] md:text-[15px] leading-snug">CMO, IRONSCALES</p>
+                <p class="text-brand-dark/55 text-[13px] md:text-[14px] leading-snug italic">Limited Partner, Stage 2 Capital Catalyst</p>
+              </div>
+              <div class="flex-shrink-0">
+                <p class="inline-flex items-center gap-2 text-[12px] text-brand-dark/60 font-mono uppercase tracking-[0.15em]">
+                  <span class="inline-flex items-center justify-center w-5 h-5 rounded bg-[#FF492C] text-white font-bold text-[10px] tabular-nums">G2</span>
+                  G2 verified · Jan 2025
+                </p>
+              </div>
+            </figcaption>
+          </figure>
+
+          <!-- SUPPORTING QUOTE — Andrew Roehm -->
+          <figure class="bg-white/70 rounded-2xl p-7 md:p-9 max-w-3xl">
+            <blockquote class="text-[17px] md:text-[19px] text-brand-dark/85 leading-[1.55] mb-6 italic">
+              &ldquo;VertoDigital's integrated reporting solution has been a game-changer, providing us with a comprehensive view of our campaigns and enabling data-driven decisions.&rdquo;
+            </blockquote>
+            <figcaption class="flex items-center gap-4 pt-5 border-t border-brand-dark/10">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-br from-accent-purple to-brand-blue flex items-center justify-center text-white font-medium text-[14px] flex-shrink-0" aria-hidden="true">AR</div>
+              <div class="flex-1 min-w-0">
+                <p class="font-medium text-brand-dark text-[14px] leading-tight">Andrew Roehm</p>
+                <p class="text-brand-dark/60 text-[12px] leading-snug mt-1">Sr. Director Demand Generation, IRONSCALES</p>
+              </div>
+              <p class="inline-flex items-center gap-1.5 text-[11px] text-brand-dark/55 font-mono uppercase tracking-[0.15em]">
+                <i data-lucide="file-text" class="w-3 h-3"></i>
+                Case ref
+              </p>
+            </figcaption>
+          </figure>
+
+        </div>
+      </section>
+
+      <!-- CHUNK 4 COMPLETE — SECTIONS 6–7 + CTA + FOOTER TO FOLLOW -->
 
     </main>
 
